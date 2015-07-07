@@ -1,4 +1,4 @@
-Chapter 0 - Arithmetic
+Chapter 0 - Python as a Calculator
 ======================
 
 Addition and subtraction
