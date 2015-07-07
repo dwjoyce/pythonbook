@@ -1,5 +1,5 @@
-Arithmetic
-==========
+Python as a Calculator
+======================
 
 Addition and subtraction
 ------------------------
