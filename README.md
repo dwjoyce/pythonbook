@@ -18,4 +18,4 @@ Build a pdf:
 make latexpdf
 ```
 
-The pdf will then be at `build/latex/pythonbook.pdf`.
+The pdf will then be at `build/latex/pythonbook.pdf`. Last build: https://github.com/dwjoyce/pythonbook/blob/master/build/latex/pythonbook.pdf
