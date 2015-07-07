@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'pythonbook'
+project = 'Marching up and down the code'
 copyright = '2015, Matthew Joyce, David Joyce'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -90,7 +90,7 @@ exclude_patterns = ['build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'colorful'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -194,15 +194,17 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': open("preamble.tex").read(),
+
+#'fontpkg': '\\usepackage{sans}'
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
+#  author, documentclass [howto, manual, or own class], exclude start file).
 latex_documents = [
-  ('index', 'pythonbook.tex', 'pythonbook Documentation',
-   'Matthew Joyce, David Joyce', 'manual'),
+  ('index', 'pythonbook.tex', 'Marching up and down the code',
+   'Matthew Joyce, David Joyce', 'manual', True),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -245,7 +247,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'pythonbook', 'pythonbook Documentation',
+  ('index', 'pythonbook', 'pythonbook',
    'Matthew Joyce, David Joyce', 'pythonbook', 'One line description of project.',
    'Miscellaneous'),
 ]
