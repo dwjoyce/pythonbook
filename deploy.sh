@@ -25,6 +25,9 @@ cd pythonbook.wiki
 
 echo "==> Commit"
 
+git config user.name "Travis CI"
+git config user.email ${GH_EMAIL}
+
 git add pythonbook.pdf
 git commit -m "$msg"
 
