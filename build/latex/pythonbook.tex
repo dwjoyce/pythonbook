@@ -22,10 +22,10 @@
 % Code block border
 % \definecolor{VerbatimColor}{rgb}{0.8, 0.8, 0.8}
 % \definecolor{VerbatimBorderColor}{rgb}{0.5, 0.5, 0.5}
-% \fvset{frame=lines}
+\fvset{frame=lines}
 
 \title{Marching up and down the code}
-\date{July 07, 2015}
+\date{July 08, 2015}
 \release{0.0.0}
 \author{Matthew Joyce, David Joyce}
 \newcommand{\sphinxlogo}{}
@@ -43,66 +43,66 @@
     \PYG@it{\PYG@bf{\PYG@ff{#1}}}}}}}
 \def\PYG#1#2{\PYG@reset\PYG@toks#1+\relax+\PYG@do{#2}}
 
-\expandafter\def\csname PYG@tok@gd\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@err\endcsname{\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.67,0.67}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@kp\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.20,0.53}{##1}}}
-\expandafter\def\csname PYG@tok@mi\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.87}{##1}}}
-\expandafter\def\csname PYG@tok@s1\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@na\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.80}{##1}}}
-\expandafter\def\csname PYG@tok@gi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@no\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.20,0.40}{##1}}}
-\expandafter\def\csname PYG@tok@sc\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
-\expandafter\def\csname PYG@tok@kn\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@nf\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.40,0.73}{##1}}}
-\expandafter\def\csname PYG@tok@bp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
-\expandafter\def\csname PYG@tok@nc\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.73,0.00,0.40}{##1}}}
-\expandafter\def\csname PYG@tok@m\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.40,0.00,0.93}{##1}}}
-\expandafter\def\csname PYG@tok@cp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.33,0.47,0.60}{##1}}}
-\expandafter\def\csname PYG@tok@nt\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.47,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@w\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
-\expandafter\def\csname PYG@tok@ow\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@sb\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@s2\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@gr\endcsname{\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@sx\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.87,0.13,0.00}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@nb\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
-\expandafter\def\csname PYG@tok@c1\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PYG@tok@ge\endcsname{\let\PYG@it=\textit}
-\expandafter\def\csname PYG@tok@o\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.20,0.20,0.20}{##1}}}
-\expandafter\def\csname PYG@tok@gt\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
-\expandafter\def\csname PYG@tok@kc\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@sd\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.87,0.27,0.13}{##1}}}
-\expandafter\def\csname PYG@tok@k\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@cs\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@il\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.87}{##1}}}
-\expandafter\def\csname PYG@tok@vi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.20,0.20,0.73}{##1}}}
-\expandafter\def\csname PYG@tok@go\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PYG@tok@gs\endcsname{\let\PYG@bf=\textbf}
-\expandafter\def\csname PYG@tok@ss\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.67,0.40,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@nl\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.60,0.47,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@kr\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@kt\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.20,0.20,0.60}{##1}}}
-\expandafter\def\csname PYG@tok@ni\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@gh\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
 \expandafter\def\csname PYG@tok@sr\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@cm\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PYG@tok@kd\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
 \expandafter\def\csname PYG@tok@s\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@gh\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@ow\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@gr\endcsname{\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@mi\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.87}{##1}}}
+\expandafter\def\csname PYG@tok@err\endcsname{\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.67,0.67}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@nt\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.47,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@na\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.80}{##1}}}
+\expandafter\def\csname PYG@tok@nb\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@sb\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@kp\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.20,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@nf\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.40,0.73}{##1}}}
 \expandafter\def\csname PYG@tok@vc\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.20,0.40,0.60}{##1}}}
-\expandafter\def\csname PYG@tok@vg\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.87,0.47,0.00}{##1}}}
-\expandafter\def\csname PYG@tok@gp\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PYG@tok@kr\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kc\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@il\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.87}{##1}}}
+\expandafter\def\csname PYG@tok@cp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.33,0.47,0.60}{##1}}}
+\expandafter\def\csname PYG@tok@kd\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@w\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PYG@tok@nc\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.73,0.00,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@ss\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.67,0.40,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@gs\endcsname{\let\PYG@bf=\textbf}
+\expandafter\def\csname PYG@tok@s1\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@go\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@s2\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@bp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@cm\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@no\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.20,0.40}{##1}}}
 \expandafter\def\csname PYG@tok@si\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.93,0.93,0.93}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@sh\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
 \expandafter\def\csname PYG@tok@mf\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.40,0.00,0.93}{##1}}}
-\expandafter\def\csname PYG@tok@nv\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.60,0.40,0.20}{##1}}}
+\expandafter\def\csname PYG@tok@gd\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
 \expandafter\def\csname PYG@tok@nn\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
-\expandafter\def\csname PYG@tok@se\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
-\expandafter\def\csname PYG@tok@gu\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
-\expandafter\def\csname PYG@tok@nd\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.33,0.33,0.33}{##1}}}
+\expandafter\def\csname PYG@tok@kt\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.20,0.20,0.60}{##1}}}
 \expandafter\def\csname PYG@tok@mh\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.33,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@sd\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.87,0.27,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@gi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@c1\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@k\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@nd\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.33,0.33,0.33}{##1}}}
+\expandafter\def\csname PYG@tok@vg\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.87,0.47,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kn\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@vi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.20,0.20,0.73}{##1}}}
+\expandafter\def\csname PYG@tok@gu\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@sx\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.87,0.13,0.00}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@m\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.40,0.00,0.93}{##1}}}
+\expandafter\def\csname PYG@tok@sc\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PYG@tok@sh\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@nv\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.60,0.40,0.20}{##1}}}
+\expandafter\def\csname PYG@tok@ge\endcsname{\let\PYG@it=\textit}
+\expandafter\def\csname PYG@tok@nl\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.60,0.47,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@o\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.20,0.20,0.20}{##1}}}
+\expandafter\def\csname PYG@tok@se\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@cs\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@gt\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
 \expandafter\def\csname PYG@tok@c\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PYG@tok@ne\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@gp\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
 \expandafter\def\csname PYG@tok@mo\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.27,0.00,0.93}{##1}}}
+\expandafter\def\csname PYG@tok@ne\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@ni\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
 
 \def\PYGZbs{\char`\\}
 \def\PYGZus{\char`\_}
@@ -135,11 +135,18 @@
 
 
 
+\chapter{Starting with Python's IDLE}
+\label{0 - Starting with Python's IDLE:starting-with-python-s-idle}\label{0 - Starting with Python's IDLE::doc}
+\begin{notice}{note}{Note:}
+Use the force
+\end{notice}
+
+
 \chapter{Python as a Calculator}
-\label{0 - arithmetic:python-as-a-calculator}\label{0 - arithmetic::doc}
+\label{1 - Python as a Calculator::doc}\label{1 - Python as a Calculator:python-as-a-calculator}
 
 \section{Addition and subtraction}
-\label{0 - arithmetic:addition-and-subtraction}
+\label{1 - Python as a Calculator:addition-and-subtraction}
 \begin{notice}{note}{Todo}
 
 Add content
@@ -166,6 +173,76 @@ Some random code:
 \begin{notice}{warning}{Warning:}
 Never to it this way
 \end{notice}
+
+
+\chapter{Functions and Maths}
+\label{2 - Functions and Maths:functions-and-maths}\label{2 - Functions and Maths::doc}
+
+\chapter{Getting help}
+\label{3 - Getting help:getting-help}\label{3 - Getting help::doc}
+
+\chapter{Drawing Turtles}
+\label{4 - Drawing Turtles:drawing-turtles}\label{4 - Drawing Turtles::doc}
+
+\chapter{Naming your data}
+\label{5 - Naming your data:naming-your-data}\label{5 - Naming your data::doc}
+
+\chapter{Asking questions}
+\label{6 - Asking questions::doc}\label{6 - Asking questions:asking-questions}
+
+\chapter{Using numbers}
+\label{7 - Using numbers::doc}\label{7 - Using numbers:using-numbers}
+
+\chapter{Performing selection}
+\label{8 - Performing selection:performing-selection}\label{8 - Performing selection::doc}
+
+\chapter{Decisions, decisions}
+\label{9 - Decisions, decisions:decisions-decisions}\label{9 - Decisions, decisions::doc}
+
+\chapter{Combing decisions together}
+\label{10 - Combing decisions together:combing-decisions-together}\label{10 - Combing decisions together::doc}
+
+\chapter{Going loopy}
+\label{11 - Going loopy:going-loopy}\label{11 - Going loopy::doc}
+
+\chapter{Escaping the cycle}
+\label{12 - Escaping the cycle:escaping-the-cycle}\label{12 - Escaping the cycle::doc}
+
+\chapter{Going random}
+\label{13 - Going random:going-random}\label{13 - Going random::doc}
+
+\chapter{Grouping data together}
+\label{14 - Grouping data together:grouping-data-together}\label{14 - Grouping data together::doc}
+
+\chapter{Slicing sequences}
+\label{15 - Slicing sequences:slicing-sequences}\label{15 - Slicing sequences::doc}
+
+\chapter{Walking along data}
+\label{16 - Walking along data:walking-along-data}\label{16 - Walking along data::doc}
+
+\chapter{Naming code}
+\label{17 - Naming code::doc}\label{17 - Naming code:naming-code}
+
+\chapter{More functions}
+\label{18 - More functions:more-functions}\label{18 - More functions::doc}
+
+\chapter{Reading files}
+\label{19 - Reading files:reading-files}\label{19 - Reading files::doc}
+
+\chapter{Writing files}
+\label{20 - Writing files:writing-files}\label{20 - Writing files::doc}
+
+\chapter{Catching errors}
+\label{21 - Catching errors:catching-errors}\label{21 - Catching errors::doc}
+
+\chapter{TODO}
+\label{todo:todo}\label{todo::doc}
+\begin{notice}{note}{Todo}
+
+Add content
+\end{notice}
+
+(The {\hyperref[1 - Python as a Calculator:index-0]{\emph{original entry}}} is located in  /home/matthew/GitHub/pythonbook/1 - Python as a Calculator.rst, line 7.)
 
 
 
