@@ -12,7 +12,8 @@ python:
 install:
 
   - pip install sphinx
-  - sudo apt-get install texlive-full
+  - sudo apt-get update
+  - sudo apt-get install texlive-full --fix-missing
 
 notifications:
   - email: false
