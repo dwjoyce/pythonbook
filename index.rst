@@ -11,16 +11,16 @@ Table of contents:
 .. toctree::
     :maxdepth: 2
 
-    0 - Starting with Python's IDLE
-    1 - Python as a Calculator
-    2 - Functions and Maths
-    3 - Getting help
-    4 - Drawing Turtles
-    5 - Naming your data
-    6 - Asking questions
-    7 - Using numbers
-    8 - Performing selection
-    9 - Decisions, decisions
+    00 - Starting with Python's IDLE
+    01 - Python as a Calculator
+    02 - Naming your data
+    03 - Functions and Maths
+    04 - Getting help
+    05 - Drawing Turtles
+    06 - Asking questions
+    07 - Using numbers
+    08 - Performing selection
+    09 - Decisions, decisions
     10 - Combing decisions together
     11 - Going loopy
     12 - Escaping the cycle
