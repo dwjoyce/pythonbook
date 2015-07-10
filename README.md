@@ -12,10 +12,12 @@ Install sphinx:
 pip3 install sphinx
 ```
 
-Build a pdf:
+Build a pdf (when inside root of this repository):
 
 ```bash
 make latexpdf
 ```
 
-The pdf will then be at `build/latex/pythonbook.pdf`. Last build: https://github.com/dwjoyce/pythonbook/blob/master/build/latex/pythonbook.pdf
+The pdf will then be at `build/latex/pythonbook.pdf`.
+
+Last build from latest commit: https://github.com/dwjoyce/pythonbook/wiki/pythonbook.pdf
