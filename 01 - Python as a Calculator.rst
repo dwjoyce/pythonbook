@@ -1,10 +1,12 @@
 Python as a Calculator
 ======================
 
+**Note:** type in what is highlighted in ``grey`` and starts with ``>>>``
+
 First steps (or sums)
 ---------------------
 
-Let us start our journey by taking inspiration from something we all know well - your pocket calcualtor.
+Let us start our journey by taking inspiration from something we all know well - your pocket calculator.
 
 .. highlight:: none
 
@@ -16,7 +18,7 @@ and then hit the = (equals) button.  The result, 30, will then appear on your sc
 
     10 + 20 - 4 ÷ 2 × 3
 
-and then finally hitting the equals sign, you will get a result of 39 displayed on the calculator's screen, performing the calculation as it goes along, one step at a time.
+and then finally hitting the equals button, you will get a result of 24 displayed on the calculator's screen.  This is assuming you are using a proper calculator, not a simple one which performs the calculation as it goes along, one step at a time!  In other words, it performs the division first, then the multiplication, and then subtracts this answer from the result of the addition.
 
 So given their name, we should be able to use "computers" to do some "computing", that is, working with numbers.  Particularly, we should be able to use our new programing language, Python, to do this for us.
 
@@ -36,9 +38,9 @@ How about the second example.  Let us try this::
     
 Firstly, what is this ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.
 
-Type in it, press Return and see what the result is.  Is it 39 like when we used the calculator?  No, it is 24!  Why?
+Type in it, press Return and see what the result is.  The result should read 24.0, which is a fractional number.  In Python, we will deal with two types of numbers - whole numbers (integers) and fractional numbers (floating point or real numbers).
 
-Well, unlike a calculator, but like proper Maths, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
+Remember, like proper Maths, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
 
 To enforce a different order, you can use brackets.  Just like in Maths.  Put a set of brackets around each part of the sum you want done separately.  So if we want to do the above sum in the order of the calculator, we have to do the following::
 
@@ -47,7 +49,7 @@ To enforce a different order, you can use brackets.  Just like in Maths.  Put a 
 Operator overload
 -----------------
 
-On our calculator there are more than 4 buttons, isn't there? There's one labeled ``x``\ :superscript:`2`\ . And ``x``\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
+On your calculator there are more than 4 buttons.  There is one labeled ``x``\ :superscript:`2`\ . And ``x``\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
 
     9 ** 2
 
@@ -101,5 +103,8 @@ Things to remember
    Floor division (Whole number division)  ``//``
    Modulus (remainder)                     ``%``
    ======================================  ========
+   
+   See Appendix XXXXX for a full list of operators, over and above arithmetic.
 
 2. Use brackets to force Python to do a calculation in a particular order
+3. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
