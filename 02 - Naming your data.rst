@@ -24,7 +24,7 @@ Similar, to a calculator, we can store it in a variable called M::
 
 What this does is take the integer values 10 and 20, with the addition operator it adds them together and then assigns them, using the assignement operator = (equals), to the variable name M.
 
-**Note:** in Python, variables names are like labels attached to boxes which contain the data.  If you give a present, the label is the name to which the present is being given, with the box containing the present.  In Python, the label is the variable name, the box contains the data, e.g. an integer number.
+**Note:** in Python, variables names are like labels attached to boxes which contain the data.  If you give a present to someone (e.g. at Christmas), the label is the name to which the present is being given, with the box containing the present.  In Python, the label is the variable name, the box contains the data, e.g. an integer number.
 
 We can then recall the value stored against this name later.  For example::
 
@@ -89,7 +89,7 @@ You can name your variables with any combination of letters and numbers along wi
 Exercises
 ---------
 
-1. Define a variable called ``age``, and set it to your age (use an integer number).
+1. Define a variable called ``age`` and set it to your age (use an integer number).
 2. Use your ``age`` variable to calculate how many days old you are (assume each year has 365 days).
 3. Again, use your ``age`` variable to calculate in what year you will be 100 years old.  You will need to take the value of ``age`` from the present year, 2015, and then add on 100.
 
