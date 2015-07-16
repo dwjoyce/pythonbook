@@ -55,7 +55,7 @@ More and more
 
 Your calculator will have just the one memory to store numbers, but in a Python program, you have have any number of variables in your program.  And they do not have to be called M either!  In fact, if you want to store your data separately, you need different names for each value.
 
-For example:
+For example::
 
   >>> M1 = 5
   >>> M2 = 10
@@ -97,7 +97,5 @@ Things to remember
 ------------------
 
 1. You define a variable by giving it a name, and using the assignment operator to give it a value.  The value can be evaluated (calculated) from other variables.
-
 2. Begin your variable names with a letter from the alphabet (upper or lowercase) or the _ (underscore) character.
-
 3. Use the _ (underscore) character to divide up words in your variable names, e.g. first_num.
