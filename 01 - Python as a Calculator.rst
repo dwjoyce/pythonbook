@@ -28,13 +28,13 @@ Using the first example, the Python code is very simple.
 
 Bring up your Python interactive shell, as described in chapter 0, and type the following::
 
-    10 + 20
+    >>> 10 + 20
 
 and press the Return or Enter key on your keyboard.  You should see the number 30 displayed below.
 
 How about the second example.  Let us try this::
 
-    10 + 20 - 4 / 2 * 3
+    >>> 10 + 20 - 4 / 2 * 3
     
 Firstly, what is this ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.
 
@@ -42,38 +42,38 @@ Type in it, press Return and see what the result is.  The result should read 24.
 
 Remember, like proper Maths, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
 
-To enforce a different order, you can use brackets.  Just like in Maths.  Put a set of brackets around each part of the sum you want done separately.  So if we want to do the above sum in the order of the calculator, we have to do the following::
+To enforce a different order, you can use brackets.  Just like in Maths.  Put a set of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
-    ((10 + 20) - 4) / 2 * 3
+    >>> (10 + 20 - 4) / 2 * 3
 
 Operator overload
 -----------------
 
 On your calculator there are more than 4 buttons.  There is one labeled ``x``\ :superscript:`2`\ . And ``x``\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
 
-    9 ** 2
+    >>> 9 ** 2
 
 Which is 81. 2 to the power of 3 is::
 
-    2 ** 3
+    >>> 2 ** 3
 
 Which is 8. This works for any power. Ever wanted to know what 19\ :superscript:`8` is? Ask Python::
 
-    19 ** 8
+    >>> 19 ** 8
 
 Python says 16983563041. Satisfied now? Even negative powers work. Remember that 2\ :superscript:`-1` is the same as 1 ÷ 2? So does Python::
 
-    2 ** -1
+    >>> 2 ** -1
 
 Gives 0.5.
 
 Now for something your calculator cannot do. Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (for short 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor division, but don't worry about long names) operator::
 
-    7 // 3
+    >>> 7 // 3
 
 Which should be 2. And for the remainder, use the ``%`` (modulus) operator::
 
-    7 % 3
+    >>> 7 % 3
 
 Gives 1.
 
