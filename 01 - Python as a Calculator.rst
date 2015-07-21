@@ -18,7 +18,7 @@ and then hit the = (equals) button.  The result, 30, will then appear on your sc
 
 and then finally hitting the equals button, you will get a result of 24 displayed on the calculator's screen.  This is assuming you are using a proper calculator, not a simple one which performs the calculation as it goes along, one step at a time!  In other words, it performs the division first, then the multiplication, and then subtracts this answer from the result of the addition.
 
-So given their name, we should be able to use "computers" to do some "computing", that is, working with numbers.  Particularly, we should be able to use our new programing language, Python, to do this for us.
+So given their name, we should be able to use "computers" to do some "computing", that is, working with numbers.  Particularly, we should be able to use our new programming language, Python, to do this for us.
 
 Using the first example, the Python code is very simple.
 
@@ -47,7 +47,7 @@ To enforce a different order, you can use brackets.  Just like in Maths.  Put a 
 Operator overload
 -----------------
 
-On your calculator there are more than 4 buttons.  There is one labeled ``x``\ :superscript:`2`\ . And ``x``\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
+On your calculator there are more than 4 buttons.  There is one labelled ``x``\ :superscript:`2`\ . And ``x``\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
 
     >>> 9 ** 2
 
@@ -80,7 +80,7 @@ Exercises
 
 1. Type the Python line to work out 3 plus 5 divided by 2.
 2. Type the Python line to work out 4 times 2 minus 7.
-3. To convert from celsius to fahrenheit temperature, you multiply the celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the fahrenheit reading?
+3. To convert from Celsius to Fahrenheit temperature, you multiply the Celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the Fahrenheit reading?
 4. Type the Python line to work out 7 to the power of 6.
 5. Type the Python lines to work out the quotient and remainder of 11 divided by 4.
 

@@ -66,7 +66,7 @@ In the previous chapter, we introduced the notion of bring in a separate program
     
 This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` module we used in the previous chapter.
 
-To delve deeper, we can find out more information on functions inside these other modules by using the dot notiation as introduced last time.  So, for example, if we want to find out more information on the square root function inside the math module, we could do the following:
+To delve deeper, we can find out more information on functions inside these other modules by using the dot notation as introduced last time.  So, for example, if we want to find out more information on the square root function inside the math module, we could do the following:
 
     >>> import math
     >>> help(math.sqrt)
@@ -78,4 +78,4 @@ For further information and a guide on the language, please refer to *The Python
 Things to remember
 ------------------
 
-1. To get help, using the ``help()`` function in the interactive shell with the item on which your equire further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.
+1. To get help, use the ``help()`` function in the interactive shell with the item on which your require further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.
