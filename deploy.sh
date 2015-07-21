@@ -1,5 +1,7 @@
 set -e
 
+date1=$(date +"%s")
+
 echo "==> Setup"
 
 rm -rf pythonbook.wiki || exit 0;
@@ -36,3 +38,7 @@ echo "==> Push"
 git push https://matsjoyce:${GH_TOKEN}@github.com/dwjoyce/pythonbook.wiki.git master
 
 echo "==> Done!"
+
+date2=$(date +"%s")
+diff=$(($date2-$date1))
+echo "==> $(($diff / 60)) minutes and $(($diff % 60)) seconds elapsed"

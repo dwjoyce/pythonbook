@@ -18,33 +18,33 @@ Python will evaluate this sum, give you the result, but it will not save it anyw
 
 How can we save the result in memory?
 
-Similar, to a calculator, we can store it in a variable called M::
+Similar, to a calculator, we can store it in a variable called ``M``::
 
   >>> M = 10 + 20
 
-What this does is take the integer values 10 and 20, with the addition operator it adds them together and then assigns them, using the assignement operator = (equals), to the variable name M.
+What this does is take the integer values 10 and 20, with the addition operator it adds them together and then assigns them, using the assignement operator = (equals), to the variable name ``M``.
 
-**Note:** in Python, variables names are like labels attached to boxes which contain the data.  If you give a present to someone (e.g. at Christmas), the label is the name to which the present is being given, with the box containing the present.  In Python, the label is the variable name, the box contains the data, e.g. an integer number.
+.. note:: In Python, variables names are like labels attached to boxes which contain the data.  If you give a present to someone (e.g. at Christmas), the label is the name to which the present is being given, with the box containing the present.  In Python, the label is the variable name, the box contains the data, e.g. an integer number.
 
 We can then recall the value stored against this name later.  For example::
 
   >>> M + 5
   
-You will see it gives an answer of 35.  The variable name M refers to 30 (from the addition of 10 and 20 above), and then we are adding a further 5 to it, giving 35.
+You will see it gives an answer of 35.  The variable name ``M`` refers to 30 (from the addition of 10 and 20 above), and then we are adding a further 5 to it, giving 35.
 
 If we now try::
 
   >>> M + 10
   
-You will notice it results in 40.  It does not take the previous result of 35 and add on 10, as we did not store that back into M, but simply recalled the value of M and used it as before.
+You will notice it results in 40.  It does not take the previous result of 35 and add on 10, as we did not store that back into ``M``, but simply recalled the value of ``M`` and used it as before.
 
-To change the value of M, we have to put it back on the left hand side of the assignment operator::
+To change the value of ``M``, we have to put it back on the left hand side of the assignment operator::
 
   >>> M = M + 10
 
-This changes M once more, using it on the right (recalling M, being 30, and adding on 10), and putting that back into the variable name M.  We are effectively reusing the same name, or giving it a new value.
+This changes ``M`` once more, using it on the right (recalling ``M``, being 30, and adding on 10), and putting that back into the variable name ``M``.  We are effectively reusing the same name, or giving it a new value.
 
-To see what the new value of M is, just type M::
+To see what the new value of ``M`` is, just type ``M``::
 
   >>> M
   
@@ -53,7 +53,7 @@ This gives 40, as expected (30 plus 10, as above).
 More and more
 -------------
 
-Your calculator will have just the one memory to store numbers, but in a Python program, you have have any number of variables in your program.  And they do not have to be called M either!  In fact, if you want to store your data separately, you need different names for each value.
+Your calculator will have just the one memory to store numbers, but in a Python program, you have have any number of variables in your program.  And they do not have to be called ``M`` either!  In fact, if you want to store your data separately, you need different names for each value.
 
 For example::
 
@@ -82,9 +82,9 @@ And arithmetic operators can be used that we learnt in our previous chapter::
   >>> C3 = B2 / 2 * 3
   >>> C3 + A1
 
-That last line displays the value of C3, calculated from the value of B2, and adds on the value of A1.
+That last line displays the value of ``C3``, calculated from the value of ``B2``, and adds on the value of ``A1``.
 
-You can name your variables with any combination of letters and numbers along with the _ (underscore) character. You can use this symbol to separate words if you use them in your variable names - spaces are not allowed inside names!
+You can name your variables with any combination of letters and numbers along with the ``_`` (underscore) character, as long as the name does not start with a number. You can use the underscore to separate words if you use them in your variable names - spaces are not allowed inside names!
 
 Exercises
 ---------
@@ -97,5 +97,5 @@ Things to remember
 ------------------
 
 1. You define a variable by giving it a name, and using the assignment operator to give it a value.  The value can be evaluated (calculated) from other variables.
-2. Begin your variable names with a letter from the alphabet (upper or lowercase) or the _ (underscore) character.
-3. Use the _ (underscore) character to divide up words in your variable names, e.g. first_num.
+2. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.
+3. Use the ``_`` (underscore) character to divide up words in your variable names, e.g. ``first_num``.

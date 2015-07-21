@@ -1,8 +1,6 @@
 Python as a Calculator
 ======================
 
-**Note:** type in what is highlighted in ``grey`` and starts with ``>>>``
-
 First steps (or sums)
 ---------------------
 
@@ -105,6 +103,8 @@ Things to remember
    ======================================  ========
    
    See Appendix XXXXX for a full list of operators, over and above arithmetic.
+
+   .. todo:: Make Appendix XXXXX
 
 2. Use brackets to force Python to do a calculation in a particular order
 3. Whole numbers are referred to as integers, fractional numbers are referred to as floats.

@@ -1,15 +1,18 @@
 Getting help
 ============
 
+Save Our Sanity
+---------------
+
 Python is a very helpful programming language, when we need to find out more information.  And it is all built-in so we do not even need to go elsewhere to find it.
 
 On a general level, you can use the interactive shell to enter the help utility like so::
 
     >>> help()
     
-So if you remember what we taught in chapter 3, this means that **help** is a function, and it is being called by placing brackets () after its name.
+So if you remember what we taught in chapter 3, this means that ``help`` is a function, and it is being called by placing brackets ``()`` after its name.
 
-When we are in the help utility, the prompt changes from **>>>** to **help>**, to avoid confusing the two.  The first thing to learn is how to exit the help system::
+When we are in the help utility, the prompt changes from ``>>>`` to ``help>``, to avoid confusing the two.  The first thing to learn is how to exit the help system::
 
     help> quit
     >>>
@@ -45,7 +48,7 @@ To get a list of what is built into Python, you can call the *directory* functio
 
     >>> dir(__builtins__)
     
-This will list a number of error codes, followed by a number of built-in functions.  These functions can be used just by referring to their name, followed by parentheses (round brackets) to call them.  For example, one of the built-in functions is *round*, so we can simply call it as follows::
+This will list a number of error codes, followed by a number of built-in functions.  These functions can be used just by referring to their name, followed by parentheses (round brackets) to call them.  For example, one of the built-in functions is ``round``, so we can simply call it as follows::
 
     >>> round(10.75)
      
@@ -61,18 +64,18 @@ In the previous chapter, we introduced the notion of bring in a separate program
 
     >>> help('modules')
     
-This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the *math* or *turtle* module we used in the previous chapter.
+This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` module we used in the previous chapter.
 
 To delve deeper, we can find out more information on functions inside these other modules by using the dot notiation as introduced last time.  So, for example, if we want to find out more information on the square root function inside the math module, we could do the following:
 
     >>> import math
     >>> help(math.sqrt)
     
-**Note:** you must import the module before you can get help on its contents.  Otherwise Python does not know what is inside it.
+.. note:: You must import the module before you can get help on its contents.  Otherwise Python does not know what is inside it.
 
-For further information and a guide on the language, please refer to *The Python Tutorial,* which includes many more examples and covers more language features than we will be doing in this guide!
+For further information and a guide on the language, please refer to *The Python Tutorial*, which includes many more examples and covers more language features than we will be doing in this guide!
 
 Things to remember
 ------------------
 
-1. To get help, using the help() function in the interactive shell with the item on which your equire further information, and the dir() function to get a directory listing on the __builtins__ (double underscore at each end) or a particular module.
+1. To get help, using the ``help()`` function in the interactive shell with the item on which your equire further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.
