@@ -207,6 +207,8 @@ latex_documents = [
    'Matthew Joyce, David Joyce', 'manual', True),
 ]
 
+latex_additional_files = ["sphinx.sty"]
+
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
