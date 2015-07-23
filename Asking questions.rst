@@ -65,7 +65,7 @@ Exercises
 ---------
 1. Ask the user's name.  Print it out a 100 times.
 
-2. Ask the user's name and a number.  Print it out that number of times.  You will need to convert the number string to an integer using the ``int`` function.
+2. Ask the user's name and a number.  Print out the name that number of times.  You will need to convert the number string to an integer using the ``int`` function before repeating the name string.
 
 3. Expand on the sumup.py program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers muliplied together.  To save on typing, you can modify your sumup.py program we did in the chapter above.
 
@@ -73,7 +73,7 @@ Exercises
 
 Things to remember
 ------------------
-1. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator before the call to input.
+1. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator to the left hand side of the call to input.  Moreover, you can optionally include a message (a string) to present to the user when the program stops for input.
 
 2. To convert to an integer, use the ``int`` function.
 
