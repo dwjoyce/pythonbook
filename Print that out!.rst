@@ -4,7 +4,7 @@ Print that out!
 Printing numbers
 ----------------
 
-Now that we have started writing proper programs that can be saved and run over and over, we will soon discover a litle problem.
+Now that we have started writing proper programs that can be saved and run over and over, we will soon discover a little problem.
 
 To see this, open up a new file (click on the *File* menu and select *New File*), and type in the following into the new window that appears::
 
@@ -51,7 +51,7 @@ This will print out the three numbers from before (10, 20 and 30), and then 60 (
 Printing messages
 -----------------
 
-Dealing with numbers all the time is very useful, but it is bit limiting.  Dealing with messages containing text is very easy, but subtely different.
+Dealing with numbers all the time is very useful, but it is bit limiting.  Dealing with messages containing text is very easy, but subtly different.
 
 To deal with text, we need to enclose the words with quotation marks, just like in the first book of the Bible:
 

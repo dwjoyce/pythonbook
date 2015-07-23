@@ -93,6 +93,8 @@ exclude_patterns = ['build']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'native'
 
+highlight_language = 'python3'
+
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
