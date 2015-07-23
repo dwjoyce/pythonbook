@@ -103,7 +103,7 @@ Exercises
 2. Print out the year of your birth, your age, and your age in 10 years time.
 3. Print out the same as number 2, but with strings of text indicating what number is what, e.g. I was born in: 1999, my age: 16, in 10 years: 26
 4. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space inbetween each item.
-5. You can use strings to describe colours when drawing with ``turtle``, for example, 'black', 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', etc.  Two turtle functions in particular can be called; the first called ``pencolor`` (not the American spelling of color), and the second called ``fillcolor``.  So for example, you can call turtle.pencolor('red') before you start drawing, or turtle.fillcolor('yellow') before drawing a shape.  Write a program that draws a number of circles with different pen and fill colours.
+5. You can use strings to describe colours when drawing with ``turtle``, for example, 'black', 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', etc.  Two turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call turtle.pencolor('red') before you start drawing, or turtle.fillcolor('yellow') before drawing a shape.  Write a program that draws a number of circles with different pen and fill colours.
 
 Things to remember
 ------------------
