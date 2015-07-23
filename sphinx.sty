@@ -41,7 +41,8 @@
 \definecolor{OuterLinkColor}{rgb}{0.216,0.439,0.388}
 % Redefine these colors to something not white if you want to have colored
 % background and border for code examples.
-\definecolor{VerbatimColor}{rgb}{0.125, 0.125, 0.125}
+\definecolor{VerbatimColor}{rgb}{0.945, 0.945, 0.945}
+\definecolor{VerbatimTextColor}{rgb}{0, 0, 0}
 \definecolor{VerbatimBorderColor}{rgb}{1,1,1}
 
 % Uncomment these two lines to ignore the paper size and make the page 
@@ -177,7 +178,7 @@
   \setlength\leftmargin{0pt}%
   }%
   \item\MakeFramed {\FrameRestore}%
-     
+     \small
     \OriginalVerbatim[#1]%
 }
 \renewcommand{\endVerbatim}{%

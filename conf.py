@@ -91,7 +91,7 @@ exclude_patterns = ['build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'native'
+pygments_style = 'style.TheStyle'
 
 highlight_language = 'python3'
 
