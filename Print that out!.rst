@@ -66,7 +66,7 @@ Open up a new file (click on the ``File`` menu and select ``New File``), and typ
   print("I love Python")
   print('This is fun!')
   
-Save this file as lines.py (press the ``F5`` button, press Return to confirm and save it onto your USB stick), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``""`` or single quotation marks ``''`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
+Save this file as lines.py (press the ``F5`` button, press Return to confirm and save it onto your USB stick), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
 
 These pieces of text in Python are called ``strings``.  Think of them as strings of characters, made up of either letters from the alphabet, digits or symbols.  This includes almost any key from your keyboard, and more besides.  Similar to a string of pearls, a ``string`` in programming is a sequence of characters.  Now we know three types of data - integers, floats and strings.
 
@@ -78,12 +78,12 @@ Now modify your lines.py program to include strings and integers together, below
   
 Again note how we separate a number of items being printed together - using a comma between each.
 
-We can even have a bit of fun, and join and duplicate strings like so::
+We can even have a bit of fun, and join and replicate strings like so::
 
   print('One piece of text' + 'joined to another')
   print('How about this ' * 10)
 
-Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called string concatenation.  The multiplication operation ``*`` is used to duplicate the text however many times you specify - 10 times in this example.
+Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called string concatenation.  The multiplication operation ``*`` is used to replicate the text however many times you specify - 10 times in this example.
 
 Variables can also be assigned to strings.  Add the following onto your program, lines.py::
 
@@ -98,7 +98,7 @@ Finally, you can use special characters in strings to denote certain things.  He
   print('This is how to introduce a horizontal tab \t to space out my text')
   print('I love St. Michael\'s school - notice the quote inside the quote!')
 
-The first one breaks the line with a new line character (\n), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
+The first one breaks the line with a new line character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
 
 Exercises
 ---------
@@ -106,14 +106,14 @@ Exercises
 1. Assign 5 variables to various numbers, and print them out, along with the sum
 2. Print out the year of your birth, your age, and your age in 10 years time.
 3. Print out the same as number 2, but with strings of text indicating what number is what, e.g. I was born in: 1999, my age: 16, in 10 years: 26
-4. Print out your name a hundred times, with a tab (using the code \t) to introduce space inbetween each item.
+4. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space inbetween each item.
 
 Things to remember
 ------------------
 
 1. Use the ``print()`` function to display or output any expression onto the screen.
 2. Separate the items to print using a comma.
-3. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. 'fred') or double quotes (e.g. "fred").
-4. The only operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (duplication).
-5. Use the \n for newline, \t for tab and \' or \" (quotation marks) inside strings.
+3. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. ``'fred'``) or double quotes (e.g. ``"fred"``).
+4. The only operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (replication).
+5. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
 6. Text inside quotes is a string.

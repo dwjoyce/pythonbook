@@ -34,7 +34,7 @@ How about the second example.  Let us try this::
 
     >>> 10 + 20 - 4 / 2 * 3
     
-Firstly, what is this ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.
+Firstly, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.
 
 Type in it, press Return and see what the result is.  The result should read 24.0, which is a fractional number.  In Python, we will deal with two types of numbers - whole numbers (integers) and fractional numbers (floating point or real numbers).
 
@@ -47,7 +47,7 @@ To enforce a different order, you can use brackets.  Just like in Maths.  Put a 
 Operator overload
 -----------------
 
-On your calculator there are more than 4 buttons.  There is one labelled ``x``\ :superscript:`2`\ . And ``x``\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
+On your calculator there are more than 4 buttons.  There is one labelled x\ :superscript:`2`\ . And x\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
 
     >>> 9 ** 2
 

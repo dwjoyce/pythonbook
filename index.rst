@@ -18,7 +18,7 @@ Table of contents:
     Getting help
     Drawing Turtles
     First program
-    Printing properly
+    Print that out!
     Asking questions
     Using numbers
     Performing selection

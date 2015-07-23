@@ -18,7 +18,7 @@
 \RequirePackage{makeidx}
 \RequirePackage{framed}
 \RequirePackage{ifthen}
-\RequirePackage{color}
+\RequirePackage{xcolor}
 % For highlighted code.
 \RequirePackage{fancyvrb}
 % For table captions.
@@ -41,7 +41,7 @@
 \definecolor{OuterLinkColor}{rgb}{0.216,0.439,0.388}
 % Redefine these colors to something not white if you want to have colored
 % background and border for code examples.
-\definecolor{VerbatimColor}{rgb}{0,0,0}
+\definecolor{VerbatimColor}{rgb}{0.125, 0.125, 0.125}
 \definecolor{VerbatimBorderColor}{rgb}{1,1,1}
 
 % Uncomment these two lines to ignore the paper size and make the page 
@@ -176,13 +176,13 @@
   \setlength\partopsep{0pt}%
   \setlength\leftmargin{0pt}%
   }%
-  \item%\MakeFramed {\FrameRestore}%
-     \small%
+  \item\MakeFramed {\FrameRestore}%
+     \small
     \OriginalVerbatim[#1]%
 }
 \renewcommand{\endVerbatim}{%
     \endOriginalVerbatim%
-  %\endMakeFramed%
+  \endMakeFramed%
   \endlist%
   % close group to restore \parskip
   \egroup%
@@ -531,4 +531,3 @@
 \else
   \newfloat{literal-block}{htbp}{loc}[chapter]
 \fi
-

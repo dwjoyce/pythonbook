@@ -28,7 +28,7 @@ and then you can use it thereafter, such as the square root function::
 
   >>> math.sqrt(64)
   
-which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the '.' (period) character - it separates the module name ("math") from the function being used (sqrt).
+which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the ``.`` (period) character - it separates the module name (``math``) from the function being used (``sqrt``).
 
 Here is another example - using the value of pi as defined as a variable by the math module::
 
