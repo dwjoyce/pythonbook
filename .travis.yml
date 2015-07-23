@@ -17,6 +17,7 @@ addons:
   apt:
     packages:
     - texlive-full
+    - texlive-fonts-extra
 
 notifications:
   - email: false
