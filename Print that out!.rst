@@ -21,7 +21,7 @@ When the program runs in the run window (the same as the interactive shell), wha
 
 The reason for this is that just typing a value (e.g. ``10``) or an expression to be evaluated (e.g. ``10 + 20``) or a variable name (``c`` in the example above) will do nothing in a real program.  The interactive shell is just that - interactive.  But in a real program, you have to tell it what to do with the item you are dealing with.  Otherwise, Python will simply discard the value.
 
-So what do we want to do with the variable ``c`` above?  We want to display or print it out onto to the screen.  In Python, the way to do this is to use the ``print`` function.  You simply wrap your value to display in the ``print()`` call, and it will then print it out as you originally intended.  Therefore, modify your program so it looks like this::
+So what do we want to do with the variable ``c`` above?  We want to display or print it out onto to the screen.  In Python, the way to do this is to use the ``print`` function.  You simply wrap your value to display in the ``print()`` call, and it will then print it out as we originally intended.  Therefore, modify your program so it looks like this::
 
   a = 10
   b = 20
@@ -53,11 +53,7 @@ Printing messages
 
 Dealing with numbers all the time is very useful, but it is bit limiting.  Dealing with messages containing text is very easy, but subtly different.
 
-To deal with text, we need to enclose the words with quotation marks, just like in the first book of the Bible:
-
-  And God said, "Let there be light," and there was light.
-  
-In Python, it is similar, apart from missing out the words either side of the quotes!
+To deal with text, we need to enclose the words with quotation marks, just like a piece of talking in a book is surrounded by quotation marks.  In Python, it is very similar.
 
 Open up a new file (click on the ``File`` menu and select ``New File``), and type the following::
 
@@ -83,7 +79,7 @@ We can even have a bit of fun, and join and replicate strings like so::
   print('One piece of text' + 'joined to another')
   print('How about this ' * 10)
 
-Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called string concatenation.  The multiplication operation ``*`` is used to replicate the text however many times you specify - 10 times in this example.
+Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called string concatenation.  The multiplication operation ``*`` is used to repeat the text however many times you specify - 10 times in this example.
 
 Variables can also be assigned to strings.  Add the following onto your program, lines.py::
 
@@ -107,6 +103,7 @@ Exercises
 2. Print out the year of your birth, your age, and your age in 10 years time.
 3. Print out the same as number 2, but with strings of text indicating what number is what, e.g. I was born in: 1999, my age: 16, in 10 years: 26
 4. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space inbetween each item.
+5. You can use strings to describe colours when drawing with ``turtle``, for example, 'black', 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', etc.  Two turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call turtle.pencolor('red') before you start drawing, or turtle.fillcolor('yellow') before drawing a shape.  Write a program that draws a number of circles with different pen and fill colours.
 
 Things to remember
 ------------------
@@ -114,6 +111,6 @@ Things to remember
 1. Use the ``print()`` function to display or output any expression onto the screen.
 2. Separate the items to print using a comma.
 3. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. ``'fred'``) or double quotes (e.g. ``"fred"``).
-4. The only operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (replication).
+4. The only operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (repetition).
 5. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
-6. Text inside quotes is a string.
+6. We have now covered three types of data: integers, floats and strings.
