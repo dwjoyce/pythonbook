@@ -1,6 +1,9 @@
 Performing selection
 ====================
 
+Taking a different route
+-----------------------
+
 With what we have learned up until now, we can do arithmetic, store values against variable names, call functions, import other people's modules, and even get input from the user.  We have also dealt in different types of data, whether numbers (integers or floating point) or strings (sequences of letters, digits or symbols).  Our programs have started running (technically known as *executing*) from the top, and finished at the bottom, performing each line (a code statement) at a time, without any deviation whatsoever!
 
 If a program simply performs the same instructions, line by line, every single time, then effectively they do the same thing every time they are run.  This is not very interesting!  Programs become more useful when they can make decisions on what to do, depending on the circumstances.  Usually, this involves testing the value of a variable, and then performing some instructions instead of others.  In programming, this is known as *selection* - the program is running some code statements selectively over others - it is making a decision.
@@ -27,7 +30,9 @@ So far, so good!  Now we need to take a decision, so add the following to your p
 
 You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable *vip*, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string *yes*.  To perform the test, we have introduced a new operator, called the equals operator.  It is similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is true, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.
 
-We can now finish our program, so add the lines on the end so that your complete programs looks like the following::
+Also note the use of the colon ``:`` symbol.  This is used at the end of every line that has other lines that are attached to it.  We will be seeing that on many more occasions in the future with other statements we will be introducing.  It effectively tells Python to run the following lines if the test just evaluated was true.  Please don't miss these off!
+
+We can now finish our program, so add the last line on the end so that your complete programs looks like the following::
 
     print('Welcome to our VIP program - used to calculate cinema ticket prices')
     print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIP tickets')
@@ -40,6 +45,8 @@ We can now finish our program, so add the lines on the end so that your complete
         price = price * 1.2
         
     print('Your total price is:', price)
+
+See how to resume the instructions, whether the ``if`` statement test was true or not, you simply have to move back 4 spaces to the left.  This means our *code block* attached to the ``if`` statement is over, and we now carry on as usual.
 
 Now save and run your program using the ``F5`` key, pressing Return, and using the program name of vip.py.  Remember, to save your program onto your USB stick.
 
@@ -63,6 +70,21 @@ Run your program again, and notice how either both of these statement will be pe
             
 Watching movies at the weekend is very expensive, 50% more expensive!  You will notice, though, that this is only added on for VIP seats, as the question and the test, along with the increase in price, all live inside the test for VIP seats only.  Regardless, this demonstrates that one block of code (with a certain level of indentation) can reside inside another.  There is no limit to how many blocks can be inside other blocks, although if we overdo this, it will make the code less readable.
 
+You can add another block of code that is selectively executed after the ``if`` statement above, just by starting it in the same column as the first.  Add these extra three lines onto your program::
+
+    if vip == 'yes':
+        price = price * 1.2
+        print('You have chosen a VIP seat - enjoy your film!')
+        weekend = input('Is your viewing at the weekend, yes or no? ')
+        if weekend == 'yes':
+            price = price * 1.5
+            print('Weekend viewing adds on another 50%, sorry!')
+
+    popcorn = input('Would you like popcorn, yes or no? ')
+    if popcorn == 'yes':
+        price = price + 1.25
+
+You finish with the print statement as usual.  Now run your program again - there are now six routes or paths through your vip.py program - firstly, whether the seat chosen is VIP or not, and within this, whether it is weekend or not, and finally whether popcorn was purchased.  That is 3 possibilies, multiplied by two ways for each (either yes or no), to reach our six paths in the program.  See if you can run the vip.py program, with all of these possibilies tried out.
 
 Exercises
 ---------
@@ -79,8 +101,10 @@ Things to remember
 
 1. Use the ``if`` statement to perform selection.  It is given an expression to evaluate, and if true, it will then execute the statements below the ``if`` statement.
 
-2. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to what test.
+2. Put a colon ``:`` at the end of the line containing the ``if``.
 
-3. To resume the program regardless of whether the test for the ``if`` statement was successful or not, then you should unindent your code (push it back to the left by 4 spaces).
+3. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to what test.
 
-4. Use the double equals operator ``==`` to test whether the left-hand side of the expression is equal to the right-hand side.  Do not use the assignment operator ``=`` for this!
+4. To resume the program regardless of whether the test for the ``if`` statement was successful or not, then you should unindent your code (push it back to the left by 4 spaces).
+
+5. Use the double equals operator ``==`` to test whether the left-hand side of the expression is equal to the right-hand side.  Do not use the assignment operator ``=`` for this!
