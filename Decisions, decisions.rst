@@ -54,7 +54,7 @@ The problem is that we are doing the test twice, which is wasteful.  It is more 
     else:
         print('The largest number is:', num2)
 
-Don't forget those colon ``:`` symbols at the end of the lines above each new code block!
+Don't forget those colon ``:`` symbols at the end of the lines above each new code block!  Remember, a block of code can be as little as a single statement, or hundreds of lines long.  It depends on what you want to do.
 
 Now run your program again - it should exactly the same, but more efficiently (i.e. faster) this time.
 
@@ -74,9 +74,9 @@ Things to remember
    Equals                                  ``==``
    Not equal to                            ``!=``
    Greater than                            ``>``
-   Greater than or equal to                ``>-=``
+   Greater than or equal to                ``>=``
    Less than                               ``<``
    Less than or equal to                   ``<=``
    ======================================  ========
    
-2. We now know four types of data - integer, floats, string and booleans.  Boolean values are either True or False.
+2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either True or False.
