@@ -8,7 +8,7 @@ In the previous chapter, we introduced the ``if`` statement, which evaluates a t
 
 We also introduced our first comparison operator, the equals sign ``==``.  There are many more, most of which you will recognise from your mathematics material.  We list the possibilities at the end of this chapter, but here are some highlights.
 
-We will use the interactive shell to experiement for a while.  Type the following for practice::
+We will use the interactive shell to experiment for a while.  Type the following for practice::
 
     >>> a = 10
     >>> b = 20
@@ -19,18 +19,18 @@ We will use the interactive shell to experiement for a while.  Type the followin
     >>> a > b
     >>> a >= b
     
-The first two lines create our variables, ``a`` and ``b``, using the assignement operator (not a comparison operator).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the not equal to operator ``!=``.  In maths, you would use a different symbol, such as this one: ``≠``.  Since this symbol is not readily available on the average computer keyboard, we use the explanation mark infront of the equals sign, to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the ``≥`` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with ``≤`` being turned into ``<=``.
+The first two lines create our variables, ``a`` and ``b``, using the assignment operator (not a comparison operator).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the not equal to operator ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign, to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` being turned into ``<=``.
 
-**Note:** we call these expressions, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. 2.5 > 1.2 and "fred" != "harry".
+.. note:: We call these expressions, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. ``2.5 > 1.2`` and ``"fred" != "harry"``.
 
-You will also notice that the result of each expression is either True or False.  This is our fourth type of data, and it is the simpliest of all - they are either True or False.  They cannot be any other value.  This is the equivelent of on or off, 1 or 0, up or down.  There is no inbetween value, it is one or the other.  For example, above we tested whether 10 was equal to 20 (``a == b``) - this is either True or it is False (obviously the latter).  It cannot be something else, or both!
+You will also notice that the result of each expression is either True or False.  This is our fourth type of data, and it is the simplest of all - they are either True or False.  They cannot be any other value.  This is the equivalent of on or off, 1 or 0, up or down.  There is no in between value, it is one or the other.  For example, above we tested whether 10 was equal to 20 (``a == b``) - this is either True or it is False (obviously the latter).  It cannot be something else, or both!
 
 Booleans are very useful, and you can set variables to boolean values as well.  We will see more of this in the next chapter.
 
 More than one possibility
 -------------------------
 
-Testing just with the ``if`` statement is very useful, but Python does offer more flexability than just this.  For example, if we want to write a program that inputs two numbers, and prints out the largest number, we could do the following.  So open up a new file window, and type the following::
+Testing just with the ``if`` statement is very useful, but Python does offer more flexibility than just this.  For example, if we want to write a program that inputs two numbers, and prints out the largest number, we could do the following.  So open up a new file window, and type the following::
 
     num1_str = input('Enter your first number: ')
     num2_str = input('Enter your second number: ')
@@ -63,6 +63,8 @@ Again, the ``else`` presents a block of code to be run if all of the tests in th
 Exercises
 ---------
 
+.. todo:: Exercises for Decisions, decisions
+
 Things to remember
 ------------------
 
@@ -79,4 +81,4 @@ Things to remember
    Less than or equal to                   ``<=``
    ======================================  ========
    
-2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either True or False.
+2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
