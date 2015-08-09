@@ -102,9 +102,7 @@ Things to remember
    Modulus (remainder)                     ``%``
    ======================================  ========
    
-   See Appendix XXXXX for a full list of operators, over and above arithmetic.
-
-   .. todo:: Make Appendix XXXXX
+   See Appendix B for a full list of operators, over and above arithmetic.
 
 2. Use brackets to force Python to do a calculation in a particular order
 3. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
