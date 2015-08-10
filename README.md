@@ -20,4 +20,4 @@ make latexpdf
 
 The pdf will then be at `build/latex/pythonbook.pdf`.
 
-Last build from latest commit: https://github.com/dwjoyce/pythonbook/wiki/pythonbook.pdf
+[Last build from latest commit](https://github.com/dwjoyce/pythonbook/wiki/pythonbook.pdf), build status: [![Build Status](https://travis-ci.org/dwjoyce/pythonbook.svg?branch=master)](https://travis-ci.org/dwjoyce/pythonbook)
