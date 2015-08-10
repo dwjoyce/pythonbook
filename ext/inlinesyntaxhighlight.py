@@ -74,11 +74,47 @@ def depart_literal(self, node):
     self.body.append('}')
 
 
+def visit_literal_block(self, node):
+    if self.in_footnote:
+        raise UnsupportedError('%s:%s: literal blocks in footnotes are '
+                                'not supported by LaTeX' %
+                                (self.curfilestack[-1], node.line))
+    if node.rawsource != node.astext():
+        # most probably a parsed-literal block -- don't highlight
+        self.body.append('\\begin{alltt}\n')
+    else:
+        code = node.astext().rstrip('\n')
+        lang = self.hlsettingstack[-1][0]
+        linenos = code.count('\n') >= self.hlsettingstack[-1][1] - 1
+        highlight_args = node.get('highlight_args', {})
+        if 'language' in node:
+            # code-block directives
+            lang = node['language']
+            highlight_args['force'] = True
+        if 'linenos' in node:
+            linenos = node['linenos']
+        def warner(msg):
+            self.builder.warn(msg, (self.curfilestack[-1], node.line))
+        hlcode = self.highlighter.highlight_block(code, lang, warn=warner,
+                linenos=linenos, **highlight_args)
+        # workaround for Unicode issue
+        hlcode = hlcode.replace('€', '@texteuro[]')
+        # must use original Verbatim environment and "tabular" environment
+        if self.table:
+            self.table.has_problematic = True
+            #self.table.has_verbatim = True
+        # get consistent trailer
+        hlcode = hlcode.rstrip() + '\n'
+        self.body.append('\n' + hlcode)
+        raise nodes.SkipNode
+
+
 import types
 
 
 LaTeXTranslator.visit_literal  = visit_literal
 LaTeXTranslator.depart_literal = depart_literal
+LaTeXTranslator.visit_literal_block = visit_literal_block
 
 
 def setup(app):

@@ -227,7 +227,7 @@ latex_additional_files = ["sphinx.sty"]
 #latex_show_urls = False
 
 # Documents to append as an appendix to all manuals.
-latex_appendices = ["Zen", "Operators"]
+latex_appendices = ["Zen", "Operators", "Common mistakes"]
 
 # If false, no module index is generated.
 #latex_domain_indices = True

@@ -18,7 +18,7 @@
 \RequirePackage{makeidx}
 \RequirePackage{framed}
 \RequirePackage{ifthen}
-\RequirePackage{xcolor}
+\RequirePackage[table]{xcolor}
 % For highlighted code.
 \RequirePackage{fancyvrb}
 % For table captions.
@@ -43,7 +43,8 @@
 % background and border for code examples.
 \definecolor{VerbatimColor}{rgb}{0.945, 0.945, 0.945}
 \definecolor{VerbatimTextColor}{rgb}{0, 0, 0}
-\definecolor{VerbatimBorderColor}{rgb}{1,1,1}
+\definecolor{VerbatimBorderColor}{rgb}{0.89,0.89,0.89}
+
 
 % Uncomment these two lines to ignore the paper size and make the page 
 % size more like a typical published manual.
@@ -177,8 +178,9 @@
   \setlength\partopsep{0pt}%
   \setlength\leftmargin{0pt}%
   }%
-  \item\MakeFramed {\FrameRestore}%
-     \small
+  \item%
+  \MakeFramed {\FrameRestore}%
+     \small%
     \OriginalVerbatim[#1]%
 }
 \renewcommand{\endVerbatim}{%
@@ -188,7 +190,6 @@
   % close group to restore \parskip
   \egroup%
 }
-
 
 % \moduleauthor{name}{email}
 \newcommand{\moduleauthor}[2]{}
