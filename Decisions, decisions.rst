@@ -60,10 +60,65 @@ Now run your program again - it should exactly the same, but more efficiently (i
 
 Again, the ``else`` presents a block of code to be run if all of the tests in the ``if`` statement above it have failed.  It is like a safety net at the bottom of the ``if`` statement which takes care of everything if none of the tests are true.  Read the word *else* like the word *otherwise* if that helps - test this and do this if true, otherwise do this.
 
+Many, many possibilities!
+-------------------------
+
+What if we had more than two possibilities - doing one things for the main test, and another thing for everything else?  Python has you covered for this eventuality as well - a combination of the ``if`` and the ``else`` put together to form the ``elif`` - short for *else if*.
+
+The ``elif`` statement sits after the ``if`` (so there must always be an ``if`` statement first), and there can be as many ``elif`` statements as you need.  Each one has an expression to evaluate, and if true, then the ``elif`` code block is run.
+
+For example, modify your ``if`` and ``else`` statement in your nums.py program above, so that it now states the following::
+
+    if num1 > num2:
+        print('The largest number is:', num1)
+    elif num1 == num2:
+        print('The numbers are the same!')
+    else:
+        print('The largest number is:', num2)
+
+We introduced the middle two lines, the ``elif`` followed by the call to the ``print`` function.  What this does is test the ``elif`` condition only if the test for the ``if`` fails.  If the ``elif`` test succeeds (it is true), then the line - or lines - under the ``elif`` statement are run.
+
+A bit more practice
+-------------------
+
+Combining what we have learned in this chapter, let us write another program called noises.py.  Start it in the usual method of clicking on the ``File`` menu and selecting ``New File``.  Once the new blank window has appeared, type in the following::
+
+    animal = input('What animal do you have there with you? ')
+    if animal == 'cow':
+        print('Moo!')
+    elif animal == 'sheep':
+        print('Baa!')
+    elif animal == 'pig':
+        print('Oink!')
+    elif animal == 'horse':
+        print('Neigh!')
+    elif animal == 'chicken':
+        print('Cluck!')
+    elif animal == 'duck':
+        print('Quack!')
+    elif animal == 'dog':
+        print('Woof')
+    elif animal == 'cat':
+        print('Meow!')
+    elif animal == 'dinosaur':
+        print('Roar!')
+    else:
+        print('Sorry, I don\'t recognise that animal!')
+
+Obviously, we could go on and on!  Save it using the ``F5`` key, name it noises.py making sure you save it onto your USB stick, and run it.  You need to run it several times in order to test all the possibilities (i.e. see all the noise words being printed out).
+
+As you can see, the ``if`` statement is tested first.  If the test evaluates to true, then the first optional block of code is run (printing out 'Moo!'), and it will then jump to the end (past the ``else``).  Otherwise, it will test each test in turn, only running the code blocks if the test is true.  Otherwise, it will eventually drop down to the ``else`` statement, and run the last block of code, but only if all the other tests have failed.
+
+
 Exercises
 ---------
 
-.. todo:: Exercises for Decisions, decisions
+1. Modify your kiosk.py program you wrote for the previous chapter so that instead of using lots of ``if`` statements, you use one ``if`` statement, followed by a number of ``elif`` statement.  The ``else`` statement should be used to print out a message telling the user that he has not entered a valid choice.
+
+2. Write a program called move.py, and ask the user the form of transport, either a plane, car, bicycle or walking.  Depending on what they have entered, print out 'fast', 'quick', 'steady' or 'slow'.
+
+3. Write a program that uses the ``turtle`` module called shapes.py.  Ask the user what shape to draw, e.g. circle, square or star.  Depending on what the user has entered, draw the appropriate shape.  If the user didn't type in anything sensible, then print out an error message.
+
 
 Things to remember
 ------------------
@@ -76,9 +131,15 @@ Things to remember
    Equals                                  ``==``
    Not equal to                            ``!=``
    Greater than                            ``>``
-   Greater than or equal to                ``>=``
+   Greater than or equal to                ``>-=``
    Less than                               ``<``
    Less than or equal to                   ``<=``
    ======================================  ========
    
-2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
+2. We now know four types of data - integer, floats, string and booleans.  Boolean values are either True or False.
+
+3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated to true, then even if there are ``elif`` or ``else `` statements below, the program will skip them all.
+
+4. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated to true, then the first one is run, and the other skipped.
+
+5. Finally, you can also optionally include an ``else`` statement, without any test, but with its own block of code to run.  This block of code is only run if the ``if`` and ``elif`` tests all fail (i.e. are all false).
