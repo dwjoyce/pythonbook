@@ -120,7 +120,7 @@ Exercises
 3. Write a program that uses the ``turtle`` module called shapes.py.  Ask the user what shape to draw, e.g. circle, square or star.  Depending on what the user has entered, draw the appropriate shape.  If the user didn't type in anything sensible, then print out an error message.
 
 
-Things to remember
++Things to remember
 ------------------
 
 1. Remember your comparison operators:
@@ -131,12 +131,12 @@ Things to remember
    Equals                                  ``==``
    Not equal to                            ``!=``
    Greater than                            ``>``
-   Greater than or equal to                ``>-=``
+   Greater than or equal to                ``>=``
    Less than                               ``<``
    Less than or equal to                   ``<=``
    ======================================  ========
    
-2. We now know four types of data - integer, floats, string and booleans.  Boolean values are either True or False.
+2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
 
 3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated to true, then even if there are ``elif`` or ``else `` statements below, the program will skip them all.
 
