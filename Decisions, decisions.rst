@@ -120,7 +120,7 @@ Exercises
 3. Write a program that uses the ``turtle`` module called shapes.py.  Ask the user what shape to draw, e.g. circle, square or star.  Depending on what the user has entered, draw the appropriate shape.  If the user didn't type in anything sensible, then print out an error message.
 
 
-+Things to remember
+Things to remember
 ------------------
 
 1. Remember your comparison operators:
