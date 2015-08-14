@@ -22,7 +22,7 @@ Table of contents:
     Asking questions
     Performing selection
     Decisions, decisions
-    Combing decisions together
+    Combining decisions together
     Going loopy
     Escaping the cycle
     Going random
