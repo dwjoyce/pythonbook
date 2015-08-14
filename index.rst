@@ -20,7 +20,6 @@ Table of contents:
     First program
     Print that out!
     Asking questions
-    Using numbers
     Performing selection
     Decisions, decisions
     Combing decisions together
