@@ -63,7 +63,9 @@ Exercises
 
 2. Modify your hundred.py program so that after counting up to a 100, it then counts down from 100 to 0, printing as it goes.
 
-3. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides.
+3. Modify your hundred.py program so that the loops count up or down in steps of 5, not 1.  Run it again to check that it works as expected.
+
+4. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides.
 
 Things to remember
 ------------------
