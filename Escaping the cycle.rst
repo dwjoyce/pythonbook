@@ -46,10 +46,16 @@ Therefore, modify your ``while`` loop to reflect the following::
 
 Notice how creating the variable of *total* with a value of 0 is outside of the ``while`` loop code block, as is the call to the print function at the end.  This is determined by those lines of code being aligned with the ``while`` statement, and not with the code block beneath the header of the loop.  The four middle lines form the code block which is repeated, potentially forever.  What stops the loop is the user typing the word 'stop' into the variable *num*.  This then means the test belonging to the ``if`` statement is True, so the break is then run.  If the user does not type 'stop', then the number is converted into an integer using the ``int`` function, and added onto the running total.  The loop then repeats until the user does type 'stop', and then print function finally does its bit.
 
+**Note:** the ``break`` keyword will break out of your present loop.  There is another keyword called ``continue`` which will stop executing the code block and continue the loop from the beginning again.  This is a way of skipping any remaining lines in the loop and starting the next loop cycle early.
+
 Exercises
 ---------
 
-1. Write a program called words.py which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
+1. Change your adding.py so tha the user types 'quit' instead of 'stop' to break out of the loop.
+
+2. Write a program called words.py which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
+
+3. Modify your polygon.py program from the previous chapter so that it keeps drawing polygons, one on top of the other, until the user types 'stop'.  Each time it will ask the user how  many sides to draw, just as before.
 
 Things to remember
 ------------------
