@@ -56,6 +56,15 @@ The new thing to learn here is the use of the new keyword ``while``.  With this,
 
 You can see we have reduced 12 lines to draw a hexagon, down to 5.  The great thing is that if we change the condition from 6 to 100 (and changing the angle of turning left would be good too, as well as the length of each side), then we would then draw a 100 sided shape without any further changes.  In the hard way above, this would involve another 188 lines of code!
 
+Exercises
+---------
+
+1. Write a program called hundred.py that prints out the numbers from 0 to 100, inclusive.
+
+2. Modify your hundred.py program so that after counting up to a 100, it then counts down from 100 to 0, printing as it goes.
+
+3. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides.
+
 Things to remember
 ------------------
 
