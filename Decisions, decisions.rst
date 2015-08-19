@@ -138,7 +138,7 @@ Things to remember
    
 2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
 
-3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated to true, then even if there are ``elif`` or ``else `` statements below, the program will skip them all.
+3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated to true, then even if there are ``elif`` or ``else`` statements below, the program will skip them all.
 
 4. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated to true, then the first one is run, and the other skipped.
 

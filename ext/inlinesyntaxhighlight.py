@@ -100,13 +100,83 @@ def visit_literal_block(self, node):
         # workaround for Unicode issue
         hlcode = hlcode.replace('€', '@texteuro[]')
         # must use original Verbatim environment and "tabular" environment
+        viac = "\\setlength\\verbatimindentadjustcoefficient{40pt}\n"
         if self.table:
             self.table.has_problematic = True
+            viac = "\\setlength\\verbatimindentadjustcoefficient{0pt}\n"
             #self.table.has_verbatim = True
         # get consistent trailer
         hlcode = hlcode.rstrip() + '\n'
-        self.body.append('\n' + hlcode)
+
+        #self.body.append('\n\\begin{adjustwidth}{1em}{0pt}\n' + hlcode + '\\end{adjustwidth}\n')
+        self.body.append('\n' + viac + hlcode)
         raise nodes.SkipNode
+
+
+def depart_table(self, node):
+    self.table.has_problematic = True
+    if self.table.rowcount > 30:
+        self.table.longtable = True
+    self.body = self._body
+    if not self.table.longtable and self.table.caption is not None:
+        self.body.append('\n\n\\begin{threeparttable}\n'
+                            '\\capstart\\caption{%s}\n' % self.table.caption)
+    if self.table.longtable:
+        self.body.append('\n\\begin{longtable}')
+        endmacro = '\\end{longtable}\n\n'
+    elif self.table.has_verbatim:
+        self.body.append('\n\\begin{tabular}')
+        endmacro = '\\end{tabular}\n\n'
+    elif self.table.has_problematic and not self.table.colspec:
+        # if the user has given us tabularcolumns, accept them and use
+        # tabulary nevertheless
+        self.body.append('\n\\begin{tabular}')
+        endmacro = '\\end{tabular}\n\n'
+    else:
+        self.body.append('\n\\begin{tabulary}{\\linewidth}')
+        endmacro = '\\end{tabulary}\n\n'
+    if self.table.colspec:
+        self.body.append(self.table.colspec)
+    else:
+        if self.table.has_problematic:
+            colwidth = 0.95 / self.table.colcount
+            colspec = ('p{%.3f\\linewidth}|' % colwidth) * \
+                        self.table.colcount
+            self.body.append('{|' + colspec + '}\n')
+        elif self.table.longtable:
+            self.body.append('{|' + ('l|' * self.table.colcount) + '}\n')
+        else:
+            self.body.append('{|' + ('L|' * self.table.colcount) + '}\n')
+    if self.table.longtable and self.table.caption is not None:
+        self.body.append('\\caption{%s} \\\\\n' % self.table.caption)
+    if self.table.caption is not None:
+        for id in self.next_table_ids:
+            self.body.append(self.hypertarget(id, anchor=False))
+        self.next_table_ids.clear()
+    if self.table.longtable:
+        self.body.append('\\hline\n')
+        self.body.extend(self.tableheaders)
+        self.body.append('\\endfirsthead\n\n')
+        self.body.append('\\multicolumn{%s}{c}%%\n' % self.table.colcount)
+        self.body.append(r'{{\textsf{\tablename\ \thetable{} -- %s}}} \\'
+                            % _('continued from previous page'))
+        self.body.append('\n\\hline\n')
+        self.body.extend(self.tableheaders)
+        self.body.append('\\endhead\n\n')
+        self.body.append(r'\hline \multicolumn{%s}{|r|}{{\textsf{%s}}} \\ \hline'
+                            % (self.table.colcount,
+                            _('Continued on next page')))
+        self.body.append('\n\\endfoot\n\n')
+        self.body.append('\\endlastfoot\n\n')
+    else:
+        self.body.append('\\hline\n')
+        self.body.extend(self.tableheaders)
+    self.body.extend(self.tablebody)
+    self.body.append(endmacro)
+    if not self.table.longtable and self.table.caption is not None:
+        self.body.append('\\end{threeparttable}\n\n')
+    self.table = None
+    self.tablebody = None
 
 
 import types
@@ -115,6 +185,7 @@ import types
 LaTeXTranslator.visit_literal  = visit_literal
 LaTeXTranslator.depart_literal = depart_literal
 LaTeXTranslator.visit_literal_block = visit_literal_block
+LaTeXTranslator.depart_table = depart_table
 
 
 def setup(app):

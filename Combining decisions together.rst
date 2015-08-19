@@ -2,7 +2,7 @@ Combining decisions together
 ============================
 
 Juggling tests
--------------
+--------------
 
 We have learned how to use the ``if`` statement to evaluate a test, and if true it then executes a block of code you provide immediately underneath.  It makes our programs cleverer so that they can take different decisions depending on the circumstances at the time.
 
