@@ -66,7 +66,10 @@ def visit_literal(self, node):
                             '')
     hlcode = hlcode.replace('\\end{Verbatim}',
                             '')
-    self.body.append(r'\code{' + hlcode.rstrip().lstrip() + '}')
+    if self.table:
+        self.body.append(hlcode.rstrip().lstrip())
+    else:
+        self.body.append(r'\code{' + hlcode.rstrip().lstrip() + '}')
     raise nodes.SkipNode
 
 def depart_literal(self, node):
@@ -100,10 +103,10 @@ def visit_literal_block(self, node):
         # workaround for Unicode issue
         hlcode = hlcode.replace('€', '@texteuro[]')
         # must use original Verbatim environment and "tabular" environment
-        viac = "\\setlength\\verbatimindentadjustcoefficient{40pt}\n"
+        viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{40pt}\n"
         if self.table:
             self.table.has_problematic = True
-            viac = "\\setlength\\verbatimindentadjustcoefficient{0pt}\n"
+            viac = "\\def\FrameCommand{\\mycolorboxdecol}\n\\setlength\\verbatimindentadjustcoefficient{0pt}\n"
             #self.table.has_verbatim = True
         # get consistent trailer
         hlcode = hlcode.rstrip() + '\n'
@@ -179,6 +182,16 @@ def depart_table(self, node):
     self.tablebody = None
 
 
+
+def visit_thead(self, node):
+    self.table.had_head = True
+    if self.next_table_colspec:
+        self.table.colspec = '{%s}\n' % self.next_table_colspec
+    self.next_table_colspec = None
+    # Redirect head output until header is finished. see visit_tbody.
+    self.body = self.tableheaders
+    self.body.append('\\rowcolor{TableHeaderColor}\n')
+
 import types
 
 
@@ -186,6 +199,7 @@ LaTeXTranslator.visit_literal  = visit_literal
 LaTeXTranslator.depart_literal = depart_literal
 LaTeXTranslator.visit_literal_block = visit_literal_block
 LaTeXTranslator.depart_table = depart_table
+LaTeXTranslator.visit_thead = visit_thead
 
 
 def setup(app):

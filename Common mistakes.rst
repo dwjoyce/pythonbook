@@ -271,8 +271,8 @@ Getting the indentation wrong
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     if a == 10:                        |     if a == 10:                        |
-|         print 'a is 10'                |         print ‘a is 10’                |
-|       print 'where is b?'              |         print ‘where is b?’            |
+|         print 'a is 10'                |         print 'a is 10'                |
+|       print 'where is b?'              |         print 'where is b?'            |
 |                                        |                                        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+

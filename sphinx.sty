@@ -45,6 +45,7 @@
 \definecolor{VerbatimColor}{rgb}{0.925, 0.925, 0.925}
 \definecolor{VerbatimTextColor}{rgb}{0, 0, 0}
 \definecolor{VerbatimBorderColor}{rgb}{0.85,0.85,0.85}
+\definecolor{TableHeaderColor}{rgb}{0.775,0.775,0.775}
 
 
 % Uncomment these two lines to ignore the paper size and make the page 
@@ -163,6 +164,14 @@
   \fcolorbox{VerbatimBorderColor}{VerbatimColor}{%
   \makebox[\distancetoright][l]{#1}%
   }%
+}
+\def\mycolorboxdecol#1{%
+  \setlength\distancetoright{\linewidth}%
+  \advance\distancetoright -\@totalleftmargin %
+  \advance\distancetoright -\verbatimindentadjustcoefficient %
+%   \fcolorbox{VerbatimBorderColor}{VerbatimColor}{%
+  \makebox[\distancetoright][l]{#1}%
+%   }%
 }
 \def\FrameCommand{\mycolorbox}
 
