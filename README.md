@@ -24,6 +24,12 @@ Build a pdf (when inside root of this repository):
 make latexpdf
 ```
 
+To test python code:
+
+```bash
+make pythontest
+```
+
 The pdf will then be at `build/latex/pythonbook.pdf`.
 
 [Last build from latest commit](https://github.com/dwjoyce/pythonbook/wiki/pythonbook.pdf).
