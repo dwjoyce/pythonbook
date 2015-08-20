@@ -7,6 +7,7 @@ First steps (or sums)
 Let us start our journey by taking inspiration from something we all know well - your pocket calculator.
 
 .. highlight:: none
+.. pythontest:: off
 
 To perform a sum on a calculator, such as 10 plus 20, you could simply hit the following buttons::
 
@@ -23,6 +24,7 @@ So given their name, we should be able to use "computers" to do some "computing"
 Using the first example, the Python code is very simple.
 
 .. highlight:: python
+.. pythontest:: on
 
 Bring up your Python interactive shell, as described in chapter 0, and type the following::
 

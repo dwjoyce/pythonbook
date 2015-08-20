@@ -45,6 +45,7 @@ help:
 	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  pythontest to run python code to ensure functionality as displayed"
 
 clean:
 	rm -rf $(BUILDDIR)/*
@@ -175,3 +176,7 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+pythontest:
+	$(SPHINXBUILD) -b pythontest $(ALLSPHINXOPTS) $(BUILDDIR)/pythontest
+	@echo "Build finished. The pythontest files are in $(BUILDDIR)/pythontest."

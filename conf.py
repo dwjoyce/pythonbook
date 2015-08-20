@@ -33,7 +33,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.pngmath',
-    'ext.inlinesyntaxhighlight'
+    'ext.inlinesyntaxhighlight',
+    'ext.pythontest'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

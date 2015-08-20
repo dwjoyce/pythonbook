@@ -22,13 +22,36 @@ Inline code: ``[str(i) + "#" for i in range(0, len(dir(__builtins__))) if i < 24
 
 More code::
 
-    print 'one'
-    print 'two'
+    print('one')
+    print('two')
+
+    x = 3
+    to_b = True
 
     if x == 1:
-        print 'one'
+        print('one')
 
-    cond1 = <complex comparison>
-    cond2 = <other complex comparison>
+    cond1 = x and x or x and not x
+    cond2 = to_b or not to_b
     if cond1 and cond2:
-        # do something
+        # do something or just
+        pass
+
+.. pythontest:: off
+
+.. code:: python
+
+    this will break
+
+.. pythontest:: on
+
+.. code:: python
+
+    this_will_not_break
+
+
+
+.. code-block:: python
+    :pythontestoff:
+
+    this will also break!
