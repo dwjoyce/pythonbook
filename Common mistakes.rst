@@ -7,10 +7,10 @@ Forgetting to open / close quotation marks
 ======================================== ========================================
 Bad                                      Good
 ======================================== ========================================
-``print "Hello, World!``                 ``print "Hello, World!"``
-``print Hello!'``                        ``print 'Hello!'``
-``print 'Your name is, name``            ``print 'Your name is', name``
-``print 'You are', name, 'age is, age``  ``print 'You are', name, 'age is', age``
+``print("Hello, World!)``                ``print("Hello, World!")``
+``print(Hello!')``                       ``print('Hello!')``
+``print('Your name is, name)``           ``print('Your name is', name)``
+``print('You are', name, 'age is, age)`` ``print('You are', name, 'age is', age)``
 ======================================== ========================================
 
 Using quotation marks insides quotes
@@ -19,8 +19,8 @@ Using quotation marks insides quotes
 ======================================== ========================================
 Bad                                      Good
 ======================================== ========================================
-``print 'St. Michael's School'``         ``print 'St. Michael\'s School'``
-``print "His name was "fred""``          ``print "His name was \"fred\""``
+``print('St. Michael's School')``        ``print('St. Michael\'s School')``
+``print("His name was "fred"")``         ``print("His name was \"fred\"")``
 ======================================== ========================================
 
 Not using commas between items
@@ -29,8 +29,8 @@ Not using commas between items
 ======================================== ========================================
 Bad                                      Good
 ======================================== ========================================
-``print 'Hello your name is' name``      ``print 'Hello your name is', name``
-``print 10 20 30 40``                    ``print 10, 20, 30, 40``
+``print('Hello your name is' name)``     ``print('Hello your name is', name)``
+``print(10 20 30 40)``                   ``print(10, 20, 30, 40)``
 ``months = ['jan' 'feb' 'mar']``         ``months = ['jan', 'feb', 'mar']``
 ``num1 num2 = 10 20``                    ``num1, num2 = 10, 20``
 ``num1 num2 = num2 num1``                ``num1, num2 = num2, num1``
@@ -44,14 +44,14 @@ Spelling or capitalisation mistakes
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
-|    pront 10 + 20                       |     print 10 + 20                      |
-|    Print 10 + 20                       |     print 10 + 20                      |
+|    pront(10 + 20)                      |     print(10 + 20)                     |
+|    Print(10 + 20)                      |     print(10 + 20)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |    number = 10                         |     number = 10                        |
-|    print numbre                        |     print number                       |
+|    print(numbre)                       |     print(number)                      |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
@@ -63,7 +63,7 @@ Spelling or capitalisation mistakes
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |    s = 'good morning'                  |     s = 'good morning'                 |
-|    print s.titel()                     |     print s.title()                    |
+|    print(s.titel())                    |     print(s.title())                   |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -76,11 +76,14 @@ Using variables before defining them
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     num1 = 10                          |     num1, num2 = 10, 20                |
-|     print num1, num2                   |     print num1, num2                   |
+|     print(num1, num2)                  |     print(num1, num2)                  |
+|                                        |                                        |
++----------------------------------------+----------------------------------------+
+| .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     while count < 10:                  |     count = 0                          |
-|         print count                    |     while count < 10:                  |
-|         count = count + 1              |         print count                    |
+|         print(count)                   |     while count < 10:                  |
+|         count = count + 1              |         print(count)                   |
 |                                        |         count = count + 1              |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
@@ -125,8 +128,8 @@ Not converting to integers when performing arithmetic
 ======================================== ========================================
 Bad                                      Good
 ======================================== ========================================
-``age = raw_input('Age? ')``             ``age = raw_input('Age? ')``
-``print age + 10``                       ``print int(age) + 10``
+``age = input('Age? ')``                 ``age = input('Age? ')``
+``print(age + 10)``                      ``print(int(age) + 10)``
 ======================================== ========================================
 
 Forgetting the colon ``:`` at the end of compound statements
@@ -138,21 +141,21 @@ Forgetting the colon ``:`` at the end of compound statements
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     if num > 10                        |     if num > 10:                       |
-|         print num                      |         print num                      |
+|         print(num)                     |         print(num)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 |                                        |                                        |
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     for num in range(10)               |     for num in range(10):              |
-|         print num                      |         print num                      |
+|         print(num)                     |         print(num)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 |                                        |                                        |
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     while num < 10                     |     while num < 10:                    |
-|         print num                      |         print num                      |
+|         print(num)                     |         print(num)                     |
 |         num = num + 1                  |         num = num + 1                  |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
@@ -160,7 +163,7 @@ Forgetting the colon ``:`` at the end of compound statements
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     def say_hello()                    |     def say_hello():                   |
-|         print "Hello!"                 |         print "Hello!"                 |
+|         print("Hello!")                |         print("Hello!")                |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -173,7 +176,7 @@ Using the assignment operator instead of comparison operator
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     if num = 10:                       |     if num == 10:                      |
-|         print num                      |         print num                      |
+|         print(num)                     |         print(num)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -205,9 +208,9 @@ Getting the number of brackets wrong in an expression
 ======================================== ========================================
 Bad                                      Good
 ======================================== ========================================
-``print 2 + (4 * (8 / (10 / 5)``         ``print 2 + (4 * (8 / (10 / 5)))``
-``print ((10 + 20) ** 2``                ``print ((10 + 20) ** 2)``
-``print (10 + 20) / 8 / 4)``             ``print (10 + 20) / (8 / 4)``
+``print(2 + (4 * (8 / (10 / 5))``        ``print(2 + (4 * (8 / (10 / 5))))``
+``print(((10 + 20) ** 2)``               ``print(((10 + 20) ** 2))``
+``print((10 + 20) / 8 / 4))``            ``print((10 + 20) / (8 / 4))``
 ``nums = [10, 20, [40, 50]``             ``nums = [10, 20, [40, 50]]``
 ======================================== ========================================
 
@@ -220,8 +223,8 @@ Indexing past the end of lists
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     names = ['fred', 'bob', 'tom']     |     names = ['fred', 'bob', 'tom']     |
-|     print names[3]                     |     if 3 < len(names):                 |
-|                                        |         print names[3]                 |
+|     print(names[3])                    |     if 3 < len(names):                 |
+|                                        |         print(names[3])                |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -233,8 +236,8 @@ Bad                                      Good
 ======================================== ========================================
 ``int``                                  ``int()``
 ``pen = turtle.Pen``                     ``pen = turtle.Pen()``
-``print math.sqrt 144``                  ``print math.sqrt(144)``
-``print int 1010101, 2``                 ``print int(10101010, 2)``
+``print(math.sqrt 144)``                 ``print(math.sqrt(144))``
+``print(int 1010101, 2)``                ``print(int(10101010, 2))``
 ======================================== ========================================
 
 Using variable names reserved by Python
@@ -256,33 +259,33 @@ Getting the indentation wrong
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
-|     print 'Hello there'                |     print 'Hello there'                |
-|         print 'How are you?'           |     print 'How are you?'               |
+|     print('Hello there')               |     print('Hello there')               |
+|         print('How are you?')          |     print('How are you?')              |
 |                                        |                                        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     for num in range(10):              |      for num in range(10):             |
-|     print num                          |          print num                     |
+|     print(num)                         |          print(num)                    |
 |                                        |                                        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     if a == 10:                        |     if a == 10:                        |
-|         print 'a is 10'                |         print 'a is 10'                |
-|       print 'where is b?'              |         print 'where is b?'            |
+|         print('a is 10')               |         print('a is 10')               |
+|       print('where is b?')             |         print('where is b?')           |
 |                                        |                                        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
 |                                        |                                        |
 |     if a == 10:                        |     if a == 10:                        |
-|         print 'a is 10'                |         print 'a is 10'                |
-|     print 'where is b?'                |         print 'where is b?'            |
+|         print('a is 10')               |         print('a is 10')               |
+|     print('where is b?')               |         print('where is b?')           |
 |     else:                              |     else:                              |
-|         print 'and what might c be?'   |         print 'and what might c be?'   |
+|         print('and what might c be?')  |         print('and what might c be?')  |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -296,11 +299,11 @@ Using an ``elif`` or ``else`` without an ``if``
 |                                        |                                        |
 |     a = 10                             |     a = 10                             |
 |     elif a > 10:                       |     if a == 10:                        |
-|         print 'larger than ten'        |         print 'a is ten'               |
+|         print('larger than ten')       |         print('a is ten')              |
 |     else:                              |     elif a > 10:                       |
-|         print 'something else'         |         print 'larger than ten'        |
+|         print('something else')        |         print('larger than ten')       |
 |                                        |     else:                              |
-|                                        |         print 'something else'         |
+|                                        |         print('something else')        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -314,13 +317,16 @@ Getting stuck in a loop
 |                                        |                                        |
 |     num = 0                            |     num = 0                            |
 |     while num < 10:                    |     while num < 10:                    |
-|         print num                      |         print num                      |
+|         print(num)                     |         print(num)                     |
 |                                        |         num = num + 1                  |
 |                                        |                                        |
++----------------------------------------+----------------------------------------+
+| .. code:: python                       | .. code:: python                       |
+|                                        |                                        |
 |     while True:                        |     while True:                        |
-|         name = raw_input('Name? ')     |         name = raw_input('Name? ')     |
-|         print name                     |         if name == 'quit':             |
+|         name = input('Name? ')         |         name = input('Name? ')         |
+|         print(name)                    |         if name == 'quit':             |
 |                                        |             break                      |
-|                                        |         print name                     |
+|                                        |         print(name)                    |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
