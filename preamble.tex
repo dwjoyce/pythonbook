@@ -36,7 +36,7 @@
 \setlength{\extrarowheight}{-2.75pt}
 
 % http://tex.stackexchange.com/a/58391
-\usepackage{xpatch}
+\usepackage{etoolbox}
 \makeatletter
-\xpreto\tabular{\global\rownum=\z@}
+\preto\tabular{\global\rownum=\z@}
 \makeatother
