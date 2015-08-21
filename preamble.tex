@@ -31,6 +31,12 @@
 
 % Table row colors
 
-\rowcolors{2}{VerbatimColor}{white}
-\def\arraystretch{2}%  1 is the default, change whatever you need
+\rowcolors{1}{VerbatimColor}{white}
+\def\arraystretch{2}
 \setlength{\extrarowheight}{-2.75pt}
+
+% http://tex.stackexchange.com/a/58391
+\usepackage{xpatch}
+\makeatletter
+\xpreto\tabular{\global\rownum=\z@}
+\makeatother
