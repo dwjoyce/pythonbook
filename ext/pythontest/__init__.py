@@ -3,6 +3,7 @@ from . import directives, builder
 
 
 def setup(app):
+    builder.app = app
     for node in [directives.pythontest, directives.pythontestsave, directives.pythontestrestore]:
         app.add_node(node)
 

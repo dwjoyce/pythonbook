@@ -52,6 +52,6 @@ More code::
 
 
 .. code-block:: python
-    :pythontestoff:
+    :pythontest: off
 
     this will also break!

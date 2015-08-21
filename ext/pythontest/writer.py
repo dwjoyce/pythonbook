@@ -53,6 +53,7 @@ class Writer(writers.Writer):
     def __init__(self, builder):
         writers.Writer.__init__(self)
         self.builder = builder
+        self.returncode = 0
 
     def print(self, *args, sep=" ", end="\n"):
         self.output += sep.join(map(str, args)) + end
@@ -76,6 +77,7 @@ class Writer(writers.Writer):
                     succeeded, error, detail = self.test_static(code, mode)
                 if not succeeded:
                     if major:
+                        self.returncode = 1
                         self.fails.append((chapter, code, error, detail))
                         major_fails += 1
 
@@ -184,3 +186,6 @@ class Writer(writers.Writer):
             return False, "Execution failure", "{} - {}".format(type(e).__name__, str(e))
         self.post_test()
         return self.passed
+
+    def set_returncode(self, app):
+        app.statuscode = self.returncode

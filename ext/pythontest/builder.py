@@ -15,6 +15,8 @@ from sphinx.writers.latex import LaTeXWriter
 from os import path
 from . import writer
 
+app = None
+
 
 class Builder(sphinx.builders.Builder):
     """
@@ -91,6 +93,7 @@ class Builder(sphinx.builders.Builder):
             doctree.settings.docclass = docclass
             docwriter.write(doctree, destination)
             self.info("done")
+        docwriter.set_returncode(app)
 
     def assemble_doctree(self, indexfile, toctree_only, appendices):
         self.docnames = set([indexfile] + appendices)
