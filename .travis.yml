@@ -4,8 +4,8 @@ env:
   global:
     - secure: "R0zH/kgVAZLEF/3PENfsNrgCE8sFQ0suYunemJyhFEbCLGzvUu6+R3tETe0xCTwPI6gM+RsjquKDStLjXhC/LnesIYOoUgCwyisZwYN1Yx5J1DG0OxgU/PxqQaG1Xo4V/SMOsnui/uXSQ6FOOU72kt4z+0tXR/TrPaouzTSYpo/z6zxAGmUP2HgEPVvFLxzfhkhNkDNOZC7qpezjU7OR7A9SF6Lt14/SRjHDqNHLQDTODe5b+lVGlqw87RXarBKh1rmqEV1UoKICKySIwY3kUBjmQ8vrQGK6bQ2Wf091jtuUjSXYE68VL+u3XYzafYXIVzhWbponLXw3s/CQmTNQh4Z3eXXDMV+zTVID69WKhQqwtQPquFMplYhJT8KCp3TGvAjo62ifyonx/s9RUBoceTTvBeHxt/CLBi2A96DNjoBU1u7WdRvZJzL5RMibUVryD/c2fvioWlHBnYGD0CI+DuHtyv59eF6HlHTzu80o1ii5ogGNqXcg9VmWvAQEEvlhf6bNymqTwtw9OBczNX1XRCHhs8q0dX0NH99ZZ8C/G+Fn+4+rWwhL+/5zOiz3aH96imK1P6X0HBM4kXX4BcIJzVq6Njp+6hPMsGmQ7lyI527tCg94Gr/VRzwqL36wo0q2dCHNdPDewM04VbpASrnT7mQmPffGfFS6967Q52ltM3k="
     - secure: "PZlFKxxVIEi1tzvOsVdAMcVfBnSvzjX/JHcGzF/9c277eiPvpQK+G8lEBoQ9upDwkSiFbEHTXaxdYXN+zk7qjmBu/6mUQ219GiKA6RjnGahKV7zhUXtpnfKZxmR8VMTeCBMGrOhMwxl/Pk8D659x2ShJQBn3/9KmwyfNBpp7eIgQnYr2YBYGFPUXPKnpdNlaBiBzlkHzJ9MOYATwlrPkQAT22OWHVmP7lGchcy70G4s5jhxeFPtDiTXuMGXyjcQN9W8qnSYYbcXF2C6dGpbcJmLulaGe2nJjf0hR/3AL4dpTJGRNaJhX+Jt2Vns4vGX47C3JZ/N4njW5L3YGHgXTtbmHgwMUu+vPAYlwQITiiv1TnaTqI3veUKqmjwDBgtM8sOiEJ//ODk/KOzAVlx+sOOldaCstK5evNIdCcnwC+ltMpbWBj8t7EZtUjG2ga74vJMTaA4DPWE1k4VhQ85tAsjxmAOePmR9ESn5RKrvEAZkuus+8c+xjYRUPc00XEezkJ5eFV5LQevhONdE3RavpAT/lCWqUAc3MXJ5n+RPEXzMjbO1lyFmgSpOnLq8bpVBQq5frkEb7lmnGF/QGyGy3YNSDCDRWm4nAQEnYwKCV6dGa+QRRlDUkljNO/o84U0kLxJcPM6FzpeBAZnSDidRW445PdpdYdiLkUb4Woe1qezc="
-    - BUILD_MODE="build"
-    - BUILD_MODE="test"
+    - BUILD_MODE=build
+    - BUILD_MODE=test
 
 language: python
 
@@ -18,12 +18,12 @@ install:
 
 matrix:
   include:
-  - BUILD_MODE="build"
-    addons:
-        apt:
+      - env: BUILD_MODE=build
+        addons:
+          apt:
             packages:
-                - texlive-full
-                - texlive-fonts-extra
+              - texlive-full
+              - texlive-fonts-extra
 
 notifications:
   email:
