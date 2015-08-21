@@ -7,6 +7,7 @@ from sphinx.util.nodes import set_source_info
 from sphinx.directives import CodeBlock
 
 from . import builder
+from .translator import MODES
 
 
 class pythontest(nodes.Element):
@@ -26,7 +27,8 @@ class PythonTest(Directive):
     final_argument_whitespace = False
 
     def run(self):
-        return [pythontest(on=self.arguments[0].strip().lower() == "on")]
+        mode = self.arguments[0].strip().lower()
+        return [pythontest(mode=MODES[mode])]
 
 class PTCodeBlock(CodeBlock):
     """
@@ -39,12 +41,13 @@ class PTCodeBlock(CodeBlock):
     optional_arguments = CodeBlock.optional_arguments
     final_argument_whitespace = CodeBlock.final_argument_whitespace
     option_spec = CodeBlock.option_spec
-    option_spec.update({'pythontestoff': directives.flag})
+    option_spec.update({'pythontest': directives.unchanged})
 
     def run(self):
         literal, = super().run()
-        if 'pythontestoff' in self.options:
-            return [pythontestsave(), pythontest(on=False), literal, pythontestrestore()]
+        if 'pythontest' in self.options:
+            mode = self.options['pythontest'].strip().lower()
+            return [pythontestsave(), pythontest(mode=MODES[mode]), literal, pythontestrestore()]
         return [literal]
 
 class PTDocutilsCodeBlock(directives.body.CodeBlock):
@@ -58,12 +61,13 @@ class PTDocutilsCodeBlock(directives.body.CodeBlock):
     optional_arguments = directives.body.CodeBlock.optional_arguments
     final_argument_whitespace = directives.body.CodeBlock.final_argument_whitespace
     option_spec = directives.body.CodeBlock.option_spec
-    option_spec.update({'pythontestoff': directives.flag})
+    option_spec.update({'pythontest': directives.unchanged})
 
     def run(self):
         literal, = super().run()
-        if 'pythontestoff' in self.options:
-            return [pythontestsave(), pythontest(on=False), literal, pythontestrestore()]
+        if 'pythontest' in self.options:
+            mode = self.options['pythontest'].strip().lower()
+            return [pythontestsave(), pythontest(mode=MODES[mode]), literal, pythontestrestore()]
         return [literal]
  
 

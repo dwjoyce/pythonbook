@@ -54,6 +54,6 @@ Namespaces are one honking great idea -- let's do more of those!
 Easter Egg
 ----------
 
-.. code-block:: python
+Type into the python interpreter::
 
-    >>> import this
+    import this

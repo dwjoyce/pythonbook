@@ -13,11 +13,17 @@ We will use the interactive shell to experiment for a while.  Type the following
     >>> a = 10
     >>> b = 20
     >>> a == b
+    False
     >>> a != b
+    True
     >>> a < b
+    True
     >>> a <= b
+    True
     >>> a > b
+    False
     >>> a >= b
+    False
     
 The first two lines create our variables, ``a`` and ``b``, using the assignment operator (not a comparison operator).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the not equal to operator ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign, to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` being turned into ``<=``.
 

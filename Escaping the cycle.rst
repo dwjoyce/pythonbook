@@ -10,7 +10,10 @@ Although we have introduced looping, we have only used it by counting from a sta
 
 Remember that the test after the ``while`` keyword is just a boolean expression.  If it evaluates to a ``True`` result, then the loop should perform another cycle of its block of code.  It will then test the expression again to see if it has changed in the meantime.  So if we don't know when to stop, a good start is to make the loop go round and round indefinitely.  It is a called an *infinite loop*, and - in theory at least - it goes forever!  And to make an infinite loop, we simply make the boolean expression True by using the value ``True``.
 
-To see this in action, start a new file window and type in the following::
+To see this in action, start a new file window and type in the following:
+
+.. code:: python
+    :pythontest: compile
 
     while True:
         print('Help, I\'m stuck in a loop!')
@@ -19,7 +22,10 @@ Save it as adder.py, and see what happens.  It should keep printing out the *Hel
 
 Clearly, we need a better way of breaking out of the loop than relying on the user to do it for us.  This is where the ``break`` keyword comes in, combined with what we know already about the ``while`` loop and the ``if`` statement to make a selection.
 
-Therefore, modify your adder.py program like so::
+Therefore, modify your adder.py program like so:
+
+.. code:: python
+    :pythontest: compile
 
     while True:
         name = input('What is your name, or type stop to quit: ')

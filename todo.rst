@@ -47,7 +47,7 @@ More code::
 
 .. code:: python
 
-    this_will_not_break
+    this_will_not_break = 1
 
 
 

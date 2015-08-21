@@ -2,13 +2,42 @@ from docutils import nodes, writers
 from collections import defaultdict
 
 
+class Mode:
+    def __init__(self, compile, run, output):
+        self.compile = compile
+        self.run = run
+        self.output = output
+
+    def __bool__(self):
+        return self.compile
+
+    def __str__(self):
+        return "<Mode compile={} run={} output={}>".format(self.compile, self.run, self.output)
+
+
+MODES = {"off": Mode(False, False, False),
+         "none": Mode(False, False, False),
+
+         "compile": Mode(True, False, False),
+         "norun": Mode(True, False, False),
+
+         "run": Mode(True, True, False),
+         "noexc": Mode(True, True, False),
+         "nooutput": Mode(True, True, False),
+
+         "on": Mode(True, True, True),
+         "output": Mode(True, True, True),
+         "all": Mode(True, True, True),
+         }
+
+
 class Translator(nodes.NodeVisitor):
     def __init__(self, document, builder):
         nodes.NodeVisitor.__init__(self, document)
         self.builder = builder
         self.sectionlevel = 0
         self.start = True
-        self.pythontest = True
+        self.pythontest = MODES["on"]
         self.chapters = []
         self.chapter = ""
         self.saved_pythontest_state = []
@@ -19,11 +48,11 @@ class Translator(nodes.NodeVisitor):
             yield chapter, self.code_bits[chapter]
 
     def trace(self):
-        #print("Pythontest current state:", "ON" if self.pythontest else "OFF")
+        #print("Pythontest current state:", self.pythontest)
         pass
 
     def visit_pythontest(self, node):
-        self.pythontest = node["on"]
+        self.pythontest = node["mode"]
         self.trace()
         raise nodes.SkipNode
 
@@ -39,12 +68,12 @@ class Translator(nodes.NodeVisitor):
 
     def visit_literal(self, node):
         if self.pythontest:
-            self.code_bits[self.chapter].append((False, node.astext()))
+            self.code_bits[self.chapter].append((False, self.pythontest, node.astext()))
         raise nodes.SkipNode
 
     def visit_literal_block(self, node):
         if self.pythontest:
-            self.code_bits[self.chapter].append((True, node.astext()))
+            self.code_bits[self.chapter].append((True, self.pythontest, node.astext()))
         raise nodes.SkipNode
 
     visit_doctest_block = visit_literal_block

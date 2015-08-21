@@ -53,7 +53,7 @@ But not all functions take one argument. An example of a function that takes two
 When the number of decimal places to round to is greater then the precision of the number to round, ``round`` does nothing. ``round`` can also take a negative number of decimal places, like scientific notation (or standard form)::
 
     >>> round(12345.6, -1)
-    12340.0
+    12350.0
     >>> round(12345.6, -3)
     12000.0
 
@@ -80,14 +80,20 @@ Lots! Some functions take any number of arguments. ``min`` is a function that ta
     >>> min(0.5, 0.125)
     0.125
 
-If you don't give ``min`` enough arguments, Python gives an error::
+If you don't give ``min`` enough arguments, Python gives an error:
+
+.. code:: python
+    :pythontest: compile
 
     >>> min()
     Traceback (most recent call last):
     File "<stdin>", line 1, in <module>
     TypeError: min expected 1 arguments, got 0
 
-Other functions also give errors if you don't give the right number of arguments::
+Other functions also give errors if you don't give the right number of arguments:
+
+.. code:: python
+    :pythontest: compile
 
     >>> abs()
     Traceback (most recent call last):

@@ -13,6 +13,7 @@ All programming languages, including Python, have a similar feature. Instead of 
 For example, the initial sum we worked on in the previous chapter::
 
   >>> 10 + 20
+  30
   
 Python will evaluate this sum, give you the result, but it will not save it anywhere.  It effectively throws the answer away.
 
@@ -29,12 +30,14 @@ What this does is take the integer values 10 and 20, with the addition operator 
 We can then recall the value stored against this name later.  For example::
 
   >>> M + 5
+  35
   
 You will see it gives an answer of 35.  The variable name ``M`` refers to 30 (from the addition of 10 and 20 above), and then we are adding a further 5 to it, giving 35.
 
 If we now try::
 
   >>> M + 10
+  40
   
 You will notice it results in 40.  It does not take the previous result of 35 and add on 10, as we did not store that back into ``M``, but simply recalled the value of ``M`` and used it as before.
 
@@ -47,6 +50,7 @@ This changes ``M`` once more, using it on the right (recalling ``M``, being 30, 
 To see what the new value of ``M`` is, just type ``M``::
 
   >>> M
+  40
   
 This gives 40, as expected (30 plus 10, as above).
 
@@ -67,6 +71,7 @@ Try this, so one variable makes use of two others::
   >>> b = 20
   >>> c = a + b
   >>> c
+  30
   
 And this::
 
@@ -74,6 +79,7 @@ And this::
   >>> second_num = 456
   >>> third_num = first_num * second_num
   >>> third_num
+  56088
   
 And arithmetic operators can be used that we learnt in our previous chapter::
 
@@ -81,6 +87,7 @@ And arithmetic operators can be used that we learnt in our previous chapter::
   >>> B2 = A1 - 4
   >>> C3 = B2 / 2 * 3
   >>> C3 + A1
+  69.0
 
 That last line displays the value of ``C3``, calculated from the value of ``B2``, and adds on the value of ``A1``.
 

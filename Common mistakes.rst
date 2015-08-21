@@ -8,25 +8,25 @@ Forgetting to open / close quotation marks
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print("Hello, World!)              |     print("Hello, World!")             |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print(Hello!')                     |     print('Hello!')                    |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print('Your name is, name)         |     print('Your name is', name)        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print('Name', name, 'age, age)     |     print('Name', name, 'age', age)    |
 |                                        |                                        |
@@ -39,13 +39,13 @@ Using quotation marks insides quotes
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print('St. Michael's School')      |     print('St. Michael\'s School')     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print("His name was "fred"")       |     print("His name was \"fred\"")     |
 |                                        |                                        |
@@ -58,31 +58,31 @@ Not using commas between items
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print('Hello your name is' name)   |     print('Hello your name is', name)  |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print(10 20 30 40)                 |     print(10, 20, 30, 40)              |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     months = ['jan' 'feb' 'mar']       |     months = ['jan', 'feb', 'mar']     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     num1 num2 = 10 20                  |     num1, num2 = 10, 20                |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     num1 num2 = num2 num1              |     num1, num2 = num2, num1            |
 |                                        |                                        |
@@ -95,28 +95,28 @@ Spelling or capitalisation mistakes
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     pront(10 + 20)                     |      print(10 + 20)                    |
 |     Print(10 + 20)                     |      print(10 + 20)                    |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     number = 10                        |      number = 10                       |
 |     print(numbre)                      |      print(number)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     pen = turtle.pen()                 |      pen = turtle.Pen()                |
 |     pen.beginfill()                    |      pen.begin_fill()                  |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     s = 'good morning'                 |      s = 'good morning'                |
 |     print(s.titel())                   |      print(s.title())                  |
@@ -130,14 +130,14 @@ Using variables before defining them
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     num1 = 10                          |     num1, num2 = 10, 20                |
 |     print(num1, num2)                  |     print(num1, num2)                  |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     while count < 10:                  |     count = 0                          |
 |         print(count)                   |     while count < 10:                  |
@@ -153,19 +153,19 @@ Using invalid variable names
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     100_num = 100                      |     num_100 = 100                      |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     a$ = 10                            |     a = 10                             |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     first number = 123                 |     first_number = 123                 |
 |                                        |                                        |
@@ -178,13 +178,13 @@ Setting variables
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     101 = number                       |     number = 101                       |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     num1, num2 = 5                     |     num1 = num2 = 5                    |
 |                                        |                                        |
@@ -197,7 +197,7 @@ Using modules before importing them
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     num = random.randint(1, 100)       |     import random                      |
 |                                        |     num = random.randint(1, 100)       |
@@ -211,7 +211,7 @@ Not converting to integers when performing arithmetic
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     age = input('Age? ')               |     age = input('Age? ')               |
 |     print(age + 10)                    |     print(int(age) + 10)               |
@@ -225,21 +225,21 @@ Forgetting the colon ``:`` at the end of compound statements
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     if num > 10                        |     if num > 10:                       |
 |         print(num)                     |         print(num)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     for num in range(10)               |     for num in range(10):              |
 |         print(num)                     |         print(num)                     |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     while num < 10                     |     while num < 10:                    |
 |         print(num)                     |         print(num)                     |
@@ -247,7 +247,7 @@ Forgetting the colon ``:`` at the end of compound statements
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     def say_hello()                    |     def say_hello():                   |
 |         print("Hello!")                |         print("Hello!")                |
@@ -261,7 +261,7 @@ Using the assignment operator instead of comparison operator
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     if num = 10:                       |     if num == 10:                      |
 |         print(num)                     |         print(num)                     |
@@ -275,13 +275,13 @@ Not forming expressions properly
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |     :pythontestoff:                    |
+|     :pythontest: off                   |     :pythontest: off                   |
 |                                        |                                        |
 |     if ch == 'A' or 'B':               |     if ch == 'A' or ch == 'B':         |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |     :pythontestoff:                    |
+|     :pythontest: off                   |     :pythontest: off                   |
 |                                        |                                        |
 |     if a and b > 10:                   |     if (a > 10) and (b > 10):          |
 |                                        |                                        |
@@ -294,25 +294,25 @@ Unnecessarily testing expressions against ``0``, ``True``, ``False``, ``None`` o
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |     :pythontestoff:                    |
+|     :pythontest: off                   |     :pythontest: off                   |
 |                                        |                                        |
 |     if a != 0 and b != 0:              |     if a and b:                        |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |     :pythontestoff:                    |
+|     :pythontest: off                   |     :pythontest: off                   |
 |                                        |                                        |
 |     if a == 0 and str == '':           |     if not a and not s:                |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |    :pythontestoff:                     |
+|     :pythontest: off                   |    :pythontest: off                    |
 |                                        |                                        |
 |     if a == True:                      |     if a:                              |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |     :pythontestoff:                    |
+|     :pythontest: off                   |     :pythontest: off                   |
 |                                        |                                        |
 |     if a == False:                     |     if not a:                          |
 |                                        |                                        |
@@ -325,25 +325,25 @@ Getting the number of brackets wrong in an expression
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print(2 + (4 * (8 / (10 / 5))      |     print(2 + (4 * (8 / (10 / 5))))    |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print(((10 + 20) ** 2)             |     print(((10 + 20) ** 2))            |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print((10 + 20) / 8 / 4))          |     print((10 + 20) / (8 / 4))         |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     nums = [10, 20, [40, 50]           |     nums = [10, 20, [40, 50]]          |
 |                                        |                                        |
@@ -356,7 +356,7 @@ Indexing past the end of lists
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     names = ['fred', 'bob', 'tom']     |     names = ['fred', 'bob', 'tom']     |
 |     print(names[3])                    |     if 3 < len(names):                 |
@@ -371,27 +371,27 @@ Forgetting the brackets when calling a function
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     int                                |     int()                              |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     pen = turtle.Pen                   |     pen = turtle.Pen()                 |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print(math.sqrt 144)               |     print(math.sqrt(144))              |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
-|     print(int 1010101, 2)              |     print(int(10101010, 2))            |
+|     print(int '1010101', 2)            |     print(int('10101010', 2))          |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
@@ -402,19 +402,19 @@ Using variable names reserved by Python
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     for = 10                           |     for_num = 10                       |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     if = 100                           |     if_num = 100                       |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     while = 'fred'                     |     while_str = 'fred'                 |
 |                                        |                                        |
@@ -427,7 +427,7 @@ Getting the indentation wrong
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     print('Hello there')               |     print('Hello there')               |
 |         print('How are you?')          |     print('How are you?')              |
@@ -435,7 +435,7 @@ Getting the indentation wrong
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     for num in range(10):              |      for num in range(10):             |
 |     print(num)                         |          print(num)                    |
@@ -443,7 +443,7 @@ Getting the indentation wrong
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     if a == 10:                        |     if a == 10:                        |
 |         print('a is 10')               |         print('a is 10')               |
@@ -452,7 +452,7 @@ Getting the indentation wrong
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     if a == 10:                        |     if a == 10:                        |
 |         print('a is 10')               |         print('a is 10')               |
@@ -469,7 +469,7 @@ Using an ``elif`` or ``else`` without an ``if``
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     a = 10                             |     a = 10                             |
 |     elif a > 10:                       |     if a == 10:                        |
@@ -488,7 +488,7 @@ Getting stuck in a loop
 | Bad                                    | Good                                   |
 +========================================+========================================+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |                                        |
 |                                        |                                        |
 |     num = 0                            |     num = 0                            |
 |     while num < 10:                    |     while num < 10:                    |
@@ -497,7 +497,7 @@ Getting stuck in a loop
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
-|     :pythontestoff:                    |                                        |
+|     :pythontest: off                   |     :pythontest: compile               |
 |                                        |                                        |
 |     while True:                        |     while True:                        |
 |         name = input('Name? ')         |         name = input('Name? ')         |

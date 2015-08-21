@@ -22,17 +22,19 @@ So, to include another program, we must use the ``import`` command, and give it 
 
 Therefore, to use the math (for mathematics) module, you would type::
 
-  >>> import math
+    >>> import math
   
 and then you can use it thereafter, such as the square root function::
 
-  >>> math.sqrt(64)
+    >>> math.sqrt(64)
+    8.0
   
 which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the ``.`` (period) character - it separates the module name (``math``) from the function being used (``sqrt``).
 
 Here is another example - using the value of pi as defined as a variable by the math module::
 
-  >>> math.pi
+    >>> math.pi
+    3.141592653589793
 
 Stick your head out of the shell
 --------------------------------
@@ -41,9 +43,12 @@ So let us get back to our drawing.  To import the turtle module, you just need t
 
   >>> import turtle
   
-Now we can begin to use it.  The first thing to do is to get our window onto the screen.  This is used to display our canvas (or graph paper), so that we can begin our drawing.  This is done by calling the Turtle function::
+Now we can begin to use it.  The first thing to do is to get our window onto the screen.  This is used to display our canvas (or graph paper), so that we can begin our drawing.  This is done by calling the Turtle function:
 
-  >>> turtle.Turtle()
+.. code:: python
+    :pythontest: nooutput
+
+    >>> turtle.Turtle()
   
 At first you may find this confusing - ``turtle`` (with a lowercase 't') is the module name, and ``Turtle`` (with an uppercase 't') is the function that creates the drawing window.  Please do not confuse the two - the function name begins with a CAPITAL letter!
 
@@ -51,33 +56,33 @@ You should see a new window pop up onto the screen.  Move it so it does not obsc
 
 We are now ready to get drawing.  Try typing the following in order::
 
-  >>> turtle.forward(100)
+    >>> turtle.forward(100)
   
 See how the small shape leaves a trail behind as it moves.  Let us carry on::
 
-  >>> turtle.left(90)
-  >>> turtle.forward(100)
-  >>> turtle.left(90)
-  >>> turtle.forward(100)
-  >>> turtle.left(90)
-  >>> turtle.forward(100)
-  >>> turtle.left(90)
+    >>> turtle.left(90)
+    >>> turtle.forward(100)
+    >>> turtle.left(90)
+    >>> turtle.forward(100)
+    >>> turtle.left(90)
+    >>> turtle.forward(100)
+    >>> turtle.left(90)
   
 We have drawn a box!  We have effectively done the same thing four times - moved forward 100 places (measured in *pixels*, which stands for picture elements), and then turned left 90 degrees.
 
 If you make a mistake, you can go back a turn, or *undo* your previous move, by typing the following::
 
-  >>> turtle.undo()
+    >>> turtle.undo()
   
 There are lots of other functions to call as well.  Try the following::
 
-  >>> turtle.circle(75)
-  >>> turtle.right(30)
-  >>> turtle.forward(50)
-  >>> turtle.begin_fill()
-  >>> turtle.circle(40)
-  >>> turtle.end_fill()
-  
+    >>> turtle.circle(75)
+    >>> turtle.right(30)
+    >>> turtle.forward(50)
+    >>> turtle.begin_fill()
+    >>> turtle.circle(40)
+    >>> turtle.end_fill()
+
 The ``begin_fill`` must be called before you start drawing your shape, and the ``end_fill`` function is called when the shape is complete.  Then the turtle code knows what to fill in.
 
 Here is a list of turtle functions you may find useful: ``forward``, ``left``, ``right``, ``up``, ``down``, ``goto``, ``begin_fill``, ``end_fill`` and ``undo``.

@@ -18,18 +18,24 @@ Python does this by using the ``random`` module.  We will get to know this by fi
 We can list what functions the random module offers by using the ``dir`` function::
 
     >>> dir(random)
-    
+    ['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_BuiltinMethodType', '_MethodType', '_Sequence', '_Set', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_acos', '_ceil', '_cos', '_e', '_exp', '_inst', '_log', '_pi', '_random', '_sha512', '_sin', '_sqrt', '_test', '_test_generator', '_urandom', '_warn', 'betavariate', 'choice', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate']
+
+.. pythontest:: run
+
 We can then experiment with some of its functions.  Try calling the ``random`` module's ``random`` function (random module, random function), a few times::
 
     >>> random.random()
     >>> random.random()
     >>> random.random()
     
-**Note:** you can repeat a command in the interactive shell by using the up arrow key on your keyboard, and pressing the Return key.  This brings the lines down onto your current line, allowing you change it.  Execute that statement by pressing return again.
+.. note:: You can repeat a command in the interactive shell by using the up arrow key on your keyboard, and pressing the Return key.  This brings the lines down onto your current line, allowing you change it.  Execute that statement by pressing return again.
 
 Run this line a few time with the note above.  See how it always returns a number that is between 0.0 and 1.0, but hardly ever the same exact number.  See if you can get it to repeat a number - it is not easy!
 
-In fact, let's use our new found knowledge on looping to see how this random number changes every time you ask for it.  So type the following into the interactive shell::
+In fact, let's use our new found knowledge on looping to see how this random number changes every time you ask for it.  So type the following into the interactive shell:
+
+.. code::
+    :pythontest: compile
 
     while True:
         random.random()
@@ -53,7 +59,9 @@ Try any end number you like, although the number must be above zero.  You can al
     >>> random.randrange(10, 20)
     >>> random.randrange(50, 100)
     >>> random.randrange(1000, 2000)
-    
+
+.. pythontest:: on
+
 The number returned is always between the numbers you give, including the start number, but excluding the end number.
 
 A guessing game
@@ -65,7 +73,7 @@ Now we can use this knowledge to construct a simple game, where the program come
     
     number_to_guess = random.randrange(1, 101)
     
-We have imported the random module, in order to use it within our guess.py program, and asked for a random number between 1 and 101 (1 and 100, inclusive, not including 101) and stored it against a variable name *number_to_guess*.  Now we add the loop to give the user 6 tries at guessing, so add he following::
+We have imported the random module, in order to use it within our guess.py program, and asked for a random number between 1 and 101 (1 and 100, inclusive, not including 101) and stored it against a variable name ``number_to_guess``.  Now we add the loop to give the user 6 tries at guessing, so add he following::
 
     num_tries = 0
     while num_tries < 6:

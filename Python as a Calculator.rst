@@ -29,12 +29,14 @@ Using the first example, the Python code is very simple.
 Bring up your Python interactive shell, as described in chapter 0, and type the following::
 
     >>> 10 + 20
+    30
 
 and press the Return or Enter key on your keyboard.  You should see the number 30 displayed below.
 
 How about the second example.  Let us try this::
 
     >>> 10 + 20 - 4 / 2 * 3
+    24.0
     
 Firstly, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.
 
@@ -45,6 +47,7 @@ Remember, like proper Maths, a computer language does not work out the sum from 
 To enforce a different order, you can use brackets.  Just like in Maths.  Put a set of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
     >>> (10 + 20 - 4) / 2 * 3
+    39.0
 
 Operator overload
 -----------------
@@ -52,28 +55,34 @@ Operator overload
 On your calculator there are more than 4 buttons.  There is one labelled x\ :superscript:`2`\ . And x\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
 
     >>> 9 ** 2
+    81
 
 Which is 81. 2 to the power of 3 is::
 
     >>> 2 ** 3
+    8
 
 Which is 8. This works for any power. Ever wanted to know what 19\ :superscript:`8` is? Ask Python::
 
     >>> 19 ** 8
+    16983563041
 
 Python says 16983563041. Satisfied now? Even negative powers work. Remember that 2\ :superscript:`-1` is the same as 1 ÷ 2? So does Python::
 
     >>> 2 ** -1
+    0.5
 
 Gives 0.5.
 
 Now for something your calculator cannot do. Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (for short 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor division, but don't worry about long names) operator::
 
     >>> 7 // 3
+    2
 
 Which should be 2. And for the remainder, use the ``%`` (modulus) operator::
 
     >>> 7 % 3
+    1
 
 Gives 1.
 

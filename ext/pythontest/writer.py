@@ -1,15 +1,54 @@
 from docutils import nodes, writers
 from sphinx.util.console import *
 from . import translator
+import sys
+import builtins
+import io
+
+
+class FakeTurtle:
+    def forward(self, *a): pass
+    def right(self, *a): pass
+    def left(self, *a): pass
+    def circle(self, *a): pass
+    def undo(self, *a): pass
+    def begin_fill(self, *a): pass
+    def end_fill(self, *a): pass
+    def Turtle(self, *a): pass
+    def Pen(self, *a): return self
+
+sys.modules["turtle"] = FakeTurtle()
 
 
 class Writer(writers.Writer):
-
     supported = ('sphinxlatex',)
-
     settings_defaults = {}
-
     output = None
+    passed = True, "Passed", ""
+    stdout = io.StringIO()
+    static_builtins = builtins.__dict__.copy()
+
+    def input(prompt=""):
+        prompt = prompt.strip().lower()
+        if "stop" in prompt:
+            return "stop"
+        elif "age" in prompt or "number" in prompt:
+            return "10"
+        elif "name" in prompt:
+            return "quit"
+        return ""
+
+    def pre_test(self):
+        self.stdout = io.StringIO()
+        self.old_stdout = sys.stdout
+        sys.stdout = self.stdout
+
+    def post_test(self):
+        sys.stdout = self.old_stdout
+
+    static_builtins.update({"input": input,
+                            "help": lambda *a: None})
+    static_ns = {"__builtins__": static_builtins}
 
     def __init__(self, builder):
         writers.Writer.__init__(self)
@@ -29,12 +68,12 @@ class Writer(writers.Writer):
         for chapter, code_bits in visitor.result():
             self.print(chapter, "=" * len(chapter), sep="\n")
             tests = minor_fails = major_fails = 0
-            for major, code in code_bits:
+            for major, mode, code in code_bits:
                 tests += 1
                 if ">>>" in code:
-                    succeeded, error, detail = self.test_interactive(code)
+                    succeeded, error, detail = self.test_interactive(code, mode)
                 else:
-                    succeeded, error, detail = self.test_static(code)
+                    succeeded, error, detail = self.test_static(code, mode)
                 if not succeeded:
                     if major:
                         self.fails.append((chapter, code, error, detail))
@@ -83,24 +122,65 @@ class Writer(writers.Writer):
         except BaseException as e:
             return False, "Compilation failure", "{} - {}".format(type(e).__name__, str(e))
 
-    def test_interactive(self, code):
+    def test_interactive(self, code, mode):
         section = output = ""
+        parts = []
         for line in code.split("\n") + [">>> "]:
             if line.startswith(">>> "):
                 if section:
-                    compiled, error, detail = self.compile(section, try_eval=True)
-                    if not compiled:
-                        return False, error, detail
+                    parts.append((section, output.strip()))
                     section = output = ""
                 section += line[4:] + "\n"
             elif line.startswith("... "):
                 section += line[4:] + "\n"
             else:
                 output += line + "\n"
-        return True, "Passed", ""
 
-    def test_static(self, code):
+        if not mode.compile:
+            return self.passed
+
+        for code, output in parts:
+            compiled, error, detail = self.compile(code, try_eval=True)
+            if not compiled:
+                return False, error, detail
+
+            if not mode.run:
+                continue
+            self.pre_test()
+            try:
+                res = eval(detail, self.static_ns, self.static_ns)
+            except BaseException as e:
+                self.post_test()
+                return False, "Execution failure", "{} - {}".format(type(e).__name__, str(e))
+            self.post_test()
+
+            if not mode.output:
+                continue
+            if res is None:
+                res = ""
+            else:
+                res = repr(res).strip()
+            res = self.stdout.getvalue() + res
+            if res != output:
+                return False, "Output failure", "'{}' (real) != '{}' (supposed)".format(res, output)
+
+        return self.passed
+
+    def test_static(self, code, mode):
+        if not mode.compile:
+            return self.passed
+
         compiled, error, detail = self.compile(code)
-        if compiled:
-            return True, "Passed", ""
-        return False, error, detail
+        if not compiled:
+            return False, error, detail
+
+        if not mode.run:
+            return self.passed
+        self.pre_test()
+        try:
+            exec(detail, self.static_ns, self.static_ns)
+        except BaseException as e:
+            self.post_test()
+            return False, "Execution failure", "{} - {}".format(type(e).__name__, str(e))
+        self.post_test()
+        return self.passed
