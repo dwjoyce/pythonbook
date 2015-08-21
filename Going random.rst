@@ -29,6 +29,13 @@ We can then experiment with some of its functions.  Try calling the ``random`` m
 
 Run this line a few time with the note above.  See how it always returns a number that is between 0.0 and 1.0, but hardly ever the same exact number.  See if you can get it to repeat a number - it is not easy!
 
+In fact, let's use our new found knowledge on looping to see how this random number changes every time you ask for it.  So type the following into the interactive shell::
+
+    while True:
+        random.random()
+
+Just like in the previous chapter on infinite loops, you will have to press the ``Ctl`` and ``C`` keys together on your keyboard to break out of the loop manually.  It will probably go so fast, that only by breaking out of the loop will you be able to look at the numbers properly.  If this doesn't work, then make sure you have imported the random module first.
+
 Let's try another function - ``randrange`` - this time, instead of returning a number between 0.0 and 1.0 (which could be scaled up, if needs be), this time it will return an integer up to (but not including) the number you give it.  For example, try the following a few times::
 
     >>> random.randrange(100)
