@@ -1,4 +1,4 @@
-script: bash ./test.sh
+script: bash ./travis.sh
 
 env:
   global:
