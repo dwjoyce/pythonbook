@@ -55,7 +55,67 @@ To explain what is going on - the ``for`` keyword is telling Python that *for ea
 Ranges
 ------
 
+However, it is a bit of a chore to have to type out the contents of our lists all the time.  Typing in ten numbers is one thing.  What if we wanted to have a list with a 1,000 numbers?  Or a million?  Not only would this be very time consuming (and also make our programs very large), it would also be rather error prone.  Think about typing in a few thousand numbers, and then make a single mistake!  You might not even notice at the time, but later when it is causing trouble elsewhere!
 
+It is useful then that Python provides a function to give us a list of numbers in the way we want them.  It is called ``range``, and given its name, it simply provides a range of numbers as a list.  Let's do the above program again using this ``range`` function::, 
+
+    >>> for num in range(10):
+    ...     print(num)
+    
+Even shorter than before, now that we are using the ``range`` function to do the typing for us.  Usually, it just take one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4], that is, 5 numbers starting with 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
+
+If you don't want to start from 0, then you need to pass in two numbers - a starting point and an end point.  For example, if you want the number between 100 and 200, you simply ask for ``range(100, 200)``; for numbers between -100 and 50, you ask for ``range(-100, 50)``.
+
+The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the *step*.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200:
+
+    >>> for num in range(100, 200, 2):
+    ...    print(num)
+
+The variable used to step through the list can be called anything you like.  It is a little different to how we have defined variables up until now which is by using the assignment operator::
+
+    >>> num = 10
+    >>> number = 20
+    >>> my_int = 123
+    
+The ``for`` loop defines it for us as part of the ``for`` statement, but just like with ordinary variables, we can call it what we want to::
+
+    >>> for item in range(10):
+    ...    print(item)
+    >>> for counter in range(100):
+    ...    print(counter)
+        
+And you don't need to use it all, of course.  It is used to just step through the list - what you do with it is up to you::
+
+    >>> for num in range(10):
+    ...    print('Going round and round 10 times!')
+
+Finally, the list the for loop steps over need not be a list of numbers.  It can be a list containing anything you like.  Try this::
+
+    >>> names = ['Bilbo', 'Gandalf', 'Thorin', 'Golum']
+    >>> for name in names:
+        print('Enjoy your adventure', name)
+        
+Again, as in chapter 15 on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step over and work with the block of code you provide.
+
+Drawing
+-------
+
+Let's put this knowledge to use to draw a shape using turtle.  Open a new file window and type in the following::
+
+    import turtle
+
+    turtle.Turtle()
+
+    turtle.fillcolor('red')
+    turtle.begin_fill()
+
+    for side in range(8):
+        turtle.forward(50)
+        turtle.left(45)
+    
+    turtle.end_fill()
+
+Explanation: we import the turtle module so that we can use it in our program; we create the canvas to draw on by calling the ``Turtle`` function; we then set the filling colour as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.  Much easier than before than either using a sequence of statements, or even when we were using ``while`` loops.
 
 Exercises
 ---------
@@ -69,4 +129,4 @@ Things to remember
 
 1. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The *for* keyword can be read as *for each* if that makes its easier to understand.
 
-2. Use the ``range`` function to provide a sequence of number to step through.
+2. Use the ``range`` function to provide a sequence of number to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
