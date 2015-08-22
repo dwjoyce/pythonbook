@@ -62,7 +62,7 @@ You can even get Python to sort a list in any order you wish.  Try this out::
 
     numbers = [15, 5, 35, 10, 25, 20, 30]
     print(sorted(numbers))
-    print(sorted(l, reverse=True))
+    print(sorted(numbers, reverse=True))
     
 The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but we an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 18 when we create our own functions for the first time.
 
@@ -72,10 +72,12 @@ List can also be modified after they have been defined by using the ``append``, 
     print(names)
     names.append('Pippin')
     print(names)
-    names.insert('Merry', 0)
+    names.insert(0, 'Merry')
     print(names)
     del names[1]
     print(names)
+    
+.. todo:: Perhaps the previous section on modifying lists should be in the slicing chapter.
 
 We can split a sentence into a lit of words using the split command::
 
