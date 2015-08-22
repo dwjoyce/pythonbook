@@ -27,6 +27,6 @@ matrix:
 notifications:
   email:
     recipients:
-      - secure: "PZlFKxxVIEi1tzvOsVdAMcVfBnSvzjX/JHcGzF/9c277eiPvpQK+G8lEBoQ9upDwkSiFbEHTXaxdYXN+zk7qjmBu/6mUQ219GiKA6RjnGahKV7zhUXtpnfKZxmR8VMTeCBMGrOhMwxl/Pk8D659x2ShJQBn3/9KmwyfNBpp7eIgQnYr2YBYGFPUXPKnpdNlaBiBzlkHzJ9MOYATwlrPkQAT22OWHVmP7lGchcy70G4s5jhxeFPtDiTXuMGXyjcQN9W8qnSYYbcXF2C6dGpbcJmLulaGe2nJjf0hR/3AL4dpTJGRNaJhX+Jt2Vns4vGX47C3JZ/N4njW5L3YGHgXTtbmHgwMUu+vPAYlwQITiiv1TnaTqI3veUKqmjwDBgtM8sOiEJ//ODk/KOzAVlx+sOOldaCstK5evNIdCcnwC+ltMpbWBj8t7EZtUjG2ga74vJMTaA4DPWE1k4VhQ85tAsjxmAOePmR9ESn5RKrvEAZkuus+8c+xjYRUPc00XEezkJ5eFV5LQevhONdE3RavpAT/lCWqUAc3MXJ5n+RPEXzMjbO1lyFmgSpOnLq8bpVBQq5frkEb7lmnGF/QGyGy3YNSDCDRWm4nAQEnYwKCV6dGa+QRRlDUkljNO/o84U0kLxJcPM6FzpeBAZnSDidRW445PdpdYdiLkUb4Woe1qezc="
+      - $GH_EMAIL
     on_success: never
     on_failure: always
