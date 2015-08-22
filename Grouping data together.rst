@@ -38,7 +38,7 @@ This list is a sequence containing four strings - the names 'fred', 'bob', 'harr
     my_floats = [2.5, 17.2, -1.7, 123.9]
     my_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
     
-The last one is slightly complicated - it is a list containing four sub-lists, each of which contains three integers.  A list of lists, or sometimes referred to as a *matrix*.  The data can even be mixed, although this does not always make sense.  Try this::
+Notice how the contents of the list can be in any order you wish, although it can be sorted later.  The last one is slightly complicated - it is a list containing four sub-lists, each of which contains three integers.  A list of lists, or sometimes referred to as a *matrix*.  The data can even be mixed, although this does not always make sense.  Try this::
 
     my_stuff = ['bacon', 123, 99.5, [1, 44.2, 'fred']]
     
@@ -57,7 +57,26 @@ And other functions, ``min`` and ``max``, will give the minimum and maximum valu
     numbers = [10, 123, 40, 89, 65]
     min(numbers)
     max(numbers)
+
+You can even get Python to sort a list in any order you wish.  Try this out::
+
+    numbers = [15, 5, 35, 10, 25, 20, 30]
+    print(sorted(numbers))
+    print(sorted(l, reverse=True))
     
+The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but we an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 18 when we create our own functions for the first time.
+
+List can also be modified after they have been defined by using the ``append``, ``insert`` and ``del`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well), and del is a built-in function to get rid of a variable (or part of a list, in this case).  We will cover how to index lists properly in the next chapter.  To see how this works, try out the following::
+
+    names = ['Bilbo', 'Frodo', 'Sam']
+    print(names)
+    names.append('Pippin')
+    print(names)
+    names.insert('Merry', 0)
+    print(names)
+    del names[1]
+    print(names)
+
 We can split a sentence into a lit of words using the split command::
 
     sentence = 'Mary had a little lamb'
@@ -79,9 +98,9 @@ We can also find out whether a value is a member of a list (i.e. is contained wi
     'pancake' in breakfast
     'egg' in breakfast
     
-All of these things would have been much harder to do by ourselves - Python is great at helping out in this way.
+All of these things would have been much harder to do by ourselves - Python is great at helping out in this way.  There is so much to what Python offers, but here we have at least given a brief overview.
 
-We will learn how to dip into a list to fetch individual items out of it in the next chapter.  We learn how to step over a list, one item at a time, in two chapters time.  All this will make our programs easier to write.
+As mentioned above, we will learn how to dip into a list to fetch individual items out of it in the next chapter.  We learn how to step over a list, one item at a time, in two chapters time.  All this will make our programs easier to write.
 
 Rock, Paper, Scissors
 ---------------------
