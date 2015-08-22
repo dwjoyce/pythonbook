@@ -1,4 +1,5 @@
 from docutils import nodes, writers
+from sphinx.util.console import *
 from collections import defaultdict
 
 
@@ -13,6 +14,9 @@ class Mode:
 
     def __str__(self):
         return "<Mode compile={} run={} output={}>".format(self.compile, self.run, self.output)
+
+    def __eq__(self, other):
+        return self.compile == other.compile and self.run == other.run and self.output == other.output
 
 
 MODES = {"off": Mode(False, False, False),
@@ -83,7 +87,8 @@ class Translator(nodes.NodeVisitor):
         if self.sectionlevel == 0 and isinstance(node.parent, nodes.section):
             self.chapter = node.astext()
             self.chapters.append(self.chapter)
-
+            if self.pythontest != MODES["on"]:
+                self.builder.info(yellow("Warning: pythontest mode on start of chapter {} is {}, not all".format(self.chapter, self.pythontest)))
 
     def visit_section(self, node):
         if not self.start:

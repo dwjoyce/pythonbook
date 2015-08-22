@@ -133,7 +133,7 @@ class Writer(writers.Writer):
                     parts.append((section, output.strip()))
                     section = output = ""
                 section += line[4:] + "\n"
-            elif line.startswith("... "):
+            elif line.startswith("..."):
                 section += line[4:] + "\n"
             else:
                 output += line + "\n"
