@@ -128,7 +128,7 @@ class Writer(writers.Writer):
         section = output = ""
         parts = []
         for line in code.split("\n") + [">>> "]:
-            if line.startswith(">>> "):
+            if line.startswith(">>>"):
                 if section:
                     parts.append((section, output.strip()))
                     section = output = ""
@@ -161,8 +161,9 @@ class Writer(writers.Writer):
             if res is None:
                 res = ""
             else:
-                res = repr(res).strip()
+                res = repr(res)
             res = self.stdout.getvalue() + res
+            res = res.strip()
             if res != output:
                 return False, "Output failure", "'{}' (real) != '{}' (supposed)".format(res, output)
 
