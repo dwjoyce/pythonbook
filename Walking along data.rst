@@ -10,8 +10,8 @@ For example, if we want to print out the number up to 10, then on the interactiv
 
     >>> num = 0
     >>> while num < 10:
-    >>>     print(num)
-    >>>     num = num + 1
+    ...     print(num)
+    ...     num = num + 1
     
 The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops.  Hopefully all very straightforward.
 
@@ -25,12 +25,17 @@ The name of the list is ``numbers``, and we have given it the same values as we 
 
 Now we use our new keyword ``for``, along with the ``in`` operator we first saw in chapter 15 on working out whether a value is a member of a list::
 
-    for num in numbers:
-        print(num)
+    >>> for num in numbers:
+    ...    print(num)
         
 And that is all we need to print out the numbers from the list we created.
 
-To explain what is going on - the ``for`` keyword is telling Python that *for each* item, which we have called ``num``, in the list provided, repeat this block of code.  
+To explain what is going on - the ``for`` keyword is telling Python that *for each* item, which we have called ``num``, in the list provided, then execute this block of code.  It is simply a way of stepping over a list, one item at a time.
+
+Ranges
+------
+
+
 
 Exercises
 ---------
