@@ -16,8 +16,8 @@ To achieve this in Python, we use the ``if`` statement.  We start with the word 
 
 Let us start a new program called vip.py - click on the ``File`` -> ``New File`` menu item, and type in the following::
 
-    print('Welcome to our VIP program - used to calculate cinema ticket prices')
-    print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIP tickets')
+    print('Welcome to our VIP program for calculating cinema ticket prices')
+    print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIPs')
 
     vip = input('Do you require a VIP ticket, yes or no? ')
 
@@ -34,8 +34,8 @@ Also note the use of the colon ``:`` symbol.  This is used at the end of every l
 
 We can now finish our program, so add the last line on the end so that your complete programs looks like the following::
 
-    print('Welcome to our VIP program - used to calculate cinema ticket prices')
-    print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIP tickets')
+    print('Welcome to our VIP program for calculating cinema ticket prices')
+    print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIPs')
     
     vip = input('Do you require a VIP ticket, yes or no? ')
     

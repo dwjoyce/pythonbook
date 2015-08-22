@@ -91,8 +91,8 @@ Variables can also be assigned to strings.  Add the following onto your program,
 Finally, you can use special characters in strings to denote certain things.  Here I will introduce just three of them, so add these lines to finish::
 
   print('Here is a new line character\nThis is now on a separate line!')
-  print('This is how to introduce a horizontal tab \t to space out my text')
-  print('I love St. Michael\'s school - notice the quote inside the quote!')
+  print('This introduces a horizontal tab \t to space out my text')
+  print('I love St. Michael\'s - notice the quote inside the quote!')
 
 The first one breaks the line with a new line character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
 

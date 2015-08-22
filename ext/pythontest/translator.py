@@ -73,11 +73,23 @@ class Translator(nodes.NodeVisitor):
     def visit_literal(self, node):
         if self.pythontest:
             self.code_bits[self.chapter].append((False, self.pythontest, node.astext()))
+        longest = max(map(len, node.astext().split("\n")))
+        if longest > 73:
+            self.builder.info(yellow("In chapter ") + bold("'{}'".format(self.chapter)) + yellow(":"))
+            self.builder.info("\n".join(["    " + i for i in node.astext().split("\n")]))
+            self.builder.info(yellow("Code is too wide: ") + bold("{} > 73".format(longest)))
+            self.builder.info()
         raise nodes.SkipNode
 
     def visit_literal_block(self, node):
         if self.pythontest:
             self.code_bits[self.chapter].append((True, self.pythontest, node.astext()))
+        longest = max(map(len, node.astext().split("\n")))
+        if longest > 73:
+            self.builder.info(yellow("In chapter ") + bold("'{}'".format(self.chapter)) + yellow(":"))
+            self.builder.info("\n".join(["    " + i for i in node.astext().split("\n")]))
+            self.builder.info(yellow("Code is too wide: ") + bold("{} > 73".format(longest)))
+            self.builder.info()
         raise nodes.SkipNode
 
     visit_doctest_block = visit_literal_block

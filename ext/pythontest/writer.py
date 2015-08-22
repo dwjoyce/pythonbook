@@ -14,10 +14,18 @@ class FakeTurtle:
     def undo(self, *a): pass
     def begin_fill(self, *a): pass
     def end_fill(self, *a): pass
+    def fillcolor(self, *a): pass
     def Turtle(self, *a): pass
     def Pen(self, *a): return self
 
 sys.modules["turtle"] = FakeTurtle()
+
+
+class FakeFile(list):
+    def __init__(self, *a): pass
+    def write(self, *a): pass
+    def writelines(self, *a): pass
+    def close(self, *a): pass
 
 
 class Writer(writers.Writer):
@@ -47,6 +55,7 @@ class Writer(writers.Writer):
         sys.stdout = self.old_stdout
 
     static_builtins.update({"input": input,
+                            "open": FakeFile,
                             "help": lambda *a: None})
     static_ns = {"__builtins__": static_builtins}
 

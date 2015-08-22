@@ -136,7 +136,8 @@ Start by opening up a new file window, and type in the following::
     choices = ['rock', 'paper', 'scissors']
     
     while True:
-        user_choice = input('Enter your choice, rock, paper or scissors (or stop to quit): ')
+        user_choice = input('Enter your choice, rock, paper'
+                            ' or scissors (or stop to quit): ')
         if user_choice == 'stop':
             break
 

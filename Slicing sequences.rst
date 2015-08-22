@@ -108,7 +108,8 @@ Slicing and dicing
 
 OK, we have had enough pizza to satisfy us for a lifetime. But what we have just done is useful. It is called indexing when we use only one number, and slicing when we use more than one number. The general form is ``list_or_string[start:stop:step]``. Say we have all the numbers from 0 to 20::
 
-    >>> nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    >>> nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+    ...         10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
 We can grab the first number::
 

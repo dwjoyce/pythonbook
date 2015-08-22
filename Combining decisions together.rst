@@ -64,9 +64,9 @@ For example, create a number program called numbers.py, and type in the followin
     ticket2 = input('Enter ticket number 2: ')
     ticket3 = input('Enter ticket number 3: ')
     
-    prize_number = input('What is the prize number? ')
+    prize = input('What is the prize number? ')
 
-    if ticket1 == prize_number or ticket2 == prize_number or ticket3 == prize_number:
+    if ticket1 == prize or ticket2 == prize or ticket3 == prize:
         print('We won the prize')
     else:
         print('Nevermind, maybe next time!')

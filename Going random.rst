@@ -15,12 +15,12 @@ Python does this by using the ``random`` module.  We will get to know this by fi
 
     >>> import random
 
+.. pythontest:: run
+
 We can list what functions the random module offers by using the ``dir`` function::
 
     >>> dir(random)
-    ['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_BuiltinMethodType', '_MethodType', '_Sequence', '_Set', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_acos', '_ceil', '_cos', '_e', '_exp', '_inst', '_log', '_pi', '_random', '_sha512', '_sin', '_sqrt', '_test', '_test_generator', '_urandom', '_warn', 'betavariate', 'choice', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate']
 
-.. pythontest:: run
 
 We can then experiment with some of its functions.  Try calling the ``random`` module's ``random`` function (random module, random function), a few times::
 

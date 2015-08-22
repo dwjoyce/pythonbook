@@ -12,6 +12,16 @@ For example, if we want to print out the number up to 10, then on the interactiv
     >>> while num < 10:
     ...     print(num)
     ...     num = num + 1
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
     
 The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops.  Hopefully all very straightforward.
 
@@ -27,6 +37,16 @@ Now we use our new keyword ``for``, along with the ``in`` operator we first saw 
 
     >>> for num in numbers:
     ...    print(num)
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
         
 And that is all we need to print out the numbers from the list we created.
 
