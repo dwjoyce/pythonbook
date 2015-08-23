@@ -90,10 +90,10 @@ We could test the string to see if it is a number (``str.isdigit()``), but inste
 If the user behaves, all is well::
 
     >>> try:
-    ...     your_age = int(input("Your age: "))
-    ... except:
-    ...     print("Err... No.")
-    ... 
+            your_age = int(input("Your age: "))
+        except:
+            print("Err... No.")
+        
     Your age: 99
     >>> your_age
     99
@@ -101,10 +101,10 @@ If the user behaves, all is well::
 If the user does not behave, they get told off::
 
     >>> try:
-    ...     your_age = int(input("Your age: "))
-    ... except:
-    ...     print("Err... No.")
-    ... 
+            your_age = int(input("Your age: "))
+        except:
+            print("Err... No.")
+        
     Your age: something else
     Err... No.
 
@@ -113,10 +113,10 @@ If the user does not behave, they get told off::
 This works with any code::
 
     >>> try:
-    ...     a = 2 / 0
-    ... except:
-    ...     print("Maths says no!")
-    ... 
+            a = 2 / 0
+        except:
+            print("Maths says no!")
+        
     Maths says no!
 
 
@@ -127,10 +127,10 @@ Using the ``try``-``except`` block as above work fine, but what if we only want 
 
     >>> i_do_exist = "123"
     >>> try:
-    ...     a = int(i_do_not_exist)
-    ... except:
-    ...     print("That was not a number!")
-    ... 
+            a = int(i_do_not_exist)
+        except:
+            print("That was not a number!")
+        
     That was not a number!
 
 The exception that we want to catch is a ``ValueError``:
@@ -150,10 +150,10 @@ So, instead of typing ``except:``, we can type ``except ValueError``. This will 
 
     >>> i_do_exist = "123"
     >>> try:
-    ...     a = int(i_do_not_exist)
-    ... except ValueError:
-    ...     print("That was not a number!")
-    ... 
+            a = int(i_do_not_exist)
+        except ValueError:
+            print("That was not a number!")
+        
     Traceback (most recent call last):
     File "<stdin>", line 2, in <module>
     NameError: name 'i_do_not_exist' is not defined

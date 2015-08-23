@@ -12,6 +12,7 @@ For example, if we want to print out the numbers up to 10, then on the interacti
     >>> while num < 10:
             print(num)
             num = num + 1
+
     0
     1
     2
@@ -27,6 +28,8 @@ The test is whether the variable ``num`` is less than 10.  We initially set it t
 
 However, Python has an easier way of repeating a block of code a set number of times (10 in this example).  It is the ``for`` loop, and all it does is to step through a sequence such as a list.  We have been working with lists in the previous two chapters.
 
+.. pythontest:: nooutput
+
 So let's introduce this step by step.  First define a list and give it a name using hte assignment operator::
 
     >>> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -37,16 +40,6 @@ Now we use our new keyword ``for``, along with the ``in`` operator we first saw 
 
     >>> for num in numbers:
             print(num)
-    0
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
         
 And that is all we need to print out the numbers from the list we created.  We could combine those three lines into two like this, thus avoiding the need for defining the list variable::
 
@@ -67,11 +60,11 @@ It is useful then that Python provides a function to give us a list of numbers i
     
 Even shorter than before, now that we are using the ``range`` function to do the typing for us.  Usually, it just take one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting with 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
 
-**Note:** in programming, we like to start from 0 and not from 1, just like when indexing lists.  A list called ``numbers``, the first item is referenced by an index offset from the beginning, so ``numbers[0]`` is 0 items from the beginning, so is the first item.  ``numbers[1]`` is the first item from the start, so is the second item, and so on.
+.. note:: In programming, we like to start from 0 and not from 1, just like when indexing lists.  A list called ``numbers``, the first item is referenced by an index offset from the beginning, so ``numbers[0]`` is 0 items from the beginning, so is the first item.  ``numbers[1]`` is the first item from the start, so is the second item, and so on.
 
 If you don't want to start from 0, then you need to pass in two numbers - a starting point and an end point.  For example, if you want the numbers between 100 and 200, you simply ask for ``range(100, 200)``; for numbers between -100 and 50, you ask for ``range(-100, 50)``.
 
-The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the *step*.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200:
+The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the *step*.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200::
 
     >>> for num in range(100, 200, 2):
             print(num)
@@ -93,7 +86,7 @@ The ``for`` loop defines its loop variable as part of the ``for`` statement, but
 And you don't need to use it all, of course.  It is used to just step through the list - what you do with it is up to you::
 
     >>> for num in range(10):
-    ...    print('Going round and round 10 times!')
+           print('Going round and round 10 times!')
 
 The list the for loop steps over need not be a list of numbers.  It can be a list containing anything you like.  Try this::
 
@@ -110,7 +103,9 @@ And finally, the variable to step along need not be a list - it can be any seque
     >>> word = 'rotavator'
     >>> for letter in word:
             print(letter)
-        
+
+.. pythontest:: all
+
 Again, as in chapter 15 on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step over and work with the block of code you provide.
 
 Drawing

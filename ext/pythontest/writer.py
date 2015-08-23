@@ -4,6 +4,7 @@ from . import translator
 import sys
 import builtins
 import io
+from code import compile_command
 
 
 class FakeTurtle:
@@ -63,6 +64,7 @@ class Writer(writers.Writer):
         writers.Writer.__init__(self)
         self.builder = builder
         self.returncode = 0
+        self.fails = []
 
     def print(self, *args, sep=" ", end="\n"):
         self.output += sep.join(map(str, args)) + end
@@ -71,7 +73,6 @@ class Writer(writers.Writer):
         self.builder.info()
         visitor = translator.Translator(self.document, self.builder)
         self.document.walkabout(visitor)
-        self.fails = []
         over_tests = over_minor_fails = over_major_fails = 0
         self.output = ""
 
@@ -136,16 +137,34 @@ class Writer(writers.Writer):
     def test_interactive(self, code, mode):
         section = output = ""
         parts = []
-        for line in code.split("\n") + [">>> "]:
+        code = code.split("\n")
+        while code:
+            line = code.pop(0)
             if line.startswith(">>>"):
                 if section:
                     parts.append((section, output.strip()))
                     section = output = ""
                 section += line[4:] + "\n"
-            elif line.startswith("..."):
-                section += line[4:] + "\n"
+                try:
+                    cc = compile_command(section)
+                except Exception as e:
+                    return False, "Compilation failure", "{} - {}".format(type(e).__name__, str(e))
+                else:
+                    if cc is None:
+                        while code:
+                            #if code[0].strip().startswith(">>>"):
+                                #break
+                            line = code.pop(0)
+                            if not line.strip():
+                                break
+                            if not line.startswith("    "):
+                                return False, "Compilation failure", "Invalid formatting - multiline code should be ended by a blank line (or you have used `...`)"
+                            section += line[4:] + "\n"
+                            
             else:
                 output += line + "\n"
+        if section:
+            parts.append((section, output.strip()))
 
         if not mode.compile:
             return self.passed
