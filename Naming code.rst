@@ -37,8 +37,9 @@ We have already used named sections of code - they are called *functions*.  Pyth
 
     >>> print()
     >>> print('Hello, World!')
-    >>> ord(-15)
+    >>> abs(-15)
     >>> new_num = round(10.75)
+    >>> print(len('The quick brown fox jumps over the lazy dog'))
 
 As we can see above, functions take take in values (which we have learned are called *arguments*), or not.  They can return values, not not.  It just depends on what they do, and what we want to use them for.
 
