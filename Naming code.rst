@@ -41,7 +41,7 @@ We have already used named sections of code - they are called *functions*.  Pyth
     >>> new_num = round(10.75)
     >>> print(len('The quick brown fox jumps over the lazy dog'))
 
-As we can see above, functions take take in values (which we have learned are called *arguments*), or not.  They can return values, not not.  It just depends on what they do, and what we want to use them for.
+As we can see above, functions take take in values (which we have learned are called *arguments*), or not.  They can return values, or not.  It just depends on what they do, and what we want to use them for.
 
 In this chapter, we will begin learning how to define our own functions, and not just use functions already present in the language (built-in ones), or from other programs (imported modules).
 
@@ -71,11 +71,11 @@ Open up a new file window, and type in the following::
     def say_hello():
         print('Hello there')
         
-Save your program as functions.py, and run it.  It should do nothing - as described just above, it is available to your program, but it is not being run yet.  To do that, then insert the following line beneath your program::
+Save your program as functions.py, and run it.  It should do nothing - as described just above, it is available to your program, but it is not being run yet.  To do that, insert the following line beneath your program::
 
     say_hello()
     
-Now save and run your program again - it should now print out something.  In fact, it should say hello!  Just like calling other functions, if you miss off the parentheses, then the function does not get called, it is simply referred to
+Now save and run your program again - it should now print out something.  In fact, it should say hello!  Just like calling other functions, if you miss off the parentheses, then the function does not get called, it simply gives you where it is located in memory - probably not what you intended!
 
 .. pythontest:: all
 
