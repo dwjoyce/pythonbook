@@ -4,6 +4,8 @@ Naming code
 Data and code
 -------------
 
+.. pythontest:: nooutput
+
 Variables are a way of naming data.  A piece of data, like the number *123*, can be given the name *number* like this in Python (try it in the interactive shell)::
 
     >>> number = 123
@@ -58,8 +60,8 @@ Here is an example of a bit of code that needs sections to be separated into fun
 
 Lots of repetitive code that could be parcelled up, given a name and put in one place, but called from where it is needed.  When code only needs to be written once, we tend to make less mistakes than when we have to write it lots of times.
 
-Making our own
---------------
+Rolling our own
+---------------
 
 While naming data we use the assignement operator, when naming code we use the ``def`` keyword.  This means we are *defining* a function - not calling it, but defining it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
 
@@ -73,6 +75,8 @@ Save your program as functions.py, and run it.  It should do nothing - as descri
     say_hello()
     
 Now save and run your program again - it should now print out something.  In fact, it should say hello!  Just like calling other functions, if you miss off the parentheses, then the function does not get called, it is simply referred to
+
+.. pythontest:: all
 
 Exercises
 ---------
