@@ -122,7 +122,7 @@ We can also find out whether a value is a member of a list (i.e. is contained wi
     
 All of these things would have been much harder to do by ourselves - Python is great at helping out in this way.  There is so much to what Python offers, but here we have at least given a brief overview.
 
-As mentioned above, we will learn how to dip into a list to fetch individual items out of it in the next chapter.  We learn how to step over a list, one item at a time, in two chapters time.  All this will make our programs easier to write.
+We will learn how to dip into a list to fetch individual items (or a section of the list) in the next chapter.  We learn how to step over a list, one item at a time, in two chapters time.  All this will make our programs easier to write.
 
 Rock, Paper, Scissors
 ---------------------
