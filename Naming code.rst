@@ -4,8 +4,6 @@ Naming code
 Data and code
 -------------
 
-.. pythontest:: nooutput
-
 Variables are a way of naming data.  A piece of data, like the number *123*, can be given the name *number* like this in Python (try it in the interactive shell)::
 
     >>> number = 123
@@ -36,10 +34,14 @@ Functions
 We have already used named sections of code - they are called *functions*.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses afters its name.  Try the following, again in the interactive shell::
 
     >>> print()
+    
     >>> print('Hello, World!')
+    Hello, World!
     >>> abs(-15)
+    15
     >>> new_num = round(10.75)
     >>> print(len('The quick brown fox jumps over the lazy dog'))
+    43
 
 As we can see above, functions take take in values (which we have learned are called *arguments*), or not.  They can return values, or not.  It just depends on what they do, and what we want to use them for.
 
@@ -47,7 +49,7 @@ In this chapter, we will begin learning how to define our own functions, and not
 
 But before we do, why should we bother?  Can't we just use loops instead?
 
-Loops are very useful, but only when the code to be repeated is in the same place.  Functions are useful when they are being used from a number of places, especially if they are not in related parts of your program.  They are more flexible, and offer a way of being called from anywhere - even outside your program, just like we do to other modules (e.g. turtle).  Moreover, giving pieces of your code a name makes it more understandable to those reading it, or even to you when you come back to your program in the future.
+Loops are very useful, but only when the code to be repeated is in the same place.  Functions are useful when they are being used from a number of places, especially if they are not in related parts of your program.  They are more flexible, and offer a way of being called from anywhere - even outside your program, just like we do to other modules (e.g. ``turtle``).  Moreover, giving pieces of your code a name makes it more understandable to those reading it, or even to you when you come back to your program in the future.
 
 Here is an example of a bit of code that needs sections to be separated into functions and given a name.  You don't need to type this in, it is just provided for information::
 
@@ -108,7 +110,7 @@ and insert these lines below the last call to ``say_hello_times``::
     say_message_times('Yo! ', 25)
     say_message_times('I will stop talking in class', 100)
     
-.. note:: An argument is the value or variable being passed *into* a function.  A parameter is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in 'Yo!' and 25, the function uses them as parameters.
+.. note:: An argument is the value or variable being passed *into* a function.  A parameter is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters.
 
 These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions with one that takes in two numbers, and prints out the sum::
 
@@ -127,10 +129,10 @@ These functions are very short, so may not appear very useful yet, but imagine w
 
 In the next chapter, we will discuss not only passing data into a function, but also getting data out again.
 
-.. pythontest:: all
-
 Exercises
 ---------
+
+.. todo:: Exercises for Naming code
 
 Things to remember
 ------------------
