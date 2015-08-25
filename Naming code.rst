@@ -75,7 +75,57 @@ Save your program as functions.py, and run it.  It should do nothing - as descri
 
     say_hello()
     
-Now save and run your program again - it should now print out something.  In fact, it should say hello!  Just like calling other functions, if you miss off the parentheses, then the function does not get called, it simply gives you where it is located in memory - probably not what you intended!
+Now save and run your program again - it should now print out something.  In fact, it should say hello!  Just like calling other functions, if you miss off the parentheses, then the function does not get called, it simply returns where it is located in memory - probably not what you intended!
+
+So to define a function, we use the ``def`` keyword.  To call or invoke a function, we use the name of the function followed by parentheses ``()``.
+
+Passing in data
+---------------
+
+However, a function that always does the same thing is very limited.  It is more useful to have the ability to pass information into the function, so the function can use this information on the inside, as it were.  For example, let's take the example we did above, but vary it slightly.  So type this in beneath your definition of the say_hello function in your functions.py program (i.e. not at the bottom, so as to keep your functions together, and your calls together)::
+
+    def say_hello_times(times):
+        print('Hello there' * times)
+
+Now insert this new line below your ``say_hello()`` call at the bottom of your program::
+
+    say_hello_times(5)
+
+Run it and ensure it prints out the same message, but this time 5 times.  That will be 6 times in total, with the initial call to the ``say_hello`` function as well.  Try a couple more combinations::
+
+    say_hello_times(10)
+    say_hello_times(50)
+    
+It should print out the message the number of times you are requesting.  If not, then something is very wrong!
+
+Now, of couse, if you can pass in one thing, you can pass in many.  So our next function (again, insert it between where the functions are defined and where they are being called), will take a message and a number, so the caller can specify what he wants printing::
+
+    def say_message_times(msg, times):
+        print(msg * times)
+
+and insert these lines below the last call to ``say_hello_times``::
+
+    say_message_times('Yo! ', 25)
+    say_message_times('I will stop talking in class', 100)
+    
+.. note:: An argument is the value or variable being passed *into* a function.  A parameter is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in 'Yo!' and 25, the function uses them as parameters.
+
+These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions with one that takes in two numbers, and prints out the sum::
+
+    def add_two_nums(num1, num2):
+        print(num1 + num2)
+        
+and again, lower down, we can call this function::
+
+    add_two_nums(10, 20)
+    add_two_nums(-50, 25)
+    add_two_nums(100, 200)
+    
+If you call this function with three arguments, then Python will complain - three arguments into two parameters does not go!
+
+These functions are very short, so may not appear very useful yet, but imagine writing a function that is 10 or 20 lines long, and is used in a number of places in your program.  Then your program will be much shorter, more readable and produce better results.
+
+In the next chapter, we will discuss not only passing data into a function, but also getting data out again.
 
 .. pythontest:: all
 
@@ -87,4 +137,8 @@ Things to remember
 
 1. To define a new function, use the ``def`` keyword, followed by the name of the function, and then parentheses.
 
-2. Inside the parentheses, place any parameters you are expected.  Separate each one using a comma.
+2. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.
+
+3. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any code, is indented to the right.
+
+4. Defining a function does not mean it is used - it is simply available to be used, like a tool in a toolbox.  To call or invoke a function, you must use its name, followed by parentheses, but without the ``def`` keyword.
