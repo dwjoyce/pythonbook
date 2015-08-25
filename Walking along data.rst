@@ -4,7 +4,7 @@ Walking along data
 Round and round
 ---------------
 
-Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated while that expression remains True.  It stops repeating when the expression becomes False.
+Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated while that expression remains ``True``.  It stops repeating when the expression becomes ``False``.
 
 For example, if we want to print out the numbers up to 10, then on the interactive shell we could do the following::
 
@@ -24,13 +24,13 @@ For example, if we want to print out the numbers up to 10, then on the interacti
     8
     9
     
-The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num` now equals 10, it is not less than 10.  Hopefully this is all very straightforward by now.
+The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num`` now equals 10, it is not less than 10.  Hopefully this is all very straightforward by now.
 
 However, Python has an easier way of repeating a block of code a set number of times (10 in this example).  It is the ``for`` loop, and all it does is to step through a sequence such as a list.  We have been working with lists in the previous two chapters.
 
 .. pythontest:: nooutput
 
-So let's introduce this step by step.  First define a list and give it a name using hte assignment operator::
+So let's introduce this step by step.  First define a list and give it a name using the assignment operator::
 
     >>> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     
@@ -66,7 +66,7 @@ Even shorter than before, now that we are using the ``range`` function to do the
 
 If you don't want to start from 0, then you need to pass in two numbers - a start point and an end point.  For example, if you want the numbers between 100 and 200, you simply ask for ``range(100, 200)``; for numbers between -100 and 50, you ask for ``range(-100, 50)``.
 
-The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the *step*.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200::
+The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the ``step``.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200::
 
     >>> for num in range(100, 200, 2):
             print(num)
