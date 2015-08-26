@@ -2,7 +2,6 @@ import re
 
 from pygments import lexers
 from pygments.lexers import Python3Lexer
-from pygments.lexers.agile import line_re
 
 from pygments.lexer import Lexer, RegexLexer, ExtendedRegexLexer, \
      LexerContext, include, combined, do_insertions, bygroups, using
@@ -13,6 +12,7 @@ from pygments import unistring as uni
 
 __all__ = ["Python3ConsoleLexer"]
 
+line_re  = re.compile('.*?\n')
 
 class Python3TracebackLexer(RegexLexer):
     """
