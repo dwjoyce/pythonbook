@@ -34,7 +34,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.pngmath',
     'ext.inlinesyntaxhighlight',
-    'ext.pythontest'
+    'ext.pythontest',
+    'lexer'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -94,7 +95,7 @@ exclude_patterns = ['build']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'style.TheStyle'
 
-highlight_language = 'python3'
+highlight_language = 'py3con'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []

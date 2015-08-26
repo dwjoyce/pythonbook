@@ -10,7 +10,7 @@ In Python, we encounter many errors, also known in Python as *exceptions*. We ha
 
     >>> 200 / 0
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     ZeroDivisionError: division by zero
 
 Syntax errors::
@@ -25,23 +25,23 @@ Errors with functions::
 
     >>> input("I'm", "not working")
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     TypeError: input expected at most 1 arguments, got 2
 
 And all sorts of other errors::
 
     >>> 1 + "two"
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     TypeError: unsupported operand type(s) for +: 'int' and 'str'
     >>> error += 1
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     NameError: name 'error' is not defined
     >>> lst = ["more", "bad", "bugs"]
     >>> lst[5]
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     IndexError: list index out of range
 
 Some common Python exceptions:
@@ -75,7 +75,7 @@ Say we have some code that could produce an error::
 If the user types a number, it works fine. But if the user types something else, we gen an exception::
 
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     ValueError: invalid literal for int() with base 10: 'something else'
 
 .. pythontest:: nooutput
@@ -140,7 +140,7 @@ The exception that we want to catch is a ``ValueError``:
 
     >>> int("abc")
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     ValueError: invalid literal for int() with base 10: 'abc'
 
 So, instead of typing ``except:``, we can type ``except ValueError``. This will catch errors due to converting non-numbers, but not other errors:
@@ -155,7 +155,7 @@ So, instead of typing ``except:``, we can type ``except ValueError``. This will 
             print("That was not a number!")
         
     Traceback (most recent call last):
-    File "<stdin>", line 2, in <module>
+      File "<stdin>", line 2, in <module>
     NameError: name 'i_do_not_exist' is not defined
 
 In general, you should try to name a type of exception to catch, as you will not hide other errors, which may be causing your program to malfunction.

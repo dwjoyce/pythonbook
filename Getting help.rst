@@ -24,7 +24,7 @@ In actual fact, just pressing the Enter key without any text will do the same!
 
 Now, if you re-enter the help utility, you can type any command or function to get further information on that item.  For example:
 
-.. code:: python
+.. code::
     :pythontest: nooutput
 
     >>> help()
@@ -52,7 +52,7 @@ Using the proper names of the types of data will display the same information::
 
 To get a list of what is built into Python, you can call the *directory* function in this way:
 
-.. code:: python
+.. code::
     :pythontest: nooutput
 
     >>> dir(__builtins__)

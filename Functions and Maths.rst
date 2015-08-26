@@ -87,7 +87,7 @@ If you don't give ``min`` enough arguments, Python gives an error:
 
     >>> min()
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     TypeError: min expected 1 arguments, got 0
 
 Other functions also give errors if you don't give the right number of arguments:
@@ -97,15 +97,15 @@ Other functions also give errors if you don't give the right number of arguments
 
     >>> abs()
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     TypeError: abs() takes exactly one argument (0 given)
     >>> abs(1, 2)
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     TypeError: abs() takes exactly one argument (2 given)
     >>> round(5, 9, 1)
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+      File "<stdin>", line 1, in <module>
     TypeError: round() takes at most 2 arguments (3 given)
 
 ``max`` is a similar function to ``min``, except that it returns the largest argument::
