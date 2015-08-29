@@ -26,7 +26,10 @@ class FakeFile(list):
     def __init__(self, *a): pass
     def write(self, *a): pass
     def writelines(self, *a): pass
+    def read(self, *a): return ""
+    def readlines(self, *a): return []
     def close(self, *a): pass
+    def seek(self, *a): pass
 
 
 class Writer(writers.Writer):
