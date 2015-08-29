@@ -29,8 +29,6 @@ Reading words of wisdom
 
 Once we have an open file, in this case ``f``, we can read the contents. The open file has a function, ``read``, to give the contents of the file as a string::
 
-    >>> print(f.read)
-    <built-in method read of _io.TextIOWrapper object at 0x7f7de98f6b40>
     >>> print(f.read())
     Three Rings for the Elven-kings under the sky,
     Seven for the Dwarf-lords in their halls of stone,
