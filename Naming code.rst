@@ -139,8 +139,8 @@ Things to remember
 
 1. To define a new function, use the ``def`` keyword, followed by the name of the function, and then parentheses.
 
-2. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.
+2. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.  This is a way of passing in data to affect how the function behaves - pass in different data, it should do different things.
 
-3. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any code, is indented to the right.
+3. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any block of code, is indented to the right.
 
 4. Defining a function does not mean it is used - it is simply available to be used, like a tool in a toolbox.  To call or invoke a function, you must use its name, followed by parentheses, but without the ``def`` keyword.
