@@ -1,7 +1,7 @@
-More functions
-==============
+More on functions
+=================
 
-In the previous chapter we learned how to define functions of our own, and how to pass in data that the functions can then use.  To follow on from this, we will now learn how to define functions that not only allows data to be passed in, but also returns data that can be used by the calling code.  We are already used to this in the way we use functions built into Python itself.  Try these in the interactive shell::
+In the previous chapter we learned how to define functions of our own, and how to pass in data that the functions can then use.  To follow on from this, we will now learn how to define functions that not only allow data to be passed in, but also return data that can be used by the calling code.  We are already used to this in the way we use functions built into Python itself.  Try these in the interactive shell::
     
     >>> round(1.75)
     2
@@ -44,6 +44,36 @@ The second use of the *add_5* function is similar, but instead of passing in a v
 
 The third use of the *add_5* function is similar to the second use, but instead of printing the value returned back from the function call straightaway, it first assigns the returned value to a new variable called *new_num*.  This is then printed out on its own.
 
+Forming a chain
+---------------
+
+With the use of the ``return`` keyword to send data back, you can effectively form a chain of functions just like we have done with the built-in ones at the beginning of the chapter.  Type this into your functions.py program, under your other function definitions::
+
+    def sum_up(num1, num2):
+        return num1 + num2
+        
+Then below, with the other calling code, add the following lines::
+
+    print(sum_up(10, 20))
+    
+    total = sum_up(100, -50)
+    print(total)
+
+This is very similar to what we have done already.  Now let's chain our functions together::
+
+    print(sum_up(sum_up(1, 2), sum_up(3, 4)))
+    
+This could go on and on!  You are effectively forming an expression in the shape of a tree - the inner calls to *sum_up* are called first, the one on the left, and then the one on the right.  With these two values, 3 and 7, respectively, the outer *sum_up* is called, thus producing the final printed result of 10.
+
+Exercises
+---------
+
+1. Write a function called add_list in your functions.py program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
+
+2. Write a function called product in your functions.py program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, *product*, along with the function *sum_up* we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: (4*5) + (6*7).
+
+3. Write a function called prime in your functions.py program, which accepts a single number and returns True (a boolean value) if it is a prime number or False if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
+
 Things to remember
 ------------------
 
@@ -51,4 +81,4 @@ Things to remember
 
 2. Even functions without the ``return`` keyword return a value - the value ``None``.  It is sort of like a non-value, similar to zero but not actually an integer number.
 
-3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is code after the return satement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
+3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return satement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
