@@ -18,9 +18,9 @@ What we will be learning
 
 We will be learning the basics of the Python language, enough to get you through your Computing GCSE coursework.
 
-We will cover data types, organinising our data and code, opening and reading files on disk, catching errors.  We will not cover more advanced features in any detail such as object orientated programming, dictionaries, list comphrehensions, lambdas, generators, decorators, and the like.  We may only use some of these features without delving into the details!  In fact, what we do teach will be covered will not be covered in great depth, only enough for you to start programming yourself.  Not only do we not have time for this, but these topics are not entirely necessary to do the programming the course involves.
+We will cover data types, organising our data and code, opening and reading files on disk, catching errors.  We will not cover more advanced features in any detail such as object orientated programming, dictionaries, list comprehensions, lambdas, generators, decorators, and the like.  We may only use some of these features without delving into the details!  In fact, what we do teach will be covered will not be covered in great depth, only enough for you to start programming yourself.  Not only do we not have time for this, but these topics are not entirely necessary to do the programming the course involves.
 
-The course unfolds in a way that should be familar to school children.  We first use Python to calculate arithmetic and call functions, just as you have learnt in your maths class.  The arithmetic is calculated in a way familiar to those using proper scientific calculators, not basic ones.  We then move onto storing values in memory, again just like a calculator, but in more flexible manner.  Only then do we move onto writing complete programs and using concepts that are less familiar to those following a high school curriculum.
+The course unfolds in a way that should be familiar to school children.  We first use Python to calculate arithmetic and call functions, just as you have learnt in your maths class.  The arithmetic is calculated in a way familiar to those using proper scientific calculators, not basic ones.  We then move onto storing values in memory, again just like a calculator, but in more flexible manner.  Only then do we move onto writing complete programs and using concepts that are less familiar to those following a high school curriculum.
 
 It is encouraged to use this book as a starting point, and then use other resources to continue your practice in the art of programming.
 
@@ -42,3 +42,14 @@ IDLE will then start, and you will have a window on your screen which looks like
 You are now ready to go.
 
 Later, in chapter 6 on your First Program, you will position this IDLE window slightly differently in order for you to see both the program you are writing and the interactive shell at the same time.  Until then, this is all you need to know about starting Python's shell.  Next chapter - typing in some code and seeing what happens!
+
+Things to remember
+------------------
+
+1. Click on the IDLE desktop or panel icon to start Python's interactive shell.
+
+2. Type away in the interactive shell and see what results you get.  Don't be afraid to experiment, you can't break things that easily.  Fortune rewards the brave!
+
+3. To recall something already typed in, use the up arrow to move the cursor onto the line you wish to use.  Press the Return or Enter key - this brings it down onto your current line.  You can modify what has been copied down.  To run the line again, press the Return or Enter key a second time.  This will save you lots of typing!
+
+4. Read these *Things to remember* sections in each chapter very carefully and remember what they say!
