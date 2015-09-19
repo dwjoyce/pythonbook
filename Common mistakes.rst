@@ -111,8 +111,8 @@ Spelling or capitalisation mistakes
 | .. code:: python                       | .. code:: python                       |
 |     :pythontest: off                   |                                        |
 |                                        |                                        |
-|     pen = turtle.pen()                 |      pen = turtle.Pen()                |
-|     pen.beginfill()                    |      pen.begin_fill()                  |
+|     turtle.turtle()                    |      turtle.Turtle()                   |
+|     turtle.beginfill()                 |      turtle.begin_fill()               |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
@@ -379,7 +379,7 @@ Forgetting the brackets when calling a function
 | .. code:: python                       | .. code:: python                       |
 |     :pythontest: off                   |                                        |
 |                                        |                                        |
-|     pen = turtle.Pen                   |     pen = turtle.Pen()                 |
+|     turtle.Turtle                      |     turtle.Turtle()                    |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code:: python                       | .. code:: python                       |
