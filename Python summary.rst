@@ -61,7 +61,7 @@ Converting from one type to another::
 Using code from other programs (modules)::
 
     import turtle
-    p = turtle.Pen()  # make sure the 'P' is uppercase!
+    turtle.Turtle()  # make sure the 'T' in the function call is uppercase!
     p.circle(100)
     dir(turtle)  # provide a directory listing of module
     help(turtle.fillcolor)  # help on a particular item
