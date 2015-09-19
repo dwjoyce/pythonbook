@@ -73,7 +73,7 @@ So far we pass arguments into functions, used inside the function as parameters,
     def box_volume(length, height, width):
         return length * height * width
         
-    print(box_volume(10, 20 30))
+    print(box_volume(10, 20, 30))
 
 You could place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom fo your program.
 
@@ -90,7 +90,10 @@ This is called keyword arguments - you are referring to each parameter by name, 
 A little more practice
 ----------------------
 
-We will write a little turtle based program to demonstrate some of the concepts we have been learning here.  Open up a new file, and type in the following::
+We will write a little turtle based program to demonstrate some of the concepts we have been learning here.  Open up a new file, and type in the following:
+
+.. code::
+    :pythontest: norun
 
     import turtle
     import random
@@ -112,19 +115,20 @@ We will write a little turtle based program to demonstrate some of the concepts 
 
     while True:
         # Generate the length and width, between 20 and 100 pixels each
-        length = random.randrange(20, win_height / 2)
-        width = random.randrange(20, win_width / 2)
+        length = random.randrange(20, win_height // 2)
+        width = random.randrange(20, win_width // 2)
 
         # Move to a random position in the window
-        x = random.randrange(-win_width//2, win_width//2)
-        y = random.randrange(-win_height/2, win_height/2)
+        x = random.randrange(-win_width // 2, win_width // 2)
+        y = random.randrange(-win_height // 2, win_height // 2)
         turtle.up()
         turtle.goto(x, y)
         turtle.down()
 
         # Draw box
         draw_box(length, width,
-                 red=random.random(), green=random.random(), blue=random.random())
+                 red=random.random(), green=random.random(),
+                 blue=random.random())
 
 Run your program, saving it as *boxes.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized boxes on the screen.
 

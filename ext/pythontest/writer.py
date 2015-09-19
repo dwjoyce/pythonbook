@@ -11,6 +11,8 @@ class FakeTurtle:
     def forward(self, *a): pass
     def right(self, *a): pass
     def left(self, *a): pass
+    def up(self, *a): pass
+    def down(self, *a): pass
     def circle(self, *a): pass
     def undo(self, *a): pass
     def begin_fill(self, *a): pass
@@ -18,6 +20,12 @@ class FakeTurtle:
     def fillcolor(self, *a): pass
     def Turtle(self, *a): pass
     def Pen(self, *a): return self
+    def speed(self, *a): pass
+    def pencolor(self, *a): pass
+    def pensize(self, *a): pass
+    def window_width(self, *a): return 100
+    def window_height(self, *a): return 100
+    def goto(self, *a): pass
 
 sys.modules["turtle"] = FakeTurtle()
 
