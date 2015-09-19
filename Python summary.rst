@@ -62,7 +62,7 @@ Using code from other programs (modules)::
 
     import turtle
     turtle.Turtle()  # make sure the 'T' in the function call is uppercase!
-    p.circle(100)
+    turtle.circle(100)
     dir(turtle)  # provide a directory listing of module
     help(turtle.fillcolor)  # help on a particular item
 
