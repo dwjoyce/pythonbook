@@ -65,6 +65,81 @@ This is very similar to what we have done already.  Now let's chain our function
     
 This could go on and on!  You are effectively forming an expression in the shape of a tree - the inner calls to *sum_up* are called first, the one on the left, and then the one on the right.  With these two values, 3 and 7, respectively, the outer *sum_up* is called, thus producing the final printed result of 10.
 
+Naming parameters
+-----------------
+
+So far we pass arguments into functions, used inside the function as parameters, to feed data into the function.  We generally do the following, which you should now type into your ever increasing functions.py program::
+
+    def box_volume(length, height, width):
+        return length * height * width
+        
+    print(box_volume(10, 20 30))
+
+You could place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom fo your program.
+
+It is quite clear that the integer value *10* is passed into parameter *length*, *20* is passed into the parameter *height*, and *30* is passed into the parameter *width*.  In Python, this is called *positional arguments* - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
+
+An alternative is to explicitly state what parameters you want to use for each parameter.  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
+
+    print(box_volume(length=10, height=20, width=30))
+    
+Run your program again, and make sure it now prints out the same volume twice.
+
+This is called keyword arguments - you are referring to each parameter by name, by keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
+
+A little more practice
+----------------------
+
+We will write a little turtle based program to demonstrate some of the concepts we have been learning here.  Open up a new file, and type in the following::
+
+    import turtle
+    import random
+
+    def draw_box(length, width, red, green, blue):
+        turtle.fillcolor(red, green, blue)
+        turtle.begin_fill()
+        for side in range(4):
+            if side % 2:  # is side even or odd?
+                turtle.forward(length)
+            else:
+                turtle.forward(width)
+            turtle.right(90)
+        turtle.end_fill()
+
+    turtle.Turtle()
+    turtle.speed('fastest')
+    win_width, win_height = turtle.window_width(), turtle.window_height()
+
+    while True:
+        # Generate the length and width, between 20 and 100 pixels each
+        length = random.randrange(20, win_height / 2)
+        width = random.randrange(20, win_width / 2)
+
+        # Move to a random position in the window
+        x = random.randrange(-win_width//2, win_width//2)
+        y = random.randrange(-win_height/2, win_height/2)
+        turtle.up()
+        turtle.goto(x, y)
+        turtle.down()
+
+        # Draw box
+        draw_box(length, width,
+                 red=random.random(), green=random.random(), blue=random.random())
+
+Run your program, saving it as *boxes.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized boxes on the screen.
+
+A little explanation:
+
+    - we import the modules we need, turtle for drawing, random for producing a bit of variation.
+    - we then define a function called *draw_box* which take five arguements - the length and width, followed by red, green and blue to define the colour.
+    - inside the *draw_box* function, we set the fill colour, tell turtle we are starting the shape so it can be filled in later, and then draw a four sided box.  If the side number is not divisible by 2 (i.e. is odd), then we draw its length, otherwise its width.
+    - in the main part of the program, we create our window using the Turtle() function, set the speed to hurry things up, and then save the window width and height so we can use them later.
+    - we then enter a loop which continues forever.
+    - inside the loop, we first generate the length and width of the new box by using the ``randrange`` function in the ``random`` module to generate the numbers for us.
+    - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
+    - we then call our *draw_box* function using the data we have at hand.
+
+
 Exercises
 ---------
 
@@ -82,3 +157,5 @@ Things to remember
 2. Even functions without the ``return`` keyword return a value - the value ``None``.  It is sort of like a non-value, similar to zero but not actually an integer number.
 
 3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return satement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
+
+4. There are two ways of passing in argments with functions.  Firstly, by *position*, so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword*, so you can specifiy the name of the paramter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.

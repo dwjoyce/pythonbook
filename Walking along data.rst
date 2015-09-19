@@ -141,6 +141,40 @@ A bit of explanation: we import the turtle module so that we can use it in our p
 
 This is now much easier than before than either using a sequence of statements, or even when we were using ``while`` loops.
 
+Vertico
+-------
+
+Open up another new file window, and type in the following::
+
+        
+    import turtle
+    import random
+
+    colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']
+
+    turtle.Turtle()
+
+    turtle.pencolor('red')
+    turtle.speed('fastest')
+    turtle.pensize(2)
+
+    # Start with a length of 5, and increase as we draw
+    length = 5
+
+    # Draw 300 lines, changing the color and length as we progress
+    for i in range(300):
+        new_color = random.choice(colors)
+        turtle.pencolor(new_color)
+        turtle.forward(length)
+        turtle.right(91)
+        length = length + 2
+
+Run and save it as spirals.py, and see what happens.  If there any problems, then check your code carefully!
+
+A bit of explanation: we impor the modules we need, turtle for drawing, random to introduce a bit of variaton.  We then define the colours (note, English spelling - Python requires the American splling) we are going to use.  We then create our drawing window, changing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 in total).  Inside the block of code that we are repeating (the loop), we change the pen colour, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
+
+Try changing the numbers to see what happens to the final result.
+        
 Exercises
 ---------
 
