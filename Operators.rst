@@ -1,20 +1,22 @@
 Operators
 =========
 
+The most commonly used operators in Python.
+
 Arithmetic operators
 --------------------
 
-======================================  ========
-Name                                    Operator    
-======================================  ========
-Addition                                ``+``
-Subtraction                             ``-``
-Division                                ``/``
-Multiplication                          ``*``
-Power                                   ``**``
-Floor division (Whole number division)  ``//``
-Modulus (remainder)                     ``%``
-======================================  ========
+========  ======================================
+Operator    Name                                  
+========  ======================================
+``+``       Addition                              
+``-``       Subtraction                           
+``/``       Division                              
+``*``       Multiplication                        
+``**``      Power                                 
+``//``      Floor division (Whole number division)
+``%``       Modulus (remainder)                   
+ ==============================================
 
 Examples::
 
@@ -29,16 +31,16 @@ Examples::
 Comparison operators
 --------------------
 
-======================================  ========
-Name                                    Operator    
-======================================  ========
-Equal to                                ``==``
-Not equal to                            ``!=``
-Less than                               ``<``
-Greater than                            ``>``
-Less than or equal to                   ``<=``
-Greater than or equal to                ``>=``
-======================================  ========
+========  ======================================
+Operator    Name                                  
+========  ======================================
+``==``      Equal to                              
+``!=``      Not equal to                          
+``<``       Less than                             
+``>``       Greater than                          
+``<=``      Less than or equal to                 
+``>=``      Greater than or equal to              
+========  ======================================
 
 Examples::
 
@@ -51,17 +53,43 @@ Examples::
     True
     >>> a >= c
     True
+    
+Bitwise operators
+-----------------
+
+========  ======================================
+Operator    Name                                  
+========  ======================================
+``<<``      Shift bits to the left
+``>>``      Shift bits to the right
+``&``       Bitwise and (set to 1 when both are 1) the bits together
+``|``       Bitwise or (set to 1 when either are 1) the bits together
+``~``       Return compliment - all the 1's and 0's are flipped
+``^``       Bitwise exclusive or the bits together, unless both are 1 when the result is 0
+========  ======================================
+
+Examples::
+    >>> 8 << 1
+    16
+    >>> 16 >> 2
+    4
+    >>> 127 & 15
+    15
+    >>> 10 | 5
+    15    
+    >>> 10 ^ 15
+    5    
 
 Logical operators
 -----------------
 
-=============================================================  ========
-Name                                                           Operator    
-=============================================================  ========
-If both operands are true, then condition is true              ``and``
-If either of the operands is true, then the condition is true  ``or``
-Reverses the condition                                         ``not``
-=============================================================  ========
+========  =============================================================
+Operator    Name                                                         
+========  =============================================================
+``and``     If both operands are true, then condition is true            
+``or``      If either of the operands is true, then the condition is true
+``not``     Reverses the condition                                       
+========  =============================================================
 
 Examples::
 
@@ -76,11 +104,11 @@ Examples::
 Membership operators
 --------------------
 
-=======================================================================  ========
-Name                                                                     Operator    
-=======================================================================  ========
-Condition is true if the value or variable is contained in a sequence    ``in``
-=======================================================================  ========
+========  =======================================================================
+Operator    Name                                                                   
+========  =======================================================================
+``in``      Condition is true if the value or variable is contained in a sequence  
+========  =======================================================================
 
 Examples::
 
@@ -89,4 +117,3 @@ Examples::
     True
     >>> a in [0, 20, 40, 60]
     False
-
