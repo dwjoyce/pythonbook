@@ -3,7 +3,9 @@ Starting with Python's IDLE
 
 Welcome to our guide on learning Python!
 
-Programming is the art of logical thinking.  It takes a problem, and breaks it down into simple steps expressed in a form that a computer can translate into its own machine code.  Computer languages are different from human languages in that they are formal and unambiguous.  The formal aspect means they are specified in advance.  They are unambiguous so that the program will always do the same thing every time, given the same circumstances.
+Programming is the art of logical thinking.  It takes a problem, and breaks it down into simple steps expressed in a form that a computer can translate into its own machine code.  Computer languages are different from human languages in that they are formal and unambiguous.  The formal aspect means they are specified in advance with a set notation and arrangement of keywords.  They are unambiguous so that the program will always do the same thing every time, given the same circumstances.
+
+Knowing how to program a computer is a great skill to have, even if you are not a professional programmer.  You can program in almost any field of work - especially when you need to transform data (the basis of information) from one form to another.  It means you are not simply using other people work, but you have the ability create this work yourself.  If you can never program a computer, it is like living in world that you can only read other people's writing, unable to create your own.  Programming is very much a creative process - you are instructing a computer to follow your what you are thinking, down to the letter!
 
 Python is a fantastic first computer language to learn.  It is easy to pick up, but at the same time is very useful to computer professionals so is not just a beginner's language.  It is used by large companies such as NASA, Google, Microsoft, Yahoo and Dropbox.  It is also used by many educational institutions when learning programming, such as Cambridge University.
 

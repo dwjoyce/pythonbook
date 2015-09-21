@@ -1,6 +1,11 @@
 Python summary
 ==============
 
+This short chapter summarises what we have learnt about the Python programming language.  It is only a subset of the total language, but it is enough for you to do your coursework well.
+Refer to it when you need an example of how to do something, from printing out messages or numbers, making decisions, performing loops or catching errors.
+
+Note that comments start with the ``#`` character.
+
 The ``print`` function to print to the screen::
 
     print("Hello, World!")
@@ -11,9 +16,9 @@ The ``print`` function to print to the screen::
 
 Arithmetic::
 
-    print(3 + 4 * 10 / 2 - 5 ** 2 % 5)  # add, multiply, divide, subtract,
-                                        # power, remainder - but not in
-                                        # that order!
+    # add, multiply, divide, subtract, power, remainder (modulo) - but not in that order!
+    print(3 + 4 * 10 / 2 - 5 ** 2 % 5)
+    
     print(3 + 4 * 5)   # will print 23
     print((3 + 4) * 5) # will print 35, brackets go first!
 
@@ -24,7 +29,7 @@ Using variables to store values in memory::
     my_name = 'Fred'
     my_age = 101
     print('hello there', my_name, 'you are', my_age, 'old')
-    print('hello there %s you are %d old' % (my_name, my_age))
+    print('hello there %s you are %d old' % (my_name, my_age))  # inline formatting
 
 Getting help in IDLE::
 
@@ -36,7 +41,7 @@ Getting help in IDLE::
 
 Calling functions (pieces of code that you can use easily)::
 
-    # Putting () after function names means you are calling it
+    # Putting () after function names means you are calling (invoking) it
     print(abs(-123))  # prints 123 (makes number positive)
     print(len('Hello there'))  # length of a sequence
     print(ord('a'))  # print out ordinal number of a character
@@ -169,6 +174,7 @@ Writing to a file on disk::
     output_file = open('test.txt', 'w')  # 'w' for writing
 
     output_file.write('first line\n')  # note new line symbol
+
     lines = ['second line\n', 'third line\n']
     output_file.writelines(lines)
 

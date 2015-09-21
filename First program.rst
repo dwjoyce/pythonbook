@@ -18,6 +18,8 @@ This will bring up a new window, the editor window.  The shortcut for this is to
 
 .. note for Matthew: insert picture of new window alongside IDLE window.
 
+..Note:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see side by side.
+
 The scene is set.
 
 Our first program
@@ -110,7 +112,7 @@ Things to remember
 
 1. To start a new program, click on the ``File`` menu and click on ``New File``.  This opens up a new window ready for your program to be typed in.  The shortcut for this is to hold the ``Ctrl`` key down and hit the ``N`` key.
 
-2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  You can do this on the Raspberry Pi by trying to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.
+2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
 3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick.
 
