@@ -13,12 +13,16 @@ To write a program, and modify it later, we use an *editor*.  Thankfully, IDLE n
 To start Python editor, first start IDLE itself (see chapter 0 for this if you have forgotten).  Then, using the mouse pointer, click on the ``File`` menu at the top of the shell window, and click again on the ``New File`` menu item, like so:
 
 .. image:: screenshots/idle_new_file_menu.png
+    :width: 90%
+    :align: center
 
 This will bring up a new window, the editor window.  The shortcut for this is to hold down the ``Ctrl`` key, towards the bottom left of your keyboard, and hit the ``N`` key (N for New).  This is where we type in our new program:
 
 .. image:: screenshots/idle_new_file.png
+    :width: 90%
+    :align: center
 
-..Note:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see side by side.
+.. note:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see side by side.
 
 The scene is set.
 
@@ -55,6 +59,7 @@ Once you have typed it all in, we are ready to run our program.  To run, press t
 
 .. image:: screenshots/idle_save_before_run.png
     :width: 150pt
+    :align: center
 
 Simply agree to this by pressing the Return or Enter key on your keyboard.  Again, if you like doing things the hard way, then use your mouse to click on the ``OK`` button.
 
@@ -62,6 +67,7 @@ On this, the first time of writing your program, you will need to give it a name
 
 .. image:: screenshots/idle_save_as.png
     :width: 250pt
+    :align: center
 
 Most importantly, change the location of where the program is being saved to where your USB stick.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
 
@@ -69,10 +75,13 @@ Once you are in the right place, give your program a name and click the ``Save``
 
 .. image:: screenshots/idle_save_as_name.png
     :width: 250pt
+    :align: center
 
 Your program will now run!  It should all look vaguely like this:
 
 .. image:: screenshots/idle_run.png
+    :width: 90%
+    :align: center
 
 However, the alternative is that it doesn't work - there is a problem or error in your program.  To correct this, return to your edit window, and change it so that it reflects the above program exactly.  Python, and all computer languages, are very fussy - if there is an error, the computer is not allowed to guess what you meant like a person could do!
 
