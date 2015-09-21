@@ -33,11 +33,11 @@ Python's interactive shell is known as *IDLE*.  This name comes from the acronym
 
 To start IDLE, either click on the IDLE icon on the desktop or in the pane at the bottom of your screen:
 
-.. note for Matthew: insert picture of desktop here, clipped if necessary, with desktop icon and panel icon circled in red.
+.. image:: screenshots/desktop.png
 
 IDLE will then start, and you will have a window on your screen which looks like this:
 
-.. note for Matthew: insert picture of IDLE having just started, no text entered.
+.. image:: screenshots/idle_blank.png
 
 You are now ready to go.
 
