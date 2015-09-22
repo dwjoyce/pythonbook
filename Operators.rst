@@ -24,6 +24,10 @@ Examples::
     50
     >>> 100 / 4 - 3
     22.0
+    >>> 10 / 4
+    2.5
+    >>> 10 // 4
+    2
     >>> 9 % 4
     1
     >>> 2 ** 8 + 1
@@ -105,9 +109,9 @@ Examples::
     >>> 127 & 15
     15
     >>> 10 | 5
-    15    
+    15
     >>> 10 ^ 15
-    5    
+    5
 
 Logical operators
 -----------------
@@ -141,8 +145,14 @@ Operator    Description
 
 Examples::
 
-    >>> a = 10
-    >>> a in [5, 10, 15, 20]
+    >>> 'a' in 'abc'
     True
-    >>> a in [0, 20, 40, 60]
+    >>> 'ab' in 'abc'
+    True
+    >>> 'abcd' in 'abc'
+    False
+    >>> num = 10
+    >>> num in [5, 10, 15, 20]
+    True
+    >>> num in [0, 20, 40, 60]
     False
