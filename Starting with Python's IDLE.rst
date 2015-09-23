@@ -1,26 +1,29 @@
 Starting with Python's IDLE
 ===========================
 
+Introduction
+------------
+
 Welcome to our guide on learning Python!
 
 Programming is the art of logical thinking.  It takes a problem, and breaks it down into simple steps expressed in a form that a computer can translate into its own machine code.  Computer languages are different from human languages in that they are formal and unambiguous.  The formal aspect means they are specified in advance with a set notation and arrangement of keywords.  They are unambiguous so that the program will always do the same thing every time, given the same circumstances.
 
 Knowing how to program a computer is a great skill to have, even if you are not a professional programmer.  You can program in almost any field of work - especially when you need to transform data (the basis of information) from one form to another.  It means you are not simply using other people work, but you have the ability create this work yourself.  If you can never program a computer, it is like living in world that you can only read other people's writing, unable to create your own.  Programming is very much a creative process - you are instructing a computer to follow your what you are thinking, down to the letter!
 
-Python is a fantastic first computer language to learn.  It is easy to pick up, but at the same time is very useful to computer professionals so is not just a beginner's language.  It is used by large companies such as NASA, Google, Microsoft, Yahoo and Dropbox.  It is also used by many educational institutions when learning programming, such as Cambridge University.
+Python is a fantastic first computer language to learn.  It is easy to pick up, but at the same time is very useful to computer professionals so is not just a beginner's language.  It is used by large companies such as NASA, Disney, Google, YouTube, Microsoft, Yahoo and Dropbox.  It is also used by many educational institutions when learning programming, such as Cambridge University.  It also has the advantage of being free and open source software, so you can download it at home free of charge.
 
 It was created in the early 1990s by the Dutch programmer Guido van Rossum.  It has been updated many times since then, and in this book we will be using Python 3.  The exact version of Python 3 does not matter so much, as long as your version is Python 3.something.  This is for when you are trying to program at home.
 
-Code written in Python is very readable.  It lacks much of the cryptic notation that other languages use to express themselves.  It almost reads like *pseudo code* - a description of how a program should operate that you might jot down whilst thinking about a problem.
+Code written in Python is very readable.  It lacks much of the cryptic notation that other languages use to express themselves.  It almost reads like *pseudo code* - a description of how a program should operate as written in lines of simple English.
 
-Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in your way.  Although we will write proper programs later (from chapter 6 - First Program), initially we will use Python's interactive shell to start off.  It is called an *interactive shell* because you type lines of code (known as statements) and get the answer straightaway, i.e. interactively.
+Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from chapter 6 - First Program), initially we will use Python's interactive shell to start off.  It is called an *interactive shell* because you type lines of code (known as statements) and get the answer straightaway, i.e. interactively.
 
 What we will be learning
 ------------------------
 
 We will be learning the basics of the Python language, enough to get you through your Computing GCSE coursework.
 
-We will cover data types, organising our data and code, opening and reading files on disk, catching errors.  We will not cover more advanced features in any detail such as object orientated programming, dictionaries, list comprehensions, lambdas, generators, decorators, and the like.  We may only use some of these features without delving into the details!  In fact, what we do teach will be covered will not be covered in great depth, only enough for you to start programming yourself.  Not only do we not have time for this, but these topics are not entirely necessary to do the programming the course involves.
+We will cover data types, organising our data and code, opening and reading files on disk, catching errors.  We introduce the three ways code can flow - sequentially, selectively or iteratively.  We will not cover more advanced features in any detail such as object orientated programming, dictionaries, list comprehensions, lambdas, generators, decorators, and the like.  We may only use some of these features, but not code them ourselves.  In fact, what we do teach will be covered will not be covered in great depth, only enough for you to start programming yourself.  Not only do we not have time for this, but these topics are not entirely necessary to do the programming the course involves.
 
 The course unfolds in a way that should be familiar to school children.  We first use Python to calculate arithmetic and call functions, just as you have learnt in your maths class.  The arithmetic is calculated in a way familiar to those using proper scientific calculators, not basic ones.  We then move onto storing values in memory, again just like a calculator, but in more flexible manner.  Only then do we move onto writing complete programs and using concepts that are less familiar to those following a high school curriculum.
 
