@@ -158,6 +158,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.next_table_ids.clear()
         if self.table.longtable:
             self.body.append('\\hline\n')
+            if len(self.tableheaders) > 1:
+                print(len(self.tableheaders))
+                self._body.append('\\rowcolor{TableHeaderColor}\n')
             self.body.extend(self.tableheaders)
             self.body.append('\\endfirsthead\n\n')
             self.body.append('\\multicolumn{%s}{c}%%\n' % self.table.colcount)
@@ -173,6 +176,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.append('\\endlastfoot\n\n')
         else:
             self.body.append('\\hline\n')
+            if len(self.tableheaders) > 1:
+                print(len(self.tableheaders))
+                self._body.append('\\rowcolor{TableHeaderColor}\n')
             self.body.extend(self.tableheaders)
         self.body.extend(self.tablebody)
         self.body.append(endmacro)
@@ -188,7 +194,6 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.next_table_colspec = None
         # Redirect head output until header is finished. see visit_tbody.
         self.body = self.tableheaders
-        self.body.append('\\rowcolor{TableHeaderColor}\n')
 
 
 def setup(app):
