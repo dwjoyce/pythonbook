@@ -306,7 +306,7 @@ Unnecessarily testing expressions against ``0``, ``True``, ``False``, ``None`` o
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code-block:: py3con                 | .. code-block:: py3con                 |
-|     :pythontest: off                   |    :pythontest: off                    |
+|     :pythontest: off                   |     :pythontest: off                   |
 |                                        |                                        |
 |     if a == True:                      |     if a:                              |
 |                                        |                                        |
