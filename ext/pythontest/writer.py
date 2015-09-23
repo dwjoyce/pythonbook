@@ -5,6 +5,7 @@ import sys
 import builtins
 import io
 from code import compile_command
+import keyword, tokenize
 
 
 class FakeTurtle:
@@ -99,7 +100,7 @@ class Writer(writers.Writer):
                 if not succeeded:
                     if major:
                         self.returncode = 1
-                        self.fails.append((chapter, code, error, detail))
+                        self.fails.append((True, chapter, code, error, detail))
                         major_fails += 1
 
                         self.print(error + ":")
@@ -107,7 +108,13 @@ class Writer(writers.Writer):
                         self.print(detail)
                         self.print()
                     else:
-                        minor_fails += 1
+                        if not self.minor_retest(code, mode):
+                            self.fails.append((False, chapter, code, error, detail))
+                            self.print(error + ":")
+                            self.print("\n".join(["    " + i for i in code.split("\n")]))
+                            self.print(detail)
+                            self.print()
+                            minor_fails += 1
             self.print()
             self.print(tests, "code items")
             self.print(minor_fails, "minor fails")
@@ -118,11 +125,15 @@ class Writer(writers.Writer):
             over_minor_fails += minor_fails
             over_major_fails += major_fails
 
-        for chapter, code, error, detail in self.fails:
-            self.builder.info(red("In chapter ") + bold("'{}'".format(chapter)) + red(":"))
-            self.builder.info("\n".join(["    " + i for i in code.split("\n")]))
-            self.builder.info(red(error + ": ") + bold(detail))
-            self.builder.info()
+        for major, chapter, code, error, detail in self.fails:
+            if major:
+                self.builder.info(red("In chapter ") + bold("'{}'".format(chapter)) + red(":"))
+                self.builder.info("\n".join(["    " + i for i in code.split("\n")]))
+                self.builder.info(red(error + ": ") + bold(detail))
+                self.builder.info()
+            else:
+                self.builder.info(yellow("Minor fail in chapter ") + bold("'{}'".format(chapter)) + yellow(": ") + bold(code))
+                self.builder.info()
 
         self.builder.info(bold("{} code items".format(over_tests)))
         self.builder.info(yellow("{} minor fails".format(over_minor_fails)))
@@ -226,6 +237,18 @@ class Writer(writers.Writer):
             return False, "Execution failure", "{} - {}".format(type(e).__name__, str(e))
         self.post_test()
         return self.passed
+
+    def minor_retest(self, code, mode):
+        if keyword.iskeyword(code):
+            return True
+        try:
+            list(tokenize.generate_tokens(io.StringIO(code).readline))
+        except Exception as e:
+            if "EOF in multi-line statement" in str(e):
+                return True
+        else:
+            return True
+        return False
 
     def set_returncode(self, app):
         app.statuscode = self.returncode
