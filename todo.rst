@@ -39,13 +39,13 @@ More code::
 
 .. pythontest:: off
 
-.. code:: python
+.. code-block:: py3con
 
     this will break
 
 .. pythontest:: on
 
-.. code:: python
+.. code-block:: py3con
 
     this_will_not_break = 1
 

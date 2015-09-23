@@ -135,7 +135,7 @@ Using the ``try``-``except`` block as above work fine, but what if we only want 
 
 The exception that we want to catch is a ``ValueError``:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: norun
 
     >>> int("abc")
@@ -145,7 +145,7 @@ The exception that we want to catch is a ``ValueError``:
 
 So, instead of typing ``except:``, we can type ``except ValueError``. This will catch errors due to converting non-numbers, but not other errors:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: norun
 
     >>> i_do_exist = "123"

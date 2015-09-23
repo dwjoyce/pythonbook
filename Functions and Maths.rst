@@ -82,7 +82,7 @@ Lots! Some functions take any number of arguments. ``min`` is a function that ta
 
 If you don't give ``min`` enough arguments, Python gives an error:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: compile
 
     >>> min()
@@ -92,7 +92,7 @@ If you don't give ``min`` enough arguments, Python gives an error:
 
 Other functions also give errors if you don't give the right number of arguments:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: compile
 
     >>> abs()

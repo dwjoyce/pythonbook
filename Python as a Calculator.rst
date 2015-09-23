@@ -23,7 +23,7 @@ So given their name, we should be able to use "computers" to do some "computing"
 
 Using the first example, the Python code is very simple.
 
-.. highlight:: python
+.. highlight:: py3con
 .. pythontest:: on
 
 Bring up your Python interactive shell, as described in chapter 0, and type the following::

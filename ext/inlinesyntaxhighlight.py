@@ -159,7 +159,6 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         if self.table.longtable:
             self.body.append('\\hline\n')
             if len(self.tableheaders) > 1:
-                print(len(self.tableheaders))
                 self._body.append('\\rowcolor{TableHeaderColor}\n')
             self.body.extend(self.tableheaders)
             self.body.append('\\endfirsthead\n\n')
@@ -177,7 +176,6 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         else:
             self.body.append('\\hline\n')
             if len(self.tableheaders) > 1:
-                print(len(self.tableheaders))
                 self._body.append('\\rowcolor{TableHeaderColor}\n')
             self.body.extend(self.tableheaders)
         self.body.extend(self.tablebody)

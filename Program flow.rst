@@ -6,7 +6,7 @@ Sequence
 
 +----------------------------------------+-----------------------------------------+
 |                                        |                                         |
-| |seq-image|                            | .. code:: python                        |
+| |seq-image|                            | .. code-block:: py3con                  |
 |                                        |                                         |
 |                                        |     name = input('What is your name? ') |
 |                                        |     print('Hello there', name)          |
@@ -23,7 +23,7 @@ Selection
 
 +----------------------------------------+-----------------------------------------+
 |                                        |                                         |
-| |sel-image|                            | .. code:: python                        |
+| |sel-image|                            | .. code-block:: py3con                  |
 |                                        |                                         |
 |                                        |     num = int(input('Number please: ')) |
 |                                        |     if num < 0:                         |
@@ -44,7 +44,7 @@ Iteration
 
 +----------------------------------------+-----------------------------------------+
 |                                        |                                         |
-| |itr-image|                            | .. code:: python                        |
+| |itr-image|                            | .. code-block:: py3con                  |
 |                                        |                                         |
 |                                        |     num = 0                             |
 |                                        |     while num < 10:                     |

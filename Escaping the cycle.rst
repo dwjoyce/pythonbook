@@ -12,7 +12,7 @@ Remember that the test after the ``while`` keyword is just a boolean expression.
 
 To see this in action, start a new file window and type in the following:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: compile
 
     while True:
@@ -24,7 +24,7 @@ Clearly, we need a better way of breaking out of the loop than relying on the us
 
 Therefore, modify your adder.py program like so:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: compile
 
     while True:

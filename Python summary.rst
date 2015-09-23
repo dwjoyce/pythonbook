@@ -16,7 +16,8 @@ The ``print`` function to print to the screen::
 
 Arithmetic::
 
-    # add, multiply, divide, subtract, power, remainder (modulo) - but not in that order!
+    # add, multiply, divide, subtract, power,
+    # remainder (modulo) - but not in that order!
     print(3 + 4 * 10 / 2 - 5 ** 2 % 5)
     
     print(3 + 4 * 5)   # will print 23
@@ -29,7 +30,8 @@ Using variables to store values in memory::
     my_name = 'Fred'
     my_age = 101
     print('hello there', my_name, 'you are', my_age, 'old')
-    print('hello there %s you are %d old' % (my_name, my_age))  # inline formatting
+    print('hello there %s you are %d old' % (my_name,
+                                             my_age))  # inline formatting
 
 Getting help in IDLE::
 

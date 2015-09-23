@@ -23,14 +23,16 @@ Subsequent calls to write will append data on the end, instead of overwriting::
 
 The file will now look like:
 
-.. code:: none
+.. code-block:: none
+    :pythontest: off
 
     Do homework
     Make death star fully armed and operational
 
 .. note:: If you forget the newlines ``"\n"``, the file will look like this:
 
-    .. code:: none
+    .. code-block:: none
+        :pythontest: off
 
         Do homeworkMake death star fully armed and operational
 

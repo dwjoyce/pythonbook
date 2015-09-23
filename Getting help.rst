@@ -14,7 +14,7 @@ So if you remember what we taught in chapter 3, this means that ``help`` is a fu
 
 When we are in the help utility, the prompt changes from ``>>>`` to ``help>``, to avoid confusing the two.  The first thing to learn is how to exit the help system:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: nooutput
 
     help> quit

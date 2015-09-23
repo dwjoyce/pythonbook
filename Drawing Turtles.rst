@@ -45,7 +45,7 @@ So let us get back to our drawing.  To import the turtle module, you just need t
   
 Now we can begin to use it.  The first thing to do is to get our window onto the screen.  This is used to display our canvas (or graph paper), so that we can begin our drawing.  This is done by calling the Turtle function:
 
-.. code:: python
+.. code-block:: py3con
     :pythontest: nooutput
 
     >>> turtle.Turtle()
