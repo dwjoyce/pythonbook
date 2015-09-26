@@ -87,9 +87,9 @@ This is the turtle coordinate system illustrated (reference: 101computing.net):
     :width: 200pt
     :align: center
 
-You will need to create the turtle window using the ``Pen()`` function, to pick your pen up using the ``up()`` function, and move using the ``goto()`` function.
+You will need to create the turtle window using the ``Turtle`` function, to pick your pen up using the ``up`` function, and move using the ``goto`` function.
 
-For example (drawn with a thicker pen using the ``pensize()`` function on a 500x500 window):
+For example (drawn with a thicker pen using the ``pensize`` function on a 500x500 window):
 
 .. code-block:: none
     :pythontest: off
@@ -181,7 +181,7 @@ headstails.py
 
 Write a program in Python to ask the user how many times the program should flip a coin, and count how many times the coin landed on heads and tails.
 
-.. hint:: Use ``random.choice()`` function with a parameter of ``["heads", "tails"]`` to choose between the two options.
+.. hint:: Use ``random.choice`` function with a parameter of ``["heads", "tails"]`` to choose between the two options.
 
 For example:
 
@@ -212,7 +212,7 @@ For example:
 ascii.py
 --------
 
-Write a program in Python to print out a section of the ASCII table.  It should print out the decimal, binary, hexadecimal and character representation for the values from 32 to 127, inclusive.  Use the built-in ``bin()`` function to get the binary value, ``hex()`` for the hexadecimal value and ``chr()`` to get the character representation.
+Write a program in Python to print out a section of the ASCII table.  It should print out the decimal, binary, hexadecimal and character representation for the values from 32 to 127, inclusive.  Use the built-in ``bin`` function to get the binary value, ``hex`` for the hexadecimal value and ``chr`` to get the character representation.
 
 For example:
 
@@ -396,7 +396,7 @@ For example:
 length.py
 ---------
 
-Write a program in Python to input a list, and print out how long that list is.  Use ``sentence.split()`` to split the sentence returned by ``input()`` into a list of items.
+Write a program in Python to input a list, and print out how long that list is.  Use ``sentence.split`` to split the sentence returned by ``input`` into a list of items.
 For example:
 
 .. code-block:: none
@@ -409,12 +409,12 @@ For example:
     The number of items in your sentence is: 3
 
 
-turtlecircles.py
-----------------
+turtleboxes.py
+--------------
 
-Write a program in Python to draw 100 circles of a random size and a random colour and at random positions on in the turtle window.
+Write a program in Python to draw 100 rectangles of a random length and width, and a random colour and at random positions in the turtle window.
 
-.. hint:: You will need to use the ``turtle`` module, and functions from the turtle module such as ``goto()``, ``up()``, ``down()``, ``circle()``, ``begin_fill()``, ``end_fill()`` and ``fillcolor()``.  Use the help system to find out how to call these functions.
+.. hint:: You will need to use the ``turtle`` module, and functions from the turtle module such as ``goto``, ``up``, ``down``, ``forward``, ``righ`` (or ``left``), ``begin_fill``, ``end_fill`` and ``fillcolor``.  Use the help system to find out how to call these functions.
 
 For example:
 
@@ -454,7 +454,7 @@ For example:
 twist.py
 --------
 
-Write a program in Python that draws a number of squares, using the ``turtle`` module, each one larger than the last and with the drawing turtle turning after each square.  Each square should also be a different colour - use the ``random.choice()`` function to select from a variety of colours.
+Write a program in Python that draws a number of squares, using the ``turtle`` module, each one larger than the last and with the drawing turtle turning after each square.  Each square should also be a different colour - use the ``random.choice`` function to select from a variety of colours.
 
 The first square should have sides of 25 pixels in length, with each succeeding square being 10 pixels longer on each side.  The turtle should turn 10 degrees to the right after every square.
 
@@ -540,7 +540,7 @@ Write a program in Python to implement a simple hangman game.  Give the user 11 
 
 However, this part of drawing the hangman is optional as it makes the program more complicated.
 
-.. hint:: You will need three strings, one for the word to guess (which selects one from the word list below randomly using the ``random.choice()`` function), one containing the letters guessed so far, and one for the letters not in the word being guesses.  You can add onto a string by doing the following::
+.. hint:: You will need three strings, one for the word to guess (which selects one from the word list below randomly using the ``random.choice`` function), one containing the letters guessed so far, and one for the letters not in the word being guesses.  You can add onto a string by doing the following::
 
         string_name = string_name + character_entered
 
@@ -586,7 +586,7 @@ checkerboard.py
 
 Write a program in Python to input a number, and then draw - using the ``turtle`` module - a checkerboard with that number of squares across.
 
-.. hint:: Use the ``turtle`` module, and to see what turtle offers you, type ``dir(turtle)`` in the interactive shell to see the available functions.  You can use the ``turtle.setup()`` function set arrange a square window for drawing.
+.. hint:: Use the ``turtle`` module, and to see what turtle offers you, type ``dir(turtle)`` in the interactive shell to see the available functions.  You can use the ``turtle.setup`` function set arrange a square window for drawing.
 
 For example:
 
@@ -705,7 +705,7 @@ For example:
     Please enter your money: 500
     Your change is 400 pence
 
-Again, use the ``numbers.split()`` command to split the original string input into a list of entries.  The list you used in the previous practice can be used again for this program.
+Again, use the ``numbers.split`` command to split the original string input into a list of entries.  The list you used in the previous practice can be used again for this program.
 
 
 brackets.py
@@ -734,7 +734,7 @@ For example:
 calc.py
 -------
 
-Write a program in Python to give the user sums to perform until he types the word "quit".  Randomly chose two numbers between 1 and 10, and one operator of either addition, subtraction, division or multiplication.  Use ``random.randint()`` function to choose the number, and also to select between your operator (1 for addition, 2 for subtraction, and so on).
+Write a program in Python to give the user sums to perform until he types the word "quit".  Randomly chose two numbers between 1 and 10, and one operator of either addition, subtraction, division or multiplication.  Use ``random.randrange`` function to choose the number, and also to select between your operator (1 for addition, 2 for subtraction, and so on).
 
 For example:
 
@@ -847,7 +847,7 @@ Write a program in Python to read in a sentence, and then print it out with each
 
 Having printed out the encoded message, the program should then decode it so that each letter is shifted forwards by three, and then print out the result.  Obviously, the decoded message should be the same as the one originally input by the user in the first place.
 
-.. hint:: Use the ``ord()`` function to get the numerical representation of a letter, and ``chr()`` to convert them back to their character representation.  Use ``string.ascii_lowercase`` as a shortcut for the lowercase alphabet, although you will have to import the ``string`` module first.
+.. hint:: Use the ``ord`` function to get the numerical representation of a letter, and ``chr`` to convert them back to their character representation.  Use ``string.ascii_lowercase`` as a shortcut for the lowercase alphabet, although you will have to import the ``string`` module first.
 
 For example:
 
