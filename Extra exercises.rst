@@ -414,7 +414,7 @@ turtleboxes.py
 
 Write a program in Python to draw 100 rectangles of a random length and width, and a random colour and at random positions in the turtle window.
 
-.. hint:: You will need to use the ``turtle`` module, and functions from the turtle module such as ``goto``, ``up``, ``down``, ``forward``, ``righ`` (or ``left``), ``begin_fill``, ``end_fill`` and ``fillcolor``.  Use the help system to find out how to call these functions.
+.. hint:: You will need to use the ``turtle`` module, and functions from the turtle module such as ``goto``, ``up``, ``down``, ``forward``, ``right`` (or ``left``), ``begin_fill``, ``end_fill`` and ``fillcolor``.  Use the help system to find out how to call these functions.
 
 For example:
 
