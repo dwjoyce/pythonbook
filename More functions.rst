@@ -98,50 +98,44 @@ We will write a little turtle based program to demonstrate some of the concepts 
     import turtle
     import random
 
-    def draw_box(length, width, red, green, blue):
+    def draw_circle(radius, red, green, blue):
         turtle.fillcolor(red, green, blue)
         turtle.begin_fill()
-        for side in range(4):
-            if side % 2:  # is side even or odd?
-                turtle.forward(length)
-            else:
-                turtle.forward(width)
-            turtle.right(90)
+        turtle.circle(radius)
         turtle.end_fill()
 
     turtle.Turtle()
     turtle.speed('fastest')
     win_width, win_height = turtle.window_width(), turtle.window_height()
-
+    
     while True:
-        # Generate the length and width, between 20 and 100 pixels each
-        length = random.randrange(20, win_height // 2)
-        width = random.randrange(20, win_width // 2)
+        # Define the radius of the circle, between 20 and 200 pixels each
+        radius = random.randrange(20, 200)
 
-        # Move to a random position in the window
+        # Move to a random position in the window, remember to pick up the pen first
         x = random.randrange(-win_width // 2, win_width // 2)
         y = random.randrange(-win_height // 2, win_height // 2)
         turtle.up()
         turtle.goto(x, y)
         turtle.down()
 
-        # Draw box
-        draw_box(length, width,
-                 red=random.random(), green=random.random(),
-                 blue=random.random())
+        # Draw circle
+        draw_circle(radius,
+                    red=random.random(), green=random.random(),
+                    blue=random.random())
 
-Run your program, saving it as *boxes.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized boxes on the screen.
+Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized circles on the screen.
 
 A little explanation:
 
     - we import the modules we need, turtle for drawing, random for producing a bit of variation.
-    - we then define a function called *draw_box* which take five arguements - the length and width, followed by red, green and blue to define the colour.
-    - inside the *draw_box* function, we set the fill colour, tell turtle we are starting the shape so it can be filled in later, and then draw a four sided box.  If the side number is not divisible by 2 (i.e. is odd), then we draw its length, otherwise its width.
+    - we then define a function called *draw_circle* which take four arguements - the radius, followed by red, green and blue to define the colour.
+    - inside the *draw_circle* function, we set the fill colour, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
     - in the main part of the program, we create our window using the Turtle() function, set the speed to hurry things up, and then save the window width and height so we can use them later.
     - we then enter a loop which continues forever.
-    - inside the loop, we first generate the length and width of the new box by using the ``randrange`` function in the ``random`` module to generate the numbers for us.
+    - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
     - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
-    - we then call our *draw_box* function using the data we have at hand.
+    - we then call our *draw_circle* function using the data we have at hand.
 
 
 Exercises
@@ -156,10 +150,10 @@ Exercises
 Things to remember
 ------------------
 
-1. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.
+1. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the return statement.
 
-2. Even functions without the ``return`` keyword return a value - the value ``None``.  It is sort of like a non-value, similar to zero but not actually an integer number.
+2. Even functions without the ``return`` statement return a value - the value ``None``.  It is sort of like a non-value, similar to zero but not actually an integer number.
 
-3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return satement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
+3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
 
-4. There are two ways of passing in argments with functions.  Firstly, by *position*, so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword*, so you can specifiy the name of the paramter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.
+4. There are two ways of passing in argments with functions.  Firstly, by *position*, so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword*, so you can specify the name of the paramter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.
