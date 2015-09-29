@@ -110,11 +110,8 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
                 #self.table.has_verbatim = True
             # get consistent trailer
             hlcode = hlcode.rstrip() + '\n'
-
-            #self.body.append('\n\\begin{adjustwidth}{1em}{0pt}\n' + hlcode + '\\end{adjustwidth}\n')
             self.body.append('\n' + viac + hlcode)
             raise nodes.SkipNode
-
 
     def depart_table(self, node):
         self.table.has_problematic = True
@@ -143,7 +140,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         else:
             if self.table.has_problematic:
                 colwidth = 0.95 / self.table.colcount
-                colspec = ('p{%.3f\\linewidth}|' % colwidth) * \
+                colspec = ('m{%.3f\\linewidth}|' % colwidth) * \
                             self.table.colcount
                 self.body.append('{|' + colspec + '}\n')
             elif self.table.longtable:
@@ -192,6 +189,62 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.next_table_colspec = None
         # Redirect head output until header is finished. see visit_tbody.
         self.body = self.tableheaders
+    def visit_image(self, node):
+        attrs = node.attributes
+        pre = []                        # in reverse order
+        post = []
+        include_graphics_options = []
+        is_inline = self.is_inline(node)
+        if 'scale' in attrs:
+            # Could also be done with ``scale`` option to
+            # ``\includegraphics``; doing it this way for consistency.
+            pre.append('\\scalebox{%f}{' % (attrs['scale'] / 100.0,))
+            post.append('}')
+        if 'width' in attrs:
+            w = self.latex_image_length(attrs['width'])
+            if w:
+                include_graphics_options.append('width=%s' % w)
+        if 'height' in attrs:
+            h = self.latex_image_length(attrs['height'])
+            if h:
+                include_graphics_options.append('height=%s' % h)
+        if 'align' in attrs:
+            align_prepost = {
+                # By default latex aligns the top of an image.
+                (1, 'top'): ('{\\hspace*{\\fill}', '\\hspace*{\\fill}}'),
+                (1, 'middle'): ('{\\hspace*{\\fill}\\raisebox{-0.5\\height}{', '}\\hspace*{\\fill}}'),
+                (1, 'bottom'): ('{\\hspace*{\\fill}\\raisebox{-\\height}{', '}\\hspace*{\\fill}}'),
+                (0, 'center'): ('{\\hfill', '\\hfill}'),
+                # These 2 don't exactly do the right thing.  The image should
+                # be floated alongside the paragraph.  See
+                # http://www.w3.org/TR/html4/struct/objects.html#adef-align-IMG
+                (0, 'left'): ('{', '\\hfill}'),
+                (0, 'right'): ('{\\hfill', '}'),}
+            try:
+                pre.append(align_prepost[is_inline, attrs['align']][0])
+                post.append(align_prepost[is_inline, attrs['align']][1])
+            except KeyError:
+                pass
+        if not is_inline:
+            pre.append('\n')
+            post.append('\n')
+        pre.reverse()
+        if node['uri'] in self.builder.images:
+            uri = self.builder.images[node['uri']]
+        else:
+            # missing image!
+            if self.ignore_missing_images:
+                return
+            uri = node['uri']
+        if uri.find('://') != -1:
+            # ignore remote images
+            return
+        self.body.extend(pre)
+        options = ''
+        if include_graphics_options:
+            options = '[%s]' % ','.join(include_graphics_options)
+        self.body.append('\\includegraphics%s{%s}' % (options, uri))
+        self.body.extend(post)
 
 
 def setup(app):
