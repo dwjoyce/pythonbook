@@ -86,6 +86,7 @@ class Writer(writers.Writer):
         visitor = translator.Translator(self.document, self.builder)
         self.document.walkabout(visitor)
         over_tests = over_minor_fails = over_major_fails = 0
+        warnings = visitor.warnings
         self.output = ""
 
         for chapter, code_bits in visitor.result():
@@ -136,6 +137,7 @@ class Writer(writers.Writer):
                 self.builder.info()
 
         self.builder.info(bold("{} code items".format(over_tests)))
+        self.builder.info(yellow("{} warnings".format(warnings)))
         self.builder.info(yellow("{} minor fails".format(over_minor_fails)))
         self.builder.info(red("{} major fails".format(over_major_fails)))
 

@@ -112,7 +112,8 @@ We will write a little turtle based program to demonstrate some of the concepts 
         # Define the radius of the circle, between 20 and 200 pixels each
         radius = random.randrange(20, 200)
 
-        # Move to a random position in the window, remember to pick up the pen first
+        # Move to a random position in the window
+        # Remember to pick up the pen first
         x = random.randrange(-win_width // 2, win_width // 2)
         y = random.randrange(-win_height // 2, win_height // 2)
         turtle.up()
