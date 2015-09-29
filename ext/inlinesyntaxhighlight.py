@@ -106,7 +106,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{40pt}\n"
             if self.table:
                 self.table.has_problematic = True
-                viac = "\\def\FrameCommand{\\mycolorboxdecol}\n\\setlength\\verbatimindentadjustcoefficient{0pt}\n"
+                viac = "\\def\FrameCommand{\\mycolorboxdecol}\n\\setlength\\verbatimindentadjustcoefficient{0pt}\\vspace{1em}\n"
                 #self.table.has_verbatim = True
             # get consistent trailer
             hlcode = hlcode.rstrip() + '\n'
