@@ -129,7 +129,7 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
     # Create our window to draw in
     turtle.Turtle()
 
-    # Set colour and start shape
+    # Set color and start shape
     turtle.fillcolor('red')
     turtle.begin_fill()
 
@@ -140,34 +140,32 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
     
     turtle.end_fill()
 
-A bit of explanation: we import the turtle module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling colour as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
+A bit of explanation: we import the turtle module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
 
 This is now much easier than before than either using a sequence of statements, or even when we were using ``while`` loops.
 
-Vertico
+Vertigo
 -------
 
 Open up another new file window, and type in the following::
-
         
     import turtle
     import random
 
-    # Define the colours we will use below
+    # Define the colors we will use below
     colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']
 
     turtle.Turtle()
 
-    # Set the pen size, colour and drawing speed
+    # Set the pen size, color and drawing speed
     turtle.pensize(2)
-    turtle.pencolor('red')
     turtle.speed('fastest')
 
     # Start with a length of 5, and increase as we draw
     length = 5
 
-    # Draw 300 lines, changing the color and length as we progress
-    for i in range(300):
+    # Draw 400 lines, changing the color and length as we progress
+    for i in range(400):
         new_color = random.choice(colors)
         turtle.pencolor(new_color)
         turtle.forward(length)
@@ -176,10 +174,100 @@ Open up another new file window, and type in the following::
 
 Run and save it as spirals.py, and see what happens.  If there any problems, then check your code carefully!
 
-A bit of explanation: we impor the modules we need, turtle for drawing, random to introduce a bit of variaton.  We then define the colours (note, English spelling - Python requires the American splling) we are going to use.  We then create our drawing window, changing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 in total).  Inside the block of code that we are repeating (the loop), we change the pen colour, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
+A bit of explanation: we impor the modules we need, turtle for drawing, random to introduce a bit of variaton.  We then define the colors (note, English spelling - Python requires the American splling) we are going to use.  We then create our drawing window, changing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
 
 Try changing the numbers to see what happens to the final result.
+
+Loops inside loops
+------------------
+
+As we noted in chapter 9 on selection, you can have blocks code inside other blocks of code.  These blocks of code could be repeated, with other blocks also repeated - in other words, we can have loops inside loops - one section of code repeated inside another.
+
+Let us practice this concept by using the interactive shell:
+
+.. code::
+    :pythontest: nooutput
+
+    >>> for outer_number in range(1, 10):
+            print('outer loop', outer_number)
+            for inner_number in range(1, 10):
+                print('inner', inner_number)    
+    outer loop 1
+    inner 1
+    inner 2
+    inner 3
+    inner 4
+    inner 5
+    inner 6
+    inner 7
+    inner 8
+    inner 9
+    outer loop 2
+    inner 1
+    inner 2
+    inner 3
+    inner 4
+    inner 5
+
+and so on.  You will notice the outer loop starts, and before it repeats the inner loop takes over.  This then repeats until it runs out of items to step over (numbers in this example), and then the outer loop resumes.
         
+Now to do something longer and more colorful, start a new program and type in the following:
+
+.. code::
+    :pythontest: norun
+
+    import turtle
+    import math
+
+    # Define our colors to use lower down
+    colors = ['red', 'cyan', 'green', 'magenta', 'blue', 'yellow', 'white']
+
+    # Create our window, and set pen size and speed
+    turtle.Turtle()
+    turtle.pensize(5)
+    turtle.speed(0)
+
+    # Set the size of each triangle
+    length = 400
+
+    # Move a bit up and to the left so the shape is centred
+    turtle.up()
+    triangle_height = length / 2 * math.sqrt(3)
+    turtle.goto(-length/2, triangle_height)
+    turtle.down()
+
+    # Use colors from the start, and move along each time
+    color_index = 0
+
+    while True:
+        # Draw six triangles, centred on a point
+        for triangle in range(6):
+            # Select a color from the color list
+            color = colors[color_index % len(colors)]
+            turtle.fillcolor(color)
+            turtle.begin_fill()
+            
+            # Draw each of the triangle's 3 sides
+            for side in range(3):
+                turtle.forward(length)
+                turtle.right(120)
+            turtle.end_fill()
+            turtle.forward(length)
+            turtle.right(60)
+
+            # Increment our index, so the colors are rotated
+            color_index = color_index + 1
+
+Run it, naming it triangles.py, and see what happens.  Much of what we have typed in is similar to the spirals.py program, but this time we have loops inside loop.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is True, which never changes to False.  Inside this loop, we draw 6 triangle, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
+
+Your turtle window should show something like this being drawn:
+
+.. image:: screenshots/triangles.png
+    :width: 50%
+    :align: center
+
+One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatly go from 0 to 6, inclusive.
+
 Exercises
 ---------
 
@@ -191,9 +279,13 @@ Exercises
 
 4. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
+5. Modify your spirals.py program so that after the ``for`` loop, it then retraces its steps back to the middle.  You will need a similar ``for`` loop after the initial one, but instead of turning right, it should turn left, and instead of incrementing the length by 2 every time, it decrements the length by 2 every time.  Finally, between each of the loops, you will need to the drawing turtle around - this means turning right by 89 degrees, as the previous loop has just turned by 91 degrees (so the total is an about turn of 180 degrees).
+
 Things to remember
 ------------------
 
 1. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The ``for`` keyword can be read as *for each* if that makes its easier to understand.
 
 2. Use the ``range`` function to provide a sequence of number to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
+
+3. You can use the ``break`` keyword in a ``for`` loop as well as the ``while`` loop we leant in chapter 13 on escaping the cycle.

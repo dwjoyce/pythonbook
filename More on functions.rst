@@ -125,17 +125,17 @@ We will write a little turtle based program to demonstrate some of the concepts 
                     red=random.random(), green=random.random(),
                     blue=random.random())
 
-Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized circles on the screen, similar to the following:
+Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly colored and sized circles on the screen, similar to the following:
 
 .. image:: screenshots/randomcircles.png
-    :width: 200pt
+    :width: 250pt
     :align: center
 
 A little explanation:
 
     - we import the modules we need, turtle for drawing, random for producing a bit of variation.
-    - we then define a function called *draw_circle* which take four arguements - the radius, followed by red, green and blue to define the colour.
-    - inside the *draw_circle* function, we set the fill colour, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
+    - we then define a function called *draw_circle* which take four arguements - the radius, followed by red, green and blue to define the color.
+    - inside the *draw_circle* function, we set the fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
     - in the main part of the program, we create our window using the Turtle() function, set the speed to hurry things up, and then save the window width and height so we can use them later.
     - we then enter a loop which continues forever.
     - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.

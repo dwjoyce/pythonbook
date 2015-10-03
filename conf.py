@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Marching up and down the code'
-copyright = '2015, Matthew Joyce, David Joyce'
+copyright = '2015, Dr. D.W. Joyce, M.S. Joyce'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -209,7 +209,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class], exclude start file).
 latex_documents = [
   ('index', 'pythonbook.tex', 'Marching up and down the code',
-   'Matthew Joyce, David Joyce', 'manual', True),
+   'Dr. D.W. Joyce, M.S. Joyce', 'manual', True),
 ]
 
 latex_additional_files = ["sphinx.sty"]
@@ -241,7 +241,7 @@ latex_appendices = ["Python summary", "Extra exercises", "Operators", "Program f
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'pythonbook', 'pythonbook Documentation',
-     ['Matthew Joyce, David Joyce'], 1)
+     ['Dr. D.W. Joyce, M.S. Joyce'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -255,7 +255,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'pythonbook', 'pythonbook',
-   'Matthew Joyce, David Joyce', 'pythonbook', 'One line description of project.',
+   'Dr. D.W. Joyce, M.S. Joyce', 'pythonbook', 'One line description of project.',
    'Miscellaneous'),
 ]
 

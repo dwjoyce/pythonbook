@@ -412,7 +412,7 @@ For example:
 turtleboxes.py
 --------------
 
-Write a program in Python to draw 100 rectangles of a random length and width, and a random colour and at random positions in the turtle window.
+Write a program in Python to draw 100 rectangles of a random length and width, and a random color and at random positions in the turtle window.
 
 .. hint:: You will need to use the ``turtle`` module, and functions from the turtle module such as ``goto``, ``up``, ``down``, ``forward``, ``right`` (or ``left``), ``begin_fill``, ``end_fill`` and ``fillcolor``.  Use the help system to find out how to call these functions.
 
@@ -454,7 +454,7 @@ For example:
 twist.py
 --------
 
-Write a program in Python that draws a number of squares, using the ``turtle`` module, each one larger than the last and with the drawing turtle turning after each square.  Each square should also be a different colour - use the ``random.choice`` function to select from a variety of colours.
+Write a program in Python that draws a number of squares, using the ``turtle`` module, each one larger than the last and with the drawing turtle turning after each square.  Each square should also be a different color - use the ``random.choice`` function to select from a variety of colors.
 
 The first square should have sides of 25 pixels in length, with each succeeding square being 10 pixels longer on each side.  The turtle should turn 10 degrees to the right after every square.
 

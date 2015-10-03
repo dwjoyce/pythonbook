@@ -181,8 +181,8 @@ class Writer(writers.Writer):
                             line = code.pop(0)
                             if not line.strip():
                                 break
-                            #if not line.startswith("    "):
-                                #return False, "Compilation failure", "Invalid formatting - multiline code should be ended by a blank line (or you have used `...`)"
+                            if not line.startswith("    "):
+                                break
                             section += line[4:] + "\n"
                             
             else:
