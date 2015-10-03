@@ -132,7 +132,11 @@ In the next chapter, we will discuss not only passing data into a function, but 
 Exercises
 ---------
 
-.. todo:: Exercises for Naming code
+1. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``opertor``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 20.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
+
+2. Write a function called ``timestable`` which receives a number and prints out a times table with that number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two for loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers.  Again, put it in the same functions.py program.
+
+3. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a circle will need to input the radius.
 
 Things to remember
 ------------------

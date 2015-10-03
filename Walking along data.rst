@@ -126,11 +126,14 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
 
     import turtle
 
+    # Create our window to draw in
     turtle.Turtle()
 
+    # Set colour and start shape
     turtle.fillcolor('red')
     turtle.begin_fill()
 
+    # Draw octagon
     for side in range(8):
         turtle.forward(50)
         turtle.left(45)
@@ -150,13 +153,15 @@ Open up another new file window, and type in the following::
     import turtle
     import random
 
+    # Define the colours we will use below
     colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']
 
     turtle.Turtle()
 
+    # Set the pen size, colour and drawing speed
+    turtle.pensize(2)
     turtle.pencolor('red')
     turtle.speed('fastest')
-    turtle.pensize(2)
 
     # Start with a length of 5, and increase as we draw
     length = 5
