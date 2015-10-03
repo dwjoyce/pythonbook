@@ -125,7 +125,7 @@ We will write a little turtle based program to demonstrate some of the concepts 
                     red=random.random(), green=random.random(),
                     blue=random.random())
 
-Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized circles on the screen, similar to the following::
+Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly coloured and sized circles on the screen, similar to the following:
 
 .. image:: screenshots/randomcircles.png
     :width: 200pt
