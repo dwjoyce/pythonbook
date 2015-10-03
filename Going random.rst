@@ -40,7 +40,7 @@ In fact, let's use our new found knowledge on looping to see how this random num
     while True:
         random.random()
 
-Just like in the previous chapter on infinite loops, you will have to press the ``Ctl`` and ``C`` keys together on your keyboard to break out of the loop manually.  It will probably go so fast, that only by breaking out of the loop will you be able to look at the numbers properly.  If this doesn't work, then make sure you have imported the random module first.
+Just like in the previous chapter on infinite loops, you will have to press the ``Ctrl`` and ``C`` keys together on your keyboard to break out of the loop manually.  It will probably go so fast, that only by breaking out of the loop will you be able to look at the numbers properly.  If this doesn't work, then make sure you have imported the random module first.
 
 Let's try another function - ``randrange`` - this time, instead of returning a number between 0.0 and 1.0 (which could be scaled up, if needs be), this time it will return an integer up to (but not including) the number you give it.  For example, try the following a few times::
 

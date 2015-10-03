@@ -186,7 +186,7 @@ Exercises
 
 1. Modify your rps.py program so that it prints out what the choices were, particularly the computer choice.  It is nice for the user to know how they won or lost a game!
 
-2. Write a program called sizes.py to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill colour randomly selected.  You could defined your colours such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
+2. Write a program called sizes.py to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could defined your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
 
 Things to remember
 ------------------

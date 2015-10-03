@@ -1,4 +1,4 @@
-Walking along data
+ThisWalking along data
 ==================
 
 Round and round
@@ -266,7 +266,7 @@ Your turtle window should show something like this being drawn:
     :width: 50%
     :align: center
 
-One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatly go from 0 to 6, inclusive.
+One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatly go from 0 to 6, inclusive.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
 
 Exercises
 ---------
@@ -288,4 +288,4 @@ Things to remember
 
 2. Use the ``range`` function to provide a sequence of number to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
 
-3. You can use the ``break`` keyword in a ``for`` loop as well as the ``while`` loop we leant in chapter 13 on escaping the cycle.
+3. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we leant in chapter 13 on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.
