@@ -30,7 +30,7 @@ Table of contents:
     Slicing sequences
     Walking along data
     Naming code
-    More functions
+    More on functions
     Reading files
     Writing files
     Catching errors

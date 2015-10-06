@@ -52,7 +52,7 @@ To write a list of lines, like that produced by ``readlines``, we use ``writelin
 Exercises
 ---------
 
-.. todo:: Exercises for Reading files
+.. todo:: Exercises for Writing files
 
 
 Things to remember
