@@ -202,6 +202,25 @@ latex_elements = {
 'preamble': open("preamble.tex").read(),
 
 #'fontpkg': '\\usepackage{sans}'
+'maketitle':r"""
+\makeatletter
+\begin{titlepage}
+ \begin{center}
+  \hspace{1cm}\\[10cm]
+  {\Huge \textbf{\thetitle}}
+  \\[0.4cm]
+  {\Large \color{TitleColor} Learning Python 3 on the Raspberry Pi}
+  \\[0.5cm]
+  \rule{\linewidth}{0.4mm}
+  \\[0.5cm]
+  {\large \textbf{\theauthor}}
+  \\[0.5cm]
+  {\normalsize \color{TitleColor} \textit{\py@release}}
+ \end{center}
+
+\end{titlepage}
+\makeatother
+"""
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -209,7 +228,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class], exclude start file).
 latex_documents = [
   ('index', 'pythonbook.tex', 'Marching up and down the code',
-   'Dr. D.W. Joyce, M.S. Joyce', 'manual', True),
+   'Dr. D.W. Joyce \\and M.S. Joyce', 'manual', True),
 ]
 
 latex_additional_files = ["sphinx.sty"]
