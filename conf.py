@@ -206,7 +206,7 @@ latex_elements = {
 \makeatletter
 \begin{titlepage}
  \begin{center}
-  \hspace{1cm}\\[10cm]
+  \hspace{1cm}\\[8cm]
   {\Huge \textbf{\thetitle}}
   \\[0.4cm]
   {\Large \color{TitleColor} Learning Python 3 on the Raspberry Pi}
