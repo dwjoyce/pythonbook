@@ -4,9 +4,9 @@ Performing selection
 Taking a different route
 ------------------------
 
-With what we have learned up until now, we can do arithmetic, store values against variable names, call functions, import other people's modules, and even get input from the user.  We have also dealt in different types of data, whether numbers (integers or floating point) or strings (sequences of letters, digits or symbols).  Our programs have started running (technically known as *executing*) from the top, and finished at the bottom, performing each line (a code statement) at a time, without any deviation whatsoever!
+With what we have learned up until now, we can do arithmetic, store values against variable names, call functions, import other people's modules, and even get input from the user.  We have also dealt in different types of data, whether numbers (integers or floating point) or strings (sequences of letters, digits and symbols).  Our programs have started running (technically known as *executing*) from the top, and finished at the bottom, performing each line (a code statement) at a time, without any deviation whatsoever.
 
-If a program simply performs the same instructions, line by line, every single time, then effectively they do the same thing every time they are run.  This is not very interesting!  Programs become more useful when they can make decisions on what to do, depending on the circumstances.  Usually, this involves testing the value of a variable, and then performing some instructions instead of others.  In programming, this is known as *selection* - the program is running some code statements selectively over others - it is making a decision.
+If a program simply performs the same instructions, line by line, every single time, then effectively they do the same thing every time they are run.  This is not very interesting!  Programs become more useful when they can make decisions on what to do, depending on the circumstances.  Usually, this involves testing the value of a variable, and then performing some instructions over others.  In programming, this is known as *selection* - the program is running some code statements selectively over others - it is making a decision.
 
 For example, if the program is working out the price of a cinema ticket, and VIP tickets cost 20% extra, the program needs to take a decision as to whether to add on this 20% or not.  It cannot add on 20% for all the tickets!
 
@@ -28,7 +28,7 @@ So far, so good!  Now we need to take a decision, so add the following to your p
     if vip == 'yes':
         price = price * 1.2
 
-You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable ``vip``, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string *yes*.  To perform the test, we have introduced a new operator, called the equals operator.  It is similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is true, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.
+You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable ``vip``, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string *yes*.  To perform the test, we have introduced a new operator, called the equals operator.  It is looks similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing whether what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is true, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.
 
 Also note the use of the colon ``:`` symbol.  This is used at the end of every line that has other lines that are attached to it.  We will be seeing that on many more occasions in the future with other statements we will be introducing.  It effectively tells Python to run the following lines if the test just evaluated was true.  Please don't miss these off!
 
@@ -46,7 +46,7 @@ We can now finish our program, so add the last line on the end so that your comp
         
     print('Your total price is:', price)
 
-See how to resume the instructions, whether the ``if`` statement test was true or not, you simply have to move back 4 spaces to the left.  This means our *code block* attached to the ``if`` statement is over, and we now carry on as usual.
+See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our *code block* attached to the ``if`` statement is over, and we now carry on as usual.
 
 Now save and run your program using the ``F5`` key, pressing Return, and using the program name of vip.py.  Remember, to save your program onto your USB stick.
 
@@ -93,7 +93,7 @@ Exercises
 
 2. Write a program called kiosk.py which prints out a menu of snacks to buy, e.g. Mars bar for 50p, Kitkat for 40p, Galaxy for 55p, Haribo for 30p (even better: make up your own items).  Ask the user to type in a choice (it could even be "1", "2", "3", etc.), and print out the correct price for the item chosen.
 
-3. Write a program called weather.py which asks whether it is sunny or rainy or cloudy.  If the user types in "sunny", then tell the user to bring some sun cream.  If the user typed in "rainy", then tell the user to bring his umbrella.  Otherwise, just ignore the response.
+3. Write a program called weather.py which asks whether it is sunny or rainy or cloudy.  If the user types in "sunny", then tell the user to bring some sun cream.  If the user typed in "rainy", then tell the user to bring his umbrella.  If the user typed in "cloudy", then tell the user to bring his jumper.  Otherwise, just ignore the response.
 
 
 Things to remember

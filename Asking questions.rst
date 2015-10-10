@@ -4,7 +4,7 @@ Asking questions
 String input
 ------------
 
-It is now time to make our programs more interactive, allowing the user to get involved whilst the program is running.  Up until now, Python has carried out our instructions, one line at a time, and the program will do exactly the same thing every time.
+It is now time to make our programs more interactive, allowing the user to get involved whilst the program is running.  Up until now, Python has carried out our instructions, one line at a time, with the program doing exactly the same thing every time.
 
 In this chapter, we will allow the user to affect what happens in the program with the opportunity to enter data of their own.  The way Python allows the user to enter data is by using the ``input`` function.  This reads in what the user is typing on the keyboard, and returns the value to the program so that it can be stored or used elsewhere.
 
@@ -24,7 +24,7 @@ The type of data given to us by the ``input`` function (i.e. what is returned) i
 
 Remember, when you *add* two strings, you are really joining them together (e.g. ``"12" + "34"`` would equal ``"1234"``).  When you *multiply* a string by a number, you are repeating the contents of the string (e.g. ``"123" * 3`` would equal ``"123123123"``).
 
-Therefore, if you need to use the input as an actual number, you need to convert it from a string type to an integer or float type.  This means you can then use the result in a normal calculation like any other number.
+Therefore, if you need to use the input as an actual number, you need to convert it from a string type to an integer or float type.  This means you can then use the result in a normal calculation like any other number.  It is effectively converts a sequence of digits into a proper number where the right most digit is the 1s, the second column is the 10s, the third column is the 100s, etc., with all the numbers combined together to form a complete number.
 
 To convert from a string to an integer, you use the ``int`` function.  So for example, ``int("123")`` would return the actual number ``123``.
 
@@ -46,7 +46,7 @@ To practice, start a new program called sumup.py, and type in the following into
 
 Press ``F5`` to run it, confirm to save, and name your program sumup.py.  Careful when entering those numbers - they must be integers, otherwise converting from a string to an integer in the program will not work!
 
-To explain what is going on, we first save what the user has typed in, and save it in a variable called ``first_num_str``.  We do the same again for ``second_num_str``.  We then convert this input from a string value to an integer value so that we can perform a proper numerical addition operation.  We do this with the line where we assign a new variable called ``total`` to ``first_num`` added onto ``second_num``.  We finish by printing out a message, printing the value of total alongside.
+To explain what is going on, we first input what the user has typed in, and save it in a variable called ``first_num_str``.  We do the same again for ``second_num_str``.  We then convert this input from a string value to an integer value so that we can perform a proper numerical addition operation.  We do this addition with the line where we assign a new variable called ``total`` to ``first_num`` added onto ``second_num``.  We finish by printing out a message, printing the value of total alongside.
 
 Run your program again with different numbers to check it works.  Now run it, and instead of entering integer numbers (e.g. ``10``, ``20``, ``-50``, ``123``, etc.), type in a fractional number (e.g. ``10.75``).  This should result in an error, as the period ``.`` is not part of an integer number.  Python will not like this!
 

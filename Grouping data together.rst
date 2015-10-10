@@ -4,7 +4,7 @@ Grouping data together
 Scattered items
 ---------------
 
-We have covered already variables, which just give a name to a piece of data.  This is very handy, and allows us to give data a memorable name we can refer to and modify later.
+We have already covered variables, which just give a name to a piece of data.  This is very handy, and allows us to give data a memorable name we can refer to and modify later.  Technically, variable names (identifiers) are memory addresses that point to the data we are referring to.
 
 However, it can become messy when there are many variables in our programs, especially if they are closely related.  For example, if we had a bunch of people's names, we could define each name individually.  Use the interactive shell to type in the following::
 
@@ -13,12 +13,12 @@ However, it can become messy when there are many variables in our programs, espe
     >>> name3 = 'harry'
     >>> name4 = 'tom'
     
-All the variables here describe the same kind of data - a group of names, one after the other.  It would be good if we could simply group these items together under the same name.  This is usually very good practice in programming - those things (whether code or data) that belong together should be kept together.
+All the variables here describe the same kind of data - a group of names, one after the other.  It would be good if we could simply group these items together under a single name.  This is usually very good practice in programming - those things (whether code or data) that belong together should be kept together.
 
 Boxing up
 ---------
 
-The way we do this in Python is by using lists.  As its name suggests, a list is simply a sequence of other pieces of data, whether integers, floats, strings or even others lists.
+The way we do this in Python is by using lists.  As its name suggests, a list is simply a sequence of other pieces of data, whether integers, floats, strings or even other lists.
 
 Remember, if we have more than one item to print out, we simply use a comma ``,`` in-between each item.  This is easy to forget!  For example, if we wish to print out our names above, you can type the following::
 
@@ -34,13 +34,13 @@ Notice how we have done away with the individual variables, eg. name1, name2, et
     >>> print(names)
     ['fred', 'bob', 'harry', 'tom']
 
-This list is a sequence containing four strings - the names 'fred', 'bob', 'harry' and 'tom'.  As mentioned above, list can contain almost anything, so let's try a list containing different data::
+This list is a sequence containing four strings - the names 'fred', 'bob', 'harry' and 'tom'.  As mentioned above, lists can contain almost anything, so let's try a list containing different data::
 
     >>> my_ints = [1, 2, 3, 4, 5]
     >>> my_floats = [2.5, 17.2, -1.7, 123.9]
     >>> my_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
     
-Notice how the contents of the list can be in any order you wish, although it can be sorted later.  The last one is slightly complicated - it is a list containing four sub-lists, each of which contains three integers.  A list of lists, or sometimes referred to as a *matrix*.  The data can even be mixed, although this does not always make sense.  Try this::
+Notice how the contents of the list can be in any order you wish, although it can be sorted later.  The last one is slightly complicated - it is a list containing four sub-lists, each of which contain three integers.  A list of lists, or sometimes referred to as a *matrix*.  The data can even be mixed, although this does not always make sense.  Try this::
 
     >>> my_stuff = ['bacon', 123, 99.5, [1, 44.2, 'fred']]
     
@@ -49,7 +49,7 @@ Again, you can print these list out using the ``print`` function.  Try it with e
 Playing with lists
 ------------------
 
-We can do all sorts of things with lists in Python that can turn out to be incredibly useful.  To get Python to sum up a group of numbers, we can just put them in a list and use the ``sum`` function::
+We can do all sorts of things with lists in Python that can turn out to be very useful.  To get Python to sum up a group of numbers, we can just put them in a list and use the ``sum`` function::
 
     >>> numbers = [1, 5, 50, 23, 77]
     >>> sum(numbers)
@@ -71,9 +71,9 @@ You can even get Python to sort a list in any order you wish.  Try this out::
     >>> print(sorted(numbers, reverse=True))
     [35, 30, 25, 20, 15, 10, 5]
     
-The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but we an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 18 when we create our own functions for the first time.
+The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but we an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 19 when we are creating our own functions.
 
-List can also be modified after they have been defined by using the ``append``, ``insert`` and ``del`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well), and del is a built-in function to get rid of a variable (or part of a list, in this case).  We will cover how to index lists properly in the next chapter.  To see how this works, try out the following::
+Lists can also be modified after they have been defined by using the ``append``, ``insert`` and ``del`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well), and del is a built-in function to get rid of a variable (or part of a list, in this case).  We will cover how to index lists properly in the next chapter.  To see how this works, try out the following::
 
     >>> names = ['Bilbo', 'Frodo', 'Sam']
     >>> print(names)
@@ -152,8 +152,8 @@ This is also new - we are using a different function from the random module call
     if user_choice == computer_choice:
         print('Draw!')
     elif ((user_choice == 'rock' and computer_choice == 'scissors') or
-            (user_choice == 'scissors' and computer_choice == 'paper') or
-            (user_choice == 'paper' and computer_choice == 'rock')):
+          (user_choice == 'scissors' and computer_choice == 'paper') or
+          (user_choice == 'paper' and computer_choice == 'rock')):
         print('You won!')
     else:
         print('Computer won!')
@@ -171,8 +171,8 @@ Therefore, modify the long ``if`` statement in your rps.py program so it include
     elif user_choice == computer_choice:
         print('Draw!')
     elif ((user_choice == 'rock' and computer_choice == 'scissors') or
-            (user_choice == 'scissors' and computer_choice == 'paper') or
-            (user_choice == 'paper' and computer_choice == 'rock')):
+          (user_choice == 'scissors' and computer_choice == 'paper') or
+          (user_choice == 'paper' and computer_choice == 'rock')):
         print('You won!')
     else:
         print('Computer won!')

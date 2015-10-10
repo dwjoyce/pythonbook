@@ -21,14 +21,13 @@ We can list what functions the random module offers by using the ``dir`` functio
 
     >>> dir(random)
 
-
 We can then experiment with some of its functions.  Try calling the ``random`` module's ``random`` function (random module, random function), a few times::
 
     >>> random.random()
     >>> random.random()
     >>> random.random()
     
-.. note:: You can repeat a command in the interactive shell by using the up arrow key on your keyboard, and pressing the Return key.  This brings the lines down onto your current line, allowing you change it.  Execute that statement by pressing return again.
+.. note:: You can repeat a command in the interactive shell by using the up arrow key on your keyboard, and pressing the Return key.  This brings the lines down onto your current line, allowing you change it.  Execute that statement by pressing Return again.
 
 Run this line a few time with the note above.  See how it always returns a number that is between 0.0 and 1.0, but hardly ever the same exact number.  See if you can get it to repeat a number - it is not easy!
 
@@ -42,7 +41,7 @@ In fact, let's use our new found knowledge on looping to see how this random num
 
 Just like in the previous chapter on infinite loops, you will have to press the ``Ctrl`` and ``C`` keys together on your keyboard to break out of the loop manually.  It will probably go so fast, that only by breaking out of the loop will you be able to look at the numbers properly.  If this doesn't work, then make sure you have imported the random module first.
 
-Let's try another function - ``randrange`` - this time, instead of returning a number between 0.0 and 1.0 (which could be scaled up, if needs be), this time it will return an integer up to (but not including) the number you give it.  For example, try the following a few times::
+Let's try another function - ``randrange`` - this time, instead of returning a number between 0.0 and 1.0 (which could be scaled up, if needs be), it will return an integer up to (but not including) the number you give it.  For example, try the following a few times::
 
     >>> random.randrange(100)
     >>> random.randrange(100)
@@ -116,7 +115,7 @@ Exercises
 
 1. Modify your guess.py program so that after testing whether the ``user_guess`` variable is equal to the computer's number ``number_to_guess``, the program will then test whether the user's number is less than the computer's number and print an appropriate message (e.g. 'Too low!'), and also if the user's number is larger than the computer's number, then print out another message (e.g. 'Too high!').  This will give the user a hint as to which direction to head in!
 
-2. Write a program called poly.py to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, and octagon is drawn.
+2. Write a program called poly.py to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, an octagon is drawn.
 
 Things to remember
 ------------------

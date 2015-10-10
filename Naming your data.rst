@@ -6,9 +6,9 @@ Saving and recalling
 
 Remember in the last chapter we looked at how your calculator works and started using the Python programming language to copy and build on this.
 
-One feature of a calculator is the Memory button, usually marked by the letter **M**.  This allows you to store a number, add onto or subtract from it, and recall it for use in a new calculation.  It effectively makes the calculator remember a number for you, so that you do not have to.
+One feature of a calculator is the Memory button, usually marked by the letter **M**.  This allows you to store a number, add onto or subtract from it, and recall it later for use in a new calculation.  It effectively makes the calculator remember a number for you, so that you do not have to.
 
-All programming languages, including Python, have a similar feature. Instead of having a memory button, Python has variables.  It is really just a way of putting a name against the data (e.g. a number) you are working with, giving your program the ability to store data, work on it, and recall it later.
+All programming languages, including Python, have a similar feature. Instead of having a memory button, Python has variables.  It is really just a way of putting a name against the data (e.g. a number) you are working with, giving your program the ability to store data, change it (i.e. vary its value), and recall it later.
 
 For example, the initial sum we worked on in the previous chapter::
 
@@ -91,18 +91,22 @@ And arithmetic operators can be used that we learnt in our previous chapter::
 
 That last line displays the value of ``C3``, calculated from the value of ``B2``, and adds on the value of ``A1``.
 
-You can name your variables with any combination of letters and numbers along with the ``_`` (underscore) character, as long as the name does not start with a number. You can use the underscore to separate words if you use them in your variable names - spaces are not allowed inside names!
+You can name your variables with any combination of letters and numbers along with the ``_`` (underscore, not minus sign) character, as long as the name does not start with a number. You can use the underscore to separate words if you use them in your variable names - spaces are not allowed inside names!
 
 Exercises
 ---------
 
 1. Define a variable called ``age`` and set it to your age (use an integer number).
+
 2. Use your ``age`` variable to calculate how many days old you are (assume each year has 365 days).
+
 3. Again, use your ``age`` variable to calculate in what year you will be 100 years old.  You will need to take the value of ``age`` from the present year, 2015, and then add on 100.
 
 Things to remember
 ------------------
 
 1. You define a variable by giving it a name, and using the assignment operator to give it a value.  The value can be evaluated (calculated) from other variables.
-2. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.
-3. Use the ``_`` (underscore) character to divide up words in your variable names, e.g. ``first_num``.
+
+2. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.  To use the underscore character, you need to press the Shift key down whilst pressing the key to the right of the 0 (zero).
+
+3. Use the ``_`` (underscore) character to divide up words in your variable names to make them more readable, e.g. ``first_num``.

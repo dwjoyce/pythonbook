@@ -4,13 +4,13 @@ Getting help
 Save Our Sanity
 ---------------
 
-Python is a very helpful programming language, when we need to find out more information.  And it is all built-in so we do not even need to go elsewhere to find it.
+Python is a very helpful programming language when we need to find out more information.  And it is all built-in so we do not even need to go elsewhere to find it.
 
 On a general level, you can use the interactive shell to enter the help utility like so::
 
     >>> help()
     
-So if you remember what we taught in chapter 3, this means that ``help`` is a function, and it is being called by placing brackets ``()`` after its name.
+So if you remember what we taught in chapter 2, this means that ``help`` is a function, and it is being called by placing parentheses ``()`` (round brackets) after its name.
 
 When we are in the help utility, the prompt changes from ``>>>`` to ``help>``, to avoid confusing the two.  The first thing to learn is how to exit the help system:
 
@@ -28,13 +28,13 @@ Now, if you re-enter the help utility, you can type any command or function to g
     :pythontest: nooutput
 
     >>> help()
-    help> print
+    help> round
 
-This will display some information on the print function.  If the help utility does not recognise what you have typed, it will say so.
+This will display some information on the ``round`` function.  If the help utility does not recognise what you have typed, it will say so.
 
 You need not enter the help utility to get further information, though.  You can do it from the interactive prompt as well::
 
-    >>> help(print)
+    >>> help(round)
     
 This will display the same information as before, but it takes less effort to get to it!
 
@@ -64,7 +64,7 @@ To get a list of what is built into Python, you can call the *directory* functio
      '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items',
      'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
     
-This will list a number of error codes, followed by a number of built-in functions.  These functions can be used just by referring to their name, followed by parentheses (round brackets) to call them.  For example, one of the built-in functions is ``round``, so we can simply call it as follows::
+This will list a number of error codes, followed by a number of built-in functions.  These functions can be used just by referring to their name, followed by parentheses to call them.  For example, one of the built-in functions is ``round``, so we can simply call it as follows::
 
     >>> round(10.75)
     11
@@ -77,11 +77,11 @@ You can get more help on these functions by using the help function again.  For 
     
 will give more information on the round function, such as what it accepts (a number, and optionally the number of digits to round the number to), and what it returns back (another number, the rounded result).
 
-In the previous chapter, we introduced the notion of bring in a separate program (often called a *module*) into our own using the *import* command.  But how do we know what available programs there are to import?  To find this out, we can type the following::
+In the previous chapter, we introduced the notion of bringing in a separate program (often called a *module*) into our own using the ``import`` command.  But how do we know what available programs there are to import?  To find this out, we can type the following::
 
     >>> help('modules')
     
-This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` module we used in the previous chapter.
+This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` module we used previously.
 
 To delve deeper, we can find out more information on functions inside these other modules by using the dot notation as introduced last time.  So, for example, if we want to find out more information on the square root function inside the math module, we could do the following:
 

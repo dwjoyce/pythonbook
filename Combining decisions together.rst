@@ -6,7 +6,7 @@ Juggling tests
 
 We have learned how to use the ``if`` statement to evaluate a test, and if true it then executes a block of code you provide immediately underneath.  It makes our programs cleverer so that they can take different decisions depending on the circumstances at the time.
 
-This chapter introduces logical operators which make combining tests together easier.  Although this part of programming is not essential, it does make our programs much easier to write.
+This chapter introduces logical operators which make combining tests together easier.  Although this part of programming is not essential, it does make our programs shorter and easier to write.
 
 For example, take a program that wants to tell the user whether he can go the beach or not.  This decision depends on the weather (preferably warm), and whether it is during the holidays or not.
 
@@ -25,7 +25,7 @@ With what we know now, we could code this as follows, so type this into a new fi
 
 Save this program and call it beach.py.  Run it and test it out - it should all work fine, regardless of the combination of values you type in.
 
-However, this took a lot of typing to get working, and programmers like to avoid typing when we can!  One problem is that the 'Sorry' message is done twice, so we duplicating a line unnecessarily.  We also have two ``else`` statements to go with the two ``if`` statements.  It would be much better if we could combine the two tests together on one line, with one ``if`` statement and one ``else`` statement, with each call to the ``print`` function done once each as well.
+However, this took a lot of typing to get working, and programmers like to avoid typing when we can!  One problem is that the 'Sorry' message is done twice, so we are duplicating a line unnecessarily.  We also have two ``else`` statements to go with the two ``if`` statements.  It would be much better if we could combine the two tests together on one line, with one ``if`` statement and one ``else`` statement, with each call to the ``print`` function done once each as well.
 
 So far, we have only learned how to attach one test to either an ``if`` statement or an ``elif`` statement.  With logical operators, we can combine a number of tests together to form a larger single test.  There are three logical operators:
 
@@ -84,6 +84,6 @@ Exercises
 Things to remember
 ------------------
 
-1. There are three logical operators: ``and`` for testing whether the left and right-hand side tests are both true; ``or`` for testing whether either the left or right-hand side tests are true; ``not`` for inverting a boolean value.
+1. There are three logical operators: ``and`` for testing whether the left and right-hand side tests are both true; ``or`` for testing whether either the left or right-hand side tests are true (or both); ``not`` for inverting a boolean value.
 
-2. Put the ``and`` and ``or`` operators inbetween boolean expressions.  Put the ``not`` operator infront of a boolean expression.
+2. Put the ``and`` and ``or`` operators in-between boolean expressions.  Put the ``not`` operator in front of a boolean expression.

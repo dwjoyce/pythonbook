@@ -3,7 +3,7 @@ Going loopy
 
 Computers are very good at doing a number of steps repetitively, relieving us of many mundane tasks in our lives.  In programming, this makes our programs much more flexible and involves a lot less typing which is always a good thing!
 
-Imagine drawing a hexagon (6 sided polygon) using turtle.  There is the hard way, and the easy way.
+Imagine drawing a hexagon (a 6 sided polygon) using turtle.  There is the hard way, and the easy way.
 
 Doing it the hard way
 ---------------------
@@ -36,9 +36,9 @@ Clearly, this is too much typing for what it does.  But there are cases where th
 Doing it the easy way
 ---------------------
 
-To overcome this hurdle, Python - and pretty much all programming languages - has the ability to repeat a block of code a number of times.  This is called looping or iteration.
+To overcome this hurdle, Python - and pretty much every other programming language - has the ability to repeat a block of code a number of times.  This is called looping or iteration.
 
-Roughly speaking, looping is similar to the way we construct ``if`` statements.  In an ``if`` statement, we use the ``if`` keyword (a word reserved by Python and given a special meaning), following by a test which results in a boolean value - either ``True`` or ``False``.  It will then conditionally execute a given code block, which follows the ``:`` colon symbol.  If the test fails (results in ``False``), then the code block is skipped.  Either way, the program continues on its way after the ``if``, along with any ``elif`` and ``else`` statements are done.
+Roughly speaking, looping is similar to the way we construct ``if`` statements.  In an ``if`` statement, we use the ``if`` keyword (a keyword is a word reserved by Python and given a special meaning), following by a test which results in a boolean value - either ``True`` or ``False``.  It will then conditionally execute a given code block, which follows the ``:`` colon symbol.  If the test fails (results in ``False``), then the code block is skipped.  Either way, the program continues on its way after the ``if``, along with any ``elif`` and ``else`` statements are done.
 
 A loop uses a different keyword, but still has a condition that is tested, and also a code block that belongs to it.  The main difference is that a loop will execute the code block not just once, but potentially many times.  To be precise, the code block can execute zero or more times, depending on whether the test at the top of the loop is ``True`` in the first place!  The loop will repeat whilst the condition remains ``True``, so clearly we need a way of changing the condition as we go along or otherwise it will repeat forever.  In the next chapter, we will do this on purpose, but with a way of escaping!
 
@@ -52,7 +52,7 @@ Enough talking - let us go about changing our program above to get the computer 
 
 Run your program, again saving it onto your USB stick, and see what it does.  It should now draw the same hexagon twice!
 
-The new thing to learn here is the use of the new keyword ``while``.  With this, the program performs the indented block of code, following the ``:`` symbol, ``while`` the condition is ``True``.  Initially, the condition is true, as we have set an integer variable to zero, and zero is less than 6.  Each time we draw a side of the hexagon, we add (increment) one onto the side variable.  So the variable side goes from 0 to 1 to 2, 3, 4, 5 and finally 6.  We then test whether the value 6 is less than 6, which it is not - it is equal to 6.  Therefore, the condition is then ``False``, and the loop stops.
+The new thing to learn here is the use of the new keyword ``while``.  With this, the program performs the indented block of code, following the ``:`` symbol, ``while`` the condition is ``True``.  Initially, the condition is ``True``, as we have set an integer variable to zero, and zero is less than 6.  Each time we draw a side of the hexagon, we add (increment) one onto the side variable.  So the variable side goes from 0 to 1 to 2, 3, 4, 5 and finally 6.  We then test whether the value 6 is less than 6, which it is not - it is equal to 6.  Therefore, the condition is then ``False``, and the loop stops.
 
 You can see we have reduced 12 lines to draw a hexagon, down to 5.  The great thing is that if we change the condition from 6 to 100 (and changing the angle of turning left would be good too, as well as the length of each side), then we would then draw a 100 sided shape without any further changes.  In the hard way above, this would involve another 188 lines of code!
 
@@ -65,7 +65,7 @@ Exercises
 
 3. Modify your hundred.py program so that the loops count up or down in steps of 5, not 1.  Run it again to check that it works as expected.
 
-4. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides.
+4. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides when turning the turtle to the left or right.
 
 Things to remember
 ------------------

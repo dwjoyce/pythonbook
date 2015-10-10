@@ -19,30 +19,30 @@ and then hit the = (equals) button.  The result, 30, will then appear on your sc
 
 and then finally hitting the equals button, you will get a result of 24 displayed on the calculator's screen.  This is assuming you are using a proper calculator, not a simple one which performs the calculation as it goes along, one step at a time!  In other words, it performs the division first, then the multiplication, and then subtracts this answer from the result of the addition.
 
-So given their name, we should be able to use "computers" to do some "computing", that is, working with numbers.  Particularly, we should be able to use our new programming language, Python, to do this for us.
+So given their name, we should be able to use *computers* to do some *computing*, that is, working with numbers.  Particularly, we should be able to use our new programming language, Python, to do this for us.
 
 Using the first example, the Python code is very simple.
 
 .. highlight:: py3con
 .. pythontest:: on
 
-Bring up your Python interactive shell, as described in chapter 0, and type the following::
+Bring up your Python interactive shell, as described in chapter 0 (i.e. by clicking on the IDLE icon on your desktop), and type the following::
 
     >>> 10 + 20
     30
 
-and press the Return or Enter key on your keyboard.  You should see the number 30 displayed below.
+and press the Return or Enter key on your keyboard.  The *>>>* (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
 
 How about the second example.  Let us try this::
 
     >>> 10 + 20 - 4 / 2 * 3
     24.0
     
-Firstly, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.
+The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.  These *signs* in computer programmign are called *operators*, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
 
-Type in it, press Return and see what the result is.  The result should read 24.0, which is a fractional number.  In Python, we will deal with two types of numbers - whole numbers (integers) and fractional numbers (floating point or real numbers).
+Type in it, press Return and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two types of numbers - whole numbers (integers) and fractional numbers (floating point or real numbers).
 
-Remember, like proper Maths, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
+Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
 
 To enforce a different order, you can use brackets.  Just like in Maths.  Put a set of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
@@ -52,7 +52,7 @@ To enforce a different order, you can use brackets.  Just like in Maths.  Put a 
 Operator overload
 -----------------
 
-On your calculator there are more than 4 buttons.  There is one labelled x\ :superscript:`2`\ . And x\ :superscript:`3`\ . Can Python do that? Sure. Use the ``**`` (power) operator. 9 to the power of 2 is as simple as::
+On your calculator there are more than 4 buttons to do things.  There is one labelled x\ :superscript:`2`\ . And x\ :superscript:`3`\ .  Python has this built-in as well and it is the ``**`` (power) operator.  For example, the number 9 to the power of 2 is as simple as::
 
     >>> 9 ** 2
     81
@@ -62,19 +62,20 @@ Which is 81. 2 to the power of 3 is::
     >>> 2 ** 3
     8
 
-Which is 8. This works for any power. Ever wanted to know what 19\ :superscript:`8` is? Ask Python::
+Which is 8. This works for any power.  How about working out large numbers, such as 19\ :superscript:`8`.  To do this, type in the following::
 
     >>> 19 ** 8
     16983563041
 
-Python says 16983563041. Satisfied now? Even negative powers work. Remember that 2\ :superscript:`-1` is the same as 1 ÷ 2? So does Python::
+
+Your answer should state 16983563041. Negative numbers work as well to give fractional numbers less than 1.0.  Remember that 2\ :superscript:`-1` is the same as 1 ÷ 2?  Doing this in Python is similar::
 
     >>> 2 ** -1
     0.5
 
-Gives 0.5.
+Your answer should read 0.5.
 
-Now for something your calculator cannot do. Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (for short 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor division, but don't worry about long names) operator::
+We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor or integer division) operator::
 
     >>> 7 // 3
     2
@@ -84,15 +85,19 @@ Which should be 2. And for the remainder, use the ``%`` (modulus) operator::
     >>> 7 % 3
     1
 
-Gives 1.
+Resulting in 1.  Reading both answers together, we have got 2 remainder 1.
 
 Exercises
 ---------
 
 1. Type the Python line to work out 3 plus 5 divided by 2.
+
 2. Type the Python line to work out 4 times 2 minus 7.
+
 3. To convert from Celsius to Fahrenheit temperature, you multiply the Celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the Fahrenheit reading?
+
 4. Type the Python line to work out 7 to the power of 6.
+
 5. Type the Python lines to work out the quotient and remainder of 11 divided by 4.
 
 
@@ -113,7 +118,8 @@ Things to remember
    Modulus (remainder)                     ``%``
    ======================================  ========
    
-   See Appendix B for a full list of operators, over and above arithmetic.
+   See Appendix C for a full list of operators, over and above arithmetic.
 
 2. Use brackets to force Python to do a calculation in a particular order
+
 3. Whole numbers are referred to as integers, fractional numbers are referred to as floats.

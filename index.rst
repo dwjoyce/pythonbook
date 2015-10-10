@@ -15,8 +15,8 @@ Table of contents:
     Python as a Calculator
     Naming your data
     Functions and Maths
-    Getting help
     Drawing Turtles
+    Getting help
     First program
     Print that out!
     Asking questions

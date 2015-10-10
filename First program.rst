@@ -3,7 +3,7 @@ First program
 
 So far we have been using Python's interactive shell, built into the IDLE program, to experiment with Python in a way that is familiar to us - performing calculations, calling functions, giving values in memory a name.  We have started to veer out of this familiar territory by using other programs (known as modules), such as the turtle module, to extend what Python can do by itself.  Using the interactive shell allows us get to know the language, but it limits us effectively to one statement of code - a line that when you press return, will be run straight away and gives you back an answer (if there is one).
 
-We will now learn how to use IDLE in order to write a full program, one that can be run on its own.  This means we can write the program once, and run it many times without the need to re-write the program each time.  We only need to change our program to modify its behaviour, or correct errors, not having to write or recall it once written.  It also means we can write longer more interesting programs!
+We will now learn how to use IDLE in order to write a full program, one that can be run on its own.  This means we can write the program once, and run it many times without the need to re-write the program each time.  We only need to change our program to modify its behaviour, or correct errors, not having to it from scratch each time.  It also means we can write longer more interesting programs!
 
 Ed
 --
@@ -16,13 +16,13 @@ To start Python editor, first start IDLE itself (see chapter 0 for this if you h
     :width: 90%
     :align: center
 
-This will bring up a new window, the editor window.  The shortcut for this is to hold down the ``Ctrl`` key, towards the bottom left of your keyboard, and hit the ``N`` key (N for New).  This is where we type in our new program:
+This will bring up a new window, the editor window.  The shortcut for this is to hold down the ``Ctrl`` key, towards the bottom left of your keyboard, and hit the ``N`` key (N for New).  This blank window is where we type in our new program:
 
 .. image:: screenshots/idle_new_file.png
     :width: 90%
     :align: center
 
-.. note:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see side by side.
+.. tip:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side.
 
 The scene is set.
 
@@ -77,7 +77,7 @@ Once you are in the right place, give your program a name and click the ``Save``
     :width: 250pt
     :align: center
 
-Your program will now run!  It should all look vaguely like this:
+Your program will now run!  It should look roughly like this:
 
 .. image:: screenshots/idle_run.png
     :width: 90%
@@ -88,7 +88,7 @@ However, the alternative is that it doesn't work - there is a problem or error i
 Comments
 --------
 
-That's not all - we can also insert comments to help others people understand what is going on (including ourselves when we return to our code at some point in the future) .  Modify your program so it looks like this - in other words, add the lines beginning with the ``#`` symbol::
+That is not all - we can also insert comments to help others people understand what is going on (including ourselves when we return to our code at some point in the future) .  Modify your program so it looks like this - in other words, add the lines beginning with the ``#`` symbol::
 
     import turtle
 
@@ -126,9 +126,9 @@ Things to remember
 
 2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
-3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick.
+3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick at the following location: ``/media/guest/pi/USB Stick`` (that is *pi* for Raspberry Pi, not to be confused with *py* for Python).
 
-.. todo:: Specify USB location in filesystem.
+.. todo:: Matthew, can you check the above location is correct?
 
 4. Give your Python programs a *.py* postfix.  Avoid including spaces in your program name.
 
