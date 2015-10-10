@@ -204,21 +204,30 @@ latex_elements = {
 #'fontpkg': '\\usepackage{sans}'
 'maketitle':r"""
 \makeatletter
+\pagecolor{TitleColor}\afterpage{\nopagecolor}
+{\color{white}
 \begin{titlepage}
  \begin{center}
-  \hspace{1cm}\\[8cm]
-  {\Huge \textbf{\thetitle}}
+  {\fontsize{53}{63}\selectfont \textbf{\thetitle}\par}
+  \rule{\linewidth}{1.5mm}
   \\[0.4cm]
-  {\Large \color{TitleColor} Learning Python 3 on the Raspberry Pi}
-  \\[0.5cm]
-  \rule{\linewidth}{0.4mm}
-  \\[0.5cm]
-  {\large \textbf{\theauthor}}
-  \\[0.5cm]
-  {\normalsize \color{TitleColor} \textit{\py@release}}
- \end{center}
-
+  {\fontsize{24}{44}\selectfont \color{black} \textbf{Learning Python 3 on the Raspberry Pi}}
+\end{center}
+\vfill
+\hfill
+\begin{minipage}{0.61\textwidth}
+\begin{flushright}
+  {\LARGE \textbf{\theauthor}}
+  \rule{\linewidth}{1.0mm}
+  \\[0.4cm]
+  {\LARGE \color{black} \textbf{\textit{\py@release}}}
+ \end{flushright}
+ \end{minipage}
+\vfill
+\includegraphics[height=1.75cm,keepaspectratio]{python-logo-bw.pdf}\hfill
+\includegraphics[height=1.75cm,keepaspectratio]{raspberry-pi-logo-bw.pdf}
 \end{titlepage}
+}
 \makeatother
 """
 }
@@ -227,11 +236,11 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class], exclude start file).
 latex_documents = [
-  ('index', 'pythonbook.tex', 'Marching up and down the code',
-   'Dr. D.W. Joyce \\and M.S. Joyce', 'manual', True),
+  ('index', 'pythonbook.tex', 'Marching Up and Down the Code',
+   r'Dr. D.W. Joyce \and M.S. Joyce', 'manual', True),
 ]
 
-latex_additional_files = ["sphinx.sty"]
+latex_additional_files = ["sphinx.sty", "python-logo-bw.pdf", "raspberry-pi-logo-bw.pdf"]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
