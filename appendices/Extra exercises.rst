@@ -540,10 +540,9 @@ Write a program in Python to implement a simple hangman game.  Give the user 11 
 
 However, this part of drawing the hangman is optional as it makes the program more complicated.
 
-.. hint::
-    You will need three strings, one for the word to guess (which selects one from the word list below randomly using the ``random.choice`` function), one containing the letters guessed so far, and one for the letters not in the word being guesses.  You can add onto a string by doing the following:
+.. hint:: You will need three strings, one for the word to guess (which selects one from the word list below randomly using the ``random.choice`` function), one containing the letters guessed so far, and one for the letters not in the word being guesses.  You can add onto a string by doing the following:
 
-    ..code::
+    .. code::
         :pythontest: norun
 
         string_name = string_name + character_entered
