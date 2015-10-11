@@ -12,13 +12,13 @@ To write a program, and modify it later, we use an *editor*.  Thankfully, IDLE n
 
 To start Python editor, first start IDLE itself (see chapter 0 for this if you have forgotten).  Then, using the mouse pointer, click on the ``File`` menu at the top of the shell window, and click again on the ``New File`` menu item, like so:
 
-.. image:: screenshots/idle_new_file_menu.png
+.. image:: /images/screenshots/idle_new_file_menu.png
     :width: 90%
     :align: center
 
 This will bring up a new window, the editor window.  The shortcut for this is to hold down the ``Ctrl`` key, towards the bottom left of your keyboard, and hit the ``N`` key (N for New).  This blank window is where we type in our new program:
 
-.. image:: screenshots/idle_new_file.png
+.. image:: /images/screenshots/idle_new_file.png
     :width: 90%
     :align: center
 
@@ -57,7 +57,7 @@ Running our program
 
 Once you have typed it all in, we are ready to run our program.  To run, press the ``F5`` key (or if you really want to do it the hard way, then click on the ``Run`` menu and select ``Run Module`` menu item).  This will bring up a dialog box like this one:
 
-.. image:: screenshots/idle_save_before_run.png
+.. image:: /images/screenshots/idle_save_before_run.png
     :width: 150pt
     :align: center
 
@@ -65,7 +65,7 @@ Simply agree to this by pressing the Return or Enter key on your keyboard.  Agai
 
 On this, the first time of writing your program, you will need to give it a name.  If you have already done this, then IDLE should proceed onto attempting to run your program.  The ``Save As`` dialog is shown, asking you where to save your program and what to call it:
 
-.. image:: screenshots/idle_save_as.png
+.. image:: /images/screenshots/idle_save_as.png
     :width: 250pt
     :align: center
 
@@ -73,13 +73,13 @@ Most importantly, change the location of where the program is being saved to whe
 
 Once you are in the right place, give your program a name and click the ``Save`` button (or hold down the ``Alt`` key and hit the ``S`` key), like so:
 
-.. image:: screenshots/idle_save_as_name.png
+.. image:: /images/screenshots/idle_save_as_name.png
     :width: 250pt
     :align: center
 
 Your program will now run!  It should look roughly like this:
 
-.. image:: screenshots/idle_run.png
+.. image:: /images/screenshots/idle_run.png
     :width: 90%
     :align: center
 

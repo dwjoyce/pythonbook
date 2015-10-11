@@ -83,7 +83,7 @@ Write a program in Python to draw a line on the screen given two x and y coordin
 
 This is the turtle coordinate system illustrated (reference: 101computing.net):
 
-.. image:: extraex/image02.png
+.. image:: /images/extraex/image02.png
     :width: 200pt
     :align: center
 
@@ -97,7 +97,7 @@ For example (drawn with a thicker pen using the ``pensize`` function on a 500x50
     From where should the line start? -100 -200
     And to where should the line end? 275 175
 
-.. image:: extraex/image07.png
+.. image:: /images/extraex/image07.png
     :width: 200pt
     :align: center
 
@@ -204,7 +204,7 @@ For example:
 
     How many steps should I draw? 500
 
-.. image:: extraex/image00.png
+.. image:: /images/extraex/image00.png
     :width: 200pt
     :align: center
 
@@ -418,7 +418,7 @@ Write a program in Python to draw 100 rectangles of a random length and width, a
 
 For example:
 
-.. image:: extraex/image04.png
+.. image:: /images/extraex/image04.png
     :width: 200pt
     :align: center
 
@@ -461,7 +461,7 @@ The first square should have sides of 25 pixels in length, with each succeeding 
 For example:
 
 
-.. image:: extraex/image05.png
+.. image:: /images/extraex/image05.png
     :width: 200pt
     :align: center
 
@@ -540,7 +540,8 @@ Write a program in Python to implement a simple hangman game.  Give the user 11 
 
 However, this part of drawing the hangman is optional as it makes the program more complicated.
 
-.. hint:: You will need three strings, one for the word to guess (which selects one from the word list below randomly using the ``random.choice`` function), one containing the letters guessed so far, and one for the letters not in the word being guesses.  You can add onto a string by doing the following::
+.. hint::
+    You will need three strings, one for the word to guess (which selects one from the word list below randomly using the ``random.choice`` function), one containing the letters guessed so far, and one for the letters not in the word being guesses.  You can add onto a string by doing the following::
 
         string_name = string_name + character_entered
 
@@ -596,7 +597,7 @@ For example:
     Please input the number of squares across: 4
 
 
-.. image:: extraex/image08.png
+.. image:: /images/extraex/image08.png
     :width: 200pt
     :align: center
 
@@ -606,7 +607,7 @@ For example:
     Please input the number of squares across: 20
 
 
-.. image:: extraex/image03.png
+.. image:: /images/extraex/image03.png
     :width: 200pt
     :align: center
 
@@ -656,7 +657,7 @@ For example:
 
     Enter the numbers for the histogram: 1 1 2 5 10 20 35 25 12 4 2 1 1
 
-.. image:: extraex/image09.png
+.. image:: /images/extraex/image09.png
     :width: 200pt
     :align: center
 
@@ -871,7 +872,7 @@ At the end, the board should be drawn one last time, then the program should wai
 
 For example:
 
-.. image:: extraex/image10.png
+.. image:: /images/extraex/image10.png
     :width: 200pt
     :align: center
 
@@ -880,7 +881,7 @@ For example:
 
     What is your move in the form 'x y'? 3 4
 
-.. image:: extraex/image01.png
+.. image:: /images/extraex/image01.png
     :width: 200pt
     :align: center
 
@@ -889,7 +890,7 @@ For example:
 
     What is your move in the form 'x y'? 1 1
 
-.. image:: extraex/image06.png
+.. image:: /images/extraex/image06.png
     :width: 200pt
     :align: center
 

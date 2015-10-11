@@ -14,7 +14,7 @@ Sequence
 |                                        |                                         |
 +----------------------------------------+-----------------------------------------+
 
-.. |seq-image| image:: flow/seq.png
+.. |seq-image| image:: /images/flow/seq.png
     :height: 168pt
     :align: bottom
 
@@ -34,7 +34,7 @@ Selection
 |                                        |                                         |
 +----------------------------------------+-----------------------------------------+
 
-.. |sel-image| image:: flow/selec.png
+.. |sel-image| image:: /images/flow/selec.png
     :height: 168pt
     :align: bottom
 
@@ -54,6 +54,6 @@ Iteration
 |                                        |                                         |
 +----------------------------------------+-----------------------------------------+
 
-.. |itr-image| image:: flow/iter.png
+.. |itr-image| image:: /images/flow/iter.png
     :height: 168pt
     :align: bottom

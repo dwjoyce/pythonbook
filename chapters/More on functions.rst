@@ -127,7 +127,7 @@ We will write a little turtle based program to demonstrate some of the concepts 
 
 Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly colored and sized circles on the screen, similar to the following:
 
-.. image:: screenshots/randomcircles.png
+.. image:: /images/screenshots/randomcircles.png
     :width: 250pt
     :align: center
 

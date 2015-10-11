@@ -6,19 +6,19 @@ Unidentified Food Object
 
 The aliens have landed on Earth, and they have brought pizza! However, for us humans to join in and eat pizza, we have to learn their language. Here is an alien pizza:
 
-.. image:: alien_pizza/unnumbered.pdf
+.. image:: /images/alien_pizza/unnumbered.pdf
     :height: 100 pt
     :align: center
 
 The aliens like to be efficient when telling other aliens. They number each cut, starting from 0. The pizza slice's number is the number directly to its left:
 
-.. image:: alien_pizza/numbered.pdf
+.. image:: /images/alien_pizza/numbered.pdf
     :height: 100 pt
     :align: center
 
 So, if an alien wants the red pizza slice, he says 0, and if he wants the blue slice, he says 4. However, the aliens have giant pizzas, and asking for the slice before 0 on a 100 slice pizza means saying a very large number (99). So the aliens also number their pizzas using negative numbers:
 
-.. image:: alien_pizza/negnumbered.pdf
+.. image:: /images/alien_pizza/negnumbered.pdf
     :height: 100 pt
     :align: center
 
@@ -29,19 +29,19 @@ An alien army marches on its stomach
 
 Some aliens are greedy, and want more than one slice, but they are also lazy, and cannot be bothered to say every single number. So they say a range. For example, if an alien wants the red and yellow slice, he can say he wants all the slices between cuts 0 and 2. The serving alien takes piece 0, and adds one, taking piece 1. If he adds 1 again, he gets 2, so he has got all the pieces, and gives pieces 0 and 1 to the alien:
 
-.. image:: alien_pizza/slice02.pdf
+.. image:: /images/alien_pizza/slice02.pdf
     :height: 100 pt
     :align: center
 
 Aliens also do negative slices. An alien wants -4 to -1, which is the same as 2 to 5 so adding 1 gives the slices 2, 3 and 4.:
 
-.. image:: alien_pizza/slice-4-1.pdf
+.. image:: /images/alien_pizza/slice-4-1.pdf
     :height: 100 pt
     :align: center
 
 The opposite does not work, as you cannot add ones to 5 to get 2. 1 to -1 is the same as 1 to 5, so the slices are 1, 2, 3, and 4:
 
-.. image:: alien_pizza/slice1-1.pdf
+.. image:: /images/alien_pizza/slice1-1.pdf
     :height: 100 pt
     :align: center
 
@@ -50,13 +50,13 @@ I'll pass
 
 What if an alien only likes red, green and blue? Well, he can ask for every second piece from 0 to 5. The serving alien takes 0, adds two, so takes 2, and adds 2 again and takes 4. Adding two again will mean that he takes slice 6, but 6 is greater than 5, so he stops:
 
-.. image:: alien_pizza/slice052.pdf
+.. image:: /images/alien_pizza/slice052.pdf
     :height: 100 pt
     :align: center
 
 Every third slice from 1 to -1? That's the same as every third slice from 1 to 5, which is 1 and 4:
 
-.. image:: alien_pizza/slice1-13.pdf
+.. image:: /images/alien_pizza/slice1-13.pdf
     :height: 100 pt
     :align: center
 

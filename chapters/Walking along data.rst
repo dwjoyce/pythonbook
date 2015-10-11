@@ -262,7 +262,7 @@ Run it, naming it triangles.py, and see what happens.  Much of what we have type
 
 Your turtle window should show something like this being drawn:
 
-.. image:: screenshots/triangles.png
+.. image:: /images/screenshots/triangles.png
     :width: 50%
     :align: center
 

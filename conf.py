@@ -35,7 +35,7 @@ extensions = [
     'sphinx.ext.pngmath',
     'ext.inlinesyntaxhighlight',
     'ext.pythontest',
-    'lexer'
+    'ext.lexer'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -93,7 +93,7 @@ exclude_patterns = ['build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'style.TheStyle'
+pygments_style = 'ext.style.TheStyle'
 
 highlight_language = 'py3con'
 
@@ -240,7 +240,7 @@ latex_documents = [
    r'Dr. D.W. Joyce \and M.S. Joyce', 'manual', True),
 ]
 
-latex_additional_files = ["sphinx.sty", "python-logo-bw.pdf", "raspberry-pi-logo-bw.pdf"]
+latex_additional_files = ["sphinx.sty", "images/python-logo-bw.pdf", "images/raspberry-pi-logo-bw.pdf"]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -257,7 +257,13 @@ latex_additional_files = ["sphinx.sty", "python-logo-bw.pdf", "raspberry-pi-logo
 #latex_show_urls = False
 
 # Documents to append as an appendix to all manuals.
-latex_appendices = ["Python summary", "Extra exercises", "Operators", "Program flow", "Common mistakes", "Zen"]
+latex_appendices = ["appendices/Glossary",
+                    "appendices/Python summary",
+                    "appendices/Extra exercises",
+                    "appendices/Operators",
+                    "appendices/Program flow",
+                    "appendices/Common mistakes",
+                    "appendices/Zen"]
 
 # If false, no module index is generated.
 #latex_domain_indices = True
