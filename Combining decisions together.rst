@@ -29,9 +29,9 @@ However, this took a lot of typing to get working, and programmers like to avoid
 
 So far, we have only learned how to attach one test to either an ``if`` statement or an ``elif`` statement.  With logical operators, we can combine a number of tests together to form a larger single test.  There are three logical operators:
 
-    - ``and`` which tests whether the left-hand side and the right-hand side are both true, giving an overall result of true.  For example: ``a > 10 and b > 10`` tests whether *a* and *b* are both greater than 10, and if so the whole expression is true.
+    - ``and`` which tests whether the left-hand side and the right-hand side are both true, giving an overall result of true.  For example: ``a > 10 and b > 10`` tests whether ``a`` and ``b`` are both greater than 10, and if so the whole expression is true.
     
-    - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether *a* is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can be true, which is also fine.
+    - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether ``a`` is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can be true, which is also fine.
     
     - ``not`` which takes a single boolean value and inverts its value, so ``true`` becomes ``false`` and ``false`` becomes ``true``.  For example, ``not weather == 'warm'`` which tests whether the variable weather is equal to the value 'warm', and then flips the result.
     
@@ -54,7 +54,7 @@ to this::
 
 Save and run this version, and make sure it does the same thing.
 
-Notice how we have taken the two separate ``if`` statements in the previous version of the program, and combined them together - since one was inside the other - with the logical *and* operator.  This will then only perform the first call to the ``print`` function if both the weather is 'warm' ``and`` and holidays is 'yes'.  Otherwise, we do what comes after the ``else`` statement.
+Notice how we have taken the two separate ``if`` statements in the previous version of the program, and combined them together - since one was inside the other - with the logical ``and`` operator.  This will then only perform the first call to the ``print`` function if both the weather is 'warm' ``and`` and holidays is 'yes'.  Otherwise, we do what comes after the ``else`` statement.
 
 The logical ``or`` operator is useful when a number of separate tests all do the same thing, so their blocks of code are all the same.
 

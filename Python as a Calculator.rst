@@ -31,7 +31,7 @@ Bring up your Python interactive shell, as described in chapter 0 (i.e. by click
     >>> 10 + 20
     30
 
-and press the Return or Enter key on your keyboard.  The *>>>* (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
+and press the Return or Enter key on your keyboard.  The ``>>>`` (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
 
 How about the second example.  Let us try this::
 

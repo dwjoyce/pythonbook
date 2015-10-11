@@ -8,7 +8,7 @@ Let us move from using Python to do our maths and switch to doodling instead!
 
 What we will do is to use a Python program called ``turtle`` to move a shape around the screen, leaving a trail behind in the process.  Think of it like using a piece of graph paper, with the origin in the centre, and the pen being moved by your instructions.
 
-To use this separate Turtle program, we have to use a new command called *import*.  What import does is to bring in, or include, a separate program - called a *module* in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
+To use this separate Turtle program, we have to use a new command called ``import``.  What import does is to bring in, or include, a separate program - called a *module* in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
 
 It was Isaac Newton who said:
 
@@ -31,12 +31,12 @@ and then you can use it thereafter, such as the square root function::
   
 which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the ``.`` (period) character - it separates the module name (``math``) from the function being used (``sqrt``).  We must write the name of the module first, followed by the ``.`` period, and then the function name that is to be found inside the module.  The period is used to say that this function is found inside this module - we will see more of this later when talking about type or class functions.
 
-Here is another example - using the value of pi as defined as a variable by the math module::
+Here is another example - using the value of :math:`\pi` as defined as a variable by the math module::
 
     >>> math.pi
     3.141592653589793
 
-Using the name *pi* is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the math module, therefore we do not need to use parentheses.  Although we refer to *pi* as a *variable*, we do not expect it change any time, it is what we call a constant.
+Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the math module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a *variable*, we do not expect it change any time, it is what we call a constant.
     
 Stick your head out of the shell
 --------------------------------

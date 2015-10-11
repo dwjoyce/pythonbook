@@ -38,11 +38,11 @@ Now add these lines onto the bottom of your program, so that the function define
     new_num = add_5(my_num)
     print(new_num)
     
-Now run the program, and see what it does.  It should call our new function *add_5* a number of times.  The first ones simply passed in the integer value 10.  Inside the function, the parmater *num* will refer to this value of 10.  The value is incremented by 5, and the result is *returned* or sent back to the code that called the function in the first place.  In the first call of *add_5*, this happens to be a ``print`` function, which naturally prints out the result it has been given (the number returned back from the function call).
+Now run the program, and see what it does.  It should call our new function ``add_5`` a number of times.  The first ones simply passed in the integer value 10.  Inside the function, the parmater ``num`` will refer to this value of 10.  The value is incremented by 5, and the result is *returned* or sent back to the code that called the function in the first place.  In the first call of ``add_5``, this happens to be a ``print`` function, which naturally prints out the result it has been given (the number returned back from the function call).
 
-The second use of the *add_5* function is similar, but instead of passing in a value, it passes in a variable which is referring to an integer value.  It then proceeds as before.
+The second use of the ``add_5`` function is similar, but instead of passing in a value, it passes in a variable which is referring to an integer value.  It then proceeds as before.
 
-The third use of the *add_5* function is similar to the second use, but instead of printing the value returned back from the function call straightaway, it first assigns the returned value to a new variable called *new_num*.  This is then printed out on its own.
+The third use of the ``add_5`` function is similar to the second use, but instead of printing the value returned back from the function call straightaway, it first assigns the returned value to a new variable called ``new_num``.  This is then printed out on its own.
 
 Forming a chain
 ---------------
@@ -63,7 +63,7 @@ This is very similar to what we have done already.  Now let's chain our function
 
     print(sum_up(sum_up(1, 2), sum_up(3, 4)))
     
-This could go on and on!  You are effectively forming an expression in the shape of a tree - the inner calls to *sum_up* are called first, the one on the left, and then the one on the right.  With these two values, 3 and 7, respectively, the outer *sum_up* is called, thus producing the final printed result of 10.
+This could go on and on!  You are effectively forming an expression in the shape of a tree - the inner calls to ``sum_up`` are called first, the one on the left, and then the one on the right.  With these two values, 3 and 7, respectively, the outer ``sum_up`` is called, thus producing the final printed result of 10.
 
 Naming parameters
 -----------------
@@ -77,7 +77,7 @@ So far we pass arguments into functions, used inside the function as parameters,
 
 You could place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom fo your program.
 
-It is quite clear that the integer value *10* is passed into parameter *length*, *20* is passed into the parameter *height*, and *30* is passed into the parameter *width*.  In Python, this is called *positional arguments* - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
+It is quite clear that the integer value *10* is passed into parameter ``length``, *20* is passed into the parameter ``height``, and *30* is passed into the parameter ``width``.  In Python, this is called *positional arguments* - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
 
 An alternative is to explicitly state what parameters you want to use for each parameter.  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
 
@@ -134,23 +134,23 @@ Run your program, saving it as *circles.py*, and make sure it runs without error
 A little explanation:
 
     - we import the modules we need, turtle for drawing, random for producing a bit of variation.
-    - we then define a function called *draw_circle* which take four arguements - the radius, followed by red, green and blue to define the color.
-    - inside the *draw_circle* function, we set the fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
+    - we then define a function called ``draw_circle`` which take four arguements - the radius, followed by red, green and blue to define the color.
+    - inside the ``draw_circle`` function, we set the fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
     - in the main part of the program, we create our window using the Turtle() function, set the speed to hurry things up, and then save the window width and height so we can use them later.
     - we then enter a loop which continues forever.
     - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
     - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
-    - we then call our *draw_circle* function using the data we have at hand.
+    - we then call our ``draw_circle`` function using the data we have at hand.
 
 
 Exercises
 ---------
 
-1. Write a function called add_list in your functions.py program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
+1. Write a function called ``add_list`` in your functions.py program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
 
-2. Write a function called product in your functions.py program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, *product*, along with the function *sum_up* we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: (4*5) + (6*7).
+2. Write a function called product in your functions.py program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, *product*, along with the function ``sum_up`` we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: (4*5) + (6*7).
 
-3. Write a function called prime in your functions.py program, which accepts a single number and returns True (a boolean value) if it is a prime number or False if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
+3. Write a function called prime in your functions.py program, which accepts a single number and returns ``True`` (a boolean value) if it is a prime number or ``False`` if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
 
 Things to remember
 ------------------
