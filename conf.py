@@ -229,7 +229,8 @@ latex_elements = {
 \end{titlepage}
 }
 \makeatother
-"""
+""",
+"printindex": ""
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
