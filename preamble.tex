@@ -50,3 +50,21 @@
 \usepackage{titling}
 \usepackage{afterpage}
 \usepackage{anyfontsize}
+
+% Chapter num spacing
+
+\makeatletter
+\renewcommand{\TheAlphaChapter}{%
+
+\ifinapp
+  \thechapter
+\else
+  \setcounter{AlphaCnt}{\c@chapter}
+  \ifnum\c@chapter<20
+    \AlphaNo
+  \else
+    \AlphaDecNo\enspace\AlphaNo
+  \fi
+\fi
+}
+\makeatother
