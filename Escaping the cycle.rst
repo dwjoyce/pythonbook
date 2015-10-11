@@ -35,7 +35,7 @@ Therefore, modify your adder.py program like so:
         
 Save and run it again and see what happens.  Notice how the ``while`` statement is the same, but inside the loop it is very different.  The first line of the loop code block simply asks for the user's name, using the ``input`` function, and stores it in a variable called ``name``.  Then we do something new - we test whether the contents of the variable ``name`` is equal to the value 'stop' (which we have told the user to type in to quit the loop), and if so, we use the new keyword ``break`` to break out of the loop.  It simply jumps passed the end of the code block, attached to the ``while`` loop, to carry on with the rest of the program (if there was any).  If we didn't break out of the loop, then we print a message to the user, using the contents of the variable ``name`` as we do so.
 
-We could also do this by using a boolean variable in a slightly different way::
+We could also do this by using a boolean variable in a slightly different way:
 
 .. code-block:: py3con
     :pythontest: compile

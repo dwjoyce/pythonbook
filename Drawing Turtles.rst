@@ -54,7 +54,7 @@ Now we can begin to use it.  The first thing to do is to get our window onto the
   
 At first you may find this confusing - ``turtle`` (with a lowercase 't') is the module name, and ``Turtle`` (with an uppercase 't') is the function that creates the drawing window.  Please do not confuse the two - the function name begins with a CAPITAL letter!
 
-You should see a new window pop up onto the screen.  Move it to the right of your screen so it does not obscure what you are typing, like so::
+You should see a new window pop up onto the screen.  Move it to the right of your screen so it does not obscure what you are typing, like so:
 
 .. todo:: Matthew, could you insert a screenshot here of the interactive shell on the left and the turtle window towards the right (they need not be 50-50).  The turtle window should be blank before any drawing.
 
