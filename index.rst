@@ -35,3 +35,4 @@ Table of contents:
     Writing files
     Catching errors
     todo
+    Glossary
