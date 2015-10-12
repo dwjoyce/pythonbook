@@ -126,9 +126,7 @@ Things to remember
 
 2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
-3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick at the following location: ``/media/guest/pi/USB Stick`` (that is *pi* for Raspberry Pi, not to be confused with *py* for Python).
-
-.. todo:: Matthew, can you check the above location is correct?
+3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted it will appear in the ``USB_STICKS`` folder.
 
 4. Give your Python programs a *.py* postfix.  Avoid including spaces in your program name.
 
