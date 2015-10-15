@@ -14,9 +14,9 @@ Python is a fantastic first computer language to learn.  It is easy to pick up, 
 
 It was created in the early 1990s by the Dutch programmer Guido van Rossum.  It has been updated many times since then, and in this book we will be using Python 3.  The exact version of Python 3 does not matter so much, as long as your version is Python 3.something.  This is for when you are trying to program at home.
 
-Code written in Python is very readable.  It lacks much of the cryptic notation that other languages use to express themselves.  It almost reads like *pseudo code* - a description of how a program should operate as written in lines of simple English.
+Code written in Python is very readable.  It lacks much of the cryptic notation that other languages use to express themselves.  It almost reads like :term:`pseudo-code` - a description of how a program should operate as written in lines of simple English.
 
-Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from chapter 6 - First Program), initially we will use Python's interactive shell to start off.  It is called an *interactive shell* because you type lines of code (known as statements) and get the answer straightaway, i.e. interactively.
+Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from chapter 6 - First Program), initially we will use Python's interactive shell to start off.  It is called an :term:`interactive shell` because you type lines of code (known as statements) and get the answer straightaway, i.e. interactively.
 
 What we will be learning
 ------------------------
@@ -32,9 +32,9 @@ It is encouraged to use this book as a starting point, and then use other resour
 How to get going
 ----------------
 
-We first use the interactive shell to start off with Python.  Even when introducing more advanced language features, we will still use this shell to experiment before moving onto a proper program.  A proper program is one typed into its own file, and then the program is started separately.  This is similar to how we use other programs (e.g. LibreOffice or Firefox) - we use the final result.  This is known as *running* the program.  However, at this stage, we only use the interactive shell.
+We first use the interactive shell to start off with Python.  Even when introducing more advanced language features, we will still use this shell to experiment before moving onto a proper program.  A proper program is one typed into its own file, and then the program is started separately.  This is similar to how we use other programs (e.g. LibreOffice or Firefox) - we use the final result.  This is known as :term:`running` the program.  However, at this stage, we only use the interactive shell.
 
-Python's interactive shell is known as *IDLE*.  This name comes from the acronym IDE, which stands for *Integrated Development Environment* - a program that allows you to develop or create other programs.  It contains an editor, used to type your code, and a way of running your programs.  IDLE also contains the interactive shell that allows us to experiment line by line.
+Python's interactive shell is known as :term:`IDLE`.  This name comes from the acronym IDE, which stands for :term:`Integrated Development Environment` - a program that allows you to develop or create other programs.  It contains an editor, used to type your code, and a way of running your programs.  IDLE also contains the interactive shell that allows us to experiment line by line.
 
 To start IDLE, either click on the IDLE icon on the desktop or select the IDLE program from the Applications menu in the bottom left:
 

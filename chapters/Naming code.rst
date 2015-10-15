@@ -4,7 +4,7 @@ Naming code
 Data and code
 -------------
 
-Variables are a way of naming data.  A piece of data, like the number *123*, can be given the name *number* like this in Python (try it in the interactive shell)::
+Variables are a way of naming data.  A piece of data, like the number *123*, can be given the name ``number`` like this in Python (try it in the interactive shell)::
 
     >>> number = 123
     
@@ -31,7 +31,7 @@ Programs are made up of data, which we have been discussing above, and code.  We
 Functions
 ---------
 
-We have already used named sections of code - they are called *functions*.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses afters its name.  Try the following, again in the interactive shell::
+We have already used named sections of code - they are called :term:`functions`.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses afters its name.  Try the following, again in the interactive shell::
 
     >>> print()
     
@@ -43,7 +43,7 @@ We have already used named sections of code - they are called *functions*.  Pyth
     >>> print(len('The quick brown fox jumps over the lazy dog'))
     43
 
-As we can see above, functions take take in values (which we have learned are called *arguments*), or not.  They can return values, or not.  It just depends on what they do, and what we want to use them for.
+As we can see above, functions take take in values (which we have learned are called :term:`arguments`), or not.  They can return values, or not.  It just depends on what they do, and what we want to use them for.
 
 In this chapter, we will begin learning how to define our own functions, and not just use functions already present in the language (built-in ones), or from other programs (imported modules).
 
@@ -66,7 +66,7 @@ Lots of repetitive code that could be parcelled up, given a name and put in one 
 Rolling our own
 ---------------
 
-While naming data we use the assignement operator, when naming code we use the ``def`` keyword.  This means we are *defining* a function - not calling it, but defining it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
+While naming data we use the assignment operator, when naming code we use the ``def`` keyword.  This means we are :term:`defining a function` - not calling it, but defining it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
 
 Open up a new file window, and type in the following::
 
@@ -100,7 +100,7 @@ Run it and ensure it prints out the same message, but this time 5 times.  That w
     
 It should print out the message the number of times you are requesting.  If not, then something is very wrong!
 
-Now, of couse, if you can pass in one thing, you can pass in many.  So our next function (again, insert it between where the functions are defined and where they are being called), will take a message and a number, so the caller can specify what he wants printing::
+Now, of course, if you can pass in one thing, you can pass in many.  So our next function (again, insert it between where the functions are defined and where they are being called), will take a message and a number, so the caller can specify what he wants printing::
 
     def say_message_times(msg, times):
         print(msg * times)

@@ -6,7 +6,7 @@ It's broke
 
 .. pythontest:: off
 
-In Python, we encounter many errors, also known in Python as *exceptions*. We have arithmetic errors::
+In Python, we encounter many errors, also known in Python as :term:`exceptions`. We have arithmetic errors::
 
     >>> 200 / 0
     Traceback (most recent call last):

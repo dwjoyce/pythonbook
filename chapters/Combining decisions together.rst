@@ -27,7 +27,7 @@ Save this program and call it beach.py.  Run it and test it out - it should all 
 
 However, this took a lot of typing to get working, and programmers like to avoid typing when we can!  One problem is that the 'Sorry' message is done twice, so we are duplicating a line unnecessarily.  We also have two ``else`` statements to go with the two ``if`` statements.  It would be much better if we could combine the two tests together on one line, with one ``if`` statement and one ``else`` statement, with each call to the ``print`` function done once each as well.
 
-So far, we have only learned how to attach one test to either an ``if`` statement or an ``elif`` statement.  With logical operators, we can combine a number of tests together to form a larger single test.  There are three logical operators:
+So far, we have only learned how to attach one test to either an ``if`` statement or an ``elif`` statement.  With :term:`logical operators`, we can combine a number of tests together to form a larger single test.  There are three logical operators:
 
     - ``and`` which tests whether the left-hand side and the right-hand side are both true, giving an overall result of true.  For example: ``a > 10 and b > 10`` tests whether ``a`` and ``b`` are both greater than 10, and if so the whole expression is true.
     

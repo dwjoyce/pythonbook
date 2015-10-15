@@ -8,7 +8,7 @@ Breaking out
 
 Although we have introduced looping, we have only used it by counting from a starting number to an end number, and then stopping.  We really just want to repeat a block of code a certain number of times.  But what, like our problem above, you don't know when to stop until the end?
 
-Remember that the test after the ``while`` keyword is just a boolean expression.  If it evaluates to a ``True`` value, then the loop should perform another cycle of its block of code.  It will then test the expression again to see if it has changed in the meantime.  So if we don't know when to stop, a good start is to make the loop go round and round indefinitely.  It is a called an *infinite loop*, and - in theory at least - it goes round forever!  And to make an infinite loop, we simply make the boolean expression True by using the value ``True``.
+Remember that the test after the ``while`` keyword is just a boolean expression.  If it evaluates to a ``True`` value, then the loop should perform another cycle of its block of code.  It will then test the expression again to see if it has changed in the meantime.  So if we don't know when to stop, a good start is to make the loop go round and round indefinitely.  It is a called an :term:`infinite loop`, and - in theory at least - it goes round forever!  And to make an infinite loop, we simply make the boolean expression True by using the value ``True``.
 
 To see this in action, start a new file window and type in the following:
 

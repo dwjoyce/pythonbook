@@ -8,9 +8,9 @@ In Maths, you learn about functions. An example of a simple function is:
 
 .. math:: f(x) = x + 1
 
-This function takes in a number, :math:`x`, and adds one to it. So if :math:`x = 1`, :math:`f(x) = 2`. In Python-speak, :math:`x` is an *argument*, and the result, :math:`f(x)` is the *return value*. Every function has a return value.
+This function takes in a number, :math:`x`, and adds one to it. So if :math:`x = 1`, :math:`f(x) = 2`. In Python-speak, :math:`x` is an :term:`argument`, and the result, :math:`f(x)` is the :term:`return value`. Every function has a return value.
 
-Python also has functions. You can make your own functions, but in this chapter, we will focus on using functions that Python already has, called builtin functions. The first function we'll use is called ``abs``, which stands for absolute value::
+Python also has :term:`functions`. You can make your own functions, but in this chapter, we will focus on using functions that Python already has, called :term:`built-in functions`. The first function we'll use is called ``abs``, which stands for absolute value::
 
     >>> abs
     <built-in function abs>
@@ -29,7 +29,7 @@ It works! We can do this with other numbers, including numbers with decimal plac
     >>> abs(0)
     0
 
-We can say that ``abs`` is a function that takes *one argument*, a number, and *returns* the positive version of that number. In the above example, we can say that we *called* ``abs`` with ``-123.45`` as an argument.
+We can say that ``abs`` is a function that takes one argument, a number, and :term:`returns` the positive version of that number. In the above example, we can say that we :term:`called` ``abs`` with ``-123.45`` as an :term:`argument`.
 
 More arguments
 --------------
@@ -57,7 +57,7 @@ When the number of decimal places to round to is greater then the precision of t
     >>> round(12345.6, -3)
     12000.0
 
-If you call ``round`` with ``-2``, it makes the last two non-fractional digits zeros. Another two-argument function is ``pow`` (power). ``pow(x, y)`` is equivelent to ``x ** y``::
+If you call ``round`` with ``-2``, it makes the last two non-fractional digits zeros. Another two-argument function is ``pow`` (power). ``pow(x, y)`` is equivalent to ``x ** y``::
 
     >>> pow(3, 4)
     81

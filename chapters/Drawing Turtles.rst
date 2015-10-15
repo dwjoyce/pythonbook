@@ -8,7 +8,7 @@ Let us move from using Python to do our maths and switch to doodling instead!
 
 What we will do is to use a Python program called ``turtle`` to move a shape around the screen, leaving a trail behind in the process.  Think of it like using a piece of graph paper, with the origin in the centre, and the pen being moved by your instructions.
 
-To use this separate Turtle program, we have to use a new command called ``import``.  What import does is to bring in, or include, a separate program - called a *module* in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
+To use this separate Turtle program, we have to use a new command called ``import``.  What import does is to bring in, or include, a separate program - called a :term:`module` in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
 
 It was Isaac Newton who said:
 
@@ -36,7 +36,7 @@ Here is another example - using the value of :math:`\pi` as defined as a variabl
     >>> math.pi
     3.141592653589793
 
-Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the math module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a *variable*, we do not expect it change any time, it is what we call a constant.
+Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the math module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change any time, it is what we call a constant.
     
 Stick your head out of the shell
 --------------------------------

@@ -50,7 +50,7 @@ Using the proper names of the types of data will display the same information::
     >>> help(int)
     >>> help(float)
 
-To get a list of what is built into Python, you can call the *directory* function in this way:
+To get a list of what is built into Python, you can call the :term:`directory function` in this way:
 
 .. code::
     :pythontest: nooutput
@@ -77,7 +77,7 @@ You can get more help on these functions by using the help function again.  For 
     
 will give more information on the round function, such as what it accepts (a number, and optionally the number of digits to round the number to), and what it returns back (another number, the rounded result).
 
-In the previous chapter, we introduced the notion of bringing in a separate program (often called a *module*) into our own using the ``import`` command.  But how do we know what available programs there are to import?  To find this out, we can type the following::
+In the previous chapter, we introduced the notion of bringing in a separate program (often called a :term:`module`) into our own using the ``import`` command.  But how do we know what available programs there are to import?  To find this out, we can type the following::
 
     >>> help('modules')
     

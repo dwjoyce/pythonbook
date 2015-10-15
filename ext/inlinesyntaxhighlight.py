@@ -258,10 +258,19 @@ with open("glossary_aliases.txt") as f:
 
 def missing_reference(app, env, node, contnode):
     if node["reftarget"] in aliases:
-        return sphinx_nodes.make_refnode(app.builder, node["refdoc"],
-                                         "appendices/Glossary",
-                                         "term-" + aliases[node["reftarget"]],
-                                         contnode)
+        target = node['reftarget']
+        if target not in aliases:
+            return
+        typ = node['reftype']
+        fromdocname = node["refdoc"]
+        if 'refdomain' in node and node['refdomain']:
+            try:
+                domain = env.domains[node['refdomain']]
+            except KeyError:
+                return
+            node['reftarget'] = aliases[target]
+            return domain.resolve_xref(env, fromdocname, app.builder,
+                                       typ, aliases[target], node, contnode)
 
 
 def setup(app):

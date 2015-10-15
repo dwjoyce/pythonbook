@@ -38,9 +38,9 @@ How about the second example.  Let us try this::
     >>> 10 + 20 - 4 / 2 * 3
     24.0
     
-The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterix ``*`` symbol instead.  These *signs* in computer programmign are called *operators*, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
+The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterisk ``*`` symbol instead.  These *signs* in computer programming are called :term:`operators`, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
 
-Type in it, press Return and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two types of numbers - whole numbers (integers) and fractional numbers (floating point or real numbers).
+Type in it, press Return and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
 
 Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
 
@@ -75,12 +75,12 @@ Your answer should state 16983563041. Negative numbers work as well to give frac
 
 Your answer should read 0.5.
 
-We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor or integer division) operator::
+We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor or :term:`integer division`) operator::
 
     >>> 7 // 3
     2
 
-Which should be 2. And for the remainder, use the ``%`` (modulus) operator::
+Which should be 2. And for the remainder, use the ``%`` (:term:`modulus`) operator::
 
     >>> 7 % 3
     1

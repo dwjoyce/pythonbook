@@ -4,7 +4,7 @@ Decisions, decisions
 Differing ways of comparing
 ---------------------------
 
-In the previous chapter, we introduced the ``if`` statement, which evaluates a test, and if true, it runs the statements which have been indented to the right following the colon ``:`` symbol.  We call this group of statements indented to the right a *block of code*.
+In the previous chapter, we introduced the ``if`` statement, which evaluates a test, and if true, it runs the statements which have been indented to the right following the colon ``:`` symbol.  We call this group of statements indented to the right a :term:`block of code`.
 
 We also introduced our first comparison operator, the equals sign ``==``.  There are many more, most of which you will recognise from your mathematics material.  We list the possibilities at the end of this chapter, but here are some highlights.
 
@@ -29,7 +29,7 @@ The first two lines create our variables, ``a`` and ``b``, using the assignment 
 
 .. note:: We call these expressions, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. ``2.5 > 1.2`` and ``"fred" != "harry"``.
 
-You will also notice that the result of each expression is either True or False.  This is our fourth type of data, and they are called *boolean* values.  They are the simplest type of data imaginable - they are either True or False.  They cannot be any other value.  This is the equivalent of on or off, 1 or 0, up or down.  There is no in-between value, it is one or the other.  For example, above we tested whether 10 was equal to 20 (``a == b``) - this is either True or it is False (obviously the latter).  It cannot be something else, or both!
+You will also notice that the result of each expression is either ``True`` or ``False``.  This is our fourth type of data, and they are called :term:`boolean` values.  They are the simplest type of data imaginable - they are either ``True`` or ``False``.  They cannot be any other value.  This is the equivalent of on or off, 1 or 0, up or down.  There is no in-between value, it is one or the other.  For example, above we tested whether 10 was equal to 20 (``a == b``) - this is either True or it is False (obviously the latter).  It cannot be something else, or both!
 
 Booleans are very useful, and you can set variables to boolean values as well.  We will see more of this in chapter 13 on escaping out of a loop.
 

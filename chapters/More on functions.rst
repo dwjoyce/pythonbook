@@ -38,7 +38,7 @@ Now add these lines onto the bottom of your program, so that the function define
     new_num = add_5(my_num)
     print(new_num)
     
-Now run the program, and see what it does.  It should call our new function ``add_5`` a number of times.  The first ones simply passed in the integer value 10.  Inside the function, the parmater ``num`` will refer to this value of 10.  The value is incremented by 5, and the result is *returned* or sent back to the code that called the function in the first place.  In the first call of ``add_5``, this happens to be a ``print`` function, which naturally prints out the result it has been given (the number returned back from the function call).
+Now run the program, and see what it does.  It should call our new function ``add_5`` a number of times.  The first ones simply passed in the integer value 10.  Inside the function, the parmater ``num`` will refer to this value of 10.  The value is incremented by 5, and the result is :term:`returned` or sent back to the code that called the function in the first place.  In the first call of ``add_5``, this happens to be a ``print`` function, which naturally prints out the result it has been given (the number returned back from the function call).
 
 The second use of the ``add_5`` function is similar, but instead of passing in a value, it passes in a variable which is referring to an integer value.  It then proceeds as before.
 
@@ -75,9 +75,9 @@ So far we pass arguments into functions, used inside the function as parameters,
         
     print(box_volume(10, 20, 30))
 
-You could place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom fo your program.
+You could place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom of your program.
 
-It is quite clear that the integer value *10* is passed into parameter ``length``, *20* is passed into the parameter ``height``, and *30* is passed into the parameter ``width``.  In Python, this is called *positional arguments* - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
+It is quite clear that the integer value *10* is passed into parameter ``length``, *20* is passed into the parameter ``height``, and *30* is passed into the parameter ``width``.  In Python, this is called :term:`positional arguments` - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
 
 An alternative is to explicitly state what parameters you want to use for each parameter.  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
 

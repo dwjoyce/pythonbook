@@ -79,7 +79,7 @@ We can even have a bit of fun, and join and replicate strings like so::
   print('One piece of text' + 'joined to another')
   print('How about this ' * 10)
 
-Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called *string concatenation*.  The multiplication operation ``*`` is used to repeat the string however many times you specify - 10 times in this example.
+Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called :term:`string concatenation`.  The multiplication operation ``*`` is used to repeat the string however many times you specify - 10 times in this example.
 
 Variables can also be assigned to strings.  Add the following onto your program, lines.py::
 

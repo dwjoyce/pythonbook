@@ -22,7 +22,7 @@ Using numbers
 
 The type of data given to us by the ``input`` function (i.e. what is returned) is always a string.
 
-Remember, when you *add* two strings, you are really joining them together (e.g. ``"12" + "34"`` would equal ``"1234"``).  When you *multiply* a string by a number, you are repeating the contents of the string (e.g. ``"123" * 3`` would equal ``"123123123"``).
+Remember, when you *add* two strings, you are really joining them together or :term:`concatenating` them (e.g. ``"12" + "34"`` would equal ``"1234"``).  When you *multiply* a string by a number, you are repeating the contents of the string (e.g. ``"123" * 3`` would equal ``"123123123"``).
 
 Therefore, if you need to use the input as an actual number, you need to convert it from a string type to an integer or float type.  This means you can then use the result in a normal calculation like any other number.  It is effectively converts a sequence of digits into a proper number where the right most digit is the 1s, the second column is the 10s, the third column is the 100s, etc., with all the numbers combined together to form a complete number.
 
