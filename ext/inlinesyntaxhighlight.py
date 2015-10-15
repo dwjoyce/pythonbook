@@ -4,6 +4,10 @@ from docutils.parsers.rst.roles import register_canonical_role, set_classes
 from docutils.parsers.rst import directives
 from docutils import nodes
 import re
+import shlex
+import sphinx.writers.latex
+import sphinx.util.nodes as sphinx_nodes
+
 
 def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     r'''code_role override or create if older docutils used.
@@ -25,7 +29,7 @@ def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
         classes.append(language)
 
     node = nodes.literal(rawtext, text, classes=classes, language=language)
-    
+
     #import rpdb2 ; rpdb2.start_embedded_debugger('foo')
 
     return [node], []
@@ -35,8 +39,6 @@ code_role.options = { 'class': directives.class_option,
 
 register_canonical_role('code', code_role)
 
-
-import sphinx.writers.latex
 
 class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
     def visit_literal(self, node):
@@ -75,7 +77,6 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
     def depart_literal(self, node):
         self.no_contractions -= 1
         self.body.append('}')
-
 
     def visit_literal_block(self, node):
         if self.in_footnote:
@@ -189,6 +190,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.next_table_colspec = None
         # Redirect head output until header is finished. see visit_tbody.
         self.body = self.tableheaders
+
     def visit_image(self, node):
         attrs = node.attributes
         pre = []                        # in reverse order
@@ -246,8 +248,24 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.body.append('\\includegraphics%s{%s}' % (options, uri))
         self.body.extend(post)
 
+aliases = {}
+with open("glossary_aliases.txt") as f:
+    for line in f:
+        real, al = line.split("->")
+        for name in shlex.split(al):
+            aliases[name.strip()] = real.strip()
+
+
+def missing_reference(app, env, node, contnode):
+    if node["reftarget"] in aliases:
+        return sphinx_nodes.make_refnode(app.builder, node["refdoc"],
+                                         "appendices/Glossary",
+                                         "term-" + aliases[node["reftarget"]],
+                                         contnode)
+
 
 def setup(app):
     app.add_config_value('inline_highlight_literals', True, 'env')
     app.add_config_value('inline_highlight_respect_highlight', True, 'env')
+    app.connect("missing-reference", missing_reference)
     sphinx.writers.latex.LaTeXTranslator = ISLLaTeXTranslator
