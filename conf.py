@@ -217,6 +217,7 @@ latex_elements = {
 'maketitle':r"""
 \makeatletter
 \pagecolor{TitleColor}\afterpage{\nopagecolor}
+\afterpage{\null\newpage}
 {\color{white}
 \begin{titlepage}
  \begin{center}
@@ -241,6 +242,14 @@ latex_elements = {
 \end{titlepage}
 }
 \makeatother
+{
+\topskip0pt
+\vspace*{\fill}
+\begin{center}
+\Huge \textbf{DON'T PANIC!}
+\end{center}
+\vspace*{\fill}
+}
 """,
 "printindex": ""
 }
