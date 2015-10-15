@@ -161,9 +161,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.next_table_ids.clear()
         if self.table.longtable:
             self.body.append('\\hline\n')
-            if len(self.tableheaders) > 1:
+            if self.tableheaders:
                 self._body.append('\\rowcolor{TableHeaderColor}\n')
-            self.body.extend(self.tableheaders)
+            self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
             self.body.append('\\endfirsthead\n\n')
             self.body.append('\\multicolumn{%s}{c}%%\n' % self.table.colcount)
             self.body.append(r'{{\textsf{\tablename\ \thetable{} -- %s}}} \\'
@@ -178,9 +178,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.append('\\endlastfoot\n\n')
         else:
             self.body.append('\\hline\n')
-            if len(self.tableheaders) > 1:
+            if self.tableheaders:
                 self._body.append('\\rowcolor{TableHeaderColor}\n')
-            self.body.extend(self.tableheaders)
+            self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
         self.body.extend(self.tablebody)
         self.body.append(endmacro)
         if not self.table.longtable and self.table.caption is not None:
