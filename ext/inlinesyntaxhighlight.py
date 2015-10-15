@@ -261,6 +261,13 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         super().depart_definition_list(node)
         self.definition -= 1
 
+    def visit_term(self, node):
+        ctx = '}] \\leavevmode'
+        if node.get('ids'):
+            ctx += "".join(self.hypertarget(i) for i in node['ids'])
+        self.body.append('\\item[{')
+        self.context.append(ctx)
+
 aliases = {}
 with open("glossary_aliases.txt") as f:
     for line in f:
