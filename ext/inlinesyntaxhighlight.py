@@ -41,6 +41,10 @@ register_canonical_role('code', code_role)
 
 
 class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
+    def __init__(self, *args):
+        super().__init__(*args)
+        self.definition = 0
+
     def visit_literal(self, node):
         if self.in_footnote:
             raise UnsupportedError('%s:%s: literal blocks in footnotes are '
@@ -104,7 +108,8 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             # workaround for Unicode issue
             hlcode = hlcode.replace('€', '@texteuro[]')
             # must use original Verbatim environment and "tabular" environment
-            viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{40pt}\n"
+            coeff = 10 if self.definition else 40
+            viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{" + str(coeff) + "pt}\n"
             if self.table:
                 self.table.has_problematic = True
                 viac = "\\def\FrameCommand{\\mycolorboxdecol}\n\\setlength\\verbatimindentadjustcoefficient{0pt}\\vspace{1em}\n"
@@ -247,6 +252,14 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             options = '[%s]' % ','.join(include_graphics_options)
         self.body.append('\\includegraphics%s{%s}' % (options, uri))
         self.body.extend(post)
+
+    def visit_definition_list(self, node):
+        self.definition += 1
+        super().visit_definition_list(node)
+
+    def depart_definition_list(self, node):
+        super().depart_definition_list(node)
+        self.definition -= 1
 
 aliases = {}
 with open("glossary_aliases.txt") as f:
