@@ -217,7 +217,6 @@ latex_elements = {
 'maketitle':r"""
 \makeatletter
 \pagecolor{TitleColor}\afterpage{\nopagecolor}
-\afterpage{\null\newpage}
 {\color{white}
 \begin{titlepage}
  \begin{center}
