@@ -1,3 +1,5 @@
+:orphan:
+
 Python summary
 ==============
 
@@ -33,7 +35,7 @@ Using variables to store values in memory::
     print('hello there %s you are %d old' % (my_name,
                                              my_age))  # inline formatting
 
-Getting help in IDLE::
+Getting help in :term:`IDLE`::
 
     dir(__builtins__)  # list all the builtin functions
     help(range)  # display help on the range function
@@ -41,7 +43,7 @@ Getting help in IDLE::
     dir(str)  # or dir(int), dir(float), dir(list)
     help(str.isdigit)  # or help(str), help(float), help(list)
 
-Calling functions (pieces of code that you can use easily)::
+Calling :term:`functions` (pieces of code that you can use easily)::
 
     # Putting () after function names means you are calling (invoking) it
     print(abs(-123))  # prints 123 (makes number positive)
@@ -56,7 +58,7 @@ Reading input from the user (using a function)::
     name = input('What is your name? ')
     print('Hello there', name)
 
-Converting from one type to another::
+Converting from one :term:`type` to another::
 
     age_str = input('What is your age? ')
     age = int(age_str)  # converts from a str to int
@@ -65,7 +67,7 @@ Converting from one type to another::
     num_float = float(num_int)
     num_float2 = num_int * 10.0  # performs float calculation
 
-Using code from other programs (modules)::
+Using code from other programs (:term:`modules`)::
 
     import turtle
     turtle.Turtle()  # make sure the 'T' in the function call is uppercase!
@@ -73,7 +75,7 @@ Using code from other programs (modules)::
     dir(turtle)  # provide a directory listing of module
     help(turtle.fillcolor)  # help on a particular item
 
-Taking decisions using ``if`` statement (operators you can use are: ``==``, ``>``, ``<``, ``<=``, ``>=``, ``!=``, ``in``, ``and``, ``or``, ``not``)::
+Taking decisions using ``if`` statement (:term:`operators` you can use are: ``==``, ``>``, ``<``, ``<=``, ``>=``, ``!=``, ``in``, ``and``, ``or``, ``not``)::
 
     a = 10
     b = 20
@@ -102,7 +104,7 @@ Looping (repeating the same code whilst a test is ``True``)::
             break  # escape from loop
         print('Hello there', input_str)
 
-To generate random numbers, we use the ``random`` module::
+To generate :term:`random` numbers, we use the ``random`` module::
 
     import random
     print(random.randrange(1,100)) # random number between 1 - 100

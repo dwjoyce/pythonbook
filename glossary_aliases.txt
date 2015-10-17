@@ -1,0 +1,19 @@
+argument -> arguments
+string concatenation -> concatenating
+function -> functions
+call -> called
+variable -> variables
+float -> "floating point"
+operator -> operators
+integer -> integers
+exception -> exceptions
+code block -> "block of code"
+return value -> returned returns return
+function definition -> "defining a function"
+execute -> executing
+run -> running
+logical operator -> "logical operators"
+module -> modules
+function -> functions
+built-in function -> "built-in functions"
+type -> types

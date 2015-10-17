@@ -34,4 +34,3 @@ Table of contents:
     chapters/Reading files
     chapters/Writing files
     chapters/Catching errors
-    todo

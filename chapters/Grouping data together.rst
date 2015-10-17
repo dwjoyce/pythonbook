@@ -40,7 +40,7 @@ This list is a sequence containing four strings - the names 'fred', 'bob', 'harr
     >>> my_floats = [2.5, 17.2, -1.7, 123.9]
     >>> my_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
     
-Notice how the contents of the list can be in any order you wish, although it can be sorted later.  The last one is slightly complicated - it is a list containing four sub-lists, each of which contain three integers.  A list of lists, or sometimes referred to as a *matrix*.  The data can even be mixed, although this does not always make sense.  Try this::
+Notice how the contents of the list can be in any order you wish, although it can be sorted later.  The last one is slightly complicated - it is a list containing four sub-lists, each of which contain three integers.  A list of lists, or sometimes referred to as a :term:`matrix`.  The data can even be mixed, although this does not always make sense.  Try this::
 
     >>> my_stuff = ['bacon', 123, 99.5, [1, 44.2, 'fred']]
     

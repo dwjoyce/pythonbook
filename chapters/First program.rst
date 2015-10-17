@@ -8,7 +8,7 @@ We will now learn how to use IDLE in order to write a full program, one that can
 Ed
 --
 
-To write a program, and modify it later, we use an *editor*.  Thankfully, IDLE not only has the interactive shell we have been using, but an editor built-in as well.
+To write a program, and modify it later, we use an :term:`editor`.  Thankfully, IDLE not only has the interactive shell we have been using, but an editor built-in as well.
 
 To start Python editor, first start IDLE itself (see chapter 0 for this if you have forgotten).  Then, using the mouse pointer, click on the ``File`` menu at the top of the shell window, and click again on the ``New File`` menu item, like so:
 
@@ -126,10 +126,8 @@ Things to remember
 
 2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
-3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick at the following location: ``/media/guest/pi/USB Stick`` (that is *pi* for Raspberry Pi, not to be confused with *py* for Python).
+3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted it will appear in the ``USB_STICKS`` folder.
 
-.. todo:: Matthew, can you check the above location is correct?
-
-4. Give your Python programs a *.py* postfix.  Avoid including spaces in your program name.
+4. Give your Python programs a :term:`.py` postfix.  Avoid including spaces in your program name.
 
 5. Comments, or annotations intended for other people to read, are denoted with hash ``#`` symbol.

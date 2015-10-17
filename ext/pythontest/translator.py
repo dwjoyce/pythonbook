@@ -16,6 +16,8 @@ class Mode:
         return "<Mode compile={} run={} output={}>".format(self.compile, self.run, self.output)
 
     def __eq__(self, other):
+        if not isinstance(other, Mode):
+            return False
         return self.compile == other.compile and self.run == other.run and self.output == other.output
 
 

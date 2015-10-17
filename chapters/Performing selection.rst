@@ -4,7 +4,7 @@ Performing selection
 Taking a different route
 ------------------------
 
-With what we have learned up until now, we can do arithmetic, store values against variable names, call functions, import other people's modules, and even get input from the user.  We have also dealt in different types of data, whether numbers (integers or floating point) or strings (sequences of letters, digits and symbols).  Our programs have started running (technically known as *executing*) from the top, and finished at the bottom, performing each line (a code statement) at a time, without any deviation whatsoever.
+With what we have learned up until now, we can do arithmetic, store values against variable names, call functions, import other people's modules, and even get input from the user.  We have also dealt in different types of data, whether numbers (integers or floating point) or strings (sequences of letters, digits and symbols).  Our programs have started running (technically known as :term:`executing`) from the top, and finished at the bottom, performing each line (a code statement) at a time, without any deviation whatsoever.
 
 If a program simply performs the same instructions, line by line, every single time, then effectively they do the same thing every time they are run.  This is not very interesting!  Programs become more useful when they can make decisions on what to do, depending on the circumstances.  Usually, this involves testing the value of a variable, and then performing some instructions over others.  In programming, this is known as *selection* - the program is running some code statements selectively over others - it is making a decision.
 
@@ -12,7 +12,7 @@ For example, if the program is working out the price of a cinema ticket, and VIP
 
 To achieve this in Python, we use the ``if`` statement.  We start with the word ``if``, and then give it a test to evaluate.  If the test evaluates to true (i.e. it is successful), then the statements underneath are performed (executed).  If the test evaluates to false (i.e. it was unsuccessful), then the statements underneath are skipped.
 
-.. note:: Statements that belong to an ``if`` statement must be pushed to the right in order to show what code belongs to what line.  In programming, this is called *indentation*.  In Python, we indent by four spaces.  When the code block is finished, we unindent back to the column of the initial line.
+.. note:: Statements that belong to an ``if`` statement must be pushed to the right in order to show what code belongs to what line.  In programming, this is called :term:`indentation`.  In Python, we indent by four spaces.  When the code block is finished, we unindent back to the column of the initial line.
 
 Let us start a new program called vip.py - click on the ``File`` -> ``New File`` menu item, and type in the following::
 
@@ -46,7 +46,7 @@ We can now finish our program, so add the last line on the end so that your comp
         
     print('Your total price is:', price)
 
-See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our *code block* attached to the ``if`` statement is over, and we now carry on as usual.
+See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our :term:`code block` attached to the ``if`` statement is over, and we now carry on as usual.
 
 Now save and run your program using the ``F5`` key, pressing Return, and using the program name of vip.py.  Remember, to save your program onto your USB stick.
 

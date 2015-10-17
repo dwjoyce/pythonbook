@@ -4,6 +4,10 @@ from docutils.parsers.rst.roles import register_canonical_role, set_classes
 from docutils.parsers.rst import directives
 from docutils import nodes
 import re
+import shlex
+import sphinx.writers.latex
+import sphinx.util.nodes as sphinx_nodes
+
 
 def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     r'''code_role override or create if older docutils used.
@@ -25,7 +29,7 @@ def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
         classes.append(language)
 
     node = nodes.literal(rawtext, text, classes=classes, language=language)
-    
+
     #import rpdb2 ; rpdb2.start_embedded_debugger('foo')
 
     return [node], []
@@ -36,9 +40,11 @@ code_role.options = { 'class': directives.class_option,
 register_canonical_role('code', code_role)
 
 
-import sphinx.writers.latex
-
 class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
+    def __init__(self, *args):
+        super().__init__(*args)
+        self.definition = 0
+
     def visit_literal(self, node):
         if self.in_footnote:
             raise UnsupportedError('%s:%s: literal blocks in footnotes are '
@@ -76,7 +82,6 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.no_contractions -= 1
         self.body.append('}')
 
-
     def visit_literal_block(self, node):
         if self.in_footnote:
             raise UnsupportedError('%s:%s: literal blocks in footnotes are '
@@ -103,7 +108,8 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             # workaround for Unicode issue
             hlcode = hlcode.replace('€', '@texteuro[]')
             # must use original Verbatim environment and "tabular" environment
-            viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{40pt}\n"
+            coeff = 10 if self.definition else 40
+            viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{" + str(coeff) + "pt}\n"
             if self.table:
                 self.table.has_problematic = True
                 viac = "\\def\FrameCommand{\\mycolorboxdecol}\n\\setlength\\verbatimindentadjustcoefficient{0pt}\\vspace{1em}\n"
@@ -155,9 +161,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.next_table_ids.clear()
         if self.table.longtable:
             self.body.append('\\hline\n')
-            if len(self.tableheaders) > 1:
+            if self.tableheaders:
                 self._body.append('\\rowcolor{TableHeaderColor}\n')
-            self.body.extend(self.tableheaders)
+            self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
             self.body.append('\\endfirsthead\n\n')
             self.body.append('\\multicolumn{%s}{c}%%\n' % self.table.colcount)
             self.body.append(r'{{\textsf{\tablename\ \thetable{} -- %s}}} \\'
@@ -172,9 +178,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.append('\\endlastfoot\n\n')
         else:
             self.body.append('\\hline\n')
-            if len(self.tableheaders) > 1:
+            if self.tableheaders:
                 self._body.append('\\rowcolor{TableHeaderColor}\n')
-            self.body.extend(self.tableheaders)
+            self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
         self.body.extend(self.tablebody)
         self.body.append(endmacro)
         if not self.table.longtable and self.table.caption is not None:
@@ -189,6 +195,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.next_table_colspec = None
         # Redirect head output until header is finished. see visit_tbody.
         self.body = self.tableheaders
+
     def visit_image(self, node):
         attrs = node.attributes
         pre = []                        # in reverse order
@@ -246,8 +253,48 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.body.append('\\includegraphics%s{%s}' % (options, uri))
         self.body.extend(post)
 
+    def visit_definition_list(self, node):
+        self.definition += 1
+        super().visit_definition_list(node)
+
+    def depart_definition_list(self, node):
+        super().depart_definition_list(node)
+        self.definition -= 1
+
+    def visit_term(self, node):
+        ctx = '}] \\leavevmode'
+        if node.get('ids'):
+            ctx += "".join(self.hypertarget(i) for i in node['ids'])
+        self.body.append('\\item[{')
+        self.context.append(ctx)
+
+aliases = {}
+with open("glossary_aliases.txt") as f:
+    for line in f:
+        real, al = line.split("->")
+        for name in shlex.split(al):
+            aliases[name.strip()] = real.strip()
+
+
+def missing_reference(app, env, node, contnode):
+    if node["reftarget"] in aliases:
+        target = node['reftarget']
+        if target not in aliases:
+            return
+        typ = node['reftype']
+        fromdocname = node["refdoc"]
+        if 'refdomain' in node and node['refdomain']:
+            try:
+                domain = env.domains[node['refdomain']]
+            except KeyError:
+                return
+            node['reftarget'] = aliases[target]
+            return domain.resolve_xref(env, fromdocname, app.builder,
+                                       typ, aliases[target], node, contnode)
+
 
 def setup(app):
     app.add_config_value('inline_highlight_literals', True, 'env')
     app.add_config_value('inline_highlight_respect_highlight', True, 'env')
+    app.connect("missing-reference", missing_reference)
     sphinx.writers.latex.LaTeXTranslator = ISLLaTeXTranslator

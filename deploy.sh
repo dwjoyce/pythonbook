@@ -4,6 +4,8 @@ date1=$(date +"%s")
 
 echo "==> Setup"
 
+git fetch --tags --unshallow
+
 rm -rf pythonbook.wiki || exit 0;
 
 echo "==> Make"

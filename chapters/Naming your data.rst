@@ -8,7 +8,7 @@ Remember in the last chapter we looked at how your calculator works and started 
 
 One feature of a calculator is the Memory button, usually marked by the letter **M**.  This allows you to store a number, add onto or subtract from it, and recall it later for use in a new calculation.  It effectively makes the calculator remember a number for you, so that you do not have to.
 
-All programming languages, including Python, have a similar feature. Instead of having a memory button, Python has variables.  It is really just a way of putting a name against the data (e.g. a number) you are working with, giving your program the ability to store data, change it (i.e. vary its value), and recall it later.
+All programming languages, including Python, have a similar feature. Instead of having a memory button, Python has :term:`variables`.  It is really just a way of putting a name against the data (e.g. a number) you are working with, giving your program the ability to store data, change it (i.e. vary its value), and recall it later.
 
 For example, the initial sum we worked on in the previous chapter::
 

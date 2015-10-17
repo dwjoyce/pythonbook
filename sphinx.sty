@@ -38,7 +38,7 @@
 
 % Redefine these colors to your liking in the preamble.
 \definecolor{TitleColor}{rgb}{0.15625, 0.32875, 0.45125}
-\definecolor{InnerLinkColor}{rgb}{0.208,0.374,0.486}
+\definecolor{InnerLinkColor}{rgb}{0,0,0.35}
 \definecolor{OuterLinkColor}{rgb}{0.216,0.439,0.388}
 % Redefine these colors to something not white if you want to have colored
 % background and border for code examples.
@@ -123,7 +123,7 @@
     \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
     \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
     \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
-    \fancyhead[LE,RO]{{\py@HeaderFamily \@title, \py@release}}
+    \fancyhead[LE,RO]{{\py@HeaderFamily \@title}}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
     % define chaptermark with \@chappos when \@chappos is available for Japanese
@@ -190,7 +190,8 @@
   }%
   \item%
   \MakeFramed {\FrameRestore}%
-     \small%
+    \small%
+    \@totalleftmargin=0cm
     \OriginalVerbatim[#1]%
 }
 \renewcommand{\endVerbatim}{%
@@ -284,12 +285,12 @@
 \newcommand{\py@lightbox}{{%
   \setlength\parskip{0pt}\par
   \noindent\rule[0ex]{\linewidth}{0.5pt}%
-  \par\noindent\vspace{-0.5ex}%
+  \par\noindent%
   }}
-\newcommand{\py@endlightbox}{{%
+\newcommand{\py@endlightbox}{\vspace{-0.5ex}{%
   \setlength{\parskip}{0pt}%
   \par\noindent\rule[0.5ex]{\linewidth}{0.5pt}%
-  \par\vspace{-0.5ex}%
+  \par%
   }}
 
 % Some are quite plain:
