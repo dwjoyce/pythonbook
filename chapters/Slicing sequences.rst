@@ -30,7 +30,7 @@ In Python, sequences are very similar - the number of each item is how far from 
     :width: 200 pt
     :align: center
 
-To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how we boxed up the sequence in the first place.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
+To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
 
     >>> print(s[0])
     >>> print(s[1])
@@ -40,7 +40,7 @@ To use the offset of a particular item inside a sequence, you need to use square
     
 This should print off each letter in turn.  Remember, the offset refers to how many places from the beginning, or the left, the item is to be found.
 
-If we want to refer to item not from the beginning, but instead from the end, we simply use negative numbers:
+If we want to refer to an item not from the beginning, but instead from the end, we simply use negative numbers:
 
 .. image:: /images/alien_pizza/indexing-all.pdf
     :width: 200 pt
@@ -54,7 +54,7 @@ Practice again in the interactive shell::
     >>> print(s[-4])
     >>> print(s[-5])
     
-This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended at an item offset by 4 (one less than the length fo the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the at the beginning), and end up at -5.
+This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 4 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -5.
 
 All of this is relevant for any type of list, whether they contain characters, strings, numbers, sub-lists or anything else.  Let us use one from the previous chapter::
 
@@ -64,7 +64,7 @@ All of this is relevant for any type of list, whether they contain characters, s
     >>> print(names[-1])
     >>> print(names[-4])
 
-Careful you open and close the brackets correctly, if you are having problems!
+Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is off the end (or the past the beginning) of the sequence, Python will complain.
     
 Unidentified Food Object
 ------------------------
