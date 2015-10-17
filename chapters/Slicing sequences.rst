@@ -6,6 +6,8 @@ Dipping in
 
 In the previous chapter we learnt how to group a sequence of items together under a single name, whether a list or a string.  We have been able to refer to the group as a whole, and even modify later as needs be.  But what if we need to select individual items out of the group - how do we dip into the sequence and reference a single item?
 
+.. pythontest:: nooutput
+
 Firstly, type this in so we start off with a simple sequence (a string)::
 
     >>> s = 'abcde'
@@ -65,7 +67,9 @@ All of this is relevant for any type of list, whether they contain characters, s
     >>> print(names[-4])
 
 Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is off the end (or the past the beginning) of the sequence, Python will complain.
-    
+
+.. pythontest:: all
+
 Unidentified Food Object
 ------------------------
 
