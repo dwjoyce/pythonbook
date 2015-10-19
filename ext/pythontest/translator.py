@@ -48,7 +48,7 @@ class Translator(nodes.NodeVisitor):
         self.chapter = ""
         self.saved_pythontest_state = []
         self.code_bits = defaultdict(list)
-        self.warnings = 0
+        self.warnings = []
 
     def result(self):
         for chapter in self.chapters:
@@ -78,11 +78,8 @@ class Translator(nodes.NodeVisitor):
             self.code_bits[self.chapter].append((False, self.pythontest, node.astext()))
         longest = max(map(len, node.astext().split("\n")))
         if longest > 73:
-            self.warnings += 1
-            self.builder.info(yellow("In chapter ") + bold("'{}'".format(self.chapter)) + yellow(":"))
-            self.builder.info("\n".join(["    " + i for i in node.astext().split("\n")]))
-            self.builder.info(yellow("Code is too wide: ") + bold("{} > 73".format(longest)))
-            self.builder.info()
+            self.warnings.append((self.chapter, node.astext(),
+                                  "Code is too wide", "{} > 73".format(longest)))
         raise nodes.SkipNode
 
     def visit_literal_block(self, node):
@@ -90,11 +87,8 @@ class Translator(nodes.NodeVisitor):
             self.code_bits[self.chapter].append((True, self.pythontest, node.astext()))
         longest = max(map(len, node.astext().split("\n")))
         if longest > 73:
-            self.warnings += 1
-            self.builder.info(yellow("In chapter ") + bold("'{}'".format(self.chapter)) + yellow(":"))
-            self.builder.info("\n".join(["    " + i for i in node.astext().split("\n")]))
-            self.builder.info(yellow("Code is too wide: ") + bold("{} > 73".format(longest)))
-            self.builder.info()
+            self.warnings.append((self.chapter, node.astext(),
+                                  "Code is too wide", "{} > 73".format(longest)))
         raise nodes.SkipNode
 
     visit_doctest_block = visit_literal_block
@@ -105,8 +99,8 @@ class Translator(nodes.NodeVisitor):
             self.chapter = node.astext()
             self.chapters.append(self.chapter)
             if self.pythontest != MODES["on"]:
-                self.warnings += 1
-                self.builder.info(yellow("Warning: pythontest mode on start of chapter {} is {}, not all".format(self.chapter, self.pythontest)))
+                self.warnings.append((self.chapter, node.astext(),
+                                      "Pythontest mode carryover", "pythontest mode on start of chapter is {}, not all".format(self.pythontest)))
 
     def visit_section(self, node):
         if not self.start:

@@ -65,7 +65,7 @@ More code::
 
 Longness::
 
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=11
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx = 11
 
 Random stuff about :term:`todo`...
 :term:`argument` or :term:`arguments`

@@ -97,8 +97,8 @@ The ``for`` loop defines its loop variable as part of the ``for`` statement, but
 And you don't need to use it all, of course.  It is used to just step through the list - what you do with it is up to you::
 
     >>> for num in range(10):
-           print('Going round and round 10 times!')
-           print('Weeeeee!')
+            print('Going round and round 10 times!')
+            print('Weeeeee!')
            
     >>> for line in range(1000):
             print('I will not draw on the classroom wall again.')

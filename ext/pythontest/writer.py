@@ -6,6 +6,8 @@ import builtins
 import io
 from code import compile_command
 import keyword, tokenize
+import pep8
+import re
 
 
 class FakeTurtle:
@@ -77,16 +79,21 @@ class Writer(writers.Writer):
         self.builder = builder
         self.returncode = 0
         self.fails = []
+        self.pep8 = []
 
     def print(self, *args, sep=" ", end="\n"):
         self.output += sep.join(map(str, args)) + end
+
+    def write(self, doctree, dest):
+        self.dest = dest.destination_path
+        super().write(doctree, dest)
 
     def translate(self):
         self.builder.info()
         visitor = translator.Translator(self.document, self.builder)
         self.document.walkabout(visitor)
         over_tests = over_minor_fails = over_major_fails = 0
-        warnings = visitor.warnings
+        self.warnings = warnings = visitor.warnings
         self.output = ""
 
         for chapter, code_bits in visitor.result():
@@ -95,9 +102,11 @@ class Writer(writers.Writer):
             for major, mode, code in code_bits:
                 tests += 1
                 if ">>>" in code:
-                    succeeded, error, detail = self.test_interactive(code, mode)
+                    succeeded, error, detail = self.test_interactive(code, mode,
+                                                                     warnings, chapter if major else None)
                 else:
-                    succeeded, error, detail = self.test_static(code, mode)
+                    succeeded, error, detail = self.test_static(code, mode,
+                                                                warnings, chapter if major else None)
                 if not succeeded:
                     if major:
                         self.returncode = 1
@@ -126,6 +135,8 @@ class Writer(writers.Writer):
             over_minor_fails += minor_fails
             over_major_fails += major_fails
 
+        self.complete_pep8()
+
         for major, chapter, code, error, detail in self.fails:
             if major:
                 self.builder.info(red("In chapter ") + bold("'{}'".format(chapter)) + red(":"))
@@ -136,8 +147,14 @@ class Writer(writers.Writer):
                 self.builder.info(yellow("Minor fail in chapter ") + bold("'{}'".format(chapter)) + yellow(": ") + bold(code))
                 self.builder.info()
 
+        for chapter, code, error, detail in warnings:
+            self.builder.info(yellow("In chapter ") + bold("'{}'".format(chapter)) + yellow(":"))
+            self.builder.info("\n".join(["    " + i for i in code.split("\n")]))
+            self.builder.info(yellow(error + ": ") + bold(detail))
+            self.builder.info()
+
         self.builder.info(bold("{} code items".format(over_tests)))
-        self.builder.info(yellow("{} warnings".format(warnings)))
+        self.builder.info(yellow("{} warnings".format(len(warnings))))
         self.builder.info(yellow("{} minor fails".format(over_minor_fails)))
         self.builder.info(red("{} major fails".format(over_major_fails)))
 
@@ -145,8 +162,7 @@ class Writer(writers.Writer):
         self.print(tests, "code items")
         self.print(minor_fails, "minor fails")
         self.print(major_fails, "major fails")
-                
-            
+
     def compile(self, code, try_eval=False):
         if try_eval:
             try:
@@ -158,9 +174,10 @@ class Writer(writers.Writer):
         except BaseException as e:
             return False, "Compilation failure", "{} - {}".format(type(e).__name__, str(e))
 
-    def test_interactive(self, code, mode):
+    def test_interactive(self, code, mode, warnings, chapter):
         section = output = ""
         parts = []
+        orig_code = code
         code = code.split("\n")
         while code:
             line = code.pop(0)
@@ -184,7 +201,6 @@ class Writer(writers.Writer):
                             if not line.startswith("    "):
                                 break
                             section += line[4:] + "\n"
-                            
             else:
                 output += line + "\n"
         if section:
@@ -194,6 +210,8 @@ class Writer(writers.Writer):
             return self.passed
 
         for code, output in parts:
+            if chapter and code.strip():
+                self.pep8.append((chapter, code))
             compiled, error, detail = self.compile(code, try_eval=True)
             if not compiled:
                 return False, error, detail
@@ -221,7 +239,9 @@ class Writer(writers.Writer):
 
         return self.passed
 
-    def test_static(self, code, mode):
+    def test_static(self, code, mode, warnings, chapter):
+        if chapter and code.strip():
+            self.pep8.append((chapter, code))
         if not mode.compile:
             return self.passed
 
@@ -254,3 +274,18 @@ class Writer(writers.Writer):
 
     def set_returncode(self, app):
         app.statuscode = self.returncode
+
+    def complete_pep8(self):
+        fname = self.dest.rsplit(".", 1)[0] + "{}.py"
+        for i, (chapter, code) in enumerate(self.pep8):
+            with open(fname.format(i), "w") as f:
+                f.write(code.rstrip("\n") + "\n")
+        msgs = []
+        pep8.print = lambda m, **_: msgs.append(m)
+        checker = pep8.StyleGuide(paths=[fname.format(i) for i in range(len(self.pep8))])
+        report = checker.check_files()
+        r = re.compile(re.escape(self.dest.rsplit(".", 1)[0]) + "(\d+)\.py:(\d+):\d+: (.*)$")
+        for i in [fname.format(i) for i in range(len(self.pep8))]:
+            os.remove(i)
+        for filenum, line, msg in [r.match(i).groups() for i in msgs]:
+            self.warnings.append(self.pep8[int(filenum)] + ("PEP8 fail", msg))

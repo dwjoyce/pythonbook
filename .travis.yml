@@ -12,7 +12,7 @@ python:
   - "3.4"
   
 install:
-  - pip install sphinx
+  - pip install sphinx pep8
 
 matrix:
   include:
