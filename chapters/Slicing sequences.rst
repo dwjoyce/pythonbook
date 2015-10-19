@@ -5,6 +5,75 @@ Slicing sequences
 
     A programmer is a device for turning caffeine into code.
 
+Dipping in
+----------
+
+In the previous chapter we learnt how to group a sequence of items together under a single name, whether a list or a string.  We have been able to refer to the group as a whole, and even modify later as needs be.  But what if we need to select individual items out of the group - how do we dip into the sequence and reference a single item?
+
+.. pythontest:: nooutput
+
+Firstly, type this in so we start off with a simple sequence (a string)::
+
+    >>> s = 'abcde'
+    
+That is an *s* for *string*, not the digit 5!  We can refer to the whole sequence of letters, such as ``print(s)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequenece of boxes, each of which contains a single letter:
+
+.. image:: /images/alien_pizza/indexing-middle.pdf
+    :width: 200 pt
+    :align: center
+
+To "dip in" and fetch a single letter, we need to index the item as an offset from the start of the sequence.  To picture this, think of a hotel, like so:
+
+.. image:: /images/alien_pizza/hotel.pdf
+    :height: 170 pt
+    :align: center
+
+In the UK at least, we do not number the floors from the 1st floor and count up - the floors are numbered as how far up they are.  Effectively, the floor number is an *offset* from the ground, i.e. 1st floor up, 2nd floor up, etc.
+
+In Python, sequences are very similar - the number of each item is how far from the beginning it is - the offset from the first item:
+
+.. image:: /images/alien_pizza/indexing-top.pdf
+    :width: 200 pt
+    :align: center
+
+To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
+
+    >>> print(s[0])
+    >>> print(s[1])
+    >>> print(s[2])
+    >>> print(s[3])
+    >>> print(s[4])
+    
+This should print off each letter in turn.  Remember, the offset refers to how many places from the beginning, or the left, the item is to be found.
+
+If we want to refer to an item not from the beginning, but instead from the end, we simply use negative numbers:
+
+.. image:: /images/alien_pizza/indexing-all.pdf
+    :width: 200 pt
+    :align: center
+
+Practice again in the interactive shell::
+
+    >>> print(s[-1])
+    >>> print(s[-2])
+    >>> print(s[-3])
+    >>> print(s[-4])
+    >>> print(s[-5])
+    
+This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 4 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -5.
+
+All of this is relevant for any type of list, whether they contain characters, strings, numbers, sub-lists or anything else.  Let us use one from the previous chapter::
+
+    >>> names = ['fred', 'bob', 'harry', 'tom']
+    >>> print(names[0])
+    >>> print(names[3])
+    >>> print(names[-1])
+    >>> print(names[-4])
+
+Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is off the end (or the past the beginning) of the sequence, Python will complain.
+
+.. pythontest:: all
+
 Unidentified Food Object
 ------------------------
 

@@ -291,10 +291,10 @@ latex_additional_files = ["sphinx.sty", "images/python-logo-bw.pdf", "images/ras
 # Documents to append as an appendix to all manuals.
 latex_appendices = ["appendices/Glossary",
                     "appendices/Python summary",
-                    "appendices/Extra exercises",
                     "appendices/Operators",
                     "appendices/Program flow",
                     "appendices/Common mistakes",
+                    "appendices/Extra exercises",
                     "appendices/Zen"]
 
 if not isrelease:
