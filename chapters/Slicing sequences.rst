@@ -14,9 +14,9 @@ In the previous chapter we learnt how to group a sequence of items together unde
 
 Firstly, type this in so we start off with a simple sequence (a string)::
 
-    >>> s = 'abcde'
+    >>> a_string = 'abcdef'
     
-That is an *s* for *string*, not the digit 5!  We can refer to the whole sequence of letters, such as ``print(s)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequenece of boxes, each of which contains a single letter:
+We can refer to the whole sequence of letters, such as ``print(a_string)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequence of boxes, each of which contains a single letter:
 
 .. image:: /images/alien_pizza/indexing-middle.pdf
     :width: 200 pt
@@ -38,11 +38,12 @@ In Python, sequences are very similar - the number of each item is how far from 
 
 To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
 
-    >>> print(s[0])
-    >>> print(s[1])
-    >>> print(s[2])
-    >>> print(s[3])
-    >>> print(s[4])
+    >>> print(a_string[0])
+    >>> print(a_string[1])
+    >>> print(a_string[2])
+    >>> print(a_string[3])
+    >>> print(a_string[4])
+    >>> print(a_string[5])
     
 This should print off each letter in turn.  Remember, the offset refers to how many places from the beginning, or the left, the item is to be found.
 
@@ -54,13 +55,14 @@ If we want to refer to an item not from the beginning, but instead from the end,
 
 Practice again in the interactive shell::
 
-    >>> print(s[-1])
-    >>> print(s[-2])
-    >>> print(s[-3])
-    >>> print(s[-4])
-    >>> print(s[-5])
+    >>> print(a_string[-1])
+    >>> print(a_string[-2])
+    >>> print(a_string[-3])
+    >>> print(a_string[-4])
+    >>> print(a_string[-5])
+    >>> print(a_string[-6])
     
-This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 4 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -5.
+This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -6.
 
 All of this is relevant for any type of list, whether they contain characters, strings, numbers, sub-lists or anything else.  Let us use one from the previous chapter::
 
