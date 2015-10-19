@@ -72,10 +72,9 @@
 % Chapter quotes
 
 \makeatletter
-\newenvironment{chapquote}[2][2em]
-  {\setlength{\@tempdima}{#1}%
-   \def\chapquote@author{#2}%
+\newenvironment{chapquote}[1]
+  {\def\chapquote@author{#1}%
    \begin{flushright}\begin{minipage}{0.5\textwidth}\begin{flushright}%
    \itshape\large}
-  {\\[2mm]\normalfont\normalsize---\ \chapquote@author\end{flushright}\end{minipage}\end{flushright}\vspace{5mm}}
+  {\\[2mm]\normalfont\normalsize--- \chapquote@author\end{flushright}\end{minipage}\end{flushright}\vspace{5mm}}
 \makeatother

@@ -26,7 +26,11 @@ This will bring up a new window, the editor window.  The shortcut for this is to
     :width: 90%
     :align: center
 
-.. tip:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similiar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side.
+.. tip:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side:
+    
+    .. image:: /images/screenshots/idle_side_by_side.png
+        :width: 90%
+        :align: center
 
 The scene is set.
 
