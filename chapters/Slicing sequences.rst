@@ -8,15 +8,22 @@ Slicing sequences
 Dipping in
 ----------
 
-In the previous chapter we learnt how to group a sequence of items together under a single name, whether a list or a string.  We have been able to refer to the group as a whole, and even modify later as needs be.  But what if we need to select individual items out of the group - how do we dip into the sequence and reference a single item?
+In the previous chapter we learnt how to group a sequence of items together under a single name.  These are all sequences in Python::
+
+    >>> names = ['tom', 'dick', 'harry']
+    >>> numbers = [0, 1, 2, 3, 4, 5]
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> jumble = [10, 'fred', 17.25, True, ['username', 123456789]]
+    
+However, there is another type of sequence that we are already familiar with - strings.  As we know, strings are sequences of characters, whether letters, digits or symbols, and can be treated as sequences in terms of slicing as we shall see in this chapter.  The main difference is that you cannot modify the contents of a string, but you can form new strings from old ones.
+
+We have been able to refer to the group as a whole, but what if we need to select individual items out of the group - how do we dip into the sequence and reference a single item?  Firstly, type this in so we start off with a simple string as our sequence to use::
 
 .. pythontest:: nooutput
 
-Firstly, type this in so we start off with a simple sequence (a string)::
-
-    >>> a_string = 'abcdef'
+    >>> letters = 'abcdef'
     
-We can refer to the whole sequence of letters, such as ``print(a_string)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequence of boxes, each of which contains a single letter:
+We can refer to the whole sequence of letters, such as ``print(letters)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequence of boxes, each of which contains a single letter:
 
 .. image:: /images/alien_pizza/indexing-middle.pdf
     :width: 200 pt
@@ -38,12 +45,12 @@ In Python, sequences are very similar - the number of each item is how far from 
 
 To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
 
-    >>> print(a_string[0])
-    >>> print(a_string[1])
-    >>> print(a_string[2])
-    >>> print(a_string[3])
-    >>> print(a_string[4])
-    >>> print(a_string[5])
+    >>> print(letters[0])
+    >>> print(letters[1])
+    >>> print(letters[2])
+    >>> print(letters[3])
+    >>> print(letters[4])
+    >>> print(letters[5])
     
 This should print off each letter in turn.  Remember, the offset refers to how many places from the beginning, or the left, the item is to be found.
 
@@ -55,12 +62,12 @@ If we want to refer to an item not from the beginning, but instead from the end,
 
 Practice again in the interactive shell::
 
-    >>> print(a_string[-1])
-    >>> print(a_string[-2])
-    >>> print(a_string[-3])
-    >>> print(a_string[-4])
-    >>> print(a_string[-5])
-    >>> print(a_string[-6])
+    >>> print(letters[-1])
+    >>> print(letters[-2])
+    >>> print(letters[-3])
+    >>> print(letters[-4])
+    >>> print(letters[-5])
+    >>> print(letters[-6])
     
 This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -6.
 
@@ -300,13 +307,19 @@ We can find various things::
 Exercises
 ---------
 
-.. todo:: Exercises for Slicing sequences
+1. Write a program called daysofweek.py which defines a list containing the days of the week (assume that Sunday is the first day).  Ask the user for a number between 1 and 7, and print out the appropriate day of the week.  For example, if the user types in ``1``, then print out ``Sunday``.  If the user types in ``7``, then print out ``Saturday``.  Note, you will have to take 1 off what the user has typed in, before you use it as an index into your days of the week list.
+
+2. Write a program called planets.py which defines a list with the 8 major planets of our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune (each one will be a string).  Your program should print out the rocky planets (the first four), followed by the four gaseous planets - use slicing to do this.
+
+3. Write a program called colours which defines the colors of the rainbow as red, orange, yellow, green, blue, indigo and violet.  Your program should print our the primary colours of red, green and blue as a slice of your color list.
 
 Things to remember
 ------------------
 
 1. Lists and strings are sequences, and so can be indexed and sliced.
-2. The first item in a sequence has the index ``0``.
-3. Negative indexes can be used, counting from the back of the sequence. The last item is ``-1``.
+
+2. The first item in a sequence has the index ``0``, the second ``1``, the third ``2``, and so on.
+
+3. Negative indexes can be used, counting from the end of the sequence. The last item is ``-1``.
+
 4. Slicing is done by ``sequence[start:stop:step]``.
-5. Aliens love pizza.
