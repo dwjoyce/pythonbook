@@ -8,15 +8,22 @@ Slicing sequences
 Dipping in
 ----------
 
-In the previous chapter we learnt how to group a sequence of items together under a single name, whether a list or a string.  We have been able to refer to the group as a whole, and even modify later as needs be.  But what if we need to select individual items out of the group - how do we dip into the sequence and reference a single item?
+In the previous chapter we learnt how to group a sequence of items together under a single name.  These are all sequences in Python::
+
+    >>> escape_tunnels = ['tom', 'dick', 'harry']
+    >>> numbers = [0, 1, 2, 3, 4, 5]
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> jumble = [10, 'fred', 17.25, True, ['username', 123456789]]
+    
+However, there is another type of sequence that we are already familiar with - strings.  As we know, strings are sequences of characters, whether letters, digits or symbols, and can be treated as sequences in terms of slicing as we shall see in this chapter.  The main difference is that you cannot modify the contents of a string, but you can form new strings from old ones.
 
 .. pythontest:: nooutput
 
-Firstly, type this in so we start off with a simple sequence (a string)::
+We have been able to refer to the group as a whole, but what if we need to select individual items out of the group - how do we dip into the sequence and reference a single item?  Firstly, type this in so we start off with a simple string as our sequence to use::
 
-    >>> a_string = 'abcdef'
+    >>> letters = 'abcdef'
     
-We can refer to the whole sequence of letters, such as ``print(a_string)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequence of boxes, each of which contains a single letter:
+We can refer to the whole sequence of letters, such as ``print(letters)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequence of boxes, each of which contains a single letter:
 
 .. image:: /images/alien_pizza/indexing-middle.pdf
     :width: 200 pt
@@ -38,12 +45,12 @@ In Python, sequences are very similar - the number of each item is how far from 
 
 To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
 
-    >>> print(a_string[0])
-    >>> print(a_string[1])
-    >>> print(a_string[2])
-    >>> print(a_string[3])
-    >>> print(a_string[4])
-    >>> print(a_string[5])
+    >>> print(letters[0])
+    >>> print(letters[1])
+    >>> print(letters[2])
+    >>> print(letters[3])
+    >>> print(letters[4])
+    >>> print(letters[5])
     
 This should print off each letter in turn.  Remember, the offset refers to how many places from the beginning, or the left, the item is to be found.
 
@@ -55,14 +62,14 @@ If we want to refer to an item not from the beginning, but instead from the end,
 
 Practice again in the interactive shell::
 
-    >>> print(a_string[-1])
-    >>> print(a_string[-2])
-    >>> print(a_string[-3])
-    >>> print(a_string[-4])
-    >>> print(a_string[-5])
-    >>> print(a_string[-6])
+    >>> print(letters[-1])
+    >>> print(letters[-2])
+    >>> print(letters[-3])
+    >>> print(letters[-4])
+    >>> print(letters[-5])
+    >>> print(letters[-6])
     
-This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -6.
+This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -6.  This may not sound like a big improvement, but when your sequence is very long it is better to state the offset from the right rather than from the left.
 
 All of this is relevant for any type of list, whether they contain characters, strings, numbers, sub-lists or anything else.  Let us use one from the previous chapter::
 
@@ -79,30 +86,13 @@ Be careful that you open and close the brackets correctly, if you are having pro
 Unidentified Food Object
 ------------------------
 
-The aliens have landed on Earth, and they have brought pizza! However, for us humans to join in and eat pizza, we have to learn their language. Here is an alien pizza:
+The aliens have landed on Earth, and they have brought pizza!  Thankfully, their numbering system is the same as Python's, so here is a summary of how they refer to each slice:
 
-.. image:: /images/alien_pizza/unnumbered.pdf
+.. image:: /images/alien_pizza/pizza-intro.pdf
     :height: 100 pt
     :align: center
 
-The aliens like to be efficient when telling other aliens. They number each cut, starting from 0. The pizza slice's number is the number directly to its left:
-
-.. image:: /images/alien_pizza/numbered.pdf
-    :height: 100 pt
-    :align: center
-
-So, if an alien wants the red pizza slice, he says 0, and if he wants the blue slice, he says 4. However, the aliens have giant pizzas, and asking for the slice before 0 on a 100 slice pizza means saying a very large number (99). So the aliens also number their pizzas using negative numbers:
-
-.. image:: /images/alien_pizza/negnumbered.pdf
-    :height: 100 pt
-    :align: center
-
-Instead of saying 99, he can say -1.
-
-An alien army marches on its stomach
-------------------------------------
-
-Some aliens are greedy, and want more than one slice, but they are also lazy, and cannot be bothered to say every single number. So they say a range. For example, if an alien wants the red and yellow slice, he can say he wants all the slices between cuts 0 and 2. The serving alien takes piece 0, and adds one, taking piece 1. If he adds 1 again, he gets 2, so he has got all the pieces, and gives pieces 0 and 1 to the alien:
+However, aliens are not satisfied with one slice, they are greedy.  They are also lazy, and cannot be bothered to say every single number. So they say a range. For example, if an alien wants the red and yellow slice, he can say he wants all the slices between cuts 0 and 2. The serving alien takes piece 0, and adds one, taking piece 1. If he adds 1 again, he gets 2, so he has got all the pieces, and gives pieces 0 and 1 to the alien:
 
 .. image:: /images/alien_pizza/slice02.pdf
     :height: 100 pt
@@ -181,7 +171,7 @@ What about every third slice from 1 to -1? Easy::
 Slicing and dicing
 ------------------
 
-OK, we have had enough pizza to satisfy us for a lifetime. But what we have just done is useful. It is called indexing when we use only one number, and slicing when we use more than one number. The general form is ``list_or_string[start:stop:step]``. Say we have all the numbers from 0 to 20::
+OK, we have had enough pizza to satisfy us for a lifetime. But what we have just done is useful. It is called indexing when we use only one number, and slicing when we use more than one number. The general form is ``sequence[start:stop:step]``. Say we have all the numbers from 0 to 20::
 
     >>> nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
                 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
@@ -229,7 +219,7 @@ All the multiples of 3 plus 1::
 Cut the string
 --------------
 
-Before I said ``list_or_string``. That means string work too! If we want the first letter of someone's name, use indexing::
+As we mentioned at the start of the chapter, both lists and strings are sequences.  If we want the first letter of someone's name, we can index it as follows::
 
     >>> name = "Isaac Newton"
     >>> name[0]
@@ -300,13 +290,32 @@ We can find various things::
 Exercises
 ---------
 
-.. todo:: Exercises for Slicing sequences
+1. Write a program called daysofweek.py which defines a list containing the days of the week (assume that Sunday is the first day).  Ask the user for a number between 1 and 7, and print out the appropriate day of the week.  For example, if the user types in ``1``, then print out ``Sunday``.  If the user types in ``7``, then print out ``Saturday``.  Note, you will have to take 1 off what the user has typed in before you use it as an index into your days of the week list.
+
+2. Write a program called planets.py which defines a list with the 8 major planets of our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune (each one will be a string).  Ask the user whether he wants either the rocky or gaseous planets.  For the former, print out the first four planets; for the later, print out the last four planets - use slicing to do this.
+
+3. Write a program called colours which defines the colors of the rainbow as red, orange, yellow, green, blue, indigo and violet.  Your program should print our the primary colours of red, green and blue as a slice of your color list.
+
+4. Write a program called seasons.py, which defines a list containing three sub-lists, for example:
+
+    .. code::
+    
+        seasons = [['December', 'January', 'February'],
+                   ['March', 'April', 'May'],
+                   ['June', 'July', 'August'],
+                   ['September', 'October', 'November']]
+        
+   Ask the user which season, for example, "winter", "spring", "summer" or "autumn".  If the user has entered "spring", then print out the first item in the seasons list, if "summer", then print out the second item, and so on.  Bonus: use ``', '.join(seasons[index])`` to print out the month names nicely, with a comma between each and missing out the brackets.
 
 Things to remember
 ------------------
 
 1. Lists and strings are sequences, and so can be indexed and sliced.
-2. The first item in a sequence has the index ``0``.
-3. Negative indexes can be used, counting from the back of the sequence. The last item is ``-1``.
+
+2. The first item in a sequence has the index ``0``, the second ``1``, the third ``2``, and so on.
+
+3. Negative indexes can be used, counting from the end of the sequence. The last item is ``-1``.
+
 4. Slicing is done by ``sequence[start:stop:step]``.
-5. Aliens love pizza.
+
+5. Use the ``len`` function to find out how long a sequence is.
