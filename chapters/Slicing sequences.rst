@@ -1,9 +1,9 @@
 Slicing sequences
 =================
 
-.. quote:: Many people
+.. quote:: Bill Bryson
 
-    A programmer is a device for turning caffeine into code.
+    A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.
 
 Dipping in
 ----------

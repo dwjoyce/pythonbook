@@ -38,7 +38,7 @@ Unless explicitly silenced.
 
 In the face of ambiguity, refuse the temptation to guess.
 
-There should be one -- and preferably only one -- obvious way to do it.
+There should be one — and preferably only one — obvious way to do it.
 
 Although that way may not be obvious at first unless you're Dutch.
 
@@ -50,12 +50,12 @@ If the implementation is hard to explain, it's a bad idea.
 
 If the implementation is easy to explain, it may be a good idea.
 
-Namespaces are one honking great idea -- let's do more of those!
+Namespaces are one honking great idea — let's do more of those!
 
 
 Easter Egg
 ----------
 
-Type into the python interpreter::
+Type into the Python interpreter::
 
     import this
