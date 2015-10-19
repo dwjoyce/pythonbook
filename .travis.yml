@@ -12,7 +12,7 @@ python:
   - "3.4"
   
 install:
-  - pip install sphinx
+  - pip install sphinx pep8
 
 matrix:
   include:
@@ -28,5 +28,5 @@ notifications:
   email:
     recipients:
       - secure: "Ezaz5KmTizRKBiFa8UTiKzw7qIPlhO1AlXmaGuLJRMQ499ts5WVHWev7agqRtV1EBcKheiWuEjtpvW8Olt+5HoNFKdXuj9xF63o4/05yO6kGBp38GWE9hdaLC/fABt00kehxgUHWXuDUHHEJq8lhfhQdTCPtog1lC6SoGIfQ0y13LJQuCmq+uIsQg5VkJ+RKPLxPTwSW10cp+NlQ4vZEtNYMjQ/Y7CAvy+wGcRVWN8Z0AAwy0MyaStzVaILNOwC5cG59APHaPSqNtkj+6Co10sL0cgac626cidkW9x0VDmt14i+GKZc81b3wkTGrVPgeu8bBlmWq19c7njLowpTUK73+JfyzixOcr/uJ49V1HaxcoSvJFOvvqf6zxCAX4XTImIsdSZADLOD4+1jiO1Daoee3Vohw53hkPaPyEBOqawDdzdDwd2FUSx3VkFIq8c9eLpPqi9x8VXZ8/rBkBt+e4DdXt9ENis4WmjCltt4jekW3laXm42F/sie+v8SL+8aoY8nanBgIIq17DHdpZwITVVl1XJaAtpQmZLU5btV0KtdQE0O+IaynyJwExIUfhnkLFkHp6+18jKDlKgSe97xYhQxcaUOR75bog+StaREmeMmhJ4aQmlmN3GTV0CT2M/IQDJsfv905guR3O03LUvNH+yVghssLqdqQdftO9cMaOn0="
-    on_success: never
+    on_success: change
     on_failure: always

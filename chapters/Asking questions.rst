@@ -39,7 +39,7 @@ To convert back from a number (whether integer or float) into a string, you use 
 To practice, start a new program called sumup.py, and type in the following into your new window::
 
     first_num_str = input('First number: ')
-    second_num_str = input('Second number:' )
+    second_num_str = input('Second number: ')
     
     first_num = int(first_num_str)
     second_num = int(second_num_str)
@@ -57,7 +57,7 @@ Run your program again with different numbers to check it works.  Now run it, an
 To correct this, let us finally modify your program to change the calls to the ``int`` function, so that they call the ``float`` function instead, as follows::
 
     first_num_str = input('First number: ')
-    second_num_str = input('Second number:' )
+    second_num_str = input('Second number: ')
     
     first_num = float(first_num_str)
     second_num = float(second_num_str)

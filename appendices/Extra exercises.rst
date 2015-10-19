@@ -552,38 +552,46 @@ However, this part of drawing the hangman is optional as it makes the program mo
 You may use the following as your word list, or create your own::
 
     WORD_LIST = ['adult', 'aeroplane', 'air', 'aircraft', 'airforce',
-    'airport', 'album', 'alphabet', 'apple', 'arm', 'army', 'baby',
-    'backpack', 'balloon', 'banana', 'bank', 'barbecue', 'bathroom',
-    'bathtub', 'bed', 'bed', 'bee', 'bible', 'bible', 'bird', 'bomb', 'book',
-    'boss', 'bottle', 'bowl', 'box', 'boy', 'brain', 'bridge', 'butterfly',
-    'button', 'cappuccino', 'car', 'carpet', 'carrot', 'cave', 'chair',
-    'chess', 'chief', 'child', 'chisel', 'chocolates', 'church', 'church',
-    'circle', 'circus', 'circus', 'clock', 'clown', 'coffee', 'comet',
-    'compass', 'computer', 'crystal', 'cup', 'cycle', 'database', 'desk',
-    'diamond', 'dress', 'drill', 'drink', 'drum', 'dung', 'ears', 'earth',
-    'egg', 'electricity', 'elephant', 'eraser', 'explosive', 'eyes',
-    'family', 'fan', 'feather', 'festival', 'film', 'finger', 'fire',
-    'floodlight', 'flower', 'foot', 'fork', 'freeway', 'fruit', 'fungus',
-    'game', 'garden', 'gas', 'gate', 'gemstone', 'girl', 'gloves', 'god',
-    'grapes', 'guitar', 'hammer', 'hat', 'hieroglyph', 'highway',
-    'horoscope', 'horse', 'hose', 'ice', 'insect', 'jet', 'junk',
-    'kaleidoscope', 'kitchen', 'knife', 'leather', 'leg', 'library',
-    'liquid', 'magnet', 'man', 'map', 'maze', 'meat', 'meteor', 'microscope',
-    'milk', 'milkshake', 'mist', 'money', 'monster', 'mosquito', 'mouth',
-    'nail', 'navy', 'necklace', 'needle', 'onion', 'paintbrush', 'parts',
-    'parachute', 'passport', 'pebble', 'pendulum', 'pepper', 'perfume',
-    'pillow', 'plane', 'planet', 'pocket', 'potato', 'printer', 'prison',
-    'pyramid', 'radar', 'rainbow', 'record', 'restaurant', 'rifle', 'ring',
-    'robot', 'rock', 'rocket', 'roof', 'room', 'rope', 'saddle', 'salt',
-    'sandpaper', 'sandwich', 'satellite', 'school', 'ship', 'shoes', 'shop',
-    'shower', 'signature', 'skeleton', 'slave', 'snail', 'software', 'solid',
-    'space', 'spectrum', 'sphere', 'spice', 'spiral', 'spoon', 'sport',
-    'square', 'staircase', 'star', 'stomach', 'sun', 'sunglasses',
-    'surveyor', 'swimming', 'sword', 'table', 'tapestry', 'teeth',
-    'telescope', 'television', 'tennis', 'thermometer', 'tiger', 'toilet',
-    'tongue', 'torch', 'torpedo', 'train', 'treadmill', 'triangle', 'tunnel',
-    'typewriter', 'umbrella', 'vacuum', 'vampire', 'videotape', 'vulture',
-    'water', 'weapon', 'web', 'wheelchair', 'window', 'woman', 'worm']
+                 'airport', 'album', 'alphabet', 'apple', 'arm', 'army',
+                 'baby', 'backpack', 'balloon', 'banana', 'bank',
+                 'barbecue', 'bathroom', 'bathtub', 'bed', 'bed', 'bee',
+                 'bible', 'bible', 'bird', 'bomb', 'book', 'boss', 'bottle',
+                 'bowl', 'box', 'boy', 'brain', 'bridge', 'butterfly',
+                 'button', 'cappuccino', 'car', 'carpet', 'carrot', 'cave',
+                 'chair', 'chess', 'chief', 'child', 'chisel', 'chocolates',
+                 'church', 'church', 'circle', 'circus', 'circus', 'clock',
+                 'clown', 'coffee', 'comet', 'compass', 'computer',
+                 'crystal', 'cup', 'cycle', 'database', 'desk', 'diamond',
+                 'dress', 'drill', 'drink', 'drum', 'dung', 'ears', 'earth',
+                 'egg', 'electricity', 'elephant', 'eraser', 'explosive',
+                 'eyes', 'family', 'fan', 'feather', 'festival', 'film',
+                 'finger', 'fire', 'floodlight', 'flower', 'foot', 'fork',
+                 'freeway', 'fruit', 'fungus', 'game', 'garden', 'gas',
+                 'gate', 'gemstone', 'girl', 'gloves', 'god', 'grapes',
+                 'guitar', 'hammer', 'hat', 'hieroglyph', 'highway',
+                 'horoscope', 'horse', 'hose', 'ice', 'insect', 'jet',
+                 'junk', 'kaleidoscope', 'kitchen', 'knife', 'leather',
+                 'leg', 'library', 'liquid', 'magnet', 'man', 'map', 'maze',
+                 'meat', 'meteor', 'microscope', 'milk', 'milkshake',
+                 'mist', 'money', 'monster', 'mosquito', 'mouth', 'nail',
+                 'navy', 'necklace', 'needle', 'onion', 'paintbrush',
+                 'parts', 'parachute', 'passport', 'pebble', 'pendulum',
+                 'pepper', 'perfume', 'pillow', 'plane', 'planet', 'pocket',
+                 'potato', 'printer', 'prison', 'pyramid', 'radar',
+                 'rainbow', 'record', 'restaurant', 'rifle', 'ring',
+                 'robot', 'rock', 'rocket', 'roof', 'room', 'rope',
+                 'saddle', 'salt', 'sandpaper', 'sandwich', 'satellite',
+                 'school', 'ship', 'shoes', 'shop', 'shower', 'signature',
+                 'skeleton', 'slave', 'snail', 'software', 'solid', 'space',
+                 'spectrum', 'sphere', 'spice', 'spiral', 'spoon', 'sport',
+                 'square', 'staircase', 'star', 'stomach', 'sun',
+                 'sunglasses', 'surveyor', 'swimming', 'sword', 'table',
+                 'tapestry', 'teeth', 'telescope', 'television', 'tennis',
+                 'thermometer', 'tiger', 'toilet', 'tongue', 'torch',
+                 'torpedo', 'train', 'treadmill', 'triangle', 'tunnel',
+                 'typewriter', 'umbrella', 'vacuum', 'vampire', 'videotape',
+                 'vulture', 'water', 'weapon', 'web', 'wheelchair',
+                 'window', 'woman', 'worm']
 
 
 checkerboard.py
@@ -684,10 +692,12 @@ For example:
     Your choice: 3
     That's 55 pence please!
 
-.. hint:: You can store your items in a list of items, with the name in the first field and the price in the second field of each item::
+.. hint:: You can store your items in a list of items, with the name in the first field and the price in the second field of each item:
+
+    .. code::
 
         [["1 Coke", 50], ["2 Fanta", 40], ["3 Pepsi", 55],
-        ["4 Sprite", 40], ["Dr Pepper", 60]]
+         ["4 Sprite", 40], ["Dr Pepper", 60]]
 
 
 order.py

@@ -11,7 +11,7 @@ Note that comments start with the ``#`` character.
 The ``print`` function to print to the screen::
 
     print("Hello, World!")
-    print('I will meet you at Fred\'s house') # quote in quote
+    print('I will meet you at Fred\'s house')  # quote in quote
     print('My name is', 'David', 'and my age is', 21)
     print('I love Python ' * 1000)
     print('two strings' + 'joined together')
@@ -22,8 +22,8 @@ Arithmetic::
     # remainder (modulo) - but not in that order!
     print(3 + 4 * 10 / 2 - 5 ** 2 % 5)
     
-    print(3 + 4 * 5)   # will print 23
-    print((3 + 4) * 5) # will print 35, brackets go first!
+    print(3 + 4 * 5)    # will print 23
+    print((3 + 4) * 5)  # will print 35, brackets go first!
 
 Using variables to store values in memory::
 
@@ -107,23 +107,24 @@ Looping (repeating the same code whilst a test is ``True``)::
 To generate :term:`random` numbers, we use the ``random`` module::
 
     import random
-    print(random.randrange(1,100)) # random number between 1 - 100
+    print(random.randrange(1, 100))  # random number between 1 - 100
     print(random.random())  # random number between 0.0 - 1.0
 
 Sequences::
 
+    import random
+
     # Make a list of items using the square brackets []:
     month_names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-    import random
     print(random.choice(month_names))  # print random month
 
-    print(month_names[0])   # prints Jan, indices start from 0
-    print(month_names[5])   # prints Jun
-    print(month_names[-1])  # prints Dec
-    print(month_names[-2])  # prints Nov
-    print(month_names[2:5]) # prints Mar, Apr, May
+    print(month_names[0])    # prints Jan, indices start from 0
+    print(month_names[5])    # prints Jun
+    print(month_names[-1])   # prints Dec
+    print(month_names[-2])   # prints Nov
+    print(month_names[2:5])  # prints Mar, Apr, May
 
     friends = ['Tom', 'Dick', 'Harry']
     friends.append('Fred')  # append a new item onto list
@@ -149,11 +150,14 @@ Defining functions allows us to organise our code better::
     def say_hello():
         print('hello')
 
+
     def say_hello_times(times):
         print('hello' * times)
 
+
     def square_number(number):
         return number * number
+
 
     def lowest_highest(numbers):  # accepts a list of numbers
         lowest = min(numbers)
@@ -163,7 +167,7 @@ Defining functions allows us to organise our code better::
     say_hello()
     say_hello_times(10)
     print(square_number(5))  # prints 25
-    low, high = lowest_highest([5,10,35,15,50,20])
+    low, high = lowest_highest([5, 10, 35, 15, 50, 20])
 
 Reading from a file on disk::
 
