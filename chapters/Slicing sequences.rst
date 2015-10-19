@@ -1,6 +1,10 @@
 Slicing sequences
 =================
 
+.. quote:: Many people
+
+    A programmer is a device for turning caffeine into code.
+
 Unidentified Food Object
 ------------------------
 

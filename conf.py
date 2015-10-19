@@ -27,6 +27,9 @@ sys.path.append(os.path.abspath('.'))
 isrelease = tags.has("release")
 if isrelease:
     print("Release version!")
+else:
+    print("Pre-release version!")
+    tags.add("prerelease")
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
@@ -40,7 +43,8 @@ extensions = [
     'sphinx.ext.pngmath',
     'ext.inlinesyntaxhighlight',
     'ext.pythontest',
-    'ext.lexer'
+    'ext.lexer',
+    "ext.quote"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -74,7 +78,7 @@ except (OSError, subprocess.CalledProcessError):
 release = version
 if not isrelease:
     try:
-        release += ".\small " + subprocess.check_output("git rev-parse --short HEAD".split(),
+        release += r".\normalsize " + subprocess.check_output("git rev-parse --short HEAD".split(),
                                                         cwd=os.path.dirname(__file__)).decode().strip()
     except (OSError, subprocess.CalledProcessError):
         pass

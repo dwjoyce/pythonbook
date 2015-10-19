@@ -1,6 +1,10 @@
 First program
 =============
 
+.. quote:: Donald Knuth
+
+    Computers are good at following instructions, but not at reading your mind.
+
 So far we have been using Python's interactive shell, built into the IDLE program, to experiment with Python in a way that is familiar to us - performing calculations, calling functions, giving values in memory a name.  We have started to veer out of this familiar territory by using other programs (known as modules), such as the turtle module, to extend what Python can do by itself.  Using the interactive shell allows us get to know the language, but it limits us effectively to one statement of code - a line that when you press return, will be run straight away and gives you back an answer (if there is one).
 
 We will now learn how to use IDLE in order to write a full program, one that can be run on its own.  This means we can write the program once, and run it many times without the need to re-write the program each time.  We only need to change our program to modify its behaviour, or correct errors, not having to it from scratch each time.  It also means we can write longer more interesting programs!

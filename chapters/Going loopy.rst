@@ -1,6 +1,10 @@
 Going loopy
 ===========
 
+.. quote:: Martin Golding
+
+    Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
+
 Computers are very good at doing a number of steps repetitively, relieving us of many mundane tasks in our lives.  In programming, this makes our programs much more flexible and involves a lot less typing which is always a good thing!
 
 Imagine drawing a hexagon (a 6 sided polygon) using turtle.  There is the hard way, and the easy way.

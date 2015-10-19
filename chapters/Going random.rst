@@ -1,6 +1,10 @@
 Going random
 ============
 
+.. quote:: Robert R. Coveyou
+
+    The generation of random numbers is too important to be left to chance.
+
 A bit of variation
 ------------------
 

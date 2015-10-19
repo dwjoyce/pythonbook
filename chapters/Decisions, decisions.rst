@@ -1,6 +1,10 @@
 Decisions, decisions
 ====================
 
+.. quote:: William Shakespeare
+
+    To be, or not to be, that is the question.
+
 Differing ways of comparing
 ---------------------------
 

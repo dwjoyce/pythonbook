@@ -1,6 +1,10 @@
 Asking questions
 ================
 
+.. quote:: Homer Simpson, in response to the message, "Press any key"
+
+    Where is the 'any' key?”
+
 String input
 ------------
 

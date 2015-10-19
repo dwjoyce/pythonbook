@@ -1,6 +1,10 @@
 Drawing Turtles
 ===============
 
+.. quote:: Leonardo da Vinci
+
+    Simplicity is the ultimate sophistication.
+
 Importing
 ---------
 

@@ -1,6 +1,10 @@
 Catching errors
 ===============
 
+.. quote:: Unknown
+
+    At the source of every error which is blamed on the computer you will find at least two human errors, including the error of blaming it on the computer.
+
 It's broke
 ----------
 

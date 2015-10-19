@@ -68,3 +68,15 @@
 \fi
 }
 \makeatother
+
+% Chapter quotes
+
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \begin{flushright}\begin{minipage}{0.5\textwidth}\begin{flushright}%
+   \itshape\large}
+  {\\[2mm]\normalfont\normalsize---\ \chapquote@author\end{flushright}\end{minipage}\end{flushright}}
+\makeatother

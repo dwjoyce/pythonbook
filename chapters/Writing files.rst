@@ -1,6 +1,11 @@
 Writing files
 =============
 
+.. quote:: Waseem Latif
+
+    Give a man a program, frustrate him for a day.
+    Teach a man to program, frustrate him for a lifetime.
+
 Prepare your ink
 ----------------
 

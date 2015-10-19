@@ -1,6 +1,10 @@
 Performing selection
 ====================
 
+.. quote:: Gollum / Sméagol
+
+    If Baggins loses, we eats it whole.
+
 Taking a different route
 ------------------------
 

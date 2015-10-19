@@ -1,6 +1,10 @@
 Escaping the cycle
 ==================
 
+.. quote:: Edsger Dijkstra
+
+    If debugging is the process of removing software bugs, then programming must be the process of putting them in.
+
 In the previous chapter we posed a problem that a sequential way of programming cannot solve - needing to repeat a block or set of instructions a number of times that is unknown in advance.  In other words, you have to repeat a set of statements, but you only know when to stop at the very end.  It is not possible to code this in a top-down or sequential way.  However, we can achieve this by using loops in our programs.
 
 Breaking out

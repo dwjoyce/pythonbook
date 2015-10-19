@@ -1,6 +1,10 @@
 Naming your data
 ================
 
+.. quote:: Emo Philips
+
+    A computer once beat me at chess, but it was no match for me at kick boxing.
+
 Saving and recalling
 --------------------
 

@@ -1,3 +1,5 @@
+:orphan:
+
 TODO
 ====
 
@@ -6,6 +8,11 @@ TODO
      
 Test Area
 =========
+
+.. quote:: Rick Cook
+
+    Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.
+
 
 Inline code: ``[str(i) + "#" for i in range(0, len(dir(__builtins__))) if i < 24.6]``
 

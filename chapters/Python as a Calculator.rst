@@ -1,6 +1,10 @@
 Python as a Calculator
 ======================
 
+.. quote:: All programmers
+
+    There, it should work now.
+
 First steps (or sums)
 ---------------------
 

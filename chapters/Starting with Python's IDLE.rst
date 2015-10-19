@@ -1,6 +1,10 @@
 Starting with Python's IDLE
 ===========================
 
+.. quote:: Winston Churchill
+
+    I have nothing to offer but blood, toil, tears and sweat.
+
 Introduction
 ------------
 

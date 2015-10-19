@@ -1,6 +1,10 @@
 More on functions
 =================
 
+.. quote:: William Shakespeare
+
+    Once more unto the breach, dear friends, once more!
+
 In the previous chapter we learned how to define functions of our own, and how to pass in data that the functions can then use.  To follow on from this, we will now learn how to define functions that not only allow data to be passed in, but also return data that can be used by the calling code.  We are already used to this in the way we use functions built into Python itself.  Try these in the interactive shell::
     
     >>> round(1.75)

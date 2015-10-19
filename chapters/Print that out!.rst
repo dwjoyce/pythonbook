@@ -1,6 +1,10 @@
 Print that out!
 ===============
 
+.. quote:: Brian W. Kernighan
+
+    What you see is all you get
+
 Printing numbers
 ----------------
 
