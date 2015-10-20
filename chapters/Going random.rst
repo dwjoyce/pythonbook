@@ -1,7 +1,8 @@
 Going random
 ============
 
-.. quote:: Robert R. Coveyou
+.. quote::
+    :author: Robert R. Coveyou
 
     The generation of random numbers is too important to be left to chance.
 

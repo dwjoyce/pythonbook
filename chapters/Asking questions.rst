@@ -1,7 +1,9 @@
 Asking questions
 ================
 
-.. quote:: Homer Simpson, in response to the message, "Press any key"
+.. quote::
+    :author: Homer Simpson
+    :source: In response to the message, "Press any key"
 
     Where is the 'any' key?”
 

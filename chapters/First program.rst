@@ -1,7 +1,8 @@
 First program
 =============
 
-.. quote:: Donald Knuth
+.. quote::
+    :author: Donald Knuth
 
     Computers are good at following instructions, but not at reading your mind.
 

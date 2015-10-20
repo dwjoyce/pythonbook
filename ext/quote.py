@@ -7,7 +7,10 @@ class quote_node(docutils.nodes.Element):
 
 
 def visit_quote_latex(self, node):
-    self.body.append("\\begin{chapquote}{" + node["author"] + "}\n")
+    author = node["author"]
+    if node["source"]:
+        author += r"\\\textit{\scriptsize " + node["source"] + "}"
+    self.body.append("\\begin{chapquote}{" + author + "}\n")
 
 
 def depart_quote_latex(self, node):
@@ -16,13 +19,15 @@ def depart_quote_latex(self, node):
 
 class Quote(Directive):
     has_content = True
-    required_arguments = 1
-    optional_arguments = 0
+    required_arguments = 0
+    optional_arguments = 2
+    option_spec = {"source": directives.unchanged,
+                   "author": directives.unchanged_required}
     final_argument_whitespace = True
 
     def run(self):
-        author = self.arguments[0].strip()
-        node = quote_node(author=author)
+        node = quote_node(author=self.options.get("author", ""),
+                          source=self.options.get("source", "").strip())
         quote = self.state.nested_parse(self.content, self.content_offset, node)
         return [node]
 

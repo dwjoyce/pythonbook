@@ -1,7 +1,8 @@
 Performing selection
 ====================
 
-.. quote:: Gollum / Sméagol
+.. quote::
+    :author: Gollum / Sméagol
 
     If Baggins loses, we eats it whole.
 

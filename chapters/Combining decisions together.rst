@@ -1,7 +1,8 @@
 Combining decisions together
 ============================
 
-.. quote:: Anonymous
+.. quote::
+    :author: Anonymous
 
     The best thing about a boolean is even if you are wrong, you are only off by a bit.
 

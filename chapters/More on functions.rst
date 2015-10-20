@@ -1,7 +1,8 @@
 More on functions
 =================
 
-.. quote:: William Shakespeare
+.. quote::
+    :author: William Shakespeare
 
     Once more unto the breach, dear friends, once more!
 

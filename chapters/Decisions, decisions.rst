@@ -1,7 +1,8 @@
 Decisions, decisions
 ====================
 
-.. quote:: William Shakespeare
+.. quote::
+    :author: William Shakespeare
 
     To be, or not to be, that is the question.
 

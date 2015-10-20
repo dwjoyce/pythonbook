@@ -1,7 +1,8 @@
 Escaping the cycle
 ==================
 
-.. quote:: Edsger Dijkstra
+.. quote::
+    :author: Edsger Dijkstra
 
     If debugging is the process of removing software bugs, then programming must be the process of putting them in.
 

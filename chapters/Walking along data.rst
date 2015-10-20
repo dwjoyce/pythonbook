@@ -1,7 +1,8 @@
 Walking along data
 ==================
 
-.. quote:: Bilbo Baggins
+.. quote::
+    :author: Bilbo Baggins
 
     The Road goes ever on and on...
 

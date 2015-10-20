@@ -1,9 +1,10 @@
 Drawing Turtles
 ===============
 
-.. quote:: Leonardo da Vinci
+.. quote::
+    :author: Anonymous
 
-    Simplicity is the ultimate sophistication.
+    Theory is when you know something, but it doesn't work. Practice is when something works, but you don't know why. Programmers combine theory and practice: Nothing works and they don't know why.
 
 Importing
 ---------

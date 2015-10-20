@@ -1,9 +1,10 @@
 Slicing sequences
 =================
 
-.. quote:: Bill Bryson
+.. quote::
+    :author: Many people
 
-    A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.
+    A programmer is a device for turning caffeine into code.
 
 Dipping in
 ----------
@@ -298,12 +299,12 @@ Exercises
 
 4. Write a program called seasons.py, which defines a list containing three sub-lists, for example:
 
-    .. code::
+   .. code::
     
-        seasons = [['December', 'January', 'February'],
-                   ['March', 'April', 'May'],
-                   ['June', 'July', 'August'],
-                   ['September', 'October', 'November']]
+       seasons = [['December', 'January', 'February'],
+                  ['March', 'April', 'May'],
+                  ['June', 'July', 'August'],
+                  ['September', 'October', 'November']]
         
    Ask the user which season, for example, "winter", "spring", "summer" or "autumn".  If the user has entered "spring", then print out the first item in the seasons list, if "summer", then print out the second item, and so on.  Bonus: use ``', '.join(seasons[index])`` to print out the month names nicely, with a comma between each and missing out the brackets.
 

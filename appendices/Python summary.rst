@@ -3,6 +3,12 @@
 Python summary
 ==============
 
+.. quote::
+    :author: Jack Sparrow
+    :source: Pirates of the Caribbean: On Stranger Tides
+
+    I understand everything! Except that wig.
+
 This short chapter summarises what we have learnt about the Python programming language.  It is only a subset of the total language, but it is enough for you to do your coursework well.
 Refer to it when you need an example of how to do something, from printing out messages or numbers, making decisions, performing loops or catching errors.
 

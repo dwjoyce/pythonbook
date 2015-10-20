@@ -1,7 +1,8 @@
 Python as a Calculator
 ======================
 
-.. quote:: All programmers
+.. quote::
+    :author: All programmers
 
     There, it should work now.
 

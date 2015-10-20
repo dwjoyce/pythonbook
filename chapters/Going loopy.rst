@@ -1,7 +1,8 @@
 Going loopy
 ===========
 
-.. quote:: Martin Golding
+.. quote::
+    :author: Martin Golding
 
     Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
 
