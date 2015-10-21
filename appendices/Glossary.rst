@@ -3,6 +3,11 @@
 Glossary
 ========
 
+.. quote::
+    :author: Shelock Homes
+
+    Elementary, my dear Watson
+
 .. Please keep entries under the chapter they were first introduced. They will be alphabetically sorted on build.
 
 .. glossary::
