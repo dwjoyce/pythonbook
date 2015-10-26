@@ -78,7 +78,7 @@ You can even get Python to sort a list in any order you wish.  Try this out::
     
 The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but we an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 19 when we are creating our own functions.
 
-Lists can also be modified after they have been defined by using the ``append``, ``insert`` and ``del`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well), and del is a built-in function to get rid of a variable (or part of a list, in this case).  We will cover how to index lists properly in the next chapter.  To see how this works, try out the following::
+Lists can also be modified after they have been defined by using the ``append`` and ``insert`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well).  We will cover how to index lists properly in the next chapter.  To see how this works, try out the following::
 
     >>> names = ['Bilbo', 'Frodo', 'Sam']
     >>> print(names)
@@ -89,14 +89,9 @@ Lists can also be modified after they have been defined by using the ``append``,
     >>> names.insert(0, 'Merry')
     >>> print(names)
     ['Merry', 'Bilbo', 'Frodo', 'Sam', 'Pippin']
-    >>> del names[1]
     >>> print(names)
     ['Merry', 'Frodo', 'Sam', 'Pippin']
     
-.. todo:: Perhaps the previous section on modifying lists should be in the slicing chapter.
-
-.. todo:: Remove ``del``
-
 We can split a sentence into a lit of words using the split command::
 
     >>> sentence = 'Mary had a little lamb'
