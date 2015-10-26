@@ -3,6 +3,12 @@
 Operators
 =========
 
+.. quote::
+    :author: J.R.R. Tolkien
+    :source: The Hobbit
+
+    Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?
+
 The most commonly used operators in Python.
 
 Arithmetic operators

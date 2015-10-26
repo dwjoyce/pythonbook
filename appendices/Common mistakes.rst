@@ -3,6 +3,11 @@
 Common mistakes
 ===============
 
+.. quote::
+    :author: Paul R. Ehrlich
+
+    To err is human, but to really foul things up you need a computer.
+
 Forgetting to open / close quotation marks
 ------------------------------------------
 
