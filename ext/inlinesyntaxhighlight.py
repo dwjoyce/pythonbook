@@ -6,7 +6,6 @@ from docutils import nodes
 import re
 import shlex
 import sphinx.writers.latex
-import sphinx.util.nodes as sphinx_nodes
 
 
 def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -267,6 +266,9 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             ctx += "".join(self.hypertarget(i) for i in node['ids'])
         self.body.append('\\item[{')
         self.context.append(ctx)
+
+    def visit_definition(self, node):
+        self.body.append("\n")
 
 aliases = {}
 with open("glossary_aliases.txt") as f:
