@@ -15,7 +15,7 @@ We have used Python to store values in memory by using variables.  Type the foll
     >>> troops = 85
     >>> print('Your message:', message, 'and the number of troops is:', troops)
     
-However, storing values in memory by using variables is only transitory - just like your maths calcualtor.  If you store a number in memory using the ``MS`` (memory store) button, then turn your calculator off and on again, and try and recall the number by using ``MR``, it will have gone.  Variables in computer memory are similar - when your program stops (or the computer is switched off), the memory is gone.  To demonstate this, having typed in the code above, select the *Restart Shell* menu item from the *Shell* menu.  Then redo the print command (you can use the up arrow and press the Return key twice), and see what happens - Python will complain it cannot find the variables stating you have not defined them.  In other words, they have gone from memory!
+However, storing values in memory by using variables is only transitory - just like your maths calcualtor.  If you store a number in memory using the ``MS`` (memory store) button, then turn your calculator off and on again, and try and recall the number by using ``MR``, it will be gone.  Variables in computer memory are similar - when your program stops (or the computer is switched off), the memory is gone.  To demonstate this, having typed in the code above, select the *Restart Shell* menu item from the *Shell* menu.  Then redo the print command (you can use the up arrow and press the Return key twice), and see what happens - Python will complain it cannot find the variables stating you have not defined them.  In other words, they have gone from memory!
 
 So how do we retain information from one run of our program to the next?  How do we, as a computer scientist would say, make our data persistent - i.e. be able to be recalled when the program is run again?  Think of a game with a highest scores table - we need a way to store these numbers (and names) so that they can be read and changed every time the game is run.  To do this, we need to place our data in a file that is stored on disk - whether a hard drive or flash storage such as a USB stick.  This data, when the electricity is turned off, retains its state - the data does not drain away with the current!  To work with files, we need to learn how to read from them (in this chapter) and write to them (in the next).
 
@@ -45,6 +45,8 @@ In Python, we use the ``open`` function to open files::
     <_io.TextIOWrapper name='mission.txt' mode='r' encoding='UTF-8'>
 
 This shows that the file has been opened. The ``mode`` is ``'r'``, which means the it is open for reading. The other mode, ``'w'``, is for writing and it is covered in the next chapter.  Note you have to enclose the name of the file (the *filename*) in quotation marks as it is string.  If this does not work, make sure the *mission.txt* file is in the correct location as indicated above.
+
+We have called the variable that refers to our open file ``f``, but it could be called anything just like other variables, such as ``my_file``, ``file_to_write``, ``my_todo_list`` or the like.
 
 .. note::
 
@@ -109,7 +111,7 @@ However, if you play with files, you will some interesting behaviour, such as::
 
 These special escape sequences (such as ``\n`` for new line and ``\t`` for tab) were covered briefly in chapter 7 on printing.  This is the text file as it really is, not formatted nicely for reading.
 
-If you read a file completely, the open file points to the end of the file. This is like having a book open at the end of the last page. If you want to re-read the file, you can re-open the file, or use the function ``seek`` to move back (or seek) to the start::
+If you read a file completely, the open file points to the end of the file. This is like having a book open at the end of the last page. If you want to re-read the file, you can re-open the file (similar to closing a book and reopening it at the beginning again), or use the function ``seek`` to move back to the start (similar to flicking through the pages back to the beginning, but much quicker)::
 
     >>> f.seek(0)
     0
@@ -193,12 +195,12 @@ When we have finished with a file, we should always call ``close``::
 
     >>> f.close()
 
-This just like closing the covers of a book, or the flap on a real file from a filing cabinet.  It is polite way to finish working on a file - in the next chapter, this becomes more essential.
+This just like closing the covers of a book, or the flap on a real folder from a filing cabinet.  It is polite way to finish working on a file - in the next chapter, this becomes more essential.
 
 Exercises
 ---------
 
-For these exercises, you will need to copy the text file ``mission.txt`` from your home directory (``/home/pi/mission.txt``) to the same location as your programs on your USB stick.
+For these exercises, you will need to copy the text file ``mission.txt`` from the home directory on the Raspberry Pi (``/home/pi/mission.txt``) to the same location as your programs on your USB stick (e.g. /home/pi/USB Sticks/USB Disk).
 
 1. Open and print out the contents of the mission.txt file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
 

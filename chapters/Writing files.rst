@@ -16,9 +16,7 @@ To write to a file, we first have to open it in writing mode. To do this, we pas
 
     >>> f = open("todo.txt", 'w')
 
-This will open the file, creating it if it does not exist. The file is then emptied or truncated, "cleaning the slate" for any data you will write.  In the previous chapter, we could have passed in ``'r'`` for reading, but this is not necessary as it is the default (normal) behaviour anyway.
-
-We have called our file variable ``f``, but it could be called anything just like other variables, such as ``my_file``, ``file_to_write``, ``my_todo_list`` or the like.
+This will open the file, creating it if it does not exist, and assigns the data containing the open file to the variable ``f``. The file is then emptied or truncated, "cleaning the slate" for any data you will write.  In the previous chapter, we could have passed in ``'r'`` for reading, but this is not necessary as it is the default (normal) behaviour anyway.
 
 Learning to write
 -----------------
