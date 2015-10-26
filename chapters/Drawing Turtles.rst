@@ -25,7 +25,7 @@ Programming is similar.  If we make use of the work of others, we can go far.  W
 
 So, to include another program, we must use the ``import`` command, and give it the name of the module to import.  Although this program will have the ".py" filename extension (e.g. math.py), we do not include that part when naming the module.
 
-Therefore, to use the math (for mathematics) module, you would type::
+Therefore, to use the ``math`` (for mathematics) module, you would type::
 
     >>> import math
   
@@ -36,12 +36,12 @@ and then you can use it thereafter, such as the square root function::
   
 which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the ``.`` (period) character - it separates the module name (``math``) from the function being used (``sqrt``).  We must write the name of the module first, followed by the ``.`` period, and then the function name that is to be found inside the module.  The period is used to say that this function is found inside this module - we will see more of this later when talking about type or class functions.
 
-Here is another example - using the value of :math:`\pi` as defined as a variable by the math module::
+Here is another example - using the value of :math:`\pi` as defined as a variable by the ``math`` module::
 
     >>> math.pi
     3.141592653589793
 
-Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the math module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change any time, it is what we call a constant.
+Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the ``math`` module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change any time, it is what we call a constant.
     
 Stick your head out of the shell
 --------------------------------

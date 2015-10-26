@@ -39,7 +39,7 @@ Notice how we have done away with the individual variables, eg. name1, name2, et
     >>> print(names)
     ['fred', 'bob', 'harry', 'tom']
 
-This list is a sequence containing four strings - the names 'fred', 'bob', 'harry' and 'tom'.  As mentioned above, lists can contain almost anything, so let's try a list containing different data::
+This list is a sequence containing four strings - the names ``'fred'``, ``'bob'``, ``'harry'`` and ``'tom'``.  As mentioned above, lists can contain almost anything, so let's try a list containing different data::
 
     >>> my_ints = [1, 2, 3, 4, 5]
     >>> my_floats = [2.5, 17.2, -1.7, 123.9]
@@ -95,6 +95,8 @@ Lists can also be modified after they have been defined by using the ``append``,
     
 .. todo:: Perhaps the previous section on modifying lists should be in the slicing chapter.
 
+.. todo:: Remove ``del``
+
 We can split a sentence into a lit of words using the split command::
 
     >>> sentence = 'Mary had a little lamb'
@@ -146,7 +148,7 @@ Start by opening up a new file window, and type in the following::
         if user_choice == 'stop':
             break
 
-This should be fairly familar to you now.  We are importing the ``random`` module, and we have a loop which repeats until the user breaks out by entering the word 'stop'.
+This should be fairly familiar to you now.  We are importing the ``random`` module, and we have a loop which repeats until the user breaks out by entering the word 'stop'.
 
 The new bit is the second line, where we define a list with the possible choices contained (boxed up) in a list, which we call ``choices``.  It is a list of strings.  We can then add onto our program (watch the indentation, these lines are *within* the while loop)::
 
@@ -167,7 +169,7 @@ And that's it!  Now save and run your program calling it rockpaperscissors.py (o
 
 Notice how we can split a large test (the one attached to the ``elif`` testing whether the user has won or not) over 3 lines to make it more readable by putting parentheses around the entire expression.  Otherwise Python will complain.
 
-There is one problem with our program - if the user does not type in exactly either 'rock or 'paper' or 'scissors', then the computer always wins.  Look at the tests - it fails the first test (the two choices cannot be equal), and it also fails the second test (as the user_choice is none of the possible values provided).  This is where we can use the ``in`` operator we described above.
+There is one problem with our program - if the user does not type in exactly either 'rock or 'paper' or 'scissors', then the computer always wins.  Look at the tests - it fails the first test (the two choices cannot be equal), and it also fails the second test (as the ``user_choice` is none of the possible values provided).  This is where we can use the ``in`` operator we described above.
 
 Therefore, modify the long ``if`` statement in your rps.py program so it includes the new lines below::
 
@@ -182,7 +184,7 @@ Therefore, modify the long ``if`` statement in your rps.py program so it include
     else:
         print('Computer won!')
 
-Careful - you need to enter the first two new lines, and also change the existing ``if`` to an ``elif`` - otherwise, there would be two independant ``if`` statements instead of a series of tests following on from one another.
+Careful - you need to enter the first two new lines, and also change the existing ``if`` to an ``elif`` - otherwise, there would be two independent ``if`` statements instead of a series of tests following on from one another.
 
 Now try our your program again.  It should behave itself whatever the user types in.
 

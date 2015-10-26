@@ -89,7 +89,7 @@ So to define a function, we use the ``def`` keyword.  To call or invoke a functi
 Passing in data
 ---------------
 
-However, a function that always does the same thing is very limited.  It is more useful to have the ability to pass information into the function, so the function can use this information on the inside, as it were.  For example, let's take the example we did above, but vary it slightly.  So type this in beneath your definition of the say_hello function in your functions.py program (i.e. not at the bottom, so as to keep your functions together, and your calls together)::
+However, a function that always does the same thing is very limited.  It is more useful to have the ability to pass information into the function, so the function can use this information on the inside, as it were.  For example, let's take the example we did above, but vary it slightly.  So type this in beneath your definition of the ``say_hello`` function in your functions.py program (i.e. not at the bottom, so as to keep your functions together, and your calls together)::
 
     def say_hello_times(times):
         print('Hello there' * times)

@@ -179,7 +179,7 @@ Open up another new file window, and type in the following::
 
 Run and save it as spirals.py, and see what happens.  If there any problems, then check your code carefully!
 
-A bit of explanation: we impor the modules we need, turtle for drawing, random to introduce a bit of variaton.  We then define the colors (note, English spelling - Python requires the American splling) we are going to use.  We then create our drawing window, changing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
+A bit of explanation: we import the modules we need, turtle for drawing, random to introduce a bit of variation.  We then define the colors (note, English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, changing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
 
 Try changing the numbers to see what happens to the final result.
 
@@ -271,7 +271,7 @@ Your turtle window should show something like this being drawn:
     :width: 50%
     :align: center
 
-One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatly go from 0 to 6, inclusive.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
+One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatedly go from 0 to 6, inclusive.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
 
 Exercises
 ---------

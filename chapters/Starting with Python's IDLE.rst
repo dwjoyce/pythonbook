@@ -21,7 +21,7 @@ It was created in the early 1990s by the Dutch programmer Guido van Rossum.  It 
 
 Code written in Python is very readable.  It lacks much of the cryptic notation that other languages use to express themselves.  It almost reads like :term:`pseudo-code` - a description of how a program should operate as written in lines of simple English.
 
-Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from chapter 6 - First Program), initially we will use Python's interactive shell to start off.  It is called an :term:`interactive shell` because you type lines of code (known as statements) and get the answer straightaway, i.e. interactively.
+Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from chapter 6 - First Program), initially we will use Python's interactive shell to start off.  It is called an :term:`interactive shell` because you type lines of code (known as statements) and get the answer straight away, i.e. interactively.
 
 What we will be learning
 ------------------------

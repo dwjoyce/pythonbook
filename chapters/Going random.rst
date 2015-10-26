@@ -11,7 +11,7 @@ A bit of variation
 
 To add variation to our programs, we can ask the user for some input, and then behave differently depending on what the user happened to have typed in.  But what if we wanted to play a game, with the game needing to change its behaviour from one run to the next.  If a game we played behaved exactly the same way every time, which computers tend to do, games soon become rather predictable!  A game of chess where the computer always started in the same way would never sell very well!
 
-Computer programs which need a bit of variation are programs like flight simulators (where the weather differs from time to time), board games (so the moves vary from game to game), racing games (where your competitors do different things from race to race), and so on.  They do this by using a piece of sofware to provide them with some :term:`random` data, such as a simple number which varies between a range of numbers.  This simple piece of data is then used to vary the decisions made within the program, thus making the program more interesting to use.  In a way, it becomes a little more like the real world.
+Computer programs which need a bit of variation are programs like flight simulators (where the weather differs from time to time), board games (so the moves vary from game to game), racing games (where your competitors do different things from race to race), and so on.  They do this by using a piece of software to provide them with some :term:`random` data, such as a simple number which varies between a range of numbers.  This simple piece of data is then used to vary the decisions made within the program, thus making the program more interesting to use.  In a way, it becomes a little more like the real world.
 
 Going random
 ------------

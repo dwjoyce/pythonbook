@@ -56,7 +56,7 @@ This will print out the three numbers from before (10, 20 and 30), and then 60 (
 Printing messages
 -----------------
 
-Dealing with numbers all the time is very useful, but it is bit limiting.  Computers do not just compute numbers!  They also deal with textual messages, not to mention pictures, music and movies!  Dealing with messages containing text is very easy, but subtly different.
+Dealing with numbers all the time is very useful, but it is bit limiting.  Computers do not just compute numbers!  They also deal with textual messages, not to mention pictures, music and videos!  Dealing with messages containing text is very easy, but subtly different.
 
 To deal with text, we need to enclose the words with quotation marks, just like how a piece of speech in a book is surrounded by quotation marks.  In Python, it is very similar.
 
@@ -113,7 +113,7 @@ Exercises
 4. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space in-between each item.
 
 5. You can use strings to describe colors when drawing with ``turtle``, for example, 'black', 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', etc.  Two 
-turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call turtle.pencolor('red') before you start drawing, or turtle.fillcolor('yellow') before drawing a shape.  Write a program that draws a number of circles with different pen and fill colors.
+turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call ``turtle.pencolor('red')`` before you start drawing, or ``turtle.fillcolor('yellow')`` before drawing a shape.  Write a program that draws a number of circles with different pen and fill colors.
 
 Things to remember
 ------------------
