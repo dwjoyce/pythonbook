@@ -89,8 +89,6 @@ Lists can also be modified after they have been defined by using the ``append`` 
     >>> names.insert(0, 'Merry')
     >>> print(names)
     ['Merry', 'Bilbo', 'Frodo', 'Sam', 'Pippin']
-    >>> print(names)
-    ['Merry', 'Frodo', 'Sam', 'Pippin']
     
 We can split a sentence into a lit of words using the split command::
 
@@ -164,7 +162,7 @@ And that's it!  Now save and run your program calling it rockpaperscissors.py (o
 
 Notice how we can split a large test (the one attached to the ``elif`` testing whether the user has won or not) over 3 lines to make it more readable by putting parentheses around the entire expression.  Otherwise Python will complain.
 
-There is one problem with our program - if the user does not type in exactly either 'rock or 'paper' or 'scissors', then the computer always wins.  Look at the tests - it fails the first test (the two choices cannot be equal), and it also fails the second test (as the ``user_choice` is none of the possible values provided).  This is where we can use the ``in`` operator we described above.
+There is one problem with our program - if the user does not type in exactly either 'rock or 'paper' or 'scissors', then the computer always wins.  Look at the tests - it fails the first test (the two choices cannot be equal), and it also fails the second test (as the ``user_choice`` is none of the possible values provided).  This is where we can use the ``in`` operator we described above.
 
 Therefore, modify the long ``if`` statement in your rps.py program so it includes the new lines below::
 
