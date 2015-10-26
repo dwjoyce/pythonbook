@@ -69,9 +69,15 @@ Open up a new file (click on the ``File`` menu and select ``New File``), and typ
   
 Save this file as lines.py (press the ``F5`` button, press Return to confirm and save it onto your USB stick), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
 
-These pieces of text in Python are called ``strings``.  Think of them as strings of characters, made up of either letters from the alphabet, numerical digits or symbols.  This includes almost any key from your keyboard, and more besides.  Similar to a string of pearls, a ``string`` in programming is a sequence of characters.  Now we know three types of data - integers, floats and strings.
+These pieces of text in Python are called ``strings``.  Think of them as strings of characters, made up of either letters from the alphabet, numerical digits or symbols.  This includes almost any key from your keyboard, and more besides.  Similar to a string or chain of pearls, a ``string`` in programming is a sequence of characters.  To illustrate, whilst with an integer number (shown below on the left) is stored as a whole number (with the 1s, 10s, 100s, etc., all in their correct places), strings (shown on the right) are simply a sequence of characters, where digits are treated the same as letters and symbols:
 
-Now modify your lines.py program to include strings and integers together, below the lines you added previously::
+.. image:: /images/integer-string.pdf
+    :width: 500 pt
+    :align: center
+
+We now know three types of data - integers, floats and strings.
+
+Modify your lines.py program to include strings and integers together, below the lines you added previously::
 
   print("1 plus 2 equals:", 1 + 2)
   print("I am", 18, "years old")
@@ -112,8 +118,7 @@ Exercises
 
 4. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space in-between each item.
 
-5. You can use strings to describe colors when drawing with ``turtle``, for example, 'black', 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', etc.  Two 
-turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call turtle.pencolor('red') before you start drawing, or turtle.fillcolor('yellow') before drawing a shape.  Write a program that draws a number of circles with different pen and fill colors.
+5. You can use strings to describe colors when drawing with ``turtle``, for example, 'black', 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', etc.  Two turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call turtle.pencolor('red') before you start drawing, or turtle.fillcolor('yellow') before drawing a shape.  Write a program that draws a number of circles with different pen and fill colors.
 
 Things to remember
 ------------------
