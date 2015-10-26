@@ -36,7 +36,7 @@ Programs are made up of data, which we have been discussing above, and code.  We
 Functions
 ---------
 
-We have already used named sections of code - they are called :term:`functions`.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses afters its name.  Try the following, again in the interactive shell::
+We have already used named sections of code - they are called :term:`functions`.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses after its name.  Try the following, again in the interactive shell::
 
     >>> print()
     
@@ -115,7 +115,7 @@ and insert these lines below the last call to ``say_hello_times``::
     say_message_times('Yo! ', 25)
     say_message_times('I will stop talking in class', 100)
     
-.. note:: An argument is the value or variable being passed *into* a function.  A parameter is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters.
+.. note:: An argument is the value or variable being passed *into* a function.  A parameter is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them parameters!
 
 These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions with one that takes in two numbers, and prints out the sum::
 
@@ -128,7 +128,7 @@ and again, lower down, we can call this function::
     add_two_nums(-50, 25)
     add_two_nums(100, 200)
     
-If you call this function with three arguments, then Python will complain - three arguments into two parameters does not go!
+If you call this function with three arguments (e.g. ``add_two_nums(10, 20 30)``), then Python will complain - three arguments into two parameters does not go!
 
 These functions are very short, so may not appear very useful yet, but imagine writing a function that is 10 or 20 lines long, and is used in a number of places in your program.  Then your program will be much shorter, more readable and produce better results.
 
@@ -137,11 +137,11 @@ In the next chapter, we will discuss not only passing data into a function, but 
 Exercises
 ---------
 
-1. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``opertor``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 20.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
+1. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``opertor``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
 
-2. Write a function called ``timestable`` which receives a number and prints out a times table with that number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two for loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers.  Again, put it in the same functions.py program.
+2. Write a function called ``timestable`` which receives a number and prints out a times table with that number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two for loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to ).  Again, put it in the same functions.py program.
 
-3. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a circle will need to input the radius.
+3. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
 
 Things to remember
 ------------------
