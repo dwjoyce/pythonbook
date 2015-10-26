@@ -9,7 +9,7 @@ Walking along data
 Round and round
 ---------------
 
-Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated while that expression remains ``True``.  It stops repeating when the expression becomes ``False``.
+Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated while that expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can brek out of the loop early by using the ``break`` statement.
 
 For example, if we want to print out the numbers up to 10, then on the interactive shell we could do the following::
 
@@ -29,9 +29,9 @@ For example, if we want to print out the numbers up to 10, then on the interacti
     8
     9
     
-The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num`` now equals 10, it is not less than 10.  Hopefully this is all very straightforward by now.
+The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num`` now equals 10 it is not less than 10, so the test evalutes to ``False``.  Hopefully this is all very straightforward by now.
 
-However, Python has an easier way of repeating a block of code a set number of times (10 in this example).  It is the ``for`` loop, and all it does is to step through a sequence such as a list.  We have been working with lists in the previous two chapters.
+However, Python has an easier way of repeating a block of code a set number of times (10 in this example).  It is the ``for`` loop, and all it does is to step through a sequence such as a list or a string.  We have been working with such sequences in the previous two chapters.
 
 .. pythontest:: nooutput
 
@@ -58,7 +58,7 @@ To put it another way, you are asking for each item in the list, which Python pa
 Ranges
 ------
 
-However, it is a bit of a chore to have to type out the contents of our lists all the time.  Typing in ten numbers is one thing.  What if we wanted to have a list with a 1,000 numbers?  Or a million?  Not only would this be very time consuming (and also make our programs very long), it would also be rather error prone.  Think about typing in a few thousand numbers, and then make a mistake somewhere in the middle!
+However, it is a bit of a chore to have to type out the contents of our number lists all the time.  Typing in ten numbers is one thing.  What if we wanted to have a list with a 1,000 numbers?  Or a million?  Not only would this be very time consuming (and also make our programs very long), it would also be rather error prone.  Think about typing in a few thousand numbers, and then making mistake somewhere in the middle!
 
 It is useful then that Python provides a function to give us a list of numbers in just the way we ask for.  It is called ``range``, and given its name, it simply provides a range of numbers as a list of integers.  Let's do the above program again using this ``range`` function::
 
@@ -76,7 +76,9 @@ The third thing you can do is to ask for a step in the numbers, so instead of ea
     >>> for num in range(100, 200, 2):
             print(num)
 
-Using the *step*, you can also obtain a list that counts down rather than counting up.  All the number ranges we have done so far have counted up.  To count down, you need to use a negative step.  However, you must also remember to make the end point lower than the start point!  Try this to count down from 10 to 1, inclusive::
+By this stage, you should realise that the range function is very similar to how we slice up sequences - specify a start, and also optionally an end point along with a step to take each time.
+
+By using the *step*, you can also obtain a list that counts down rather than counting up.  All the number ranges we have done so far have counted up.  To count down, you need to use a negative step.  However, you must also remember to make the end point lower than the start point!  Try this to count down from 10 to 1, inclusive::
 
     >>> for num in range(10, 0, -1):
             print(num)
@@ -145,6 +147,8 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
     
     turtle.end_fill()
 
+Save it as redoctagon.py, and run it.  Not suprisingly, it should draw a red octagon.
+
 A bit of explanation: we import the turtle module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
 
 This is now much easier than before than either using a sequence of statements, or even when we were using ``while`` loops.
@@ -179,7 +183,7 @@ Open up another new file window, and type in the following::
 
 Run and save it as spirals.py, and see what happens.  If there any problems, then check your code carefully!
 
-A bit of explanation: we import the modules we need, turtle for drawing, random to introduce a bit of variation.  We then define the colors (note, English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, changing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
+Some explanation: we import the modules we need, turtle for drawing, random to introduce a bit of variation.  We then define the colors (note, English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, change the drawing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 times in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
 
 Try changing the numbers to see what happens to the final result.
 
@@ -215,7 +219,7 @@ Let us practice this concept by using the interactive shell:
     inner 5
 
 and so on.  You will notice the outer loop starts, and before it repeats the inner loop takes over.  This then repeats until it runs out of items to step over (numbers in this example), and then the outer loop resumes.
-        
+
 Now to do something longer and more colorful, start a new program and type in the following:
 
 .. code::
@@ -263,7 +267,7 @@ Now to do something longer and more colorful, start a new program and type in th
             # Increment our index, so the colors are rotated
             color_index = color_index + 1
 
-Run it, naming it triangles.py, and see what happens.  Much of what we have typed in is similar to the spirals.py program, but this time we have loops inside loop.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is True, which never changes to False.  Inside this loop, we draw 6 triangle, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
+Run it, naming it triangles.py, and see what happens.  Much of what we have typed in is similar to the spirals.py program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is True, which never changes to False.  Inside this loop, we draw 6 triangle, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
 
 Your turtle window should show something like this being drawn:
 
@@ -271,7 +275,7 @@ Your turtle window should show something like this being drawn:
     :width: 50%
     :align: center
 
-One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatedly go from 0 to 6, inclusive.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
+One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatedly go from 0 to 6, inclusive.  In other words, once it reaches 6, it returns to 0 and climbs back up again.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
 
 Exercises
 ---------
