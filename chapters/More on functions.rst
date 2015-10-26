@@ -32,7 +32,7 @@ Open up your functions.py program, and add the following function between your f
     def add_5(num):
         return num + 5
     
-We have used the new keyword ``return`` - this takes an expression, and returns it to the caller of the function.  This means it is used, or discarded, by whatever code has called the function in the first place.
+We have used the new keyword ``return`` - this takes an expression, and returns it to the caller of the function.  This means it is used (or discarded if it is not needed), by whatever code has called the function in the first place.
 
 Now add these lines onto the bottom of your program, so that the function defined above is called::
     
@@ -85,11 +85,11 @@ You could place the calling of the function, the line containing the function na
 
 It is quite clear that the integer value ``10`` is passed into parameter ``length``, ``20`` is passed into the parameter ``height``, and ``30`` is passed into the parameter ``width``.  In Python, this is called :term:`positional arguments` - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
 
-An alternative is to explicitly state what parameters you want to use for each parameter.  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
+An alternative is to explicitly state what parameters you want to use for each argument (remember, arguments on the outside are being passed into parameters on the inside).  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
 
     print(box_volume(length=10, height=20, width=30))
     
-Run your program again, and make sure it now prints out the same volume twice.
+Run your program again, and make sure it now prints out the same volume twice.  However, the line calling the function ``box_volume`` makes more sense with the parameter names being assigned to the argument values explicitly.
 
 This is called keyword arguments - you are referring to each parameter by name, by keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
 
@@ -104,20 +104,20 @@ We will write a little turtle based program to demonstrate some of the concepts 
     import turtle
     import random
 
-
     def draw_circle(radius, red, green, blue):
+        turtle.pencolor(red, green, blue)
         turtle.fillcolor(red, green, blue)
         turtle.begin_fill()
         turtle.circle(radius)
         turtle.end_fill()
-
+        
     turtle.Turtle()
     turtle.speed('fastest')
     win_width, win_height = turtle.window_width(), turtle.window_height()
     
     while True:
         # Define the radius of the circle, between 20 and 200 pixels each
-        radius = random.randrange(20, 200)
+        size = random.randrange(20, 200)
 
         # Move to a random position in the window
         # Remember to pick up the pen first
@@ -128,7 +128,7 @@ We will write a little turtle based program to demonstrate some of the concepts 
         turtle.down()
 
         # Draw circle
-        draw_circle(radius,
+        draw_circle(radius=size,
                     red=random.random(), green=random.random(),
                     blue=random.random())
 
@@ -142,13 +142,12 @@ A little explanation:
 
     - we import the modules we need, turtle for drawing, random for producing a bit of variation.
     - we then define a function called ``draw_circle`` which take four arguments - the radius, followed by red, green and blue to define the color.
-    - inside the ``draw_circle`` function, we set the fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
+    - inside the ``draw_circle`` function, we set the pen and fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
     - in the main part of the program, we create our window using the Turtle() function, set the speed to hurry things up, and then save the window width and height so we can use them later.
     - we then enter a loop which continues forever.
     - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
     - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
     - we then call our ``draw_circle`` function using the data we have at hand.
-
 
 Exercises
 ---------
@@ -164,7 +163,7 @@ Things to remember
 
 1. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the return statement.
 
-2. Even functions without the ``return`` statement return a value - the value ``None``.  It is sort of like a non-value, similar to zero but not actually an integer number.
+2. Even functions without the ``return`` statement return a value - the value ``None``.  It is like a non-value, similar to zero but not actually an integer number.
 
 3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
 
