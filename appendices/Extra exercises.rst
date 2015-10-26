@@ -3,6 +3,12 @@
 Extra exercises
 ===============
 
+.. quote::
+    :author: William Shakespeare
+    :source: Richard III
+
+    Now is the winter of our discontent
+
 These exercises are designed to allow you to practice your programming skills learned during class.  Please complete each each task and save in a folder called "practice" on your USB stick to show the teacher when finished.  However, you need not complete the tasks in the order written - if you get stuck with one, move onto another and return to the first task later.
 
 This work must be done on your own without help or assistance from others in the class.  However, you may consult your previous work, or the books and examples provided by the teacher, as you wish.

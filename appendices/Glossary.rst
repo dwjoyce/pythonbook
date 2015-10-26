@@ -181,11 +181,6 @@ Glossary
     exception
         An interruption in normal processing, especially as caused by an error condition.
 
-    .. todo
-
-    todo
-        A section that's full of random stuff about itself.
-
     .. Python summary
 
 

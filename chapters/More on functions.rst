@@ -3,6 +3,7 @@ More on functions
 
 .. quote::
     :author: William Shakespeare
+    :source: Henry V
 
     Once more unto the breach, dear friends, once more!
 

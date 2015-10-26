@@ -3,6 +3,11 @@
 The Zen of Python
 =================
 
+.. quote::
+    :author: Stan Lee
+
+    Nuff said!
+
 Abstract
 --------
 

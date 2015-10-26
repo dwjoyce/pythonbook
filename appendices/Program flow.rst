@@ -3,6 +3,11 @@
 Program flow
 ============
 
+.. quote::
+    :author: G.K. Chesterton
+
+    The river of human nonsense flows on forever.
+
 Sequence
 --------
 
