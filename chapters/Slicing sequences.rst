@@ -16,7 +16,7 @@ In the previous chapter we learnt how to group a sequence of items together unde
     >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     >>> jumble = [10, 'fred', 17.25, True, ['username', 123456789]]
     
-However, there is another type of sequence that we are already familiar with - strings.  As we know, strings are sequences of characters, whether letters, digits or symbols, and can be treated as sequences in terms of slicing as we shall see in this chapter.  The main difference is that you cannot modify the contents of a string, but you can form new strings from old ones.
+However, there is another type of sequence that we are already familiar with - strings.  As we know from chapter 7 on printing, strings are sequences of characters, whether letters, digits or symbols, and can be treated as sequences in terms of slicing as we shall see later in this chapter.  The main difference is that you cannot modify the contents of a string, but you can form new strings from old ones.
 
 .. pythontest:: nooutput
 
@@ -24,7 +24,7 @@ We have been able to refer to the group as a whole, but what if we need to selec
 
     >>> letters = 'abcdef'
     
-We can refer to the whole sequence of letters, such as ``print(letters)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, think of this string as a sequence of boxes, each of which contains a single letter:
+We can refer to the whole sequence of letters, such as ``print(letters)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, just like we illustrated in chapter 7 on printing, think of this string as a sequence of boxes, each of which contains a single letter:
 
 .. image:: /images/alien_pizza/indexing-middle.pdf
     :width: 200 pt
@@ -36,7 +36,7 @@ To "dip in" and fetch a single letter, we need to index the item as an offset fr
     :height: 170 pt
     :align: center
 
-In the UK at least, we do not number the floors from the 1st floor and count up - the floors are numbered as how far up they are.  Effectively, the floor number is an *offset* from the ground, i.e. 1st floor up, 2nd floor up, etc.
+In the UK at least, we do not number the floors from the 1st floor and count up - the floors are numbered as how far up they are.  Effectively, the floor number is an *offset* from the ground, i.e. 1st floor up, 2nd floor up, etc.  The ground floor is really floor 0.
 
 In Python, sequences are very similar - the number of each item is how far from the beginning it is - the offset from the first item:
 
@@ -80,7 +80,7 @@ All of this is relevant for any type of list, whether they contain characters, s
     >>> print(names[-1])
     >>> print(names[-4])
 
-Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is off the end (or the past the beginning) of the sequence, Python will complain.
+Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is past the end of the sequence, Python will complain.
 
 .. pythontest:: all
 
@@ -129,42 +129,39 @@ Every third slice from 1 to -1? That's the same as every third slice from 1 to 5
 Python likes pizza
 ------------------
 
-OK, now we know how to ask aliens for pizza, but what about if python has our pizza? Lets represent the pizza as a list of the slice colors::
+OK, now we know how to ask aliens for pizza, but what about if Python has our pizza? Let us represent the pizza as a list of the colors, one for each slice::
 
-    >>> pizza = ["red", "yellow", "green", "cyan", "blue", "magenta"]
+    >>> pizza = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
 
-Our ``pizza`` has all the colors of the alien pizza, in clockwise direction. How do we ask for a slice of pizza? We type ``pizza``, followed by an opening square bracket, ``[``, followed by our slice number, lets say ``1``, followed by a closing square bracket, ``]``::
+Our ``pizza`` has all the colors of the alien pizza, in clockwise direction.  As with indexing our letters string at the beginning of the chapter, we can pull out whole words from the list in a similar way (remember, each item is a word, not an individual letter):
 
     >>> pizza[1]
     'yellow'
     >>> pizza[4]
     'blue'
-
-Python must have met the aliens too. What about negative indexes? Python learnt well::
-
     >>> pizza[-1]
     'magenta'
     >>> pizza[-3]
     'cyan'
 
-That's great, but I'm hungry. I want all the slices from 0 to 2. How do I do that? First we type the first index, the start, like before: ``pizza[0``. Then we type a colon, ``:``, followed by our second index, ``2`` which is the stop, followed by the closing bracket, ``]``::
+Now we can accommodate our hungry aliens.  If we want all the slices from 0 to 2 we first we type the first index, the start, like before: ``pizza[0``. Then we type a colon, ``:``, followed by our second index, ``2`` which is the stop, followed by the closing bracket, ``]``::
 
     >>> pizza[0:2]
     ['red', 'yellow']
 
-See?, Python has given us a list of our slices! The other aliens would be happy::
+See how Python has given us a list of our slices! The other aliens would be happy::
 
     >>> pizza[-4:-1]
     ['green', 'cyan', 'blue']
     >>> pizza[1:-1]
     ['yellow', 'green', 'cyan', 'blue']
 
-But what if our reg-green-blue loving alien turned up? We first type the start and stop index: ``pizza[0:5``. Then we type another colon, ``:``, then the number we add, or step. For every second slice, its ``2``, followed by the closing bracket, ``]``::
+But what if our reg-green-blue loving alien turned up?  We first type the start and stop index: ``pizza[0:5``. Then we type another colon, ``:``, followed by the step we wish to take each time. To ask for every second slice, the step will be ``2``, followed by the closing bracket, ``]``::
 
     >>> pizza[0:5:2]
     ['red', 'green', 'blue']
 
-What about every third slice from 1 to -1? Easy::
+To obtain a list from the color sequence with every third slice, use a step of 3 (this time starting from index 1, all the way to the end indicated by a stop value of -1)::
 
     >>> pizza[1:-1:3]
     ['yellow', 'blue']
@@ -172,22 +169,24 @@ What about every third slice from 1 to -1? Easy::
 Slicing and dicing
 ------------------
 
-OK, we have had enough pizza to satisfy us for a lifetime. But what we have just done is useful. It is called indexing when we use only one number, and slicing when we use more than one number. The general form is ``sequence[start:stop:step]``. Say we have all the numbers from 0 to 20::
+When we dip into a sequence, it is called indexing when we use only one number (for a single item), and slicing when we use more than one number (to obtain a range of items). The general form is ``sequence[start:stop:step]``.
+
+Indexing and slicing can happen on sequences containing data of any type.  Define this list of the numbers from 0 to 20::
 
     >>> nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
                 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
-We can grab the first number::
+As before, we use an index of 0 to grab the first number in the list::
 
     >>> nums[0]
     0
 
-And the last number::
+And an index of -1 to obtain the last number::
 
     >>> nums[-1]
     19
 
-We can grab the first 4 numbers::
+We can grab the first 3 numbers by using a stop value in addition to the start::
 
     >>> nums[0:3]
     [0, 1, 2]
@@ -197,12 +196,12 @@ If we want to slice from the start you can miss the zero out::
     >>> nums[:3]
     [0, 1, 2]
 
-similarly we can miss off the stop index if we want to slice to the end. To get the last 5 numbers::
+Similarly, we can miss off the stop index if we want to slice to the end.  For example, to get the last 5 numbers type the following::
 
     >>> nums[-5:]
     [15, 16, 17, 18, 19]
 
-To get all the even numbers, we can use the step::
+To get all the even numbers, we can use the step value all by itself::
 
     >>> nums[::2]
     [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
@@ -212,7 +211,7 @@ All the multiples of 3::
     >>> nums[::3]
     [0, 3, 6, 9, 12, 15, 18]
 
-All the multiples of 3 plus 1::
+All the multiples of 3, offset by 1::
 
     >>> nums[1::3]
     [1, 4, 7, 10, 13, 16, 19]
@@ -220,7 +219,7 @@ All the multiples of 3 plus 1::
 Cut the string
 --------------
 
-As we mentioned at the start of the chapter, both lists and strings are sequences.  If we want the first letter of someone's name, we can index it as follows::
+As we mentioned at the start of the chapter, both lists and strings are sequences.  This means we can slice strings as well.  As before, if we want the first letter of someone's name, we can index it as follows::
 
     >>> name = "Isaac Newton"
     >>> name[0]
@@ -267,7 +266,7 @@ Initials::
         >>> name.split()[0][0] + name.split()[1][0]
         'IN'
         
-    This will work regardless of the length of the first and surname.
+    This will work regardless of the length of the first name and surname.
 
 Given the alphabet::
 
