@@ -72,7 +72,7 @@ Save this file as lines.py (press the ``F5`` button, press Return to confirm and
 These pieces of text in Python are called ``strings``.  Think of them as strings of characters, made up of either letters from the alphabet, numerical digits or symbols.  This includes almost any key from your keyboard, and more besides.  Similar to a string or chain of pearls, a ``string`` in programming is a sequence of characters.  To illustrate, whilst with an integer number (shown below on the left) is stored as a whole number (with the 1s, 10s, 100s, etc., all in their correct places), strings (shown on the right) are simply a sequence of characters, where digits are treated the same as letters and symbols:
 
 .. image:: /images/integer-string.pdf
-    :width: 500 pt
+    :width: 310 pt
     :align: center
 
 We now know three types of data - integers, floats and strings.
