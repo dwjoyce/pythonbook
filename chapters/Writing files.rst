@@ -63,7 +63,7 @@ Exercises
 
 2. Modify the program in exercise 1 so that each line is prefixed by the line number, so the first sentence is output with "1. " added onto the beginning, with the second having "2. " added on at the beginning, and so on.
 
-3. Write a program called cipher.py so that it reads in a sentence, but instead of writing the sentence to a file, it writes the ordinal value of each character instead.  To find out the ordinal value of a character, use the built-in ``ord`` function, passing in a single character at a time.  You only need to read in one sentence, but you will need to step over the sentence using a ``for`` loop.  To check your result, an input of 'abcdef' should be stored in the file as "979899100101102 (i.e. the numbers from 97 for 'a', to 102 for 'f'), and an input of 'ABCDEF' should be stored as "656667686970" (i.e. the numbers from 65 to 70).
+3. Write a program called cipher.py so that it reads in a sentence, but instead of writing the sentence to a file, it writes the ordinal value of each character instead.  To find out the ordinal value of a character, use the built-in ``ord`` function, passing in a single character at a time.  You only need to read in one sentence, but you will need to step over the sentence using a ``for`` loop.  To check your result, an input of "abcdef" should be stored in the file as "979899100101102" (i.e. the numbers from 97 for 'a', to 102 for 'f'), and an input of "ABCDEF" should be stored as "656667686970" (i.e. the numbers from 65 to 70).  Remember, the ``str`` function can take an integer and return a string in order for you to output it to file using the ``write`` function.
 
 Things to remember
 ------------------
