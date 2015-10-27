@@ -53,6 +53,8 @@ To enforce a different order, you can use brackets.  Just like in Maths.  Put a 
 
     >>> (10 + 20 - 4) / 2 * 3
     39.0
+    
+In programming, this way of expressing a value to form a result is called an expression.
 
 Operator overload
 -----------------
@@ -105,7 +107,6 @@ Exercises
 
 5. Type the Python lines to work out the quotient and remainder of 11 divided by 4.
 
-
 Things to remember
 ------------------
 
@@ -128,3 +129,5 @@ Things to remember
 2. Use brackets to force Python to do a calculation in a particular order
 
 3. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
+
+4. In programming, values are known as :term:`expressions`, potentially made up of values, operators and even other expressions that need to be evaluated to form a result.  They express a value.

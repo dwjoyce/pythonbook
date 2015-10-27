@@ -17,31 +17,37 @@ Glossary
     .. Starting with Python's IDLE
 
     pseudo-code
-        A description of a computer programming algorithm that uses the structural conventions of programming languages but omits detailed subroutines or language-specific syntax.
+        A description of how your program works in simple English, without any unnecessary details of how it will be written.
 
     IDLE
         IDLE is the Python IDE.
 
     integrated development environment
-        An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion.
+        An integrated development environment (IDE) is a program that allows you to write, run and debug your code.  Some IDE programs provide extra tools to allow you to write the code faster such as code highlighting and automatic code completion.
 
     interactive shell
-        A simple, interactive computer programming environment that takes single user inputs (i.e. single expressions), evaluates them, and returns the result to the user.
+        A simple, interactive computer programming environment that takes user inputs (e.g. a single line of code or a loop), evaluates them, and returns the result to the user.
 
     run
     execute
         To perform the actions represented by the code.
+        
+    statement
+        A line of code that performs an action.  A compound statement is a statement that performs a block of code selectively or iteratively (e.g. an ``if`` or ``while`` statement).
 
     .. Python as a Calculator
 
+    expression
+        A combination of actual values, variables, operators, calls to functions and even sub-expressions, to form a value that is computed or evaulated into its simplest form.  For example, the expression ``10 + 4 * 3 / 2`` is evaluated to form the value 16.0.
+
     operator
-        A symbol that represents an action.
+        A symbol that represents an action, such as addition, assignment or equality.
 
     integer
         A whole number such as 18. These numbers never have a fractional part.
 
     float
-        A floating point number is a number that can have a fractional part, such as 1.78.
+        A floating point number is a number that has a fractional part, such as 1.78, even if the fractional part is zero.
 
     integer division
     floor division
@@ -52,26 +58,29 @@ Glossary
 
     type
     class
-        A set of objects having the same behaviour (but typically differing in state), or a template defining such a set.
+        A set of values having the same behaviour (but typically differing in state), or a template defining such a set.  A type is a particular class of data, such as integers, lists or files.
 
     .. Naming your data
 
     variable
-        A named memory location in which a program can store intermediate results and from which it can read them.
+        A named memory location in which a program can store intermediate results and from which it can read and modify them.
+        
+    evaluation
+        The process of computing a result.
 
     .. Functions and Maths
 
     call
-        Execute a :term:`function` with the necessary :term:`arguments`.
+        Execute or run a :term:`function` with the necessary :term:`arguments`.
 
     function
-        A section of code, called by another section of code, that implements a task and may :term:`return` a value.
+        A section of code that implements a task and :term:`returns` a value, even if that value is empty.
 
     built-in function
-        A function that comes with python, so you do not need to implement it.
+        A function that comes with Python, so you do not need to implement it yourself, such as ``round``, ``print`` and ``input``.
 
     argument
-        A value, or reference to a value, passed to a :term:`function`.
+        A value, or reference to a value, passed into a :term:`function`.
 
     return value
         The data passed back from a called :term:`function`.
@@ -83,10 +92,10 @@ Glossary
     .. Getting help
 
     module
-        A module is a file containing Python definitions and statements.
+        A module is a file containing Python definitions and statements, e.g. a program that can be used by others.
 
-    directory function
-        A :term:`built-in function` that returns a list of valid attributes for that object.
+    dir
+        A :term:`built-in function` that provides a directory listing of what is contained inside an object such as a module.
 
     .. First program
 
@@ -106,9 +115,12 @@ Glossary
 
 
     .. Performing selection
+    
+    selection
+        The process of executing one piece (block) of code over another selectively.
 
     code block
-        A block is a piece of Python program text that is executed as a unit.
+        A block is a piece of Python code that is executed as a unit.
 
     indentation
         Beginning a line with one or more spaces. Used to distinguish code blocks.
@@ -122,11 +134,12 @@ Glossary
 
     boolean operator
     logical operator
-        An operator, such as ``and``, that always results in a :term:`boolean` result, or boolean-convertible result.
+        An operator, such as ``and`` that always results in a :term:`boolean` result, or boolean-convertible result.  For example, ``a == 10`` or ``a < 0 or a > 100``.
 
     .. Going loopy
-
-
+    
+    iteration
+        The process where a set of instructions or data are repeated.
 
     .. Escaping the cycle
 
@@ -158,9 +171,9 @@ Glossary
     .. Naming code
 
     function definition
-        A statement which creates a :term:`function`, like::
+        A statement which creates a :term:`function`, such as::
 
-            def f(a, b):
+            def add(a, b):
                 return a + b
 
     .. More on functions
@@ -179,7 +192,7 @@ Glossary
     .. Catching errors
 
     exception
-        An interruption in normal processing, especially as caused by an error condition.
+        An interruption in normal processing, especially as caused by an error.
 
     .. Python summary
 
@@ -204,4 +217,4 @@ Glossary
     .. Zen
 
 
-Definitions taken from en.wiktionary.org and python.org.
+Some definitions taken from en.wiktionary.org and python.org.

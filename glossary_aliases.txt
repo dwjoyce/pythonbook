@@ -17,3 +17,4 @@ module -> modules
 function -> functions
 built-in function -> "built-in functions"
 type -> types
+expression -> expressions
