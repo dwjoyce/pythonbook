@@ -20,7 +20,7 @@ For example, the initial sum we worked on in the previous chapter::
   >>> 10 + 20
   30
   
-Python will evaluate this sum, give you the result, but it will not save it anywhere.  It effectively throws the answer away.
+Python will :term:`evaluate` this sum, give you the result, but it will not save it anywhere.  It effectively throws the answer away.
 
 How can we save the result in memory?
 

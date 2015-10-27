@@ -41,7 +41,7 @@ Clearly, this is too much typing for what it does.  But there are cases where th
 Doing it the easy way
 ---------------------
 
-To overcome this hurdle, Python - and pretty much every other programming language - has the ability to repeat a block of code a number of times.  This is called looping or iteration.
+To overcome this hurdle, Python - and pretty much every other programming language - has the ability to repeat a block of code a number of times.  This is called looping or :term:`iteration`.
 
 Roughly speaking, looping is similar to the way we construct ``if`` statements.  In an ``if`` statement, we use the ``if`` keyword (a keyword is a word reserved by Python and given a special meaning), following by a test which results in a boolean value - either ``True`` or ``False``.  It will then conditionally execute a given code block, which follows the ``:`` colon symbol.  If the test fails (results in ``False``), then the code block is skipped.  Either way, the program continues on its way after the ``if``, along with any ``elif`` and ``else`` statements are done.
 
