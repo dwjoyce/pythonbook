@@ -24,6 +24,7 @@ So how do we retain information from one run of our program to the next?  How do
 The first step in reading a file is opening it.  Think if a file like a folder or a book - before you can start reading its contents, you need to open its cover to reveal the pages within.  Firstly, we need to create our book, so click on File -> New File, and copy in the following text (remember to use Ctrl-C keys to copy and Ctrl-V to paste):
 
 .. code-block:: none
+    :pythontest: off
 
     Three Rings for the Elven-kings under the sky,
     Seven for the Dwarf-lords in their halls of stone,

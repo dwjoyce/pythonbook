@@ -104,6 +104,7 @@ We will write a little turtle based program to demonstrate some of the concepts 
     import turtle
     import random
 
+
     def draw_circle(radius, red, green, blue):
         turtle.pencolor(red, green, blue)
         turtle.fillcolor(red, green, blue)
