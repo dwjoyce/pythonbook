@@ -14,7 +14,7 @@ The opposite to reading a file is writing to it.  Whilst in the previous chapter
 
 To write to a file, we first have to open it in writing mode. To do this, we pass the ``'w'`` to ``open``::
 
-    >>> f = open("todo.txt", 'w')
+    >>> f = open('todo.txt', 'w')
 
 This will open the file, creating it if it does not exist, and assigns the data containing the open file to the variable ``f``. The file is then emptied or truncated, "cleaning the slate" for any data you will write.  In the previous chapter, we could have passed in ``'r'`` for reading, but this is not necessary as it is the default (normal) behaviour anyway.
 
@@ -23,11 +23,11 @@ Learning to write
 
 To write a string to the file, we use the ``write`` function::
 
-    >>> f.write("Do homework\n")
+    >>> f.write('Do homework\n')
 
 Subsequent calls to write will append data on the end, instead of overwriting::
 
-    >>> f.write("Make death star fully armed and operational\n")
+    >>> f.write('Make death star fully armed and operational\n')
 
 The file will now look like:
 
@@ -37,23 +37,23 @@ The file will now look like:
     Do homework
     Make death star fully armed and operational
 
-.. note:: If you forget the newlines ``"\n"``, the file will look like this:
+.. note:: If you forget the newlines ``'\n'``, the file will look like this:
 
     .. code-block:: none
         :pythontest: off
 
         Do homeworkMake death star fully armed and operational
 
-After writing, always remember to ``close`` the file, or the data may not be written fully.  This is why we always have to "Safely Remove" the USB Stick before we physically take it out of the Raspberry Pi computer - data may still be in the process of being written to one or more files.
+After writing, always remember to ``close`` the file, or the data may not be written fully.  This is why we always have to 'Safely Remove' the USB Stick before we physically take it out of the Raspberry Pi computer - data may still be in the process of being written to one or more files.
 
 Writing lists
 -------------
 
 To write a list of lines, like that produced by ``readlines``, we use ``writelines``::
 
-    >>> f = open("todo.txt", 'w')
-    >>> f.writelines(["Do homework\n",
-                      "Make death star fully armed and operational\n"])
+    >>> f = open('todo.txt', 'w')
+    >>> f.writelines(['Do homework\n',
+                      'Make death star fully armed and operational\n'])
     >>> f.close()
 
 Exercises
