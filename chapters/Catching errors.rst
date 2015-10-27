@@ -53,6 +53,8 @@ And all sorts of other errors::
       File "<stdin>", line 1, in <module>
     IndexError: list index out of range
 
+.. pythontest:: all
+
 Some common Python exceptions:
 
 ======================= ============================================================
@@ -71,8 +73,6 @@ Exceptions are good - they give the program information on what has happened so 
 
 ``try`` not to crash
 --------------------
-
-.. pythontest:: all
 
 Say we have some code that could produce an error::
 
@@ -174,12 +174,15 @@ So, instead of typing ``except:``, we can type ``except ValueError:``. This will
 
 In general, you should try to name the type of exception to handle.  If you do not name the exception in order to catch all possible errors, then you may miss problems you should be handling differently.  It is simply a case of best practice.
 
-To find a full list of error types, you can type the *directory* command ``dir`` in the interactive shell::
-
 .. pythontest:: nooutput
 
+To find a full list of error types, you can type the *directory* command ``dir`` in the interactive shell::
+
     >>> dir(__builtins__)
-    
+
+.. pythontest:: all
+
+
 The errors that you can use to filter your errors are listed at the start - generally they have the word error at the end: ArithmeticError, AssertionError, AttributeError, BaseException, all the to ZeroDivisionError at the end.
 
 Exercises
