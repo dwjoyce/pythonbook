@@ -38,18 +38,18 @@ Bring up your Python interactive shell, as described in chapter 0 (i.e. by click
 
 and press the Return or Enter key on your keyboard.  The ``>>>`` (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
 
-How about the second example.  Let us try this::
+How about the second example?  Let us try this::
 
     >>> 10 + 20 - 4 / 2 * 3
     24.0
     
-The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` instead.  And the ``×`` is too much like the letter ``x``, so we use the asterisk ``*`` symbol instead.  These *signs* in computer programming are called :term:`operators`, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
+The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` (forward slash) instead.  And the ``×`` is too much like the letter ``x``, so we use the asterisk ``*`` symbol instead.  These *signs* or symbols in computer programming are called :term:`operators`, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
 
 Type in it, press Return and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
 
-Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority - precedence - to some operations over others.  It actually performs the divide first (4 divided by 2, equalling 2), then the multiply (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
+Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).
 
-To enforce a different order, you can use brackets.  Just like in Maths.  Put a set of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
+To enforce a different order, you can use brackets.  Just like in Maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
     >>> (10 + 20 - 4) / 2 * 3
     39.0
