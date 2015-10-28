@@ -33,7 +33,8 @@ Glossary
         To perform the actions represented by the code.
         
     statement
-        A line of code that performs an action.  A compound statement is a statement that performs a block of code selectively or iteratively (e.g. an ``if`` or ``while`` statement).
+        A line of code or a code block that performs an action.  A compound statement is a statement that performs a block of code selectively or iteratively (e.g. belonging to an ``if`` or ``while`` statement).
+
 
     .. Python as a Calculator
 
@@ -60,13 +61,18 @@ Glossary
     class
         A set of values having the same behaviour (but typically differing in state), or a template defining such a set.  A type is a particular class of data, such as integers, lists or files.
 
+
     .. Naming your data
+    
+    assignment
+        The process of defining a variable with a set value, e.g. ``my_name = 'Fred'``.
 
     variable
         A named memory location in which a program can store intermediate results and from which it can read and modify them.
         
     evaluation
         The process of computing a result.
+
 
     .. Functions and Maths
 
@@ -85,8 +91,11 @@ Glossary
     return value
         The data passed back from a called :term:`function`.
 
-    .. Drawing Turtles
 
+    .. Drawing Turtles
+    
+    import
+        Including or making available one module inside another module.
 
 
     .. Getting help
@@ -97,6 +106,7 @@ Glossary
     dir
         A :term:`built-in function` that provides a directory listing of what is contained inside an object such as a module.
 
+
     .. First program
 
     .py
@@ -104,11 +114,19 @@ Glossary
 
     editor
         A program for creating and making changes to files, especially text files.
+        
+    comment
+        A piece of text acting as annotion or a description of the code.  It is intended to be read by other people, and is ignored by Python from the ``#`` character to the end of the line.
+
 
     .. Print that out!
+    
+    string
+        A sequence of characters such as letters, digits or symbols stored in encoded form.
 
     string concatenation
         The operation of joining multiple strings into one string.
+
 
     .. Asking questions
 
@@ -125,10 +143,12 @@ Glossary
     indentation
         Beginning a line with one or more spaces. Used to distinguish code blocks.
 
+
     .. Decisions, decisions
 
     boolean
         A data type that can only have the values ``True`` and ``False``.
+
 
     .. Combining decisions together
 
@@ -136,22 +156,29 @@ Glossary
     logical operator
         An operator, such as ``and`` that always results in a :term:`boolean` result, or boolean-convertible result.  For example, ``a == 10`` or ``a < 0 or a > 100``.
 
+
     .. Going loopy
     
     iteration
         The process where a set of instructions or data are repeated.
+
 
     .. Escaping the cycle
 
     infinite loop
         A loop which continues indefinitely.
 
+
     .. Going random
 
     random
         Unpredictable in value.
 
+
     .. Grouping data together
+
+    list
+        A sequence of items, boxed together using the [] notation.  The items can be of any type, such as integers, strings or even other lists.
 
     matrix
         A two-dimensional list or list of lists, such as::
@@ -160,8 +187,11 @@ Glossary
                       [4, 5, 6],
                       [7, 8, 9]]
 
+
     .. Slicing sequences
 
+    slice
+        A portion or section of a sequence.
 
 
     .. Walking along data
@@ -175,6 +205,10 @@ Glossary
 
             def add(a, b):
                 return a + b
+                
+    parameter
+        Data as received in by a function, given a name in-between the function definitions's parentheses, which is local to the function itself.
+
 
     .. More on functions
 
@@ -182,7 +216,9 @@ Glossary
         An :term:`argument` identified by its position in the list of arguments.
 
     .. Reading files
-
+    
+    file
+        A resource for storing information, based on some kind of duration storage.  It is usually persistent, so retains its state when the computer is turned off.
 
 
     .. Writing files
@@ -193,6 +229,16 @@ Glossary
 
     exception
         An interruption in normal processing, especially as caused by an error.
+        
+    syntax error
+        Where the code is breaking the rules of the language, such as misspelling the word ``while``, or missing the colon ``:`` off the end of a ``if`` statement.
+        
+    logical error
+        Where a program behaves in an unexpected or illogical way producing an undesired result, such as an adding program subtracting or a sorting program jumbling up the data.
+        
+    runtime error
+        An error that occurs during the execution of the program, such as a program crashing with unexpected data (e.g. converting non-numerical value into an integer).
+
 
     .. Python summary
 
