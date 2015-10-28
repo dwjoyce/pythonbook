@@ -82,11 +82,11 @@ You can get more help on these functions by using the help function again.  For 
     
 will give more information on the round function, such as what it accepts (a number, and optionally the number of digits to round the number to), and what it returns back (another number, the rounded result).
 
-In the previous chapter, we introduced the notion of bringing in a separate program (often called a :term:`module`) into our own using the ``import`` command.  But how do we know what available programs there are to import?  To find this out, we can type the following::
+In the previous chapter, we introduced the notion of bringing in a separate program (often called a :term:`module`) into our own using the ``import`` command.  But how do we know what available modules there are to import?  To find this out, we can type the following::
 
     >>> help('modules')
     
-This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` module we used previously.
+This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` modules we used previously.
 
 To delve deeper, we can find out more information on functions inside these other modules by using the dot notation as introduced last time.  So, for example, if we want to find out more information on the square root function inside the math module, we could do the following:
 
@@ -96,6 +96,8 @@ To delve deeper, we can find out more information on functions inside these othe
 .. note:: You must import the module before you can get help on its contents.  Otherwise Python does not know what is inside it.
 
 For further information and a guide on the language, please refer to *The Python Tutorial*, which includes many more examples and covers more language features than we will be doing in this guide!
+
+.. todo:: Matthew - can you provide the location of this guide - is it on the Raspberry Pi desktop for them to click on?
 
 Things to remember
 ------------------

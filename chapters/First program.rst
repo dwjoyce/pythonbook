@@ -6,9 +6,9 @@ First program
 
     Computers are good at following instructions, but not at reading your mind.
 
-So far we have been using Python's interactive shell, built into the IDLE program, to experiment with Python in a way that is familiar to us - performing calculations, calling functions, giving values in memory a name.  We have started to veer out of this familiar territory by using other programs (known as modules), such as the turtle module, to extend what Python can do by itself.  Using the interactive shell allows us get to know the language, but it limits us effectively to one statement of code - a line that when you press return, will be run straight away and gives you back an answer (if there is one).
+So far we have been using Python's interactive shell, built into the IDLE program, to experiment with Python in a way that is familiar to us - performing calculations, calling functions, giving values in memory a name.  We have started to step out of this familiar territory by using other programs (known as modules), such as the turtle module, to extend what Python can do by itself.  Using the interactive shell allows us get to know the language, but it limits us effectively to one statement of code - a line that when you press the Return key, will be run straight away and gives you back an answer (if there is one).
 
-We will now learn how to use IDLE in order to write a full program, one that can be run on its own.  This means we can write the program once, and run it many times without the need to re-write the program each time.  We only need to change our program to modify its behaviour, or correct errors, not having to it from scratch each time.  It also means we can write longer more interesting programs!
+We will now learn how to use IDLE in order to write a full program, one that can be run on its own again and again.  This means we can write the program once, and run it many times without the need to re-write the program each time.  We only need to change our program to modify its behaviour, or correct errors, not having to it from scratch each time.  It also means we can write longer more interesting programs!
 
 Ed
 --
@@ -27,7 +27,7 @@ This will bring up a new window, the editor window.  The shortcut for this is to
     :width: 90%
     :align: center
 
-.. tip:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen.  Do a similar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side:
+.. tip:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen - and let go of the mouse button.  Do a similar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side:
     
     .. image:: /images/screenshots/idle_side_by_side.png
         :width: 90%
@@ -38,7 +38,7 @@ The scene is set.
 Our first program
 -----------------
 
-Our first complete program will be the same as the code we typed in the previous chapter.  Therefore, in this new editor window, type in the following::
+Our first complete program will be the same as the code we typed in for chapter 4 on drawing turtles.  Therefore, in this new editor window, type in the following::
 
     import turtle
 
@@ -57,7 +57,6 @@ Our first complete program will be the same as the code we typed in the previous
     turtle.begin_fill()
     turtle.circle(40)
     turtle.end_fill()
-
 
 Type in everything, including the blank lines!  You can use copy (``Ctrl``-``C``) and paste (``Ctrl``-``V``) to repeat the lines in the middle, if you wish.
 
@@ -78,7 +77,9 @@ On this, the first time of writing your program, you will need to give it a name
     :width: 250pt
     :align: center
 
-Most importantly, change the location of where the program is being saved to where your USB stick.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
+Most importantly, change the location of where the program is being saved to your USB stick.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
+
+.. tip:: To save on your USB stick when the "Save As" dialog box appears, first click on the directory *USB Sticks*, and then click on the name of your USB stick, which is *USB Disk* by default.
 
 Once you are in the right place, give your program a name and click the ``Save`` button (or hold down the ``Alt`` key and hit the ``S`` key), like so:
 
@@ -135,7 +136,7 @@ Things to remember
 
 2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
-3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted it will appear in the ``USB_STICKS`` folder.
+3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted (inserted) it will appear in the ``USB_STICKS`` folder in your home directory.
 
 4. Give your Python programs a :term:`.py` postfix.  Avoid including spaces in your program name.
 

@@ -9,7 +9,7 @@ Drawing Turtles
 Importing
 ---------
 
-Let us move from using Python to do our maths and switch to doodling instead!
+Let us move from using Python to do maths and switch to doodling instead!
 
 What we will do is to use a Python program called ``turtle`` to move a shape around the screen, leaving a trail behind in the process.  Think of it like using a piece of graph paper, with the origin in the centre, and the pen being moved by your instructions.
 
@@ -21,7 +21,7 @@ It was Isaac Newton who said:
 
 In other words, he could only have made the advances in the fields of mathematics and physics, by building on the work of those who came before him.
 
-Programming is similar.  If we make use of the work of others, we can go far.  We can build more interesting programs much faster, and we also use other people's code which we can depend upon.  Modules that Python itself includes, ready to be included into your program, is often very well written and tested.
+Programming is similar.  If we make use of the work of others, we can go far.  We can build more interesting programs much faster, and we also use other people's code which we can depend upon.  Modules that Python itself offers as standard, ready to be included into your program, are often very well written and tested.
 
 So, to include another program, we must use the ``import`` command, and give it the name of the module to import.  Although this program will have the ".py" filename extension (e.g. math.py), we do not include that part when naming the module.
 
@@ -34,15 +34,15 @@ and then you can use it thereafter, such as the square root function::
     >>> math.sqrt(64)
     8.0
   
-which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the ``.`` (period) character - it separates the module name (``math``) from the function being used (``sqrt``).  We must write the name of the module first, followed by the ``.`` period, and then the function name that is to be found inside the module.  The period is used to say that this function is found inside this module - we will see more of this later when talking about type or class functions.
+which should give us the answer of 8 (8.0 to be exact), as you would expect.  You cannot use a module until you have performed the import, not before!  Notice the ``.`` (period) character - it separates the module name (``math``) from the function being used (``sqrt``).  We must write the name of the module first, followed by the ``.`` period, and then the function name that is to be found inside the module.  The period is used to say that this function is found inside this module - we will see more of this later when talking about functions that belong to a particular type.
 
 Here is another example - using the value of :math:`\pi` as defined as a variable by the ``math`` module::
 
     >>> math.pi
     3.141592653589793
 
-Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the ``math`` module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change any time, it is what we call a constant.
-    
+Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the ``math`` module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change in value.  We call this type of value a *constant*.
+
 Stick your head out of the shell
 --------------------------------
 
@@ -65,7 +65,7 @@ You should see a new window pop up onto the screen.  Move it to the right of you
     :width: 90%
     :align: center
 
-We are now ready to get drawing.  Try typing the following in order::
+We are now ready to get drawing.  Now type this::
 
     >>> turtle.forward(100)
   
@@ -103,15 +103,15 @@ Exercises
 
 1. Draw a hexagon - a six sided shape, where the angle of turn is 120 degrees (180 minus 60 degrees).
 
-2. Draw a star that has been filled in.  Hint: try turning 144 degrees and 72 degrees each time you draw a spike.
+2. Draw a star that has been filled in.  Hint: try turning 144 degrees and 72 degrees, alternatively, each time you draw a spike.
 
-3. Draw a house, complete with roof, windows and door.  You will need to use ``turtle.up()`` and ``turtle.down()`` to pick the pen up and put it down, respectfully, so that you do not draw a line everywhere.
+3. Draw a house, complete with roof, windows and door.  You will need to use ``turtle.up`` and ``turtle.down`` to pick the pen up and put it down, respectfully, so that you do not draw a line everywhere.
 
 Things to remember
 ------------------
 
 1. You can use another program by using the ``import`` command and the module's name (without the .py extension).
 
-2. You cannot use variables or functions inside a module until you have imported it.
+2. You cannot use variables or functions from a separate module until you have imported it.
 
 3. Use the ``.`` character to dip inside a module, with the module name first, and the variable or function from inside the module second.

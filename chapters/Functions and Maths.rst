@@ -14,7 +14,7 @@ In Maths, you learn about functions. An example of a simple function is:
 
 .. math:: f(x) = x + 1
 
-This function takes in a number, :math:`x`, and adds one to it. So if :math:`x = 1`, :math:`f(x) = 2`. In Python-speak, :math:`x` is an :term:`argument`, and the result, :math:`f(x)` is the :term:`return value`. Every function has a return value.
+This function takes in a number, :math:`x`, and adds one to it. So if :math:`x = 1`, then :math:`f(x) = 2`. In Python-speak, :math:`x` is an :term:`argument`, and the result, :math:`f(x)` is the :term:`return value`. Every function gives back a value, its return value.
 
 Python also has :term:`functions`. You can make your own functions, but in this chapter, we will focus on using functions that Python already has, called :term:`built-in functions`. The first function we'll use is called ``abs``, which stands for absolute value::
 
@@ -26,7 +26,7 @@ What this function does is, given any number, positive or negative, it returns a
     >>> abs(-42)
     42
 
-It works! We can do this with other numbers, including numbers with decimal places::
+It works just as you would expect.  We can do this with other numbers, including numbers with decimal places::
 
     >>> abs(2)
     2
@@ -75,7 +75,7 @@ If you call ``round`` with ``-2``, it makes the last two non-fractional digits z
 How many arguments can one function have?
 -----------------------------------------
 
-Lots! Some functions take any number of arguments. ``min`` is a function that takes two or more arguments, and returns the smallest one::
+That's depends!  Some functions take any number of arguments. ``min`` is a function that takes two or more arguments, and returns the smallest one::
 
     >>> min(1, 8)
     1
@@ -130,8 +130,8 @@ Functions functioning
 
 You can use the return value of a function as an argument to another function, assign the return value to a variable and use variables as arguments::
 
-    >>> max(-2, abs(-2))
-    2
+    >>> max(-10, abs(-20))
+    20
     >>> the_biggest_num = max(4, 9, 23, 56, 12, 5)
     >>> the_biggest_num
     56
@@ -155,15 +155,22 @@ Exercises
 ---------
 
 1. Use ``abs`` to find the absolute value of ``-35.5``.
+
 2. Use ``round`` to round ``-22.8364926`` to ``4`` decimal places.
+
 3. Use both ``round`` and ``abs`` to find the absolute value of ``-7495.184758`` to ``2`` decimal places.
+
 4. Use ``max`` and ``min`` to find the smallest and largest number from ``7``, ``-8``, ``4``, ``-12`` and ``1``.
 
 Things to remember
 ------------------
 
 1. Functions are called with arguments to give a return value.
+
 2. To call a function ``func`` with no arguments do ``func()``.
+
 3. To call a function ``func`` with an argument ``arg`` do ``func(arg)``.
+
 4. To call a function ``func`` with more than one argument, separate the arguments by commas: ``func(arg1, arg2, arg3, etc)``.
+
 5. Function return values can be assigned to variables, and variables and return values can be used as arguments.

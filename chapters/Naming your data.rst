@@ -9,7 +9,7 @@ Naming your data
 Saving and recalling
 --------------------
 
-Remember in the last chapter we looked at how your calculator works and started using the Python programming language to copy and build on this.
+Remember in the previous chapter we looked at how your calculator works and started using the Python programming language to copy and build on this.
 
 One feature of a calculator is the Memory button, usually marked by the letter **M**.  This allows you to store a number, add onto or subtract from it, and recall it later for use in a new calculation.  It effectively makes the calculator remember a number for you, so that you do not have to.
 
@@ -24,7 +24,7 @@ Python will :term:`evaluate` this sum, give you the result, but it will not save
 
 How can we save the result in memory?
 
-Similar, to a calculator, we can store it in a variable called ``M``::
+Similar to a calculator, we can store it in a variable called ``M``::
 
   >>> M = 10 + 20
 
@@ -62,7 +62,7 @@ This gives 40, as expected (30 plus 10, as above).
 More and more
 -------------
 
-Your calculator will have just the one memory to store numbers, but in a Python program, you have have any number of variables in your program.  And they do not have to be called ``M`` either!  In fact, if you want to store your data separately, you need different names for each value.
+Your calculator will have just the one memory to store numbers, but in a Python program you can have have any number of variables in your program.  And they do not have to be called ``M`` either!  In fact, if you want to store your data separately, you need different names for each value.
 
 For example::
 
@@ -96,7 +96,7 @@ And arithmetic operators can be used that we learnt in our previous chapter::
 
 That last line displays the value of ``C3``, calculated from the value of ``B2``, and adds on the value of ``A1``.
 
-You can name your variables with any combination of letters and numbers along with the ``_`` (underscore, not minus sign) character, as long as the name does not start with a number. You can use the underscore to separate words if you use them in your variable names - spaces are not allowed inside names!
+You can name your variables with any combination of letters (UPPER and lowercase) and numbers along with the ``_`` (underscore, not minus sign) character, as long as the name does not start with a number. You can use the underscore to separate words in your variable names to make them more readable (e.g. ``first_time_entry`` instead of ``firsttimeentry``) - spaces are not allowed inside names as this would appear as two names, not one!
 
 Exercises
 ---------
