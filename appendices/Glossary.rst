@@ -13,7 +13,6 @@ Glossary
 .. glossary::
     :sorted:
 
-
     .. Starting with Python's IDLE
 
     pseudo-code
@@ -193,6 +192,9 @@ Glossary
     slice
         A portion or section of a sequence.
 
+    index
+        Accessing a single item of a sequence, where ``0`` is the first item.
+
 
     .. Walking along data
 
@@ -207,7 +209,7 @@ Glossary
                 return a + b
                 
     parameter
-        Data as received in by a function, given a name in-between the function definitions's parentheses, which is local to the function itself.
+        Data as received in by a function, given a name in-between the function definition's parentheses, which is local to the function itself.
 
 
     .. More on functions

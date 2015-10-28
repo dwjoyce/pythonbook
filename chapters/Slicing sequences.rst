@@ -169,7 +169,7 @@ To obtain a list from the color sequence with every third slice, use a step of 3
 Slicing and dicing
 ------------------
 
-When we dip into a sequence, it is called indexing when we use only one number (for a single item), and slicing when we use more than one number (to obtain a range of items). The general form is ``sequence[start:stop:step]``.
+When we dip into a sequence, it is called :term:`indexing` when we use only one number (for a single item), and :term:`slicing` when we use more than one number (to obtain a range of items). The general form is ``sequence[start:stop:step]``.
 
 Indexing and slicing can happen on sequences containing data of any type.  Define this list of the numbers from 0 to 20::
 

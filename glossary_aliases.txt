@@ -21,3 +21,11 @@ expression -> expressions
 statement -> statements
 evaluation -> evaluate
 dir -> "directory function"
+comment -> comments
+string -> strings
+list -> lists
+index -> indexing
+slice -> slicing
+syntax error -> "syntax errors"
+runtime error -> "runtime errors"
+logical error -> "logical errors"

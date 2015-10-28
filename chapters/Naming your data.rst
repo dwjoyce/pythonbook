@@ -28,7 +28,7 @@ Similar, to a calculator, we can store it in a variable called ``M``::
 
   >>> M = 10 + 20
 
-What this does is take the integer values 10 and 20, with the addition operator it adds them together and then assigns them, using the assignment operator = (equals), to the variable name ``M``.
+What this does is take the integer values 10 and 20, with the addition operator it adds them together and then assigns them, using the :term:`assignment` operator ``=`` (equals), to the variable name ``M``.
 
 .. note:: In Python, variables names are like labels attached to boxes which contain the data.  If you give a present to someone (e.g. at Christmas), the label is the name to which the present is being given, with the box containing the present.  In Python, the label is the variable name, the box contains the data, e.g. an integer number.
 

@@ -23,7 +23,7 @@ All the variables here describe the same kind of data - a group of names, one af
 Boxing up
 ---------
 
-The way we do this in Python is by using lists.  As its name suggests, a list is simply a sequence of other pieces of data, whether integers, floats, strings or even other lists.
+The way we do this in Python is by using :term:`lists`.  As its name suggests, a list is simply a sequence of other pieces of data, whether integers, floats, strings or even other lists.
 
 Remember, if we have more than one item to print out, we simply use a comma ``,`` in-between each item.  This is easy to forget!  For example, if we wish to print out our names above, you can type the following::
 

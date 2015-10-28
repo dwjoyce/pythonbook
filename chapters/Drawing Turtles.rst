@@ -13,7 +13,7 @@ Let us move from using Python to do our maths and switch to doodling instead!
 
 What we will do is to use a Python program called ``turtle`` to move a shape around the screen, leaving a trail behind in the process.  Think of it like using a piece of graph paper, with the origin in the centre, and the pen being moved by your instructions.
 
-To use this separate Turtle program, we have to use a new command called ``import``.  What import does is to bring in, or include, a separate program - called a :term:`module` in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
+To use this separate Turtle program, we have to use a new command called ``import``.  What :term:`import` does is to bring in, or include, a separate program - called a :term:`module` in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
 
 It was Isaac Newton who said:
 

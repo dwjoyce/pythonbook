@@ -115,7 +115,7 @@ and insert these lines below the last call to ``say_hello_times``::
     say_message_times('Yo! ', 25)
     say_message_times('I will stop talking in class', 100)
     
-.. note:: An argument is the value or variable being passed *into* a function.  A parameter is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them parameters!
+.. note:: An argument is the value or variable being passed *into* a function.  A :term:`parameter` is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them parameters!
 
 These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions with one that takes in two numbers, and prints out the sum::
 
