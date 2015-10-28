@@ -22,7 +22,7 @@ In Python, we encounter many errors, also known in Python as :term:`exceptions`.
       File "<stdin>`"`, line 1, in <module>
     ZeroDivisionError: division by zero
 
-Syntax errors, where the program is breaking the rules of the language::
+:term:`Syntax errors`, where the program is breaking the rules of the language::
 
     >>> if broken = True:
     File "<stdin>", line 1
@@ -61,7 +61,7 @@ Some common Python exceptions:
 Name                    Common reason
 ======================= ============================================================
 ``ZeroDivisionError``   You divided something by zero
-``IOError``             You tried to open a non-existant file
+``FileNotFoundError``   You tried to open a non-existent file
 ``ImportError``         You tried to import a module that does not exist
 ``NameError``           You have forgotten to define a variable
 ``SyntaxError``         Your syntax is wrong
@@ -91,7 +91,7 @@ If the user types an integer number, it works fine.  But if the user types somet
 
 .. pythontest:: nooutput
 
-We could test the string to see if it is a number (``str.isdigit()``), but instead we will try to handle the problem when it is detected.  This means that our code will be shorter and neater - otherwise every time you use a value that is unknown, it will need to be checked to see whether its contents are correct.  This often results in a program where the error checking code takes up more space that the code that actually does the work!  It also allows another part of your program to handle the errors instead of having to deal with them when they have occured - for example, a worker may not know what to do when a problem occurs, but his boss will!  This last point is more obvious in larger programs rather than the small ones we will be writing here.
+We could test the string to see if it is a number (``str.isdigit()``), but instead we will try to handle the problem when it is detected.  This means that our code will be shorter and neater - otherwise every time you use a value that is unknown, it will need to be checked to see whether its contents are correct.  This often results in a program where the error checking code takes up more space that the code that actually does the work!  It also allows another part of your program to handle the errors instead of having to deal with them when they have occurred - for example, a worker may not know what to do when a problem occurs, but his boss will!  This last point is more obvious in larger programs rather than the small ones we will be writing here.
 
 To handle an error when it occurs, we type ``try:``, followed by our code, which should be indented, just like an ``if`` statement. Then we type ``except:``, followed by the code we want run when these is an error::
 
@@ -183,7 +183,7 @@ To find a full list of error types, you can type the *directory* command ``dir``
 .. pythontest:: all
 
 
-The errors that you can use to filter your errors are listed at the start - generally they have the word error at the end: ArithmeticError, AssertionError, AttributeError, BaseException, all the to ZeroDivisionError at the end.
+The errors that you can use to filter your errors are listed at the start - generally they have the word error at the end: ``ArithmeticError``, ``AssertionError``, ``AttributeError``, ``BaseException``, all the to ``ZeroDivisionError`` at the end.
 
 Exercises
 ---------
@@ -192,7 +192,7 @@ Exercises
 
 2. Write a program that takes two numbers, and divides one by the other. Print out a message when they try to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
 
-3. Write a program called openfile.py which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called *FileNotFoundError*.
+3. Write a program called openfile.py which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
 
 Things to remember
 ------------------
@@ -201,6 +201,6 @@ Things to remember
 
 2. The code inside a ``try``-``except`` block is indented, like for an ``if`` block.
 
-3. It is best to name an exception type, to avoid surprises.  You can find out what the exception type is by using the interctive shell to provoke the same error.
+3. It is best to name an exception type, to avoid surprises.  You can find out what the exception type is by using the interactive shell to provoke the same error.
 
-4. Syntax errors are when the program breaks the rules of the language.  Runtime or logical errors are problems in the operation of the program itself.
+4. Syntax errors are when the program breaks the rules of the language.  :term:`Runtime errors` or :term:`logical errors` are problems in the operation of the program itself.
