@@ -15,6 +15,9 @@ def visit_quote_latex(self, node):
 
 def depart_quote_latex(self, node):
     self.body.append("\\end{chapquote}\n")
+    next_node = node.parent[node.parent.index(node) + 1]
+    if isinstance(next_node, docutils.nodes.section) and len(next_node[0].astext()) < 20:
+        self.body.append(r"\vspace{-9mm}")
 
 
 class Quote(Directive):
