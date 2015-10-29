@@ -44,7 +44,7 @@ In Python, sequences are very similar - the number of each item is how far from 
     :width: 200 pt
     :align: center
 
-To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
+To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[index]`` or ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
 
     >>> print(letters[0])
     >>> print(letters[1])
@@ -70,7 +70,7 @@ Practice again in the interactive shell::
     >>> print(letters[-5])
     >>> print(letters[-6])
     
-This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the the beginning), and end up at -6.  This may not sound like a big improvement, but when your sequence is very long it is better to state the offset from the right rather than from the left.
+This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the beginning), and end up at -6.  This may not sound like a big improvement, but when your sequence is very long it is useful to state the offset from the right rather than from the left.
 
 All of this is relevant for any type of list, whether they contain characters, strings, numbers, sub-lists or anything else.  Let us use one from the previous chapter::
 
@@ -80,7 +80,7 @@ All of this is relevant for any type of list, whether they contain characters, s
     >>> print(names[-1])
     >>> print(names[-4])
 
-Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is past the end of the sequence, Python will complain.
+Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is past the end of the sequence, Python will complain - ``print(names[4])`` in this example.
 
 .. pythontest:: all
 
@@ -169,7 +169,7 @@ To obtain a list from the color sequence with every third slice, use a step of 3
 Slicing and dicing
 ------------------
 
-When we dip into a sequence, it is called :term:`indexing` when we use only one number (for a single item), and :term:`slicing` when we use more than one number (to obtain a range of items). The general form is ``sequence[start:stop:step]``.
+When we use a single number to reference a single item it is called :term:`indexing`; when we use more than one number to reference a range of items it is called :term:`slicing`. The general form for slicing is ``sequence[start:stop:step]``.
 
 Indexing and slicing can happen on sequences containing data of any type.  Define this list of the numbers from 0 to 20::
 
@@ -219,7 +219,7 @@ All the multiples of 3, offset by 1::
 Cut the string
 --------------
 
-As we mentioned at the start of the chapter, both lists and strings are sequences.  This means we can slice strings as well.  As before, if we want the first letter of someone's name, we can index it as follows::
+As strings are sequences as well as lists, this means we can slice them too.  As before, if we want the first letter of someone's name, we can index it as follows::
 
     >>> name = "Isaac Newton"
     >>> name[0]
@@ -294,7 +294,7 @@ Exercises
 
 2. Write a program called planets.py which defines a list with the 8 major planets of our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune (each one will be a string).  Ask the user whether he wants either the rocky or gaseous planets.  For the former, print out the first four planets; for the later, print out the last four planets - use slicing to do this.
 
-3. Write a program called colours which defines the colors of the rainbow as red, orange, yellow, green, blue, indigo and violet.  Your program should print our the primary colours of red, green and blue as a slice of your color list.
+3. Write a program called colors.py which defines the colors of the rainbow as red, orange, yellow, green, blue, indigo and violet.  Your program should print out the primary colors of red, green and blue as a slice of your color list.
 
 4. Write a program called seasons.py, which defines a list containing three sub-lists, for example:
 
