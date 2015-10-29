@@ -34,7 +34,7 @@ We do the same in lists to separate each item.  To define a list, to group a seq
 
     >>> names = ['fred', 'bob', 'harry', 'tom']
     
-Notice how we have done away with the individual variables, eg. name1, name2, etc., and now only have ones name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
+Notice how we have done away with the individual variables, e.g. name1, name2, etc., and now only have ones name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
 
     >>> print(names)
     ['fred', 'bob', 'harry', 'tom']

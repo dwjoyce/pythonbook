@@ -201,7 +201,7 @@ This just like closing the covers of a book, or the flap on a real folder from a
 Exercises
 ---------
 
-For these exercises, you will need to copy the text file ``mission.txt`` from the home directory on the Raspberry Pi (``/home/pi/mission.txt``) to the same location as your programs on your USB stick (e.g. /home/pi/USB Sticks/USB Disk).
+For these exercises, you will need to copy the text file ``mission.txt`` from the home directory on the Raspberry Pi (``/home/pi/mission.txt``) to the same location as your programs on your USB stick (e.g. */home/pi/USB_STICKS/USB Disk*).
 
 1. Open and print out the contents of the mission.txt file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
 
