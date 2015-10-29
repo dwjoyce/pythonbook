@@ -4,7 +4,7 @@ Glossary
 ========
 
 .. quote::
-    :author: Shelock Homes
+    :author: Sherlock Homes
 
     Elementary, my dear Watson
 
@@ -38,16 +38,16 @@ Glossary
     .. Python as a Calculator
 
     expression
-        A combination of actual values, variables, operators, calls to functions and even sub-expressions, to form a value that is computed or evaulated into its simplest form.  For example, the expression ``10 + 4 * 3 / 2`` is evaluated to form the value 16.0.
+        A combination of actual values, variables, operators, calls to functions and even sub-expressions, to form a value that is computed or evaluated into its simplest form.  For example, the expression ``10 + 4 * 3 / 2`` is evaluated to form the value ``16.0``.
 
     operator
         A symbol that represents an action, such as addition, assignment or equality.
 
     integer
-        A whole number such as 18. These numbers never have a fractional part.
+        A whole number such as ``18``. These numbers never have a fractional part.
 
     float
-        A floating point number is a number that has a fractional part, such as 1.78, even if the fractional part is zero.
+        A floating point number is a number that has a fractional part, such as ``1.78``, even if the fractional part is zero.
 
     integer division
     floor division
@@ -115,7 +115,7 @@ Glossary
         A program for creating and making changes to files, especially text files.
         
     comment
-        A piece of text acting as annotion or a description of the code.  It is intended to be read by other people, and is ignored by Python from the ``#`` character to the end of the line.
+        A piece of text acting as annotation or a description of the code.  It is intended to be read by other people, and is ignored by Python from the ``#`` character to the end of the line.
 
 
     .. Print that out!
@@ -177,7 +177,7 @@ Glossary
     .. Grouping data together
 
     list
-        A sequence of items, boxed together using the [] notation.  The items can be of any type, such as integers, strings or even other lists.
+        A sequence of items, boxed together using the ``[]`` notation.  The items can be of any type, such as integers, strings or even other lists.
 
     matrix
         A two-dimensional list or list of lists, such as::
@@ -185,6 +185,11 @@ Glossary
             matrix = [[1, 2, 3],
                       [4, 5, 6],
                       [7, 8, 9]]
+
+        Elements can be accessed by :term:`indexing` twice::
+
+            >>> matrix[2][2]
+            9
 
 
     .. Slicing sequences
