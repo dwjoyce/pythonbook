@@ -30,7 +30,9 @@ We will use the interactive shell to experiment for a while.  Type the following
     >>> a >= b
     False
     
-The first two lines create our variables, ``a`` and ``b``, using the assignment operator (not the comparison operator).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the not equal to operator ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` being turned into ``<=``.
+Then try changing the values of a and b (make them the same, for instance), and repeat the comparisons.
+
+From the above snippet, the first two lines create our variables, ``a`` and ``b``, using the assignment operator (not the comparison operator).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the not equal to operator ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` is turned into ``<=``.
 
 .. note:: We call these expressions, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. ``2.5 > 1.2`` and ``"fred" != "harry"``.
 
@@ -58,7 +60,7 @@ Run it with the ``F5`` key, and save it onto your USB stick with the name nums.p
 
 It should run fine, printing out the largest number of the two input by the user.  Note how we have to convert the inputs, entered as a sequence of digits, into integer numbers before we can use them in the comparisons.  Otherwise, the comparisons will not work correctly.
 
-The problem is that we are doing the test twice, which is wasteful.  It is more efficient to do the test once, and do once block of code if the test was successful (i.e. it was true), and a different block of code if unsuccessful (i.e. the result was false).  This is where the ``else`` statement comes into play.  What is does it run a block of code if the ``if`` statement above it failed in all its tests.  To see this in action, change your last-but-one line to read as follows::
+The problem is that we are doing the test twice, which is wasteful.  It is more efficient to do the test once, and do one block of code if the test was successful (i.e. it was true), and a different block of code if unsuccessful (i.e. the result was false).  This is where the ``else`` statement comes into play.  What is does it run a block of code if the ``if`` statement above it failed in all its tests.  To see this in action, change your last-but-one line to read as follows::
 
     if num1 > num2:
         print('The largest number is:', num1)
@@ -67,7 +69,7 @@ The problem is that we are doing the test twice, which is wasteful.  It is more 
 
 Don't forget those colon ``:`` symbols at the end of the lines above each new code block!  Remember, a block of code can be as little as a single statement, or hundreds of lines long.  It depends on what you want to do.
 
-Now run your program again - it should exactly the same, but more efficiently (i.e. faster) this time.
+Now run your program again - it should do exactly the same, but more efficiently (i.e. faster) this time.
 
 Again, the ``else`` presents a block of code to be run if all of the tests in the ``if`` statement above it have failed.  It is like a safety net at the bottom of the ``if`` statement which takes care of everything if none of the tests are true.  Read the word *else* like the word *otherwise* if that helps - test this and do this if true, otherwise do this.
 
@@ -120,7 +122,6 @@ Obviously, we could go on and on!  Save it using the ``F5`` key, name it noises.
 
 As you can see, the ``if`` statement is tested first.  If the test evaluates to true, then the first optional block of code is run (printing out 'Moo!'), and it will then jump to the end (past the ``else``).  Otherwise, it will test each test in turn, only running the code blocks if the test is true.  Otherwise, it will eventually drop down to the ``else`` statement, and run the last block of code, but only if all the other tests have failed.
 
-
 Exercises
 ---------
 
@@ -129,7 +130,6 @@ Exercises
 2. Write a program called move.py, and ask the user the form of transport, either a plane, car, bicycle or walking.  Depending on what they have entered, print out 'fast', 'quick', 'steady' or 'slow'.
 
 3. Write a program that uses the ``turtle`` module called shapes.py.  Ask the user what shape to draw, e.g. circle, square or star.  Depending on what the user has entered, draw the appropriate shape.  If the user didn't type in anything sensible, then print out an error message.
-
 
 Things to remember
 ------------------
@@ -149,8 +149,8 @@ Things to remember
    
 2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
 
-3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated to true, then even if there are ``elif`` or ``else`` statements below, the program will skip them all.
+3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated as true, then even if there are ``elif`` or ``else`` statements below, the program will skip them all.
 
-4. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated to true, then the first one is run, and the other skipped.
+4. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated as true, then the first one is run, and the others are skipped.
 
 5. Finally, you can also optionally include an ``else`` statement, without any test, but with its own block of code to run.  This block of code is only run if the ``if`` and ``elif`` tests all fail (i.e. are all false).
