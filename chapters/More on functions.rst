@@ -91,7 +91,7 @@ An alternative is to explicitly state what parameters you want to use for each a
     
 Run your program again, and make sure it now prints out the same volume twice.  However, the line calling the function ``box_volume`` makes more sense with the parameter names being assigned to the argument values explicitly.
 
-This is called keyword arguments - you are referring to each parameter by name, by keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
+This is called :term:`keyword arguments` - you are referring to each parameter by name, by keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
 
 A little more practice
 ----------------------

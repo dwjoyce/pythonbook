@@ -214,8 +214,12 @@ Glossary
 
     .. More on functions
 
-    positional arguments
+    positional argument
         An :term:`argument` identified by its position in the list of arguments.
+
+    keyword argument
+        An :term:`argument` identified by a name e.g. ``f(x=12, y=24)``.
+
 
     .. Reading files
     
