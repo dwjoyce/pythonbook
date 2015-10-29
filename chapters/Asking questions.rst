@@ -32,6 +32,8 @@ Remember, when you *add* two strings, you are really joining them together or :t
 
 Therefore, if you need to use the input as an actual number, you need to convert it from a string type to an integer or float type.  This means you can then use the result in a normal calculation like any other number.  It is effectively converts a sequence of digits into a proper number where the right most digit is the 1s, the second column is the 10s, the third column is the 100s, etc., with all the numbers combined together to form a complete number.
 
+.. note:: Each character of a string is actually encoded according to a table of a character set.  One common character set is ASCII (American Standard Code for Information Interchange), which includes all the Latin characters, digits and common symbols.  Another is Unicode, which includes characters from many other languages.  These character sets encode the letter 'A' as the number 65, the digit '0' as 48, and the symbol "!" as 33.  This demonstrates how text is stored inside computer systems.
+
 To convert from a string to an integer, you use the ``int`` function.  So for example, ``int("123")`` would return the actual number ``123``.
 
 To convert from a string to a floating point number, you use the ``float`` function.  So for example, ``float("123")`` would return the actual number ``123.0``.
@@ -77,14 +79,14 @@ Exercises
 
 2. Ask the user's name and a number.  Print out the name that number of times.  You will need to convert the number string to an integer using the ``int`` function before repeating the name string.
 
-3. Expand on the sumup.py program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your sumup.py program we did in the chapter above.
+3. Expand on the sumup.py program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your sumup.py program we did earlier in this chapter.
 
-4. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out 10th; if the user entered 18, print out "th".  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
+4. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out 10th; if the user entered 18, print out "18th".  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
 
 Things to remember
 ------------------
 
-1. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator to the left hand side of the call to input.  Moreover, you can optionally include a message (a string) to present to the user when the program stops for input.
+1. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator to the left hand side of the call to input.  Moreover, you can optionally include a message (a string) to present to the user when the program pauses for input.
 
 2. To convert to an integer, use the ``int`` function.
 

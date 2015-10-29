@@ -24,7 +24,7 @@ What happens now, given that it is living in its own program?  Try it and see - 
 
 When the program runs in the run window (the same as the interactive shell), what does it display onto the screen?  Does it give 30 as expected?  No, it does not!
 
-The reason for this is that just typing a value (e.g. ``10``) or an expression to be evaluated (e.g. ``10 + 20``) or a variable name (``c`` in the example above) will do nothing in a real program.  The interactive shell is just that - interactive.  But in a real program, you have to tell it what to do with the item you are dealing with.  Otherwise, Python will simply discard the value.
+The reason for this is that just typing a value (e.g. ``10``) or an expression to be evaluated (e.g. ``10 + 20``) or a variable name (``c`` in the example above) will do nothing in a real program.  The interactive shell is just that - interactive.  But in a real program, you have to tell Python what to do with the item you are dealing with.  Otherwise, the value will simply be discarded as it is not being used for anything.
 
 So what do we want to do with the variable ``c`` above?  We want to display or print it out onto the screen.  In Python, the way to do this is to use the ``print`` function.  You simply wrap your value inside the parentheses in the ``print`` call, and it will then print it out as we originally intended.  Therefore, modify your program so it looks like this::
 
@@ -35,7 +35,7 @@ So what do we want to do with the variable ``c`` above?  We want to display or p
 
 Run your program again, using the ``F5`` key (you may have to click the ``OK`` button, or just press the Return key to confirm).  This should now print out the number 30 in the run window.
 
-You can print out more than one item by using a comma ``,`` between the items to separate them.  Modify your program again::
+You can print out more than one item by using a comma ``,`` between the items to separate them.  Modify the last line in your program again::
 
   a = 10
   b = 20
@@ -44,14 +44,14 @@ You can print out more than one item by using a comma ``,`` between the items to
 
 and run, again by using the ``F5`` key and pressing the Return key to confirm.  This will print out 10, followed by 20 and finally 30, all on the same line.
 
-You can even get the print function to perform the calculation for you when passing in the values to print.  Again, modify your program like so::
+You can even get the print function to perform the calculation for you when passing in the values to print.  All arguments like this are evaluated (processed or simplified) before the values are presented to the function to use.  Again, modify your program like so::
 
   a = 10
   b = 20
   c = a + b
   print(a, b, c, a + b + c)
 
-This will print out the three numbers from before (10, 20 and 30), and then 60 (all the variables added together), without the need of a fourth variable.
+This will print out the three numbers from before (10, 20 and 30), and then 60 (all the variables added together), without the need of a fourth variable to hold this extra number.
 
 Printing messages
 -----------------
@@ -107,10 +107,12 @@ Finally, you can use special characters in strings to denote certain things.  He
 
 The first one breaks the line with a new line character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
 
+.. tip:: When you are writing a program later on and cannot see why it is not working as you would expect, try inserting some ``print`` statements in the code with the variables your program is using.  That way, you will see what is going on, whilst it is running.  This should then show you what needs changing to make it work better.  This is called debugging your program.
+
 Exercises
 ---------
 
-1. Assign 5 variables to various numbers, and print them out, along with the sum
+1. Assign 5 variables to various numbers, and print them out, along with the sum.
 
 2. Print out the year of your birth, your age, and your age in 10 years time.
 
@@ -123,13 +125,13 @@ Exercises
 Things to remember
 ------------------
 
-1. Use the ``print()`` function to display or output any expression onto the screen.
+1. Use the ``print`` function to display or output any expression onto the screen.
 
 2. Separate the items to print using a comma.
 
 3. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. ``'fred'``) or double quotes (e.g. ``"fred"``).
 
-4. The only operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (repetition).
+4. The only arithmetic operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (repetition).
 
 5. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
 
