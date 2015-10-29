@@ -160,8 +160,13 @@ Glossary
     
     iteration
         The process where a set of instructions or data are repeated.
+        
+    keyword
+        A word with a special meaning.  Python has many reserved keywords that it uses for its own purposes, such as ``if``, ``while``, ``for``, ``def``, etc., which you cannot use for any other purpose.
 
-
+    increment
+        Increase the value of a variable.  For example: ``num = num + 1``, or ``num += 1`` for short.
+        
     .. Escaping the cycle
 
     infinite loop
@@ -202,6 +207,9 @@ Glossary
 
 
     .. Walking along data
+    
+    decrement
+        Decrease the value of a variable.  For example: ``num = num - 1``, or ``num -= 1`` for short.
 
 
 

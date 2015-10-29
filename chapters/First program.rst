@@ -98,7 +98,7 @@ However, the alternative is that it doesn't work - there is a problem or error i
 Comments
 --------
 
-That is not all - we can also insert :term:`comments` to help others people understand what is going on (including ourselves when we return to our code at some point in the future) .  Modify your program so it looks like this - in other words, add the lines beginning with the ``#`` symbol::
+That is not all - we can also insert :term:`comments` to help others people understand what is going on (including ourselves when we examine our own work in the future).  Modify your program so it looks like this - in other words, add the lines beginning with the ``#`` symbol::
 
     import turtle
 

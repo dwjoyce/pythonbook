@@ -6,8 +6,8 @@ Grouping data together
 
     A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.
 
-Scattered items
----------------
+Scattered data
+--------------
 
 We have already covered variables, which just give a name to a piece of data.  This is very handy, and allows us to give data a memorable name we can refer to and modify later.  Technically, variable names (identifiers) are memory addresses that point to the data we have stored - it is like a signpost pointing at the data.
 
@@ -34,7 +34,7 @@ We do the same in lists to separate each item.  To define a list, to group a seq
 
     >>> names = ['fred', 'bob', 'harry', 'tom']
     
-Notice how we have done away with the individual variables, e.g. name1, name2, etc., and now only have ones name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
+Notice how we have done away with the individual variables, e.g. name1, name2, etc., and now only have one name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
 
     >>> print(names)
     ['fred', 'bob', 'harry', 'tom']
@@ -76,9 +76,9 @@ You can even get Python to sort a list in any order you wish.  Try this out::
     >>> print(sorted(numbers, reverse=True))
     [35, 30, 25, 20, 15, 10, 5]
     
-The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but we an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 19 when we are creating our own functions.
+The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but with an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 19 when we are creating our own functions.
 
-Lists can also be modified after they have been defined by using the ``append`` and ``insert`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well).  We will cover how to index lists properly in the next chapter.  To see how this works, try out the following::
+Lists can also be modified after they have been defined by using the ``append`` and ``insert`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well).  To see how this works, try out the following::
 
     >>> names = ['Bilbo', 'Frodo', 'Sam']
     >>> print(names)
@@ -127,7 +127,7 @@ We will learn how to dip into a list to fetch individual items (or a section of 
 Rock, Paper, Scissors
 ---------------------
 
-Let's write a rock, paper, scissors game, where you play versus the computer.  The computer will use the random module we learnt in the previous chapter to choose one option out of either rock, paper or scissors, and we will do the same.  The program will compare the choices, and declare a winner (or possibly, a draw).
+Let's write a rock, paper, scissors game, where you play versus the computer.  The computer will use the random module we learnt in the previous chapter to choose one option out of either rock, paper or scissors, and we will make our own choice.  The program will compare the choices, and declare a winner (or possibly, a draw).
 
 Start by opening up a new file window, and type in the following::
 
@@ -141,13 +141,20 @@ Start by opening up a new file window, and type in the following::
         if user_choice == 'stop':
             break
 
-This should be fairly familiar to you now.  We are importing the ``random`` module, and we have a loop which repeats until the user breaks out by entering the word 'stop'.
+This should be fairly familiar to you now.  We are importing the ``random`` module, and we have a loop which repeats until the user breaks out by entering the word 'stop'.  You can keep the question inside the ``input`` function on the same line.
 
 The new bit is the second line, where we define a list with the possible choices contained (boxed up) in a list, which we call ``choices``.  It is a list of strings.  We can then add onto our program (watch the indentation, these lines are *within* the while loop)::
 
     computer_choice = random.choice(choices)
         
-This is also new - we are using a different function from the random module called ``choice``.  It takes a list, and returns back one item selected in a random fashion from that list.  We now have both choices needed in order to declare a winner - remember what the rules of the game are - rock beats scissors, scissors beats paper, paper beats rock.  So we can now finish::
+This is also new - we are using a different function from the random module called ``choice``.  It takes a list, and returns back one item selected in a random fashion from that list.  We now have both choices needed in order to declare a winner - remember what the rules of the game are:
+
+    - if they are the same, it is a draw
+    - rock beats scissors
+    - scissors beats paper
+    - paper beats rock.
+    
+So we can now finish::
 
     if user_choice == computer_choice:
         print('Draw!')

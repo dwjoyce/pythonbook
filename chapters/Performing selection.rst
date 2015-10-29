@@ -24,7 +24,7 @@ Let us start a new program called vip.py - click on the ``File`` -> ``New File``
     print('Welcome to our VIP program for calculating cinema ticket prices')
     print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIPs')
 
-    vip = input('Do you require a VIP ticket, yes or no? ')
+    vip = input('Do you want a VIP ticket, yes or no? ')
 
     price = 5.0
 
@@ -33,7 +33,7 @@ So far, so good!  Now we need to take a decision, so add the following to your p
     if vip == 'yes':
         price = price * 1.2
 
-You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable ``vip``, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string *yes*.  To perform the test, we have introduced a new operator, called the equals operator.  It is looks similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing whether what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is true, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.
+You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable ``vip``, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string *yes*.  To perform the test, we have introduced a new operator, called the equals operator.  It is looks similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing whether what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is True, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.
 
 Also note the use of the colon ``:`` symbol.  This is used at the end of every line that has other lines that are attached to it.  We will be seeing that on many more occasions in the future with other statements we will be introducing.  It effectively tells Python to run the following lines if the test just evaluated was true.  Please don't miss these off!
 
@@ -108,7 +108,7 @@ Things to remember
 
 2. Put a colon ``:`` at the end of the line containing the ``if``.
 
-3. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to what test.
+3. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to which test.
 
 4. To resume the program regardless of whether the test for the ``if`` statement was successful or not, then you should unindent your code (push it back to the left by 4 spaces).
 

@@ -2,16 +2,16 @@ Starting with Python's IDLE
 ===========================
 
 .. quote::
-    :author: Winston Churchill
+    :author: Linus Torvalds
 
-    I have nothing to offer but blood, toil, tears and sweat.
+    Most of the good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.
 
 Introduction
 ------------
 
 Welcome to our guide on learning Python!
 
-Programming is the art of logical thinking.  It takes a problem, and breaks it down into simple steps expressed in a form that a computer can translate into its own machine code.  Thankfully, we do not have to write in machine code, made up of 1's and 0's, but in a higher form that uses English words combined with a set of symbols.  Computer languages are different from human languages in that they are formal and unambiguous.  The formal aspect means they are specified in advance with a set notation and use of keywords.  They are unambiguous so that the program will always do the same thing every time, given the same circumstances.
+Programming is the art of logical thinking.  It is the process of breaking down a problem or task into simple steps so even a dumb computer can follow them.  These steps are written down according to a set notation, so that a computer can translate them into its own machine code.  Thankfully, people no longer have to program in machine code themselves, made up of numbers, but in a higher form, constructed mainly from English words.  Computer languages are different from human languages in that they are formal and unambiguous.  The formal aspect means they are specified in advance with a set notation and use of keywords.  They are unambiguous so that the program will always do the same thing every time, given the same circumstances.
 
 Knowing how to program a computer is a great skill to have, even if you are not a professional programmer.  You can program in almost any field of work - especially when you need to transform data (the basis of information) from one form to another.  It means you are not simply using other people work, but you have the ability create for yourself.  If you can never program a computer, it is like living in world that you can only read other people's writing, unable to write for yourself.  Programming is very much a creative process - you are instructing a computer to follow your what you are thinking, down to the letter!
 

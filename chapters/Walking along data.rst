@@ -275,7 +275,7 @@ Your turtle window should show something like this being drawn:
     :width: 50%
     :align: center
 
-One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatedly go from 0 to 6, inclusive.  In other words, once it reaches 6, it returns to 0 and climbs back up again.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
+One extra note - we use an index to rotate our colors, so it steps along the colors in sequence.  We do this by incrementing (adding onto) the index after drawing every triangle.  When selecting a color, we use the modulus operator ``%`` (the remainder) so that it repeatedly go from 0 to 6, inclusive.  In other words, once it reaches 6, it returns to 0 and climbs back up again.  Notice how we have one more color (7 in total) than we do triangles (6), so that every time we repeat the ``while`` loop, the colors shift by one from one triangle to the next.  This allows us to see the outer loop working in action, moving the colors along as it runs.
 
 Exercises
 ---------
@@ -288,7 +288,7 @@ Exercises
 
 4. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
-5. Modify your spirals.py program so that after the ``for`` loop, it then retraces its steps back to the middle.  You will need a similar ``for`` loop after the initial one, but instead of turning right, it should turn left, and instead of incrementing the length by 2 every time, it decrements the length by 2 every time.  Finally, between each of the loops, you will need to the drawing turtle around - this means turning right by 89 degrees, as the previous loop has just turned by 91 degrees (so the total is an about turn of 180 degrees).
+5. Modify your spirals.py program so that after the ``for`` loop, it then retraces its steps back to the middle.  You will need a similar ``for`` loop after the initial one, but instead of turning right, it should turn left, and instead of incrementing (i.e. increasing) the length by 2 every time, it decrements (i.e. decreasing) the length by 2 every time.  Finally, between each of the loops, you will need to the drawing turtle around - this means turning right by 89 degrees, as the previous loop has just turned by 91 degrees (so the total is an about turn of 180 degrees).
 
 Things to remember
 ------------------

@@ -36,11 +36,11 @@ So far, we have only learned how to attach one test to either an ``if`` statemen
 
     - ``and`` which tests whether the left-hand side and the right-hand side are both true, giving an overall result of true.  For example: ``a > 10 and b > 10`` tests whether ``a`` and ``b`` are both greater than 10, and if so the whole expression is true.
     
-    - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether ``a`` is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can be true, which is also fine.
+    - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether ``a`` is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can also be true, which is also fine.
     
     - ``not`` which takes a single boolean value and inverts its value, so ``true`` becomes ``false`` and ``false`` becomes ``true``.  For example, ``not weather == 'warm'`` which tests whether the variable weather is equal to the value 'warm', and then flips the result.
     
-So, how do we apply this to our code in the beach.py program?  To see this, you need to change your big ``if`` statement from this::
+So, how do we apply this to our code in the beach.py program?  To see this, you need to change the big ``if`` statement from this::
 
     if weather == 'warm':
         if holidays == 'yes':
@@ -59,7 +59,7 @@ to this::
 
 Save and run this version, and make sure it does the same thing.
 
-Notice how we have taken the two separate ``if`` statements in the previous version of the program, and combined them together - since one was inside the other - with the logical ``and`` operator.  This will then only perform the first call to the ``print`` function if both the weather is 'warm' ``and`` and holidays is 'yes'.  Otherwise, we do what comes after the ``else`` statement.
+Notice how we have taken the two separate ``if`` statements in the previous version of the program, and combined them together - since one was inside the other - with the logical ``and`` operator.  This will then only perform the first call to the ``print`` function if both the weather is 'warm' *and* and holidays is 'yes'.  Otherwise, we do what comes after the ``else`` statement.
 
 The logical ``or`` operator is useful when a number of separate tests all do the same thing, so their blocks of code are all the same.
 
@@ -83,8 +83,7 @@ Exercises
 
 1. Write a program called largest.py to input three numbers, convert the inputs from strings to integers, and print out the largest.  Use the ``if`` and ``elif`` statements and the ``and`` operator to perform your tests.
 
-2. Write another program called car.py, to ask the user the attributes of a car, such as color (e.g. ``'red'``, ``'green'`` or ``'blue'``), type (e.g. ``'van'``, ``'sports'``, ``'estate'``) and price.  The program should print out ``'I want that car'`` if the color is ``'red'``, the type is ``'sports'`` and the price is less than 10,000.
-
+2. Write another program called car.py to ask the user the attributes of a car, such as color (e.g. ``'red'``, ``'green'`` or ``'blue'``), type (e.g. ``'van'``, ``'sports'``, ``'estate'``) and price.  The program should print out ``'I want that car'`` if the color is ``'red'``, the type is ``'sports'`` and the price is less than 10,000.
 
 Things to remember
 ------------------
