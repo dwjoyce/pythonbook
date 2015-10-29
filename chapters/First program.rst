@@ -79,7 +79,7 @@ On this, the first time of writing your program, you will need to give it a name
 
 Most importantly, change the location of where the program is being saved to your USB stick.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
 
-.. tip:: To save on your USB stick when the "Save As" dialog box appears, first click on the directory *USB Sticks*, and then click on the name of your USB stick, which is *USB Disk* by default.
+.. tip:: To save on your USB stick when the "Save As" dialog box appears, first click on the directory *USB_STICKS*, and then click on the name of your USB stick, which is *USB Disk* by default.
 
 Once you are in the right place, give your program a name and click the ``Save`` button (or hold down the ``Alt`` key and hit the ``S`` key), like so:
 
