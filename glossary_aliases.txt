@@ -29,3 +29,5 @@ slice -> slicing
 syntax error -> "syntax errors"
 runtime error -> "runtime errors"
 logical error -> "logical errors"
+positional argument -> "positional arguments"
+keyword argument -> "keyword arguments"

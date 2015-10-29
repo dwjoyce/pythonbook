@@ -29,7 +29,7 @@ For example, if we want to print out the numbers up to 10, then on the interacti
     8
     9
     
-The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num`` now equals 10 it is not less than 10, so the test evalutes to ``False``.  Hopefully this is all very straightforward by now.
+The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num`` now equals 10 it is not less than 10, so the test evaluates to ``False``.  Hopefully this is all very straightforward by now.
 
 However, Python has an easier way of repeating a block of code a set number of times (10 in this example).  It is the ``for`` loop, and all it does is to step through a sequence such as a list or a string.  We have been working with such sequences in the previous two chapters.
 
@@ -147,7 +147,7 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
     
     turtle.end_fill()
 
-Save it as redoctagon.py, and run it.  Not suprisingly, it should draw a red octagon.
+Save it as redoctagon.py, and run it.  Not surprisingly, it should draw a red octagon.
 
 A bit of explanation: we import the turtle module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
 
