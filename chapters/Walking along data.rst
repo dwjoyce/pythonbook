@@ -9,7 +9,7 @@ Walking along data
 Round and round
 ---------------
 
-Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated while that expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can brek out of the loop early by using the ``break`` statement.
+Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated *while* the expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can break out of the loop early by using the ``break`` statement.
 
 For example, if we want to print out the numbers up to 10, then on the interactive shell we could do the following::
 
