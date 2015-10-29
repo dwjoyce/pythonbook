@@ -288,7 +288,7 @@ Exercises
 
 4. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
-5. Modify your spirals.py program so that after the ``for`` loop, it then retraces its steps back to the middle.  You will need a similar ``for`` loop after the initial one, but instead of turning right, it should turn left, and instead of incrementing (i.e. increasing) the length by 2 every time, it decrements (i.e. decreasing) the length by 2 every time.  Finally, between each of the loops, you will need to the drawing turtle around - this means turning right by 89 degrees, as the previous loop has just turned by 91 degrees (so the total is an about turn of 180 degrees).
+5. Modify your spirals.py program so that after the ``for`` loop, it then retraces its steps back to the middle.  You will need a similar ``for`` loop after the initial one, but instead of turning right, it should turn left, and instead of incrementing (i.e. increasing) the length by 2 every time, it :term:`decrements` (i.e. decreasing) the length by 2 every time.  Finally, between each of the loops, you will need to the drawing turtle around - this means turning right by 89 degrees, as the previous loop has just turned by 91 degrees (so the total is an about turn of 180 degrees).
 
 Things to remember
 ------------------
