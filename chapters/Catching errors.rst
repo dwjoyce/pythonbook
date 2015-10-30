@@ -69,7 +69,7 @@ Name                    Common reason
 ``ValueError``          You tried to convert a non-number string into an integer
 ======================= ============================================================
 
-Exceptions are good - they give the program information on what has happened so that it can do something about it.  They tell us that something is broken, which we should fix.  However, it is also nice to be able say "if there is an error, do this".  In Python, this is called a ``try``-``except`` block.
+Exceptions are helpful - they give the program information on what has happened so that it can do something about it.  They tell us that something is broken, which we should fix.  However, it is also nice to be able say "if there is an error, do this".  In Python, this is called a ``try``-``except`` block.
 
 ``try`` not to crash
 --------------------
@@ -91,9 +91,9 @@ If the user types an integer number, it works fine.  But if the user types somet
 
 .. pythontest:: nooutput
 
-We could test the string to see if it is a number (``str.isdigit()``), but instead we will try to handle the problem when it is detected.  This means that our code will be shorter and neater - otherwise every time you use a value that is unknown, it will need to be checked to see whether its contents are correct.  This often results in a program where the error checking code takes up more space that the code that actually does the work!  It also allows another part of your program to handle the errors instead of having to deal with them when they have occurred - for example, a worker may not know what to do when a problem occurs, but his boss will!  This last point is more obvious in larger programs rather than the small ones we will be writing here.
+We could test the string to see if it is a number (``str.isdigit()``), but instead we will try to handle the problem when it is occurs.  This means that our code will be shorter and neater - otherwise every time you use a value that is unknown, it will need to be checked to see whether its contents are correct.  This approach often results in a program where the error checking code takes up more space than the code that actually does the work!  It also allows another part of your program to handle the errors instead of having to deal with them immediately - for example, a worker may not know what to do when a problem occurs, but his boss will!  This last point is more obvious in larger programs rather than the small ones we will be writing here.
 
-To handle an error when it occurs, we type ``try:``, followed by our code, which should be indented, just like an ``if`` statement. Then we type ``except:``, followed by the code we want run when these is an error::
+To handle an error when it occurs, we type ``try:``, followed by our code, which should be indented, just like an ``if`` statement. Then we type ``except:``, followed by the code we want run when there is an error::
 
     try:
         your_age = int(input('Your age: '))
@@ -137,7 +137,7 @@ This works with any code::
 Let's be specific about the problem
 -----------------------------------
 
-Using the ``try``-``except`` block as above works fine, but what if we only want to catch one type of exception? For instance the below code contains an invalid variable, but we will never know, because the ``except`` is catching every exception, including the exception due to the invalid variable::
+Using the ``try``-``except`` block as above works fine, but what if we only want to catch one type of exception? For instance, the following code contains an invalid variable, but we will never know, because the ``except`` is catching every exception, including the exception due to the invalid variable::
 
     >>> i_do_exist = '123'
     >>> try:
@@ -172,7 +172,7 @@ So, instead of typing ``except:``, we can type ``except ValueError:``. This will
       File "<stdin>", line 2, in <module>
     NameError: name 'i_do_not_exist' is not defined
 
-In general, you should try to name the type of exception to handle.  If you do not name the exception in order to catch all possible errors, then you may miss problems you should be handling differently.  It is simply a case of best practice.
+In general, you should name the type of exception you wish to handle.  If you do not name the exception in order to catch all possible errors, then you may miss problems you should be handling differently.  It is simply a case of best practice.
 
 .. pythontest:: nooutput
 
@@ -182,7 +182,6 @@ To find a full list of error types, you can type the *directory* command ``dir``
 
 .. pythontest:: all
 
-
 The errors that you can use to filter your errors are listed at the start - generally they have the word error at the end: ``ArithmeticError``, ``AssertionError``, ``AttributeError``, ``BaseException``, all the to ``ZeroDivisionError`` at the end.
 
 Exercises
@@ -190,7 +189,7 @@ Exercises
 
 1. Add ``try``-``except`` blocks to your programs from chapter 8, printing out "That was not a number" when the user types in a non-number.
 
-2. Write a program that takes two numbers, and divides one by the other. Print out a message when they try to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
+2. Write a program that takes two numbers, and divides one by the other. Print out a message when it tries to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
 
 3. Write a program called openfile.py which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
 
@@ -199,7 +198,7 @@ Things to remember
 
 1. Use ``try``-``except`` blocks to catch exceptions.  Exceptions are errors or problems raised for the program to handle in a proper manner.
 
-2. The code inside a ``try``-``except`` block is indented, like for an ``if`` block.
+2. The code inside a ``try``-``except`` block is indented, like an ``if`` block.
 
 3. It is best to name an exception type, to avoid surprises.  You can find out what the exception type is by using the interactive shell to provoke the same error.
 

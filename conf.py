@@ -294,6 +294,7 @@ latex_appendices = ["appendices/Glossary",
                     "appendices/Operators",
                     "appendices/Program flow",
                     "appendices/Common mistakes",
+                    "appendices/Functions"
                     "appendices/Extra exercises",
                     "appendices/Zen"]
 

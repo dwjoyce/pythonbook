@@ -79,7 +79,7 @@ Glossary
         Execute or run a :term:`function` with the necessary :term:`arguments`.
 
     function
-        A section of code that implements a task and :term:`returns` a value, even if that value is empty.
+        A section of code given a name that implements a task and :term:`returns` a value, even if that value is empty.
 
     built-in function
         A function that comes with Python, so you do not need to implement it yourself, such as ``round``, ``print`` and ``input``.

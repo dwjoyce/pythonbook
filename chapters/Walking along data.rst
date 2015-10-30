@@ -9,7 +9,7 @@ Walking along data
 Round and round
 ---------------
 
-Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated while that expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can break out of the loop early by using the ``break`` statement.
+Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated *while* the expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can break out of the loop early by using the ``break`` statement.
 
 For example, if we want to print out the numbers up to 10, then on the interactive shell we could do the following::
 
@@ -41,7 +41,7 @@ So let's introduce this step by step.  First define a list and give it a name us
     
 The name of the list is ``numbers``, and we have given it the same values as we printed out using the ``while`` loop above.
 
-Now we use our new keyword ``for``.  We combine it with the ``in`` operator we first saw in chapter 15 on working out whether a value is a member of a list, but this time it is used to step along each item *in* the list.  To see it in action, type this in and make you you get the same result as when we used the ``while`` loop earlier::
+Now we use our new keyword ``for``.  We combine it with the ``in`` operator we first saw in chapter 15 on working out whether a value is a member of a list, but this time it is used to step along each item *in* the list.  To see it in action, type this in and make sure you get the same result as when we used the ``while`` loop earlier::
 
     >>> for num in numbers:
             print(num)
@@ -58,25 +58,25 @@ To put it another way, you are asking for each item in the list, which Python pa
 Ranges
 ------
 
-However, it is a bit of a chore to have to type out the contents of our number lists all the time.  Typing in ten numbers is one thing.  What if we wanted to have a list with a 1,000 numbers?  Or a million?  Not only would this be very time consuming (and also make our programs very long), it would also be rather error prone.  Think about typing in a few thousand numbers, and then making mistake somewhere in the middle!
+However, it is a bit of a chore to have to type out the contents of our number lists all the time.  Typing in ten numbers is one thing.  What if we wanted to have a list with a 1,000 numbers?  Or a million?  Not only would this be very time consuming (and also make our programs very long), it would also be rather error prone.  Think about typing in a few thousand numbers, and making mistake somewhere in the middle!
 
 It is useful then that Python provides a function to give us a list of numbers in just the way we ask for.  It is called ``range``, and given its name, it simply provides a range of numbers as a list of integers.  Let's do the above program again using this ``range`` function::
 
     >>> for num in range(10):
             print(num)
     
-Even shorter than before, now that we are using the ``range`` function to do the work for us.  Usually, it just take one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting with 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
+Even shorter than before, now that we are using the ``range`` function to do the work for us.  Usually, it just takes one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting with 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
 
-.. note:: In programming, we like to start from 0 and not from 1, just like when indexing lists.  A list called ``numbers``, the first item is referenced by an index offset from the beginning, so ``numbers[0]`` is 0 items from the beginning, so is the first item.  ``numbers[1]`` is the first item from the start, so is the second item, and so on.
+.. note:: In programming generally, we like to start from 0 and not from 1, just like when indexing lists.  We count up to an end point, but since we usually count from 0, we do not include the end point in our range.
 
-If you don't want to start from 0, then you need to pass in two numbers - a start point and an end point.  For example, if you want the numbers between 100 and 200, you simply ask for ``range(100, 200)``; for numbers between -100 and 50, you ask for ``range(-100, 50)``.
+If you don't want to start from 0, then you need to pass in two numbers - a start point and an end point.  For example, if you want the numbers between 100 and 200, you simply ask for ``range(100, 200)``.  For numbers between -100 and 50, you ask for ``range(-100, 50)``.
 
 The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the ``step``.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200::
 
     >>> for num in range(100, 200, 2):
             print(num)
 
-By this stage, you should realise that the range function is very similar to how we slice up sequences - specify a start, and also optionally an end point along with a step to take each time.
+By this stage, you should realise that the range function is very similar to how we slice up sequences - specify a start, and also optionally an end point along with a step to take for each number.
 
 By using the *step*, you can also obtain a list that counts down rather than counting up.  All the number ranges we have done so far have counted up.  To count down, you need to use a negative step.  However, you must also remember to make the end point lower than the start point!  Try this to count down from 10 to 1, inclusive::
 
@@ -124,7 +124,7 @@ And finally, the variable to step along need not be a list - it can be any seque
 
 .. pythontest:: all
 
-Again, as in chapter 15 on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step over and work with the block of code you provide.
+Again, as in chapter 15 on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step along it and execute the block of code you provide.
 
 Drawing
 -------
@@ -190,7 +190,7 @@ Try changing the numbers to see what happens to the final result.
 Loops inside loops
 ------------------
 
-As we noted in chapter 9 on selection, you can have blocks code inside other blocks of code.  These blocks of code could be repeated, with other blocks also repeated - in other words, we can have loops inside loops - one section of code repeated inside another.
+As we noted in chapter 9 on selection, you can have blocks of code inside other blocks of code.  These blocks of code could be repeated, with other blocks also repeated - in other words, we can have loops inside loops - one section of code repeated inside another.
 
 Let us practice this concept by using the interactive shell:
 
@@ -267,7 +267,7 @@ Now to do something longer and more colorful, start a new program and type in th
             # Increment our index, so the colors are rotated
             color_index = color_index + 1
 
-Run it, naming it triangles.py, and see what happens.  Much of what we have typed in is similar to the spirals.py program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is ``True``, which never changes to ``False``.  Inside this loop, we draw 6 triangle, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
+Run it, naming it triangles.py, and see what happens.  Much of what we have typed in is similar to the spirals.py program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is ``True``, which never changes to ``False``.  Inside this loop, we draw 6 triangles, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
 
 Your turtle window should show something like this being drawn:
 
@@ -288,13 +288,13 @@ Exercises
 
 4. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
-5. Modify your spirals.py program so that after the ``for`` loop, it then retraces its steps back to the middle.  You will need a similar ``for`` loop after the initial one, but instead of turning right, it should turn left, and instead of incrementing (i.e. increasing) the length by 2 every time, it :term:`decrements` (i.e. decreasing) the length by 2 every time.  Finally, between each of the loops, you will need to the drawing turtle around - this means turning right by 89 degrees, as the previous loop has just turned by 91 degrees (so the total is an about turn of 180 degrees).
+5. Write a program called bullseye.py which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red in the middle.  Try and centre your shape in the middle of the turtle window.
 
 Things to remember
 ------------------
 
 1. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The ``for`` keyword can be read as *for each* if that makes its easier to understand.
 
-2. Use the ``range`` function to provide a sequence of number to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
+2. Use the ``range`` function to provide a sequence of numbers to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
 
-3. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we leant in chapter 13 on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.
+3. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we learnt in chapter 13 on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.
