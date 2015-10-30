@@ -149,8 +149,69 @@ A little explanation:
     - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
     - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
     - we then call our ``draw_circle`` function using the data we have at hand.
+
+Different types of functions
+----------------------------
+
+.. pythontest:: nooutput
+
+To conclude our two chapters on functions, we briefly describe the four general types of functions in Python:
+
+- **built-in functions** - you can see the list of built-in functions by typing ``dir(__builtins__)`` in the interactive shell, revealing the following:
+
+``abs``, ``all``, ``any``, ``ascii``, ``bin``, ``bool``, ``bytearray``, ``bytes``, ``callable``, ``chr``, ``classmethod``, ``compile``, ``complex``, ``copyright``, ``credits``, ``delattr``, ``dict``, ``dir``, ``divmod``, ``enumerate``, ``eval``, ``exec``, ``exit``, ``filter``, ``float``, ``format``, ``frozenset``, ``getattr``, ``globals``, ``hasattr``, ``hash``, ``help``, ``hex``, ``id``, ``input``, ``int``, ``isinstance``, ``issubclass``, ``iter``, ``len``, ``license``, ``list``, ``locals``, ``map``, ``max``, ``memoryview``, ``min``, ``next``, ``object``, ``oct``, ``open``, ``ord``, ``pow``, ``print``, ``property``, ``quit``, ``range``, ``repr``, ``reversed``, ``round``, ``set``, ``setattr``, ``slice``, ``sorted``, ``staticmethod``, ``str``, ``sum``, ``super``, ``tuple``, ``type``, ``vars``, ``zip``
+
+The full list will include other built-in items as well (e.g. exception types).  These can be called by any Python program without having to import anything else – they are built-in to the language itself.  For example::
     
-For more information on different types of functions - whether built-in, defined, imported or type based - please refer to appendix F.
+    >>> abs(-123)
+    >>> range(10)
+    >>> min([10, 20, 5, 15])
+    >>> print('Hello there')
+
+- **local functions** - you can define your own functions in your Python module by using the ``def`` keyword.  These can then be called from within your own program by simply using the name of the function itself, similar to a built-in function.  For example, here are four functions that we have written ourselves::
+
+    def say_hello():
+        print('hello')
+
+    def say_hello_times(times):
+        print('hello' * times)
+
+    def square_number(number):
+        return number * number
+
+    def lowest_highest(numbers):  # accepts a list of numbers
+        lowest = min(numbers)
+        highest = max(numbers)
+        return lowest, highest  # returns two values
+
+Which can then be called as follows::
+
+    say_hello()
+    say_hello_times(10)
+    print(square_number(5))  # prints 25
+    low, high = lowest_highest([5, 10, 35, 15, 50, 20])
+
+- **imported functions** - you can use functions in other modules by importing them first.  For example, to use functions inside the ``math`` module, you can do the following::
+
+    import math
+    math.sqrt(100)
+
+You need to write module name followed by a period ``.`` before the name of the function when calling it.  You can print out a directory listing of what a module contains by performing a 'dir' on its name, for example::
+
+    >>> dir(math)
+
+- **functions belonging to a type ("methods")** - a particular class of values is called a type (integers, floating point numbers, strings, files), and these contain functions on the data that the type contains.  For example, to change a sentence to uppercase you can do the following::
+
+    >>> message = 'mary had a little lamb'
+    >>> message.upper()  # returns 'MARY HAD A LITTLE LAMB'
+
+You need to write the variable name (which belongs to a particular type), followed by a period ``.`` before the name of the function when calling it.  You can list the functions that a type contains by performing a ``dir`` on its name, for example::
+
+    >>> dir(int)
+    >>> dir(float)
+    >>> dir(str)
+
+This will show that some types have functions that are not relevant to other types.  For example, floats have a function called ``is_integer`` which returns ``True`` if it is a whole number, ``False`` if not.  Strings have functions such as ``lower``, ``split``, ``title``, ``upper``, which are relevant to strings of characters, but not numbers and files.  These methods are bound up with the data they work on, so only relevant functions are offered with the type of data the variable refers to.
 
 Exercises
 ---------
