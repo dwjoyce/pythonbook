@@ -32,7 +32,7 @@ Open up your functions.py program, and add the following function between your f
     def add_5(num):
         return num + 5
     
-We have used the new keyword ``return`` - this takes an expression, and returns it to the caller of the function.  This means it is used (or discarded if it is not needed), by whatever code has called the function in the first place.
+We have used the new keyword ``return`` - this takes an expression, and returns it to the caller of the function.  This means it is used (or discarded if it is not needed), by whatever code that has called the function in the first place.
 
 Now add these lines onto the bottom of your program, so that the function defined above is called::
     
@@ -44,7 +44,7 @@ Now add these lines onto the bottom of your program, so that the function define
     new_num = add_5(my_num)
     print(new_num)
     
-Now run the program, and see what it does.  It should call our new function ``add_5`` a number of times.  The first ones simply passed in the integer value 10.  Inside the function, the parameter ``num`` will refer to this value of 10.  The value is incremented by 5, and the result is :term:`returned` or sent back to the code that called the function in the first place.  In the first call of ``add_5``, this happens to be a ``print`` function, which naturally prints out the result it has been given (the number returned back from the function call).
+Now run the program, and see what it does.  It should call our new function ``add_5`` a number of times.  The first ones simply passed in the integer value 10.  Inside the function, the parameter ``num`` will refer to this value of 10.  The value is incremented by 5, and the result is :term:`returned` or sent back to the code that called the function.  In the first call of ``add_5``, this happens to be a ``print`` function, which naturally prints out the result it has been given (the number returned back from the function call).
 
 The second use of the ``add_5`` function is similar, but instead of passing in a value, it passes in a variable which is referring to an integer value.  It then proceeds as before.
 
@@ -81,15 +81,15 @@ So far we pass arguments into functions, used inside the function as parameters,
         
     print(box_volume(10, 20, 30))
 
-You could place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom of your program.
+You should place the calling of the function, the line containing the function name ``print``, along with the other code towards the bottom of your program.
 
-It is quite clear that the integer value ``10`` is passed into parameter ``length``, ``20`` is passed into the parameter ``height``, and ``30`` is passed into the parameter ``width``.  In Python, this is called :term:`positional arguments` - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
+It is quite clear that the integer value ``10`` is passed into parameter ``length``, ``20`` is passed into the parameter ``height``, and ``30`` is passed into the parameter ``width``.  In Python, these are called :term:`positional arguments` - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
 
 An alternative is to explicitly state what parameters you want to use for each argument (remember, arguments on the outside are being passed into parameters on the inside).  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
 
     print(box_volume(length=10, height=20, width=30))
     
-Run your program again, and make sure it now prints out the same volume twice.  However, the line calling the function ``box_volume`` makes more sense with the parameter names being assigned to the argument values explicitly.
+Run your program again, and make sure it now prints out the same volume twice.  However, the line calling the function ``box_volume`` makes more sense with the parameter names being assigned to the argument values explicitly.  Yes, it is more typing, but reads better.
 
 This is called :term:`keyword arguments` - you are referring to each parameter by name, by keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
 
@@ -164,7 +164,7 @@ Things to remember
 
 1. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the return statement.
 
-2. Even functions without the ``return`` statement return a value - the value ``None``.  It is like a non-value, similar to zero but not actually an integer number.
+2. Even functions without the ``return`` statement return a value - the value ``None``.  It is like a non or null value, similar to zero but not actually an integer number.
 
 3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
 

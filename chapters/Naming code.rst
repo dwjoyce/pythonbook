@@ -31,7 +31,7 @@ or more simply such as::
     >>> number = 100
     >>> number = number + 1
     
-Programs are made up of data, which we have been discussing above, and code.  We have the ability to name our data, but it would be helpful if we also had the ability to name our code.  This would prevent repeating our code, using the name instead of the code itself, and also allow our programs to become more organised.
+Programs are made up of data, which we have been discussing here, and code.  We have the ability to name our data, but it would be helpful if we also had the ability to name our code.  This would prevent repeating our code, using the name instead of the code itself, and also allow our programs to become more organised.
 
 Functions
 ---------
@@ -48,9 +48,9 @@ We have already used named sections of code - they are called :term:`functions`.
     >>> print(len('The quick brown fox jumps over the lazy dog'))
     43
 
-As we can see above, functions take take in values (which we have learned are called :term:`arguments`), or not.  They can return values, or not.  It just depends on what they do, and what we want to use them for.
+As we can see above, functions can take in values (which we have learned are called :term:`arguments`), or not.  They can return values, or not.  Even if they do return a value, it is up to us whether we use it or not.  It just depends on what they do, and what we want to use them for.
 
-In this chapter, we will begin learning how to define our own functions, and not just use functions already present in the language (built-in ones), or from other programs (imported modules).
+In this chapter, we will begin learning how to define our own functions, and not just use the functions already present in the language (built-in ones), or from other programs (imported modules).
 
 But before we do, why should we bother?  Can't we just use loops instead?
 
@@ -66,12 +66,12 @@ Here is an example of a bit of code that needs sections to be separated into fun
     num = num + 1
     print('Hello there')
 
-Lots of repetitive code that could be parcelled up, given a name and put in one place, but called from where it is needed.  When code only needs to be written once, we tend to make less mistakes than when we have to write it lots of times.
+Lots of repetitive code that could be parcelled up, given a name and put in one place, but called from where it is needed.  Moreover, when code only needs to be written once, we tend to make less mistakes than when we have to write it lots of times.
 
 Rolling our own
 ---------------
 
-While naming data we use the assignment operator, when naming code we use the ``def`` keyword.  This means we are :term:`defining a function` - not calling it, but defining it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
+When naming data we use the assignment operator, when naming code we use the ``def`` keyword.  This means we are :term:`defining a function` - not calling it, but defining it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
 
 Open up a new file window, and type in the following::
 
@@ -105,7 +105,7 @@ Run it and ensure it prints out the same message, but this time 5 times.  That w
     
 It should print out the message the number of times you are requesting.  If not, then something is very wrong!
 
-Now, of course, if you can pass in one thing, you can pass in many.  So our next function (again, insert it between where the functions are defined and where they are being called), will take a message and a number, so the caller can specify what he wants printing::
+Now, of course, if you can pass in one item, you should be able to pass in more than one item.  So our next function (again, insert it between where the functions are defined and where they are being called), will take a message and a number, so the caller can specify what he wants printing::
 
     def say_message_times(msg, times):
         print(msg * times)
@@ -115,9 +115,9 @@ and insert these lines below the last call to ``say_hello_times``::
     say_message_times('Yo! ', 25)
     say_message_times('I will stop talking in class', 100)
     
-.. note:: An argument is the value or variable being passed *into* a function.  A :term:`parameter` is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them parameters!
+.. note:: An argument is the value or variable being passed *into* a function.  A :term:`parameter` is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them all parameters!
 
-These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions with one that takes in two numbers, and prints out the sum::
+These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions one that takes in two numbers, and prints out the sum::
 
     def add_two_nums(num1, num2):
         print(num1 + num2)
@@ -130,25 +130,25 @@ and again, lower down, we can call this function::
     
 If you call this function with three arguments (e.g. ``add_two_nums(10, 20 30)``), then Python will complain - three arguments into two parameters does not go!
 
-These functions are very short, so may not appear very useful yet, but imagine writing a function that is 10 or 20 lines long, and is used in a number of places in your program.  Then your program will be much shorter, more readable and produce better results.
+These functions are very short, so may not appear very useful yet, but imagine writing a function that is 10 or 20 lines long, and is used in a number of places in your program.  Then your program will be much shorter and be more readable as you have given part of your code a name that describes what it does.
 
-In the next chapter, we will discuss not only passing data into a function, but also getting data out again.
+In the next chapter, we will discuss not only passing data into a function, but also getting data back out again.
 
 Exercises
 ---------
 
-1. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``opertor``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
+1. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``operator``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
 
-2. Write a function called ``timestable`` which receives a number and prints out a times table with that number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two for loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to ).  Again, put it in the same functions.py program.
+2. Write a function called ``timestable`` which receives a number and prints out a times table with the specified number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two ``for`` loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to produce the result to display).  Again, put it in the same functions.py program.
 
-3. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
+3. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function each for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
 
 Things to remember
 ------------------
 
 1. To define a new function, use the ``def`` keyword, followed by the name of the function, and then parentheses.
 
-2. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.  This is a way of passing in data to affect how the function behaves - pass in different data, it should do different things.
+2. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.  This is the way of passing in data to affect how the function behaves - pass in different data, it should do different things.
 
 3. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any block of code, is indented to the right.
 
