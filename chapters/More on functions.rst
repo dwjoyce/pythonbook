@@ -168,31 +168,14 @@ To conclude our two chapters on functions, we briefly describe the four general 
       >>> min([10, 20, 5, 15])
       >>> print('Hello there')
 
-- **Local functions** - you can define your own functions in your Python module by using the ``def`` keyword.  These can then be called from within your own program by simply using the name of the function itself, similar to a built-in function.  For example, here are four functions that we have written ourselves::
-
-      def say_hello():
-          print('hello')
-
-
-      def say_hello_times(times):
-          print('hello' * times)
-
+- **Local functions** - you can define your own functions in your Python module by using the ``def`` keyword.  These can then be called from within your own program by simply using the name of the function itself, similar to a built-in function.  For example, here is a function that accepts a number and returns its square::
 
       def square_number(number):
           return number * number
 
-
-      def lowest_highest(numbers):  # accepts a list of numbers
-          lowest = min(numbers)
-          highest = max(numbers)
-          return lowest, highest  # returns two values
-
   Which can then be called as follows::
 
-      say_hello()
-      say_hello_times(10)
-      print(square_number(5))  # prints 25
-      low, high = lowest_highest([5, 10, 35, 15, 50, 20])
+      square_number(5))  # returns 25
 
 - **Imported functions** - you can use functions in other modules by importing them first.  For example, to use functions inside the ``math`` module, you can do the following::
 
