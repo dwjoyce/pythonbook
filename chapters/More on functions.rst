@@ -175,7 +175,7 @@ To conclude our two chapters on functions, we briefly describe the four general 
 
   Which can then be called as follows::
 
-      square_number(5))  # returns 25
+      square_number(5)  # returns 25
 
 - **Imported functions** - you can use functions in other modules by importing them first.  For example, to use functions inside the ``math`` module, you can do the following::
 
