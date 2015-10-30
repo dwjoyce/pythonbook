@@ -149,6 +149,8 @@ A little explanation:
     - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
     - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
     - we then call our ``draw_circle`` function using the data we have at hand.
+    
+For more information on different types of functions - whether built-in, defined, imported or type based - please refer to appendix F.
 
 Exercises
 ---------
