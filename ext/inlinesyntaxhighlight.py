@@ -123,7 +123,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             hlcode = hlcode.replace(' ',
                                     '\\hspace{\\charwidth}')
             hlcode = hlcode.strip("\n").replace('\n',
-                                                '~\\breaktext{}{{\\tiny \PYG{c}{Code continued from above...}}}\n')
+                                                '~\\breaktext{{\PYG{c}{Cont...}}}{}\n')
             viac += r"\def\Codecontinues{\tiny{Code continues from above...}}"
             self.body.append('\n' + viac + r"\nonverbatim{" + hlcode + r"}")#\def\Codecontinues{}")
             raise nodes.SkipNode
