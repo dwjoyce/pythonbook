@@ -6,6 +6,7 @@ from docutils import nodes
 import re
 import shlex
 import sphinx.writers.latex
+from sphinx import addnodes
 
 
 def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -107,7 +108,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             # workaround for Unicode issue
             hlcode = hlcode.replace('€', '@texteuro[]')
             # must use original Verbatim environment and "tabular" environment
-            coeff = 10 if self.definition else 40
+            coeff = 40# if self.definition else 40
             viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{" + str(coeff) + "pt}\n"
             if self.table:
                 self.table.has_problematic = True
@@ -115,7 +116,16 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
                 #self.table.has_verbatim = True
             # get consistent trailer
             hlcode = hlcode.rstrip() + '\n'
-            self.body.append('\n' + viac + hlcode)
+            hlcode = hlcode.replace(r'\begin{Verbatim}[commandchars=\\\{\}]' + "\n",
+                                    r'')
+            hlcode = hlcode.replace('\\end{Verbatim}\n',
+                                    '')
+            hlcode = hlcode.replace(' ',
+                                    '\\hspace{\\charwidth}')
+            hlcode = hlcode.strip("\n").replace('\n',
+                                                '~\\breaktext{}{{\\tiny \PYG{c}{Code continued from above...}}}\n')
+            viac += r"\def\Codecontinues{\tiny{Code continues from above...}}"
+            self.body.append('\n' + viac + r"\nonverbatim{" + hlcode + r"}")#\def\Codecontinues{}")
             raise nodes.SkipNode
 
     def depart_table(self, node):
@@ -269,6 +279,53 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
 
     def visit_definition(self, node):
         self.body.append("\n")
+
+    def visit_title(self, node):
+        parent = node.parent
+        if isinstance(parent, addnodes.seealso):
+            # the environment already handles this
+            raise nodes.SkipNode
+        elif self.this_is_the_title:
+            if len(node.children) != 1 and not isinstance(node.children[0],
+                                                          nodes.Text):
+                self.builder.warn('document title is not a single Text node',
+                                  (self.curfilestack[-1], node.line))
+            if not self.elements['title']:
+                # text needs to be escaped since it is inserted into
+                # the output literally
+                self.elements['title'] = node.astext().translate(tex_escape_map)
+            self.this_is_the_title = 0
+            raise nodes.SkipNode
+        elif isinstance(parent, nodes.section):
+            try:
+                self.body.append(r'\%s{{' % self.sectionnames[self.sectionlevel])
+            except IndexError:
+                # just use "subparagraph", it's not numbered anyway
+                self.body.append(r'\%s{{' % self.sectionnames[-1])
+            self.context.append('}}\n')
+
+            if self.next_section_ids:
+                for id in self.next_section_ids:
+                    self.context[-1] += self.hypertarget(id, anchor=False)
+                self.next_section_ids.clear()
+
+        elif isinstance(parent, (nodes.topic, nodes.sidebar)):
+            self.body.append(r'\textbf{')
+            self.context.append('}}\n\n\medskip\n\n')
+        elif isinstance(parent, nodes.Admonition):
+            self.body.append('{')
+            self.context.append('}}\n')
+        elif isinstance(parent, nodes.table):
+            self.table.caption = self.encode(node.astext())
+            raise nodes.SkipNode
+        else:
+            self.builder.warn(
+                'encountered title node not in section, topic, table, '
+                'admonition or sidebar',
+                (self.curfilestack[-1], node.line or ''))
+            self.body.append('\\textbf{')
+            self.context.append('}}\n')
+        self.in_title = 1
 
 aliases = {}
 with open("glossary_aliases.txt") as f:

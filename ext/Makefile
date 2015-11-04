@@ -51,8 +51,8 @@ bz2: tar
 	latex $(LATEXOPTS) '$<'
 # Sped up by removal of excess
 %.pdf: %.tex
-	max_print_line=1048576 pdflatex $(LATEXOPTS) '$<'
-	max_print_line=1048576 pdflatex $(LATEXOPTS) '$<'
+	echo "Rerun to get cross-references right." > log.log
+	while grep "Rerun to get cross-references right." log.log; do echo "Rerunning"; max_print_line=1048576 pdflatex $(LATEXOPTS) '$<' | tee log.log; done
 
 clean:
 	rm -f *.dvi *.log *.ind *.aux *.toc *.syn *.idx *.out *.ilg *.pla

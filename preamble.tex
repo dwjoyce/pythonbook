@@ -1,3 +1,5 @@
+\makeatletter
+
 % Sans font
 \usepackage{sans}
 \renewcommand{\sfdefault}{\rmdefault}
@@ -37,14 +39,10 @@
 
 % http://tex.stackexchange.com/a/58391
 \usepackage{etoolbox}
-\makeatletter
 \preto\tabular{\global\rownum=\z@}
-\makeatother
 
 % remove blank pages
-\makeatletter
 \@openrightfalse
-\makeatother
 
 % title stuff
 \usepackage{titling}
@@ -53,7 +51,6 @@
 
 % Chapter num spacing
 
-\makeatletter
 \renewcommand{\TheAlphaChapter}{%
 
 \ifinapp
@@ -67,19 +64,80 @@
   \fi
 \fi
 }
-\makeatother
 
 % Chapter quotes
 
-\makeatletter
 \newenvironment{chapquote}[1]
   {\vspace{-10mm}\def\chapquote@author{#1}%
    \begin{flushright}\begin{minipage}{0.618\textwidth}\begin{flushright}%
    \itshape}
   {\\[2mm]\normalfont\small--- \chapquote@author\end{flushright}\end{minipage}\end{flushright}\vspace{2mm}\normalsize}
-\makeatother
 
 % No hyphenation
 
 \usepackage[none]{hyphenat}
 \raggedright
+% \usepackage{lipsum}% http://ctan.org/pkg/lipsum
+% \usepackage{everyshi}% http://ctan.org/pkg/everyshi
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+% \def\Codecontinues{\tiny{Code continues from above...}}
+% \EveryShipout{%
+%   \ifdim\pagetotal>\pagegoal% There is content overflow on this page
+%     \aftergroup\Codecontinues% Reprint/-insert sectional heading
+%   \fi%
+% }
+
+\makeatletter
+\newcount\bt@count
+
+
+\def\breaktext#1#2{%
+\par%
+\nobreak%
+\global\advance\bt@count\@ne%
+\expandafter\label\expandafter{\the\bt@count bt@count}%
+\protected@edef\@tempa{\csname r@\the\bt@count bt@count\endcsname}%
+\global\advance\bt@count\@ne%
+\protected@edef\@tempb{\csname r@\the\bt@count bt@count\endcsname}%
+\expandafter\ifx\expandafter\relax\@tempa%
+% \typeout{relax}%
+\penalty\z@%
+\else%
+% \typeout{[\@tempa][\@tempb]}%
+\ifx\@tempa\@tempb%
+% \typeout{equal}%
+\penalty\z@%
+\else%
+% \typeout{page break}%
+#1\par\break#2\par\nobreak%
+\fi%
+\fi%
+\expandafter\label\expandafter{\the\bt@count bt@count}%
+\nobreak%
+}
+\newlength{\charwidth}
+\settowidth{\charwidth}{\texttt{\small{ }}}
+
+% verb
+
+\newcommand{\nonverbatim}[1]{%
+  % list starts new par, but we don't want it to be set apart vertically
+  \bgroup%
+  \parskip=0pt%
+  \smallskip%
+  \setlength\parskip{0pt}%
+  \setlength\itemsep{0ex}%
+  \setlength\topsep{0ex}%
+  \setlength\partopsep{0pt}%
+  \setlength\leftmargin{0pt}%
+  \@totalleftmargin=0cm%
+  \MakeFramed {\FrameRestore}%
+    \texttt{\small #1}
+  \endMakeFramed%
+  % close group to restore \parskip
+  \egroup%
+%   \par
+}
+
+
+\makeatother

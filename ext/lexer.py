@@ -32,7 +32,7 @@ class Python3TracebackLexer(RegexLexer):
              r'exception occurred:\n\n', Generic.Traceback),
             (r'^The above exception was the direct cause of the '
              r'following exception:\n\n', Generic.Traceback),
-            (r'^(File )("[^"]+")(, line )(\d+)(\n)',
+            (r'^(\s*File )("[^"]+")(, line )(\d+)(\n)',
              bygroups(Text, Name.Builtin, Text, Number, Text), 'intb')
         ],
         'intb': [

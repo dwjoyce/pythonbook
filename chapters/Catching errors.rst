@@ -25,9 +25,9 @@ In Python, we encounter many errors, also known in Python as :term:`exceptions`.
 :term:`Syntax errors`, where the program is breaking the rules of the language::
 
     >>> if broken = True:
-    File "<stdin>", line 1
+      File "<stdin>", line 1
         if broken = True:
-                ^
+                  ^
     SyntaxError: invalid syntax
 
 Errors with functions, such as passing in two arguments where only one is expected::
