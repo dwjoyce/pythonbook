@@ -77,15 +77,8 @@
 
 \usepackage[none]{hyphenat}
 \raggedright
-% \usepackage{lipsum}% http://ctan.org/pkg/lipsum
-% \usepackage{everyshi}% http://ctan.org/pkg/everyshi
-\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
-% \def\Codecontinues{\tiny{Code continues from above...}}
-% \EveryShipout{%
-%   \ifdim\pagetotal>\pagegoal% There is content overflow on this page
-%     \aftergroup\Codecontinues% Reprint/-insert sectional heading
-%   \fi%
-% }
+
+% Code continued code
 
 \makeatletter
 \newcount\bt@count
@@ -118,7 +111,7 @@
 \newlength{\charwidth}
 \settowidth{\charwidth}{\texttt{\small{ }}}
 
-% verb
+% Non-verbatim env for code
 
 \newcommand{\nonverbatim}[1]{%
   % list starts new par, but we don't want it to be set apart vertically
