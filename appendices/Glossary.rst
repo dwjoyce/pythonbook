@@ -162,7 +162,7 @@ Glossary
         The process where a set of instructions or data are repeated.
         
     keyword
-        A word with a special meaning.  Python has many reserved keywords that it uses for its own purposes, such as ``if``, ``while``, ``for``, ``def``, etc., which you cannot use for any other purpose.
+        A word with a special meaning.  Python has many reserved keywords that it uses for its own purposes, such as ``if``, ``while``, ``for``, ``def``, etc., which you cannot use for any other purpose.  To see Python's full list of keywords, then import the ``keyword`` module and type ``keyword.kwlist`` in the interactive shell.
 
     increment
         Increase the value of a variable.  For example: ``num = num + 1``, or ``num += 1`` for short.
