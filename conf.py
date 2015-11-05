@@ -212,53 +212,10 @@ htmlhelp_basename = 'pythonbookdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-'pointsize': '12pt',
-
-# Additional stuff for the LaTeX preamble.
-'preamble': open("preamble.tex").read(),
-
-#'fontpkg': '\\usepackage{sans}'
-'maketitle':r"""
-\makeatletter
-\pagecolor{TitleColor}\afterpage{\nopagecolor}
-{\color{white}
-\begin{titlepage}
- \begin{center}
-  {\fontsize{53}{63}\selectfont \textbf{\thetitle}\par}
-  \rule{\linewidth}{1.5mm}
-  \\[0.4cm]
-  {\fontsize{24}{44}\selectfont \color{black} \textbf{Learning Python 3 on the Raspberry Pi}}
-\end{center}
-\vfill
-\hfill
-\begin{minipage}{0.61\textwidth}
-\begin{flushright}
-  {\LARGE \textbf{\theauthor}}
-  \rule{\linewidth}{1.0mm}
-  \\[0.4cm]
-  {\LARGE \color{black} \textbf{\textit{\py@release}}}
- \end{flushright}
- \end{minipage}
-\vfill
-\includegraphics[height=1.75cm,keepaspectratio]{python-logo-bw.pdf}\hfill
-\includegraphics[height=1.75cm,keepaspectratio]{raspberry-pi-logo-bw.pdf}
-\end{titlepage}
-}
-\makeatother
-{
-\topskip0pt
-\vspace*{\fill}
-\begin{center}
-\Huge \textbf{DON'T PANIC!}
-\end{center}
-\vspace*{\fill}
-}
-""",
-"printindex": ""
+    'pointsize': '12pt',
+    'preamble': open("preamble.tex").read(),
+    'maketitle': open("title.tex").read(),
+    "printindex": ""
 }
 
 if not isrelease:
