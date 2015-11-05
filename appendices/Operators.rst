@@ -164,3 +164,27 @@ Examples::
     True
     >>> num in [0, 20, 40, 60]
     False
+
+Operator precedence
+-------------------
+
+The following table summarizes the operator precedences in Python, from lowest precedence (least binding) to highest precedence (most binding). Operators in the same box have the same precedence.
+
+===================================================================================== ========================================================================
+Operator                                                                              Description
+===================================================================================== ========================================================================
+``or``                                                                                Boolean OR
+``and``                                                                               Boolean AND
+``not``                                                                               Boolean NOT
+``in``, ``not in``, ``is``, ``is not``, ``<``, ``<=``, ``>``, ``>=``, ``!=``, ``==``  Comparisons, including membership tests and identity tests
+``|``                                                                                 Bitwise OR
+``^``                                                                                 Bitwise XOR
+``&``                                                                                 Bitwise AND
+``<<``, ``>>``                                                                        Shifts
+``+``, ``-``                                                                          Addition and subtraction
+``*``, ``/``, ``//``, ``%``                                                           Multiplication, division, remainder
+``+x``, ``-x``, ``~x``                                                                Positive, negative, bitwise NOT
+``**``                                                                                Exponentiation
+``x[index]``, ``x[index:index]``, ``x(arguments...)``, ``x.attribute``                Subscription, slicing, call, attribute reference
+``(expressions...)``, ``[expressions...]``, ``{key: value...}``, ``{expressions...}`` Binding or tuple display, list display, dictionary display, set display
+===================================================================================== ========================================================================

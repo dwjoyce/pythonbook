@@ -73,7 +73,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         hlcode = hlcode.replace('\\end{Verbatim}',
                                 '')
         if self.table:
-            self.body.append(hlcode.rstrip().lstrip())
+            self.body.append(r'\noframecode{' + hlcode.rstrip().lstrip() + '}')
         else:
             self.body.append(r'\code{' + hlcode.rstrip().lstrip() + '}')
         raise nodes.SkipNode
