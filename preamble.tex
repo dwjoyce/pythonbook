@@ -116,10 +116,7 @@
 % Non-verbatim env for code
 
 \newcommand{\nonverbatim}[1]{%
-  % list starts new par, but we don't want it to be set apart vertically
   \bgroup%
-  \parskip=0pt%
-  \smallskip%
   \setlength\parskip{0pt}%
   \setlength\itemsep{0ex}%
   \setlength\topsep{0ex}%
@@ -129,10 +126,19 @@
   \MakeFramed {\FrameRestore}%
     \texttt{\small #1}
   \endMakeFramed%
-  % close group to restore \parskip
   \egroup%
-%   \par
 }
 
+\newcommand{\nonframedverbatim}[1]{%
+  \bgroup%
+  \setlength\parskip{0pt}%
+  \setlength\itemsep{0ex}%
+  \setlength\topsep{0ex}%
+  \setlength\partopsep{0pt}%
+  \setlength\leftmargin{0pt}%
+  \@totalleftmargin=0cm%
+    \texttt{\small #1}%
+  \egroup%
+}
 
 \makeatother
