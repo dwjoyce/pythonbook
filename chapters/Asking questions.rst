@@ -14,7 +14,7 @@ It is now time to make our programs more interactive, allowing the user to get i
 
 In this chapter, we will allow the user to affect what happens in the program with the opportunity to enter data of their own.  The way Python allows the user to enter data is by using the ``input`` function.  This reads in what the user is typing on the keyboard, and returns the value to the program so that it can be stored or used elsewhere.
 
-Begin by creating a new program (``File`` -> ``New File``), and type the following::
+Begin by creating a new program (:menu:`File -> New File`), and type the following::
 
     name = input('What is your name? ')
     print('Hello there', name)

@@ -50,6 +50,11 @@ class Python3TracebackLexer(RegexLexer):
     }
 
 
+r, t = Python3Lexer.tokens["builtins"][0]
+r = r.replace("zip", "zip|copyright|credits|license|ascii|quit|callable|exec|exit|help")
+Python3Lexer.tokens["builtins"][0] = r, t
+
+
 class Python3ConsoleLexer(Lexer):
     name = 'Python 3 console session'
     aliases = ['pycon3']

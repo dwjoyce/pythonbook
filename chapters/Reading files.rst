@@ -21,7 +21,7 @@ However, storing values in memory by using variables is only transitory - just l
 
 So how do we retain information from one run of our program to the next?  How do we, as a computer scientist would say, make our data persistent - i.e. recall the data when the program is run again?  Think of a game with a highest scores table - we need a way to store these numbers (and names) so that they can be read and changed every time the game is run.  To do this, we need to place our data in a :term:`file` that is stored on disk - whether a hard drive or flash storage such as a USB stick.  This data, when the electricity is turned off, retains its state - the data does not drain away with the current!  To work with files, we need to learn how to read from them (in this chapter) and write to them (in the next).
 
-The first step in reading a file is opening it.  Think if a file like a folder or a book - before you can start reading its contents, you need to open its cover to reveal the pages within.  Firstly, we need to create our book, so click on File -> New File, and copy in the following text (remember to use :kbd:`Ctrl-C` keys to copy and :kbd:`Ctrl-V` to paste):
+The first step in reading a file is opening it.  Think if a file like a folder or a book - before you can start reading its contents, you need to open its cover to reveal the pages within.  Firstly, we need to create our book, so click on :menu:`File -> New File`, and copy in the following text (remember to use :kbd:`Ctrl-C` keys to copy and :kbd:`Ctrl-V` to paste):
 
 .. code-block:: none
     :pythontest: off
