@@ -51,7 +51,10 @@ class Python3TracebackLexer(RegexLexer):
 
 
 r, t = Python3Lexer.tokens["builtins"][0]
-r = r.replace("zip", "zip|copyright|credits|license|ascii|quit|callable|exec|exit|help")
+if isinstance(r, str):
+    r = r.replace("zip", "zip|copyright|credits|license|ascii|quit|callable|exec|exit|help")
+else:
+    r.words += tuple(("zip|copyright|credits|license|ascii|quit|callable|exec|exit|help".split("|")))
 Python3Lexer.tokens["builtins"][0] = r, t
 
 
