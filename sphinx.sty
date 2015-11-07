@@ -282,16 +282,18 @@
   \fbox{\TheSbox}
 }
 
-\newcommand{\py@lightbox}{{%
+\newcommand{\py@lightbox}{
+  \minipage{\linewidth}
+  {%
   \setlength\parskip{0pt}\par
   \noindent\rule[0ex]{\linewidth}{0.5pt}%
-  \par\noindent%
-  }}
+  \par\noindent}%
+  }
 \newcommand{\py@endlightbox}{\vspace{-0.5ex}{%
   \setlength{\parskip}{0pt}%
   \par\noindent\rule[0.5ex]{\linewidth}{0.5pt}%
   \par%
-  }}
+  }\endminipage}
 
 % Some are quite plain:
 \newcommand{\py@noticestart@note}{\py@lightbox}
