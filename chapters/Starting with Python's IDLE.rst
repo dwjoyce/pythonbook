@@ -64,6 +64,6 @@ Things to remember
 
 #. Type away in the interactive shell and see what results you get.  Don't be afraid to experiment, you can't break the computer that easily.  Fortune rewards the brave!
 
-#. To recall something already typed in, use the up arrow to move the cursor onto the line you wish to use.  Press the Return or Enter key - this brings it down onto your current line.  You can modify what has been copied down.  To run the line again, press the Return or Enter key a second time.  This will save you lots of typing!
+#. To recall something already typed in, use the up arrow to move the cursor onto the line you wish to use.  Press the :button:`Return` or :button:`Enter` key - this brings it down onto your current line.  You can modify what has been copied down.  To run the line again, press the :button:`Return` or :button:`Enter` key a second time.  This will save you lots of typing!
 
 #. Read these *Things to remember* sections in each chapter very carefully and remember what they say!

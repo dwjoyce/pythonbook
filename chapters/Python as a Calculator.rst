@@ -14,13 +14,17 @@ Let us start our journey by taking inspiration from something we all know well -
 .. highlight:: none
 .. pythontest:: off
 
-To perform a sum on a calculator, such as 10 plus 20, you could simply hit the following buttons::
+To perform a sum on a calculator, such as 10 plus 20, you could simply hit the following buttons:
+
+.. math::
 
     10 + 20
 
-and then hit the :button:`=` (equals) button.  The result, 30, will then appear on your screen.  We could do other operations as well, such as subtraction, division and multiplication, like so::
+and then hit the :button:`=` (equals) button.  The result, 30, will then appear on your screen.  We could do other operations as well, such as subtraction, division and multiplication, like so:
 
-    10 + 20 - 4 ÷ 2 × 3
+.. math::
+
+    10 + 20 - 4 \div 2 \times 3
 
 and then finally hitting the equals button, you will get a result of 24 displayed on the calculator's screen.  This is assuming you are using a proper calculator, not a simple one which performs the calculation as it goes along, one step at a time!  In other words, it performs the division first, then the multiplication, and then subtracts this answer from the result of the addition.
 
@@ -36,16 +40,16 @@ Bring up your Python interactive shell, as described in chapter 0 (i.e. by click
     >>> 10 + 20
     30
 
-and press the Return or Enter key on your keyboard.  The ``>>>`` (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
+and press the :button:`Return` or :button:`Enter` key on your keyboard.  The ``>>>`` (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
 
 How about the second example?  Let us try this::
 
     >>> 10 + 20 - 4 / 2 * 3
     24.0
     
-The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the ``÷`` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` (forward slash) instead.  And the ``×`` is too much like the letter ``x``, so we use the asterisk ``*`` symbol instead.  These *signs* or symbols in computer programming are called :term:`operators`, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
+The answer is the same as with our calculator example above.  However, what are these ``/`` and ``*`` symbols?  Well, the :math:`\div` doesn't actually appear on your computer keyboard, so we use another symbol ``/`` (forward slash) instead.  And the :math:`\times` is too much like the letter ``x``, so we use the asterisk ``*`` symbol instead.  These *signs* or symbols in computer programming are called :term:`operators`, and we have leant four so far - ``+`` (addition), ``-`` (subtraction), ``*`` (multiplication) and ``/`` (division).
 
-Type in it, press Return and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
+Type in it, press :button:`Return` and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
 
 Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to appendix C on Operators.  If in doubt, use parentheses ``(`` ``)`` to force a particular order!
 
