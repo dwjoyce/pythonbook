@@ -300,7 +300,7 @@ When comparing values, you must use one of the comparison operators.  The assign
 Not forming expressions properly
 --------------------------------
 
-The expressions below on the left (taking the first example) were intended to compare the variable ``ch`` against either 'A' or 'B', and execute the subsequent code block if this is the case.  Unfortunately, it only compares ``ch`` against 'A', and then checks whether the letter 'B' is a non-empty value (which it is).  This means that the code block will always execute, as this expression is always ``True``.  To compare a variable against two separate values, you need to do both comparisons individually, such as on the right of the table.
+The expressions below on the left (taking the first example) were intended to compare the variable ``ch`` against either 'A' or 'B', and execute the subsequent code block if this is the case.  Unfortunately, it only compares ``ch`` against 'A', and then checks whether the letter 'B' is not empty (which it isn't).  It is equivalent to ``(ch == 'A') or ('B')``, with each side of the expression being evaluated separately, and then combined together with the ``or`` operator.  This means that the code block will always execute, as this expression is always ``True``.  To compare a variable against two separate values, you need to do both comparisons individually, such as on the right of the table.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |

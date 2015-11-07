@@ -168,7 +168,7 @@ Examples::
 Operator precedence
 -------------------
 
-The following table summarizes the operator precedences in Python, from lowest precedence (least binding) to highest precedence (most binding). Operators in the same box have the same precedence.
+The following table summarizes the operator precedences in Python, from lowest precedence (least binding) to highest precedence (most binding). Operators in the same box have the same precedence - so they are evaluated from left to right.  If in doubt, use parentheses ``(`` ``)`` to force a particular order!
 
 ===================================================================================== ========================================================================
 Operator                                                                              Description
