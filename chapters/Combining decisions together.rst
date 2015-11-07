@@ -81,13 +81,13 @@ Without the use of the ``or`` operator, we would have to have written 3 ``if`` s
 Exercises
 ---------
 
-1. Write a program called largest.py to input three numbers, convert the inputs from strings to integers, and print out the largest.  Use the ``if`` and ``elif`` statements and the ``and`` operator to perform your tests.
+#. Write a program called largest.py to input three numbers, convert the inputs from strings to integers, and print out the largest.  Use the ``if`` and ``elif`` statements and the ``and`` operator to perform your tests.
 
-2. Write another program called car.py to ask the user the attributes of a car, such as color (e.g. ``'red'``, ``'green'`` or ``'blue'``), type (e.g. ``'van'``, ``'sports'``, ``'estate'``) and price.  The program should print out ``'I want that car'`` if the color is ``'red'``, the type is ``'sports'`` and the price is less than 10,000.
+#. Write another program called car.py to ask the user the attributes of a car, such as color (e.g. ``'red'``, ``'green'`` or ``'blue'``), type (e.g. ``'van'``, ``'sports'``, ``'estate'``) and price.  The program should print out ``'I want that car'`` if the color is ``'red'``, the type is ``'sports'`` and the price is less than 10,000.
 
 Things to remember
 ------------------
 
-1. There are three logical operators: ``and`` for testing whether the left and right-hand side tests are both true; ``or`` for testing whether either the left or right-hand side tests are true (or both); ``not`` for inverting a boolean value.
+#. There are three logical operators: ``and`` for testing whether the left and right-hand side tests are both true; ``or`` for testing whether either the left or right-hand side tests are true (or both); ``not`` for inverting a boolean value.
 
-2. Put the ``and`` and ``or`` operators in-between boolean expressions.  Put the ``not`` operator in front of a boolean expression.
+#. Put the ``and`` and ``or`` operators in-between boolean expressions.  Put the ``not`` operator in front of a boolean expression.

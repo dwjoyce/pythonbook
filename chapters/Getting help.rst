@@ -100,4 +100,4 @@ For further information and a guide on the language, please refer to *The Python
 Things to remember
 ------------------
 
-1. To get help, use the ``help()`` function in the interactive shell with the item on which your require further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.
+#. To get help, use the ``help()`` function in the interactive shell with the item on which your require further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.

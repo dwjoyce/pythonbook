@@ -101,17 +101,17 @@ You can name your variables with any combination of letters (UPPER and lowercase
 Exercises
 ---------
 
-1. Define a variable called ``age`` and set it to your age (use an integer number).
+#. Define a variable called ``age`` and set it to your age (use an integer number).
 
-2. Use your ``age`` variable to calculate how many days old you are (assume each year has 365 days).
+#. Use your ``age`` variable to calculate how many days old you are (assume each year has 365 days).
 
-3. Again, use your ``age`` variable to calculate in what year you will be 100 years old.  You will need to take the value of ``age`` from the present year, 2015, and then add on 100.
+#. Again, use your ``age`` variable to calculate in what year you will be 100 years old.  You will need to take the value of ``age`` from the present year, 2015, and then add on 100.
 
 Things to remember
 ------------------
 
-1. You define a variable by giving it a name, and using the assignment operator to give it a value.  The value can be evaluated (calculated) from other variables.
+#. You define a variable by giving it a name, and using the assignment operator to give it a value.  The value can be evaluated (calculated) from other variables.
 
-2. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.  To use the underscore character, you need to press the Shift key down whilst pressing the key to the right of the 0 (zero).
+#. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.  To use the underscore character, you need to press the Shift key down whilst pressing the key to the right of the 0 (zero).
 
-3. Use the ``_`` (underscore) character to divide up words in your variable names to make them more readable, e.g. ``first_num``.
+#. Use the ``_`` (underscore) character to divide up words in your variable names to make them more readable, e.g. ``first_num``.

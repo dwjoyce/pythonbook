@@ -101,17 +101,17 @@ Here is a list of turtle functions you may find useful: ``forward``, ``left``, `
 Exercises
 ---------
 
-1. Draw a hexagon - a six sided shape, where the angle of turn is 120 degrees (180 minus 60 degrees).
+#. Draw a hexagon - a six sided shape, where the angle of turn is 120 degrees (180 minus 60 degrees).
 
-2. Draw a star that has been filled in.  Hint: try turning 144 degrees and 72 degrees, alternatively, each time you draw a spike.
+#. Draw a star that has been filled in.  Hint: try turning 144 degrees and 72 degrees, alternatively, each time you draw a spike.
 
-3. Draw a house, complete with roof, windows and door.  You will need to use ``turtle.up`` and ``turtle.down`` to pick the pen up and put it down, respectfully, so that you do not draw a line everywhere.
+#. Draw a house, complete with roof, windows and door.  You will need to use ``turtle.up`` and ``turtle.down`` to pick the pen up and put it down, respectfully, so that you do not draw a line everywhere.
 
 Things to remember
 ------------------
 
-1. You can use another program by using the ``import`` command and the module's name (without the .py extension).
+#. You can use another program by using the ``import`` command and the module's name (without the .py extension).
 
-2. You cannot use variables or functions from a separate module until you have imported it.
+#. You cannot use variables or functions from a separate module until you have imported it.
 
-3. Use the ``.`` character to dip inside a module, with the module name first, and the variable or function from inside the module second.
+#. Use the ``.`` character to dip inside a module, with the module name first, and the variable or function from inside the module second.

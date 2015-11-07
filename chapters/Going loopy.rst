@@ -64,19 +64,19 @@ You can see we have reduced 12 lines to draw a hexagon, down to 5.  The great th
 Exercises
 ---------
 
-1. Write a program called hundred.py that prints out the numbers from 0 to 100, inclusive.
+#. Write a program called hundred.py that prints out the numbers from 0 to 100, inclusive.
 
-2. Modify your hundred.py program so that after counting up to a 100, it then counts down from 100 to 0, printing as it goes.
+#. Modify your hundred.py program so that after counting up to a 100, it then counts down from 100 to 0, printing as it goes.
 
-3. Modify your hundred.py program so that the loops count up or down in steps of 5, not 1.  Run it again to check that it works as expected.
+#. Modify your hundred.py program so that the loops count up or down in steps of 5, not 1.  Run it again to check that it works as expected.
 
-4. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides when turning the turtle to the left or right.
+#. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides when turning the turtle to the left or right.
 
 Things to remember
 ------------------
 
-1. Use the ``while`` keyword to repeat a block of code.
+#. Use the ``while`` keyword to repeat a block of code.
 
-2. The condition used after the ``while`` keyword is just like when using an ``if`` statement - a boolean expression.  It can use any of the arithmetic and logical operators.
+#. The condition used after the ``while`` keyword is just like when using an ``if`` statement - a boolean expression.  It can use any of the arithmetic and logical operators.
 
-3. The code block to be repeated can contain 1 or many lines of code.  It all depends on what you want to do.  It can even contain other loops nested within the outer loop.
+#. The code block to be repeated can contain 1 or many lines of code.  It all depends on what you want to do.  It can even contain other loops nested within the outer loop.

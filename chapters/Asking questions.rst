@@ -75,21 +75,21 @@ Now try entering fractional numbers, and it should handle them quite happily.
 Exercises
 ---------
 
-1. Ask the user's name.  Print it out a 100 times.
+#. Ask the user's name.  Print it out a 100 times.
 
-2. Ask the user's name and a number.  Print out the name that number of times.  You will need to convert the number string to an integer using the ``int`` function before repeating the name string.
+#. Ask the user's name and a number.  Print out the name that number of times.  You will need to convert the number string to an integer using the ``int`` function before repeating the name string.
 
-3. Expand on the sumup.py program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your sumup.py program we did earlier in this chapter.
+#. Expand on the sumup.py program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your sumup.py program we did earlier in this chapter.
 
-4. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out 10th; if the user entered 18, print out "18th".  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
+#. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out 10th; if the user entered 18, print out "18th".  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
 
 Things to remember
 ------------------
 
-1. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator to the left hand side of the call to input.  Moreover, you can optionally include a message (a string) to present to the user when the program pauses for input.
+#. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator to the left hand side of the call to input.  Moreover, you can optionally include a message (a string) to present to the user when the program pauses for input.
 
-2. To convert to an integer, use the ``int`` function.
+#. To convert to an integer, use the ``int`` function.
 
-3. To convert to a float, use the ``float`` function.
+#. To convert to a float, use the ``float`` function.
 
-4. To convert to a string, use the ``str`` function.
+#. To convert to a string, use the ``str`` function.

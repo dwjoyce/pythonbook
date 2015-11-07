@@ -109,10 +109,12 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             hlcode = hlcode.replace('€', '@texteuro[]')
             # must use original Verbatim environment and "tabular" environment
             coeff = 40# if self.definition else 40
-            viac = "\\def\FrameCommand{\\mycolorbox}\n\\setlength\\verbatimindentadjustcoefficient{" + str(coeff) + "pt}\n"
+            verbatim_mode = ""
+            viac = "\\setlength\\verbatimindentadjustcoefficient{" + str(coeff) + "pt}\n"
             if self.table:
+                verbatim_mode = "framed"
                 self.table.has_problematic = True
-                viac = "\\def\FrameCommand{\\mycolorboxdecol}\n\\setlength\\verbatimindentadjustcoefficient{0pt}\\vspace{1em}\n"
+                viac = "\\setlength\\verbatimindentadjustcoefficient{0pt}\n"
                 #self.table.has_verbatim = True
             # get consistent trailer
             hlcode = hlcode.rstrip() + '\n'
@@ -124,8 +126,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
                                     '\\hspace{\\charwidth}')
             hlcode = hlcode.strip("\n").replace('\n',
                                                 '~\\breaktext{{\PYG{c}{Cont...}}}{}\n')
-            viac += r"\def\Codecontinues{\tiny{Code continues from above...}}"
-            self.body.append('\n' + viac + r"\nonverbatim{" + hlcode + r"}")#\def\Codecontinues{}")
+            self.body.append('\n' + viac + r"\non" + verbatim_mode + "verbatim{" + hlcode + r"}")
             raise nodes.SkipNode
 
     def depart_table(self, node):

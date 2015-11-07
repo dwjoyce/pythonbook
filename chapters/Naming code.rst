@@ -137,19 +137,19 @@ In the next chapter, we will discuss not only passing data into a function, but 
 Exercises
 ---------
 
-1. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``operator``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
+#. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``operator``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
 
-2. Write a function called ``timestable`` which receives a number and prints out a times table with the specified number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two ``for`` loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to produce the result to display).  Again, put it in the same functions.py program.
+#. Write a function called ``timestable`` which receives a number and prints out a times table with the specified number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two ``for`` loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to produce the result to display).  Again, put it in the same functions.py program.
 
-3. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function each for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
+#. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function each for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
 
 Things to remember
 ------------------
 
-1. To define a new function, use the ``def`` keyword, followed by the name of the function, and then parentheses.
+#. To define a new function, use the ``def`` keyword, followed by the name of the function, and then parentheses.
 
-2. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.  This is the way of passing in data to affect how the function behaves - pass in different data, it should do different things.
+#. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.  This is the way of passing in data to affect how the function behaves - pass in different data, it should do different things.
 
-3. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any block of code, is indented to the right.
+#. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any block of code, is indented to the right.
 
-4. Defining a function does not mean it is used - it is simply available to be used, like a tool in a toolbox.  To call or invoke a function, you must use its name, followed by parentheses, but without the ``def`` keyword.
+#. Defining a function does not mean it is used - it is simply available to be used, like a tool in a toolbox.  To call or invoke a function, you must use its name, followed by parentheses, but without the ``def`` keyword.
