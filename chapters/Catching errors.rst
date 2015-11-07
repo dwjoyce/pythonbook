@@ -187,19 +187,19 @@ The errors that you can use to filter your errors are listed at the start - gene
 Exercises
 ---------
 
-1. Add ``try``-``except`` blocks to your programs from chapter 8, printing out "That was not a number" when the user types in a non-number.
+#. Add ``try``-``except`` blocks to your programs from chapter 8, printing out "That was not a number" when the user types in a non-number.
 
-2. Write a program that takes two numbers, and divides one by the other. Print out a message when it tries to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
+#. Write a program that takes two numbers, and divides one by the other. Print out a message when it tries to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
 
-3. Write a program called openfile.py which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
+#. Write a program called openfile.py which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
 
 Things to remember
 ------------------
 
-1. Use ``try``-``except`` blocks to catch exceptions.  Exceptions are errors or problems raised for the program to handle in a proper manner.
+#. Use ``try``-``except`` blocks to catch exceptions.  Exceptions are errors or problems raised for the program to handle in a proper manner.
 
-2. The code inside a ``try``-``except`` block is indented, like an ``if`` block.
+#. The code inside a ``try``-``except`` block is indented, like an ``if`` block.
 
-3. It is best to name an exception type, to avoid surprises.  You can find out what the exception type is by using the interactive shell to provoke the same error.
+#. It is best to name an exception type, to avoid surprises.  You can find out what the exception type is by using the interactive shell to provoke the same error.
 
-4. Syntax errors are when the program breaks the rules of the language.  :term:`Runtime errors` or :term:`logical errors` are problems in the operation of the program itself.
+#. Syntax errors are when the program breaks the rules of the language.  :term:`Runtime errors` or :term:`logical errors` are problems in the operation of the program itself.

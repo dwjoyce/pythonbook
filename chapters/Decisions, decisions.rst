@@ -125,16 +125,16 @@ As you can see, the ``if`` statement is tested first.  If the test evaluates to 
 Exercises
 ---------
 
-1. Modify your kiosk.py program you wrote for the previous chapter so that instead of using lots of ``if`` statements, you use one ``if`` statement, followed by a number of ``elif`` statement.  The ``else`` statement should be used to print out a message telling the user that he has not entered a valid choice.
+#. Modify your kiosk.py program you wrote for the previous chapter so that instead of using lots of ``if`` statements, you use one ``if`` statement, followed by a number of ``elif`` statement.  The ``else`` statement should be used to print out a message telling the user that he has not entered a valid choice.
 
-2. Write a program called move.py, and ask the user the form of transport, either a plane, car, bicycle or walking.  Depending on what they have entered, print out 'fast', 'quick', 'steady' or 'slow'.
+#. Write a program called move.py, and ask the user the form of transport, either a plane, car, bicycle or walking.  Depending on what they have entered, print out 'fast', 'quick', 'steady' or 'slow'.
 
-3. Write a program that uses the ``turtle`` module called shapes.py.  Ask the user what shape to draw, e.g. circle, square or star.  Depending on what the user has entered, draw the appropriate shape.  If the user didn't type in anything sensible, then print out an error message.
+#. Write a program that uses the ``turtle`` module called shapes.py.  Ask the user what shape to draw, e.g. circle, square or star.  Depending on what the user has entered, draw the appropriate shape.  If the user didn't type in anything sensible, then print out an error message.
 
 Things to remember
 ------------------
 
-1. Remember your comparison operators:
+#. Remember your comparison operators:
 
    ======================================  ========
    Name                                    Operator    
@@ -147,10 +147,10 @@ Things to remember
    Less than or equal to                   ``<=``
    ======================================  ========
    
-2. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
+#. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
 
-3. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated as true, then even if there are ``elif`` or ``else`` statements below, the program will skip them all.
+#. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated as true, then even if there are ``elif`` or ``else`` statements below, the program will skip them all.
 
-4. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated as true, then the first one is run, and the others are skipped.
+#. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated as true, then the first one is run, and the others are skipped.
 
-5. Finally, you can also optionally include an ``else`` statement, without any test, but with its own block of code to run.  This block of code is only run if the ``if`` and ``elif`` tests all fail (i.e. are all false).
+#. Finally, you can also optionally include an ``else`` statement, without any test, but with its own block of code to run.  This block of code is only run if the ``if`` and ``elif`` tests all fail (i.e. are all false).

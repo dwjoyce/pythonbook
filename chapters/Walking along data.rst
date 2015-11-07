@@ -280,21 +280,21 @@ One extra note - we use an index to rotate our colors, so it steps along the col
 Exercises
 ---------
 
-1. In the interactive shell, write a ``for`` loop that counts from 1000 to 2000 in steps of 50.
+#. In the interactive shell, write a ``for`` loop that counts from 1000 to 2000 in steps of 50.
 
-2. In the interactive shell, write a ``for`` loop that counts from 100 to 0 in steps of -5.
+#. In the interactive shell, write a ``for`` loop that counts from 100 to 0 in steps of -5.
 
-3. Write a program called sides.py which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in chapter 12, but this time the looping is different.
+#. Write a program called sides.py which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in chapter 12, but this time the looping is different.
 
-4. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
+#. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
-5. Write a program called bullseye.py which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red in the middle.  Try and centre your shape in the middle of the turtle window.
+#. Write a program called bullseye.py which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red in the middle.  Try and centre your shape in the middle of the turtle window.
 
 Things to remember
 ------------------
 
-1. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The ``for`` keyword can be read as *for each* if that makes its easier to understand.
+#. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The ``for`` keyword can be read as *for each* if that makes its easier to understand.
 
-2. Use the ``range`` function to provide a sequence of numbers to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
+#. Use the ``range`` function to provide a sequence of numbers to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
 
-3. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we learnt in chapter 13 on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.
+#. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we learnt in chapter 13 on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.

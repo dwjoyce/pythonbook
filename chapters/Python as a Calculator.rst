@@ -97,20 +97,20 @@ Resulting in 1.  Reading both answers together, we have got 2 remainder 1.
 Exercises
 ---------
 
-1. Type the Python line to work out 3 plus 5 divided by 2.
+#. Type the Python line to work out 3 plus 5 divided by 2.
 
-2. Type the Python line to work out 4 times 2 minus 7.
+#. Type the Python line to work out 4 times 2 minus 7.
 
-3. To convert from Celsius to Fahrenheit temperature, you multiply the Celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the Fahrenheit reading?
+#. To convert from Celsius to Fahrenheit temperature, you multiply the Celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the Fahrenheit reading?
 
-4. Type the Python line to work out 7 to the power of 6.
+#. Type the Python line to work out 7 to the power of 6.
 
-5. Type the Python lines to work out the quotient and remainder of 11 divided by 4.
+#. Type the Python lines to work out the quotient and remainder of 11 divided by 4.
 
 Things to remember
 ------------------
 
-1. Remember your arithmetic operators:
+#. Remember your arithmetic operators:
 
    ======================================  ========
    Name                                    Operator    
@@ -126,8 +126,8 @@ Things to remember
    
    See Appendix C for a full list of operators, over and above arithmetic.
 
-2. Use brackets to force Python to do a calculation in a particular order
+#. Use brackets to force Python to do a calculation in a particular order
 
-3. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
+#. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
 
-4. In programming, values are known as :term:`expressions`, potentially made up of values, operators and even other expressions that need to be evaluated to form a result.  They express a value.
+#. In programming, values are known as :term:`expressions`, potentially made up of values, operators and even other expressions that need to be evaluated to form a result.  They express a value.

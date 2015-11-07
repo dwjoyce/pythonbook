@@ -71,17 +71,17 @@ Notice how creating the variable of ``total`` with a value of 0 is outside of th
 Exercises
 ---------
 
-1. Change your adding.py so that the user types 'quit' instead of 'stop' to break out of the loop.
+#. Change your adding.py so that the user types 'quit' instead of 'stop' to break out of the loop.
 
-2. Write a program called words.py which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
+#. Write a program called words.py which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
 
-3. Modify your polygon.py program from the previous chapter so that it keeps drawing polygons, one on top of the other, until the user types 'stop'.  Each time it will ask the user how  many sides to draw, just as before.
+#. Modify your polygon.py program from the previous chapter so that it keeps drawing polygons, one on top of the other, until the user types 'stop'.  Each time it will ask the user how  many sides to draw, just as before.
 
 Things to remember
 ------------------
 
-1. Use the value of ``True`` as the expression - or test - for the ``while`` loop to make it go on indefinitely, i.e. an infinite loop.
+#. Use the value of ``True`` as the expression - or test - for the ``while`` loop to make it go on indefinitely, i.e. an infinite loop.
 
-2. Use the keyword ``break`` to break out of the present loop.  If one loop is nested inside another and the break resides in the inner loop, it only breaks out of the inner loop, not the outer one as well.
+#. Use the keyword ``break`` to break out of the present loop.  If one loop is nested inside another and the break resides in the inner loop, it only breaks out of the inner loop, not the outer one as well.
 
-3. The ``while`` loop is best used for this kind of looping - when you do not know when to stop until you have reached the end.  In chapter 17, we will introduce another kind of loop which is better for looping a set number of times.
+#. The ``while`` loop is best used for this kind of looping - when you do not know when to stop until you have reached the end.  In chapter 17, we will introduce another kind of loop which is better for looping a set number of times.

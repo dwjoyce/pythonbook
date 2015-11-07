@@ -154,23 +154,23 @@ Functions are also variables, so you can assign functions to new variables::
 Exercises
 ---------
 
-1. Use ``abs`` to find the absolute value of ``-35.5``.
+#. Use ``abs`` to find the absolute value of ``-35.5``.
 
-2. Use ``round`` to round ``-22.8364926`` to ``4`` decimal places.
+#. Use ``round`` to round ``-22.8364926`` to ``4`` decimal places.
 
-3. Use both ``round`` and ``abs`` to find the absolute value of ``-7495.184758`` to ``2`` decimal places.
+#. Use both ``round`` and ``abs`` to find the absolute value of ``-7495.184758`` to ``2`` decimal places.
 
-4. Use ``max`` and ``min`` to find the smallest and largest number from ``7``, ``-8``, ``4``, ``-12`` and ``1``.
+#. Use ``max`` and ``min`` to find the smallest and largest number from ``7``, ``-8``, ``4``, ``-12`` and ``1``.
 
 Things to remember
 ------------------
 
-1. Functions are called with arguments to give a return value.
+#. Functions are called with arguments to give a return value.
 
-2. To call a function ``func`` with no arguments do ``func()``.
+#. To call a function ``func`` with no arguments do ``func()``.
 
-3. To call a function ``func`` with an argument ``arg`` do ``func(arg)``.
+#. To call a function ``func`` with an argument ``arg`` do ``func(arg)``.
 
-4. To call a function ``func`` with more than one argument, separate the arguments by commas: ``func(arg1, arg2, arg3, etc)``.
+#. To call a function ``func`` with more than one argument, separate the arguments by commas: ``func(arg1, arg2, arg3, etc)``.
 
-5. Function return values can be assigned to variables, and variables and return values can be used as arguments.
+#. Function return values can be assigned to variables, and variables and return values can be used as arguments.

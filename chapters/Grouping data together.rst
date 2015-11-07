@@ -191,19 +191,19 @@ Now try our your program again.  It should behave itself whatever the user types
 Exercises
 ---------
 
-1. Modify your rps.py program so that it prints out what the choices were, particularly the computer choice.  It is nice for the user to know how they won or lost a game!
+#. Modify your rps.py program so that it prints out what the choices were, particularly the computer choice.  It is nice for the user to know how they won or lost a game!
 
-2. Write a program called sizes.py to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could defined your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
+#. Write a program called sizes.py to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could defined your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
 
 Things to remember
 ------------------
 
-1. To group a number of items together we box them together using square brackets, with an opening bracket ``[`` at the beginning, and a closing bracket ``]`` at the end.
+#. To group a number of items together we box them together using square brackets, with an opening bracket ``[`` at the beginning, and a closing bracket ``]`` at the end.
 
-2. Separate each item within the list using a comma.
+#. Separate each item within the list using a comma.
 
-3. Use the ``in`` operator to test whether a value is contained by the list.
+#. Use the ``in`` operator to test whether a value is contained by the list.
 
-4. Use the ``choice`` function from the ``random`` module to select one item, chosen in a random fashion, from a list of possible items.
+#. Use the ``choice`` function from the ``random`` module to select one item, chosen in a random fashion, from a list of possible items.
 
-5. We now know five types of data - integers, floats, strings, booleans and lists.  Lists can contain any of the other types of data, including sub-lists!
+#. We now know five types of data - integers, floats, strings, booleans and lists.  Lists can contain any of the other types of data, including sub-lists!

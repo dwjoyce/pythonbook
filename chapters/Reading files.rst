@@ -202,21 +202,21 @@ Exercises
 
 For these exercises, you will need to copy the text file ``mission.txt`` from the home directory on the Raspberry Pi (``/home/pi/mission.txt``) to the same location as your programs on your USB stick (e.g. ``/home/pi/USB_STICKS/USB Disk``).
 
-1. Open and print out the contents of the mission.txt file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
+#. Open and print out the contents of the mission.txt file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
 
-2. Open and print out the length of each line in the mission.txt file.
+#. Open and print out the length of each line in the mission.txt file.
 
-3. Open and step through each line of the mission.txt file.  Once done, print out the average word length - you will need to keep a running total of all the word lengths, plus how many words there were in order to print out the average.
+#. Open and step through each line of the mission.txt file.  Once done, print out the average word length - you will need to keep a running total of all the word lengths, plus how many words there were in order to print out the average.
 
 Things to remember
 ------------------
 
-1. Use the built-in ``open`` function to open files.
+#. Use the built-in ``open`` function to open files.
 
-2. Use ``read`` function on the file variable to get the contents of the file.
+#. Use ``read`` function on the file variable to get the contents of the file.
 
-3. Use a ``for`` loop to iterate over the file, getting each line in turn.  This is the best way to step over the contents of a file, one line at a time.
+#. Use a ``for`` loop to iterate over the file, getting each line in turn.  This is the best way to step over the contents of a file, one line at a time.
 
-4. Use the ``readlines`` function on the file variable to get a list of lines.
+#. Use the ``readlines`` function on the file variable to get a list of lines.
 
-5. When you ``read`` a file, you need to move back to the start by re-opening the file, or using ``seek``.
+#. When you ``read`` a file, you need to move back to the start by re-opening the file, or using ``seek``.

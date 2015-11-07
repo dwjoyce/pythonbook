@@ -112,27 +112,27 @@ The first one breaks the line with a new line character (``\n``), the second spa
 Exercises
 ---------
 
-1. Assign 5 variables to various numbers, and print them out, along with the sum.
+#. Assign 5 variables to various numbers, and print them out, along with the sum.
 
-2. Print out the year of your birth, your age, and your age in 10 years time.
+#. Print out the year of your birth, your age, and your age in 10 years time.
 
-3. Print out the same as number 2, but with strings of text indicating what number is what, e.g. I was born in: 1999 my age: 16 in 10 years: 26
+#. Print out the same as number 2, but with strings of text indicating what number is what, e.g. I was born in: 1999 my age: 16 in 10 years: 26
 
-4. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space in-between each item.
+#. Print out your name a hundred times, with a tab (using the code ``\t``) to introduce space in-between each item.
 
-5. You can use strings to describe colors when drawing with ``turtle``, for example, ``'black'``, ``'white'``, ``'red'``, ``'green'``, ``'blue'``, ``'cyan'``, ``'magenta'``, ``'yellow'``, etc. Two turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call ``turtle.pencolor('red')`` before you start drawing, or ``turtle.fillcolor('yellow')`` before drawing a shape.  Write a program that draws a number of circles with different pen and fill colors.
+#. You can use strings to describe colors when drawing with ``turtle``, for example, ``'black'``, ``'white'``, ``'red'``, ``'green'``, ``'blue'``, ``'cyan'``, ``'magenta'``, ``'yellow'``, etc. Two turtle functions in particular can be called; the first called ``pencolor`` (note the American spelling of color), and the second called ``fillcolor``.  So for example, you can call ``turtle.pencolor('red')`` before you start drawing, or ``turtle.fillcolor('yellow')`` before drawing a shape.  Write a program that draws a number of circles with different pen and fill colors.
 
 Things to remember
 ------------------
 
-1. Use the ``print`` function to display or output any expression onto the screen.
+#. Use the ``print`` function to display or output any expression onto the screen.
 
-2. Separate the items to print using a comma.
+#. Separate the items to print using a comma.
 
-3. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. ``'fred'``) or double quotes (e.g. ``"fred"``).
+#. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. ``'fred'``) or double quotes (e.g. ``"fred"``).
 
-4. The only arithmetic operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (repetition).
+#. The only arithmetic operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (repetition).
 
-5. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
+#. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
 
-6. We have now covered three types of data: integers, floats and strings.
+#. We have now covered three types of data: integers, floats and strings.

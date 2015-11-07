@@ -118,13 +118,13 @@ You could enclose the ``print`` at the end with a test to only display it if the
 Exercises
 ---------
 
-1. Modify your guess.py program so that after testing whether the ``user_guess`` variable is equal to the computer's number ``number_to_guess``, the program will then test whether the user's number is less than the computer's number and print an appropriate message (e.g. 'Too low!'), and also if the user's number is larger than the computer's number, then print out another message (e.g. 'Too high!').  This will give the user a hint as to which direction to head in!
+#. Modify your guess.py program so that after testing whether the ``user_guess`` variable is equal to the computer's number ``number_to_guess``, the program will then test whether the user's number is less than the computer's number and print an appropriate message (e.g. 'Too low!'), and also if the user's number is larger than the computer's number, then print out another message (e.g. 'Too high!').  This will give the user a hint as to which direction to head in!
 
-2. Write a program called poly.py to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, an octagon is drawn.
+#. Write a program called poly.py to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, an octagon is drawn.
 
 Things to remember
 ------------------
 
-1. To add variation, or a bit of randomness, into your program, then ``import`` the ``random`` module, and make use of what it offers.
+#. To add variation, or a bit of randomness, into your program, then ``import`` the ``random`` module, and make use of what it offers.
 
-2. Two functions we used in this chapter are the ``random`` function (note: it has the same name as the module), which returns a floating point number between 0.0 and 1.0, and ``randrange`` which returns an integer number between 0 (or the starting point you provide) and up to (but not including) the end point.
+#. Two functions we used in this chapter are the ``random`` function (note: it has the same name as the module), which returns a floating point number between 0.0 and 1.0, and ``randrange`` which returns an integer number between 0 (or the starting point you provide) and up to (but not including) the end point.

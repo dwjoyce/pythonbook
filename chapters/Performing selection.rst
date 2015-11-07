@@ -94,22 +94,22 @@ You finish with the ``print`` statement as usual.  Now run your program again - 
 Exercises
 ---------
 
-1. Modify your vip.py program so that the question, test and price increase for weekend seats occurs for both ordinary and VIP seats (i.e. move this part of the code outside the VIP block, and ensure the indentation is the same as the rest of the program).
+#. Modify your vip.py program so that the question, test and price increase for weekend seats occurs for both ordinary and VIP seats (i.e. move this part of the code outside the VIP block, and ensure the indentation is the same as the rest of the program).
 
-2. Write a program called kiosk.py which prints out a menu of snacks to buy, e.g. Mars bar for 50p, Kitkat for 40p, Galaxy for 55p, Haribo for 30p (even better: make up your own items).  Ask the user to type in a choice (it could even be "1", "2", "3", etc.), and print out the correct price for the item chosen.
+#. Write a program called kiosk.py which prints out a menu of snacks to buy, e.g. Mars bar for 50p, Kitkat for 40p, Galaxy for 55p, Haribo for 30p (even better: make up your own items).  Ask the user to type in a choice (it could even be "1", "2", "3", etc.), and print out the correct price for the item chosen.
 
-3. Write a program called weather.py which asks whether it is sunny or rainy or cloudy.  If the user types in "sunny", then tell the user to bring some sun cream.  If the user typed in "rainy", then tell the user to bring his umbrella.  If the user typed in "cloudy", then tell the user to bring his jumper.  Otherwise, just ignore the response.
+#. Write a program called weather.py which asks whether it is sunny or rainy or cloudy.  If the user types in "sunny", then tell the user to bring some sun cream.  If the user typed in "rainy", then tell the user to bring his umbrella.  If the user typed in "cloudy", then tell the user to bring his jumper.  Otherwise, just ignore the response.
 
 
 Things to remember
 ------------------
 
-1. Use the ``if`` statement to perform selection.  It is given an expression to evaluate, and if true, it will then execute the statements below the ``if`` statement.
+#. Use the ``if`` statement to perform selection.  It is given an expression to evaluate, and if true, it will then execute the statements below the ``if`` statement.
 
-2. Put a colon ``:`` at the end of the line containing the ``if``.
+#. Put a colon ``:`` at the end of the line containing the ``if``.
 
-3. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to which test.
+#. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to which test.
 
-4. To resume the program regardless of whether the test for the ``if`` statement was successful or not, then you should unindent your code (push it back to the left by 4 spaces).
+#. To resume the program regardless of whether the test for the ``if`` statement was successful or not, then you should unindent your code (push it back to the left by 4 spaces).
 
-5. Use the double equals operator ``==`` to test whether the left-hand side of the expression is equal to the right-hand side.  Do not use the assignment operator ``=`` for this!
+#. Use the double equals operator ``==`` to test whether the left-hand side of the expression is equal to the right-hand side.  Do not use the assignment operator ``=`` for this!

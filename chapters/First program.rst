@@ -132,12 +132,12 @@ Effectively, Python ignores everything after the ``#`` symbol - up until the end
 Things to remember
 ------------------
 
-1. To start a new program, click on the ``File`` menu and click on ``New File``.  This opens up a new window ready for your program to be typed in.  The shortcut for this is to hold the ``Ctrl`` key down and hit the ``N`` key.
+#. To start a new program, click on the ``File`` menu and click on ``New File``.  This opens up a new window ready for your program to be typed in.  The shortcut for this is to hold the ``Ctrl`` key down and hit the ``N`` key.
 
-2. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
+#. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
-3. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted (inserted) it will appear in the ``USB_STICKS`` folder in your home directory.
+#. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted (inserted) it will appear in the ``USB_STICKS`` folder in your home directory.
 
-4. Give your Python programs a :term:`.py` postfix.  Avoid including spaces in your program name.
+#. Give your Python programs a :term:`.py` postfix.  Avoid including spaces in your program name.
 
-5. Comments, or annotations intended for other people to read, are denoted with hash ``#`` symbol.
+#. Comments, or annotations intended for other people to read, are denoted with hash ``#`` symbol.

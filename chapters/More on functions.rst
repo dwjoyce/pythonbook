@@ -204,19 +204,19 @@ To conclude our two chapters on functions, we briefly describe the four general 
 Exercises
 ---------
 
-1. Write a function called ``add_list`` in your functions.py program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
+#. Write a function called ``add_list`` in your functions.py program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
 
-2. Write a function called product in your functions.py program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, ``product``, along with the function ``sum_up`` we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: ``(4 * 5) + (6 * 7)``.
+#. Write a function called product in your functions.py program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, ``product``, along with the function ``sum_up`` we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: ``(4 * 5) + (6 * 7)``.
 
-3. Write a function called prime in your functions.py program, which accepts a single number and returns ``True`` (a boolean value) if it is a prime number or ``False`` if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
+#. Write a function called prime in your functions.py program, which accepts a single number and returns ``True`` (a boolean value) if it is a prime number or ``False`` if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
 
 Things to remember
 ------------------
 
-1. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the return statement.
+#. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the return statement.
 
-2. Even functions without the ``return`` statement return a value - the value ``None``.  It is like a non or null value, similar to zero but not actually an integer number.
+#. Even functions without the ``return`` statement return a value - the value ``None``.  It is like a non or null value, similar to zero but not actually an integer number.
 
-3. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
+#. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
 
-4. There are two ways of passing in arguments with functions.  Firstly, by *position*, so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword*, so you can specify the name of the parameter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.
+#. There are two ways of passing in arguments with functions.  Firstly, by *position*, so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword*, so you can specify the name of the parameter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.
