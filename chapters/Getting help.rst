@@ -95,7 +95,7 @@ To delve deeper, we can find out more information on functions inside these othe
     
 .. note:: You must import the module before you can get help on its contents.  Otherwise Python does not know what is inside it.
 
-For further information and a guide on the language, please refer to *The Python Tutorial* at ``Computing/Python 3.4.2 docs/tutorial/index.html``, which includes many more examples and covers more language features than we will be doing in this guide!
+For further information and a guide on the language, please refer to *The Python Tutorial* at :file:`Computing/Python 3.4.2 docs/tutorial/index.html`, which includes many more examples and covers more language features than we will be doing in this guide!
 
 Things to remember
 ------------------

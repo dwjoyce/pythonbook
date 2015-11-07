@@ -282,4 +282,4 @@ Glossary
     .. Zen
 
 
-Some definitions taken from en.wiktionary.org and python.org.
+Some definitions taken from :url:`https://en.wiktionary.org` and :url:`https://www.python.org/`.

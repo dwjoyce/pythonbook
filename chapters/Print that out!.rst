@@ -20,7 +20,7 @@ To see this, open up a new file (click on the *File* menu and select *New File*)
 
 This is just the same code as we did in Chapter 2 when working with variables for the first time.  However, back then, we typed in each individual line in the interactive shell, and it gave an answer every time if there was one.
 
-What happens now, given that it is living in its own program?  Try it and see - press the ``F5`` key, click ``OK`` to save it and give it the name sum.py.  Remember, the ".py" postfix stands for Python.  Moreover, save all your programs onto your USB stick.
+What happens now, given that it is living in its own program?  Try it and see - press the ``F5`` key, click ``OK`` to save it and give it the name :file:`sum.py`.  Remember, the :file:`.py` postfix stands for Python.  Moreover, save all your programs onto your USB stick.
 
 When the program runs in the run window (the same as the interactive shell), what does it display onto the screen?  Does it give 30 as expected?  No, it does not!
 
@@ -67,7 +67,7 @@ Open up a new file (click on the ``File`` menu and select ``New File``), and typ
   print("I love Python")
   print('This is fun!')
   
-Save this file as lines.py (press the ``F5`` button, press Return to confirm and save it onto your USB stick), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
+Save this file as :file:`lines.py` (press the ``F5`` button, press Return to confirm and save it onto your USB stick), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
 
 These pieces of text in Python are called :term:`strings`.  Think of them as strings of characters, made up of either letters from the alphabet, numerical digits or symbols.  This includes almost any key from your keyboard, and more besides.  Similar to a string or chain of pearls, a string in programming is a sequence of characters.  To illustrate, whilst with an integer number (shown below on the left) is stored as a whole number (with the 1s, 10s, 100s, etc., all in their correct places), strings (shown on the right) are simply a sequence of characters, where digits are treated the same as letters and symbols:
 
@@ -77,7 +77,7 @@ These pieces of text in Python are called :term:`strings`.  Think of them as str
 
 We now know three types of data - integers, floats and strings.
 
-Modify your lines.py program to include strings and integers together, below the lines you added previously::
+Modify your :file:`lines.py` program to include strings and integers together, below the lines you added previously::
 
   print("1 plus 2 equals:", 1 + 2)
   print("I am", 18, "years old")
@@ -92,7 +92,7 @@ We can even have a bit of fun, and join and replicate strings like so::
 
 Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called :term:`string concatenation`.  The multiplication operation ``*`` is used to repeat the string however many times you specify - 10 times in this example.
 
-Variables can also be assigned to strings.  Add the following onto your program, lines.py::
+Variables can also be assigned to strings.  Add the following onto your program, :file:`lines.py`::
 
   name = 'Fred'
   occupation = 'Farmer'

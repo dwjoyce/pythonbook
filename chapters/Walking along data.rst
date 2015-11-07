@@ -147,7 +147,7 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
     
     turtle.end_fill()
 
-Save it as redoctagon.py, and run it.  Not surprisingly, it should draw a red octagon.
+Save it as :file:`redoctagon.py`, and run it.  Not surprisingly, it should draw a red octagon.
 
 A bit of explanation: we import the turtle module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
 
@@ -181,7 +181,7 @@ Open up another new file window, and type in the following::
         turtle.right(91)
         length = length + 2
 
-Run and save it as spirals.py, and see what happens.  If there any problems, then check your code carefully!
+Run and save it as :file:`spirals.py`, and see what happens.  If there any problems, then check your code carefully!
 
 Some explanation: we import the modules we need, turtle for drawing, random to introduce a bit of variation.  We then define the colors (note, English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, change the drawing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 times in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
 
@@ -267,7 +267,7 @@ Now to do something longer and more colorful, start a new program and type in th
             # Increment our index, so the colors are rotated
             color_index = color_index + 1
 
-Run it, naming it triangles.py, and see what happens.  Much of what we have typed in is similar to the spirals.py program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is ``True``, which never changes to ``False``.  Inside this loop, we draw 6 triangles, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
+Run it, naming it :file:`triangles.py`, and see what happens.  Much of what we have typed in is similar to the :file:`spirals.py` program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is ``True``, which never changes to ``False``.  Inside this loop, we draw 6 triangles, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
 
 Your turtle window should show something like this being drawn:
 
@@ -284,11 +284,11 @@ Exercises
 
 #. In the interactive shell, write a ``for`` loop that counts from 100 to 0 in steps of -5.
 
-#. Write a program called sides.py which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in chapter 12, but this time the looping is different.
+#. Write a program called :file:`sides.py` which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in chapter 12, but this time the looping is different.
 
-#. Write a program called brekkie.py which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
+#. Write a program called :file:`brekkie.py` which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
-#. Write a program called bullseye.py which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red in the middle.  Try and centre your shape in the middle of the turtle window.
+#. Write a program called :file:`bullseye.py` which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red in the middle.  Try and centre your shape in the middle of the turtle window.
 
 Things to remember
 ------------------

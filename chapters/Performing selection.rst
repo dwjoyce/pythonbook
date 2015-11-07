@@ -19,7 +19,7 @@ To achieve this in Python, we use the ``if`` statement.  We start with the word 
 
 .. note:: Statements that belong to an ``if`` statement must be pushed to the right in order to show what code belongs to what line.  In programming, this is called :term:`indentation`.  In Python, we indent by four spaces.  When the code block is finished, we unindent back to the column of the initial line.
 
-Let us start a new program called vip.py - click on the ``File`` -> ``New File`` menu item, and type in the following::
+Let us start a new program called :file:`vip.py` - click on the ``File`` -> ``New File`` menu item, and type in the following::
 
     print('Welcome to our VIP program for calculating cinema ticket prices')
     print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIPs')
@@ -53,7 +53,7 @@ We can now finish our program, so add the last line on the end so that your comp
 
 See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our :term:`code block` attached to the ``if`` statement is over, and we now carry on as usual.
 
-Now save and run your program using the ``F5`` key, pressing Return, and using the program name of vip.py.  Remember, to save your program onto your USB stick.
+Now save and run your program using the ``F5`` key, pressing Return, and using the program name of :file:`vip.py`.  Remember, to save your program onto your USB stick.
 
 You will have to run your program twice.  Initially, input *yes* as the answer to the question, and secondly, input *no* (or vice versa).  You should get different results depending on what you enter on the keyboard - either a price of £6 or £5.  Be careful what you type - if you do not type *yes* exactly, then the test will fail, and the indented statement will not be executed.
 
@@ -89,16 +89,16 @@ You can add another block of code that is selectively executed after the ``if`` 
     if popcorn == 'yes':
         price = price + 1.25
 
-You finish with the ``print`` statement as usual.  Now run your program again - there are now six routes or paths through your vip.py program - firstly, whether the seat chosen is VIP or not, and within this, whether it is weekend or not, and finally whether popcorn was purchased.  That is 3 possibilities, multiplied by two ways for each (either yes or no), to reach our six paths in the program.  See if you can run the vip.py program, with all of these possibilities tried out.
+You finish with the ``print`` statement as usual.  Now run your program again - there are now six routes or paths through your :file:`vip.py` program - firstly, whether the seat chosen is VIP or not, and within this, whether it is weekend or not, and finally whether popcorn was purchased.  That is 3 possibilities, multiplied by two ways for each (either yes or no), to reach our six paths in the program.  See if you can run the :file:`vip.py` program, with all of these possibilities tried out.
 
 Exercises
 ---------
 
-#. Modify your vip.py program so that the question, test and price increase for weekend seats occurs for both ordinary and VIP seats (i.e. move this part of the code outside the VIP block, and ensure the indentation is the same as the rest of the program).
+#. Modify your :file:`vip.py` program so that the question, test and price increase for weekend seats occurs for both ordinary and VIP seats (i.e. move this part of the code outside the VIP block, and ensure the indentation is the same as the rest of the program).
 
-#. Write a program called kiosk.py which prints out a menu of snacks to buy, e.g. Mars bar for 50p, Kitkat for 40p, Galaxy for 55p, Haribo for 30p (even better: make up your own items).  Ask the user to type in a choice (it could even be "1", "2", "3", etc.), and print out the correct price for the item chosen.
+#. Write a program called :file:`kiosk.py` which prints out a menu of snacks to buy, e.g. Mars bar for 50p, Kitkat for 40p, Galaxy for 55p, Haribo for 30p (even better: make up your own items).  Ask the user to type in a choice (it could even be "1", "2", "3", etc.), and print out the correct price for the item chosen.
 
-#. Write a program called weather.py which asks whether it is sunny or rainy or cloudy.  If the user types in "sunny", then tell the user to bring some sun cream.  If the user typed in "rainy", then tell the user to bring his umbrella.  If the user typed in "cloudy", then tell the user to bring his jumper.  Otherwise, just ignore the response.
+#. Write a program called :file:`weather.py` which asks whether it is sunny or rainy or cloudy.  If the user types in "sunny", then tell the user to bring some sun cream.  If the user typed in "rainy", then tell the user to bring his umbrella.  If the user typed in "cloudy", then tell the user to bring his jumper.  Otherwise, just ignore the response.
 
 
 Things to remember

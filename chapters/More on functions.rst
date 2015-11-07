@@ -27,7 +27,7 @@ How do we do this in our own functions?
 Please talk to me
 -----------------
 
-Open up your functions.py program, and add the following function between your functions and the code calling them::
+Open up your :file:`functions.py` program, and add the following function between your functions and the code calling them::
     
     def add_5(num):
         return num + 5
@@ -53,7 +53,7 @@ The third use of the ``add_5`` function is similar to the second use, but instea
 Forming a chain
 ---------------
 
-With the use of the ``return`` keyword to send data back, you can effectively form a chain of functions just like we have done with the built-in ones at the beginning of the chapter.  Type this into your functions.py program, under your other function definitions::
+With the use of the ``return`` keyword to send data back, you can effectively form a chain of functions just like we have done with the built-in ones at the beginning of the chapter.  Type this into your :file:`functions.py` program, under your other function definitions::
 
     def sum_up(num1, num2):
         return num1 + num2
@@ -74,7 +74,7 @@ This could go on and on!  You are effectively forming an expression in the shape
 Naming parameters
 -----------------
 
-So far we pass arguments into functions, used inside the function as parameters, to feed data into the function.  We generally do the following, which you should now type into your ever increasing functions.py program::
+So far we pass arguments into functions, used inside the function as parameters, to feed data into the function.  We generally do the following, which you should now type into your ever increasing :file:`functions.py` program::
 
     def box_volume(length, height, width):
         return length * height * width
@@ -133,7 +133,7 @@ We will write a little turtle based program to demonstrate some of the concepts 
                     red=random.random(), green=random.random(),
                     blue=random.random())
 
-Run your program, saving it as *circles.py*, and make sure it runs without errors.  You should be getting lots of randomly colored and sized circles on the screen, similar to the following:
+Run your program, saving it as :file:`circles.py`, and make sure it runs without errors.  You should be getting lots of randomly colored and sized circles on the screen, similar to the following:
 
 .. image:: /images/screenshots/randomcircles.png
     :width: 250pt
@@ -204,11 +204,11 @@ To conclude our two chapters on functions, we briefly describe the four general 
 Exercises
 ---------
 
-#. Write a function called ``add_list`` in your functions.py program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
+#. Write a function called ``add_list`` in your :file:`functions.py` program, which accepts a list comprising of a list of integers.  The function will step through the list, and return the sum.  The sum should then be printed out.
 
-#. Write a function called product in your functions.py program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, ``product``, along with the function ``sum_up`` we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: ``(4 * 5) + (6 * 7)``.
+#. Write a function called product in your :file:`functions.py` program, which accepts two numbers.  The function returns the product of these numbers (i.e. the numbers multiplied together).  Then call this function, ``product``, along with the function ``sum_up`` we wrote earlier, to form a tree-like expression.  Print out the result.  For example, use your functions to imitate this arithmetic expression: ``(4 * 5) + (6 * 7)``.
 
-#. Write a function called prime in your functions.py program, which accepts a single number and returns ``True`` (a boolean value) if it is a prime number or ``False`` if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
+#. Write a function called prime in your :file:`functions.py` program, which accepts a single number and returns ``True`` (a boolean value) if it is a prime number or ``False`` if not.  Remember, 0 and 1 are not prime, 2 is prime, and for the other numbers, a prime number is one that is only divisible by itself and 1.
 
 Things to remember
 ------------------

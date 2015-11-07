@@ -19,7 +19,7 @@ Begin by creating a new program (``File`` -> ``New File``), and type the followi
     name = input('What is your name? ')
     print('Hello there', name)
     
-Press ``F5`` to run your program, and give it the name hello.py.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the ``Return`` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
+Press ``F5`` to run your program, and give it the name :file:`hello.py`.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the ``Return`` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
 
 Note that we are using a message (a string value) when calling the ``input`` function - this is the message that is presented to the user when you are asking for input.  This is not essential - you could miss it out, but then the user may not know they are expected to type something.  It is best to present the message, so they know what to do next.
 
@@ -40,7 +40,7 @@ To convert from a string to a floating point number, you use the ``float`` funct
 
 To convert back from a number (whether integer or float) into a string, you use the ``str`` function.  So for example, ``str(123)`` would return ``"123"``, and ``str(123.0)`` would return ``"123.0"``.
 
-To practice, start a new program called sumup.py, and type in the following into your new window::
+To practice, start a new program called :file:`sumup.py`, and type in the following into your new window::
 
     first_num_str = input('First number: ')
     second_num_str = input('Second number: ')
@@ -52,7 +52,7 @@ To practice, start a new program called sumup.py, and type in the following into
     
     print('The sum of those two numbers is', total)
 
-Press ``F5`` to run it, confirm to save, and name your program sumup.py.  Careful when entering those numbers - they must be integers, otherwise converting from a string to an integer in the program will not work!
+Press ``F5`` to run it, confirm to save, and name your program :file:`sumup.py`.  Careful when entering those numbers - they must be integers, otherwise converting from a string to an integer in the program will not work!
 
 To explain what is going on, we first input what the user has typed in, and save it in a variable called ``first_num_str``.  We do the same again for ``second_num_str``.  We then convert this input from a string value to an integer value so that we can perform a proper numerical addition operation.  We do this addition with the line where we assign a new variable called ``total`` to ``first_num`` added onto ``second_num``.  We finish by printing out a message, printing the value of total alongside.
 
@@ -79,7 +79,7 @@ Exercises
 
 #. Ask the user's name and a number.  Print out the name that number of times.  You will need to convert the number string to an integer using the ``int`` function before repeating the name string.
 
-#. Expand on the sumup.py program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your sumup.py program we did earlier in this chapter.
+#. Expand on the :file:`sumup.py` program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your :file:`sumup.py` program we did earlier in this chapter.
 
 #. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out 10th; if the user entered 18, print out "18th".  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
 

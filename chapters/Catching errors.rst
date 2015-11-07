@@ -191,7 +191,7 @@ Exercises
 
 #. Write a program that takes two numbers, and divides one by the other. Print out a message when it tries to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
 
-#. Write a program called openfile.py which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
+#. Write a program called :file:`openfile.py` which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
 
 Things to remember
 ------------------

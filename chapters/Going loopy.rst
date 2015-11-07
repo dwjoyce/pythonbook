@@ -32,7 +32,7 @@ With what we have learned up until now, we would do the following.  So open a ne
     turtle.forward(100)
     turtle.left(60)
 
-Run it - calling the program hexagon.py - and check that it draws a hexagon in the turtle window.  Don't forget to make that call of the Turtle function with an initial capital letter!
+Run it - calling the program :file:`hexagon.py` - and check that it draws a hexagon in the turtle window.  Don't forget to make that call of the ``Turtle`` function with an initial capital letter!
 
 This program is 14 lines long (not including the blank lines), with 12 of those lines just to draw the hexagon.  Not a great return!
 
@@ -64,11 +64,11 @@ You can see we have reduced 12 lines to draw a hexagon, down to 5.  The great th
 Exercises
 ---------
 
-#. Write a program called hundred.py that prints out the numbers from 0 to 100, inclusive.
+#. Write a program called :file:`hundred.py` that prints out the numbers from 0 to 100, inclusive.
 
-#. Modify your hundred.py program so that after counting up to a 100, it then counts down from 100 to 0, printing as it goes.
+#. Modify your :file:`hundred.py` program so that after counting up to a 100, it then counts down from 100 to 0, printing as it goes.
 
-#. Modify your hundred.py program so that the loops count up or down in steps of 5, not 1.  Run it again to check that it works as expected.
+#. Modify your :file:`hundred.py` program so that the loops count up or down in steps of 5, not 1.  Run it again to check that it works as expected.
 
 #. Write a program using the ``turtle`` module that asks the user how many sides to draw, converts it into an integer, and then uses turtle to draw a shape with that number of sides.  You will have to work out the angle by dividing 360 degrees by the number of sides when turning the turtle to the left or right.
 

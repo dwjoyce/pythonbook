@@ -23,11 +23,11 @@ To see this in action, start a new file window and type in the following:
     while True:
         print('Help, I\'m stuck in a loop!')
         
-Save it as adder.py, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the ``Ctrl`` and ``C`` keys together - this breaks out of the loop.
+Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the ``Ctrl`` and ``C`` keys together - this breaks out of the loop.
 
 Clearly, we need a better way of breaking out of the loop than relying on the user to do it for us.  This is where the ``break`` keyword comes in, combined with what we know already about the ``while`` loop and the ``if`` statement to make a selection.
 
-Therefore, modify your adder.py program like so::
+Therefore, modify your :file:`adder.py` program like so::
 
     while True:
         name = input('What is your name, or type stop to quit: ')
@@ -71,11 +71,11 @@ Notice how creating the variable of ``total`` with a value of 0 is outside of th
 Exercises
 ---------
 
-#. Change your adding.py so that the user types 'quit' instead of 'stop' to break out of the loop.
+#. Change your :file:`adding.py` so that the user types 'quit' instead of 'stop' to break out of the loop.
 
-#. Write a program called words.py which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
+#. Write a program called :file:`words.py` which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
 
-#. Modify your polygon.py program from the previous chapter so that it keeps drawing polygons, one on top of the other, until the user types 'stop'.  Each time it will ask the user how  many sides to draw, just as before.
+#. Modify your :file:`polygon.py` program from the previous chapter so that it keeps drawing polygons, one on top of the other, until the user types 'stop'.  Each time it will ask the user how  many sides to draw, just as before.
 
 Things to remember
 ------------------

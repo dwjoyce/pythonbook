@@ -37,7 +37,7 @@ The first step in reading a file is opening it.  Think if a file like a folder o
 
     - The Lord of the Rings, Epigraph
 
-Save it as mission.txt, making sure you save it in your home directory (``/home/pi`` directory), not on your USB stick.  That way we can experiement with it in the interactive shell.  We now have a file to open and read.
+Save it as :file:`mission.txt`, making sure you save it in your home directory (:file:`/home/pi` directory), not on your USB stick.  That way we can experiment with it in the interactive shell.  We now have a file to open and read.
 
 In Python, we use the ``open`` function to open files, so type the following::
 
@@ -45,7 +45,7 @@ In Python, we use the ``open`` function to open files, so type the following::
     >>> f
     <_io.TextIOWrapper name='mission.txt' mode='r' encoding='UTF-8'>
 
-This shows that the file has been opened. The ``mode`` is ``'r'``, which means the it is open for reading. The other mode, ``'w'``, is for writing and it is covered in the next chapter.  Note you have to enclose the name of the file - the *filename* - in quotation marks as it is string.  If this does not work, make sure the *mission.txt* file is in the correct location as indicated above.
+This shows that the file has been opened. The ``mode`` is ``'r'``, which means the it is open for reading. The other mode, ``'w'``, is for writing and it is covered in the next chapter.  Note you have to enclose the name of the file - the filename - in quotation marks as it is a string.  If this does not work, make sure the :file:`mission.txt` file is in the correct location as indicated above.
 
 We have called the variable that refers to our open file ``f``, but it could be called anything just like other variables, such as ``my_file``, ``saurons_dark_secret``, ``input_file``, ``my_todo_list`` or the like.
 
@@ -200,13 +200,13 @@ This just like closing the covers of a book, or the flap of a real folder from a
 Exercises
 ---------
 
-For these exercises, you will need to copy the text file ``mission.txt`` from the home directory on the Raspberry Pi (``/home/pi/mission.txt``) to the same location as your programs on your USB stick (e.g. ``/home/pi/USB_STICKS/USB Disk``).
+For these exercises, you will need to copy the text file :file:`mission.txt` from the home directory on the Raspberry Pi (:file:`/home/pi/mission.txt`) to the same location as your programs on your USB stick (e.g. :file:`/home/pi/USB_STICKS/USB Disk`).
 
-#. Open and print out the contents of the mission.txt file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
+#. Open and print out the contents of the :file:`mission.txt` file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
 
-#. Open and print out the length of each line in the mission.txt file.
+#. Open and print out the length of each line in the :file:`mission.txt` file.
 
-#. Open and step through each line of the mission.txt file.  Once done, print out the average word length - you will need to keep a running total of all the word lengths, plus how many words there were in order to print out the average.
+#. Open and step through each line of the :file:`mission.txt` file.  Once done, print out the average word length - you will need to keep a running total of all the word lengths, plus how many words there were in order to print out the average.
 
 Things to remember
 ------------------

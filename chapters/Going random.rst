@@ -71,13 +71,13 @@ The number returned is always between the numbers you give, including the start 
 A guessing game
 ---------------
 
-Now we can use this knowledge to construct a simple game, where the program comes up with a random number, and the user has to guess it.  We'll give the user 6 tries until we give the answer.  So call your program guess.py, and type in the following for starters::
+Now we can use this knowledge to construct a simple game, where the program comes up with a random number, and the user has to guess it.  We'll give the user 6 tries until we give the answer.  So call your program :file:`guess.py`, and type in the following for starters::
 
     import random
     
     number_to_guess = random.randrange(1, 101)
     
-We have imported the random module, in order to use it within our guess.py program, and asked for a random number between 1 and 101 (1 and 100, inclusive, not including 101) and stored it against a variable name ``number_to_guess``.  Now we add the loop to give the user 6 tries at guessing, so add the following::
+We have imported the random module, in order to use it within our :file:`guess.py` program, and asked for a random number between 1 and 101 (1 and 100, inclusive, not including 101) and stored it against a variable name ``number_to_guess``.  Now we add the loop to give the user 6 tries at guessing, so add the following::
 
     num_tries = 0
     while num_tries < 6:
@@ -118,9 +118,9 @@ You could enclose the ``print`` at the end with a test to only display it if the
 Exercises
 ---------
 
-#. Modify your guess.py program so that after testing whether the ``user_guess`` variable is equal to the computer's number ``number_to_guess``, the program will then test whether the user's number is less than the computer's number and print an appropriate message (e.g. 'Too low!'), and also if the user's number is larger than the computer's number, then print out another message (e.g. 'Too high!').  This will give the user a hint as to which direction to head in!
+#. Modify your :file:`guess.py` program so that after testing whether the ``user_guess`` variable is equal to the computer's number ``number_to_guess``, the program will then test whether the user's number is less than the computer's number and print an appropriate message (e.g. 'Too low!'), and also if the user's number is larger than the computer's number, then print out another message (e.g. 'Too high!').  This will give the user a hint as to which direction to head in!
 
-#. Write a program called poly.py to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, an octagon is drawn.
+#. Write a program called :file:`poly.py` to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, an octagon is drawn.
 
 Things to remember
 ------------------

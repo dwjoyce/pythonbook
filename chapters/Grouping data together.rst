@@ -165,13 +165,13 @@ So we can now finish::
     else:
         print('Computer won!')
             
-And that's it!  Now save and run your program calling it rockpaperscissors.py (or rps.py if you like).  
+And that's it!  Now save and run your program calling it :file:`rockpaperscissors.py` (or :file:`rps.py` if you like).  
 
 Notice how we can split a large test (the one attached to the ``elif`` testing whether the user has won or not) over 3 lines to make it more readable by putting parentheses around the entire expression.  Otherwise Python will complain.
 
 There is one problem with our program - if the user does not type in exactly either 'rock or 'paper' or 'scissors', then the computer always wins.  Look at the tests - it fails the first test (the two choices cannot be equal), and it also fails the second test (as the ``user_choice`` is none of the possible values provided).  This is where we can use the ``in`` operator we described above.
 
-Therefore, modify the long ``if`` statement in your rps.py program so it includes the new lines below::
+Therefore, modify the long ``if`` statement in your :file:`rps.py` program so it includes the new lines below::
 
     if user_choice not in choices:
         print('Not a valid choice, please try again.')
@@ -191,9 +191,9 @@ Now try our your program again.  It should behave itself whatever the user types
 Exercises
 ---------
 
-#. Modify your rps.py program so that it prints out what the choices were, particularly the computer choice.  It is nice for the user to know how they won or lost a game!
+#. Modify your :file:`rps.py` program so that it prints out what the choices were, particularly the computer choice.  It is nice for the user to know how they won or lost a game!
 
-#. Write a program called sizes.py to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could defined your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
+#. Write a program called :file:`sizes.py` to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could defined your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
 
 Things to remember
 ------------------

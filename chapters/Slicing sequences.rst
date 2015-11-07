@@ -290,13 +290,13 @@ We can find various things::
 Exercises
 ---------
 
-#. Write a program called daysofweek.py which defines a list containing the days of the week (assume that Sunday is the first day).  Ask the user for a number between 1 and 7, and print out the appropriate day of the week.  For example, if the user types in ``1``, then print out ``Sunday``.  If the user types in ``7``, then print out ``Saturday``.  Note, you will have to take 1 off what the user has typed in before you use it as an index into your days of the week list.
+#. Write a program called :file:`daysofweek.py` which defines a list containing the days of the week (assume that Sunday is the first day).  Ask the user for a number between 1 and 7, and print out the appropriate day of the week.  For example, if the user types in ``1``, then print out ``Sunday``.  If the user types in ``7``, then print out ``Saturday``.  Note, you will have to take 1 off what the user has typed in before you use it as an index into your days of the week list.
 
-#. Write a program called planets.py which defines a list with the 8 major planets of our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune (each one will be a string).  Ask the user whether he wants either the rocky or gaseous planets.  For the former, print out the first four planets; for the later, print out the last four planets - use slicing to do this.
+#. Write a program called :file:`planets.py` which defines a list with the 8 major planets of our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune (each one will be a string).  Ask the user whether he wants either the rocky or gaseous planets.  For the former, print out the first four planets; for the later, print out the last four planets - use slicing to do this.
 
-#. Write a program called colors.py which defines the colors of the rainbow as red, orange, yellow, green, blue, indigo and violet.  Your program should print out the primary colors of red, green and blue as a slice of your color list.
+#. Write a program called :file:`colors.py` which defines the colors of the rainbow as red, orange, yellow, green, blue, indigo and violet.  Your program should print out the primary colors of red, green and blue as a slice of your color list.
 
-#. Write a program called seasons.py, which defines a list containing three sub-lists, for example:
+#. Write a program called :file:`seasons.py`, which defines a list containing three sub-lists, for example:
 
    .. code::
     

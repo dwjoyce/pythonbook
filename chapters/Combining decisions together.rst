@@ -28,7 +28,7 @@ With what we know now, we could code this as follows, so type this into a new fi
     else:
         print('Sorry, let\'s try again later!')
 
-Save this program and call it beach.py.  Run it and test it out - it should all work fine, regardless of the combination of values you type in.
+Save this program and call it :file:`beach.py`.  Run it and test it out - it should all work fine, regardless of the combination of values you type in.
 
 However, this took a lot of typing to get working, and programmers like to avoid typing when we can!  One problem is that the 'Sorry' message is done twice, so we are duplicating a line unnecessarily.  We also have two ``else`` statements to go with the two ``if`` statements.  It would be much better if we could combine the two tests together on one line, with one ``if`` statement and one ``else`` statement, with each call to the ``print`` function done once each as well.
 
@@ -40,7 +40,7 @@ So far, we have only learned how to attach one test to either an ``if`` statemen
     
     - ``not`` which takes a single boolean value and inverts its value, so ``true`` becomes ``false`` and ``false`` becomes ``true``.  For example, ``not weather == 'warm'`` which tests whether the variable weather is equal to the value 'warm', and then flips the result.
     
-So, how do we apply this to our code in the beach.py program?  To see this, you need to change the big ``if`` statement from this::
+So, how do we apply this to our code in the :file:`beach.py` program?  To see this, you need to change the big ``if`` statement from this::
 
     if weather == 'warm':
         if holidays == 'yes':
@@ -63,7 +63,7 @@ Notice how we have taken the two separate ``if`` statements in the previous vers
 
 The logical ``or`` operator is useful when a number of separate tests all do the same thing, so their blocks of code are all the same.
 
-For example, create a number program called numbers.py, and type in the following::
+For example, create a number program called :file:`numbers.py`, and type in the following::
 
     ticket1 = input('Enter ticket number 1: ')
     ticket2 = input('Enter ticket number 2: ')
@@ -81,9 +81,9 @@ Without the use of the ``or`` operator, we would have to have written 3 ``if`` s
 Exercises
 ---------
 
-#. Write a program called largest.py to input three numbers, convert the inputs from strings to integers, and print out the largest.  Use the ``if`` and ``elif`` statements and the ``and`` operator to perform your tests.
+#. Write a program called :file:`largest.py` to input three numbers, convert the inputs from strings to integers, and print out the largest.  Use the ``if`` and ``elif`` statements and the ``and`` operator to perform your tests.
 
-#. Write another program called car.py to ask the user the attributes of a car, such as color (e.g. ``'red'``, ``'green'`` or ``'blue'``), type (e.g. ``'van'``, ``'sports'``, ``'estate'``) and price.  The program should print out ``'I want that car'`` if the color is ``'red'``, the type is ``'sports'`` and the price is less than 10,000.
+#. Write another program called :file:`car.py` to ask the user the attributes of a car, such as color (e.g. ``'red'``, ``'green'`` or ``'blue'``), type (e.g. ``'van'``, ``'sports'``, ``'estate'``) and price.  The program should print out ``'I want that car'`` if the color is ``'red'``, the type is ``'sports'`` and the price is less than 10,000.
 
 Things to remember
 ------------------

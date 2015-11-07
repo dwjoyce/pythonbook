@@ -78,7 +78,7 @@ Open up a new file window, and type in the following::
     def say_hello():
         print('Hello there')
         
-Save your program as functions.py, and run it.  It should do nothing - as described just above, it is available to your program, but it is not being run yet.  To do that, insert the following line beneath your program::
+Save your program as :file:`functions.py`, and run it.  It should do nothing - as described just above, it is available to your program, but it is not being run yet.  To do that, insert the following line beneath your program::
 
     say_hello()
     
@@ -89,7 +89,7 @@ So to define a function, we use the ``def`` keyword.  To call or invoke a functi
 Passing in data
 ---------------
 
-However, a function that always does the same thing is very limited.  It is more useful to have the ability to pass information into the function, so the function can use this information on the inside, as it were.  For example, let's take the example we did above, but vary it slightly.  So type this in beneath your definition of the ``say_hello`` function in your functions.py program (i.e. not at the bottom, so as to keep your functions together, and your calls together)::
+However, a function that always does the same thing is very limited.  It is more useful to have the ability to pass information into the function, so the function can use this information on the inside, as it were.  For example, let's take the example we did above, but vary it slightly.  So type this in beneath your definition of the ``say_hello`` function in your :file:`functions.py` program (i.e. not at the bottom, so as to keep your functions together, and your calls together)::
 
     def say_hello_times(times):
         print('Hello there' * times)
@@ -137,11 +137,11 @@ In the next chapter, we will discuss not only passing data into a function, but 
 Exercises
 ---------
 
-#. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``operator``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same functions.py program.
+#. Write another function called ``calc`` which accepts two numbers and also a string value which you can call ``operator``.  The operator parameter can be either "add", "subtract", "multiply" or "divide".  Depending on this value, you should perform the appropriate calculation, and print out the result,  For example, if the values 4, 5, "add" are passed in, then it should print out the result 9.  If the values 100, 8, "divide" are passed in, then it should print out 12.5.  You can place this function inside the same :file:`functions.py` program.
 
-#. Write a function called ``timestable`` which receives a number and prints out a times table with the specified number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two ``for`` loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to produce the result to display).  Again, put it in the same functions.py program.
+#. Write a function called ``timestable`` which receives a number and prints out a times table with the specified number of rows and columns.  For example, if the number 5 is passed in, then the 5 times table is printed.  If the number 12 is passed in, then the 12 times table is printed.  It is best to use two ``for`` loops - one for the rows, and inside this, another for the numbers themselves, both counting along the same range of numbers (multiplying them to produce the result to display).  Again, put it in the same :file:`functions.py` program.
 
-#. Start a new program called shapes.py.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function each for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
+#. Start a new program called :file:`shapes.py`.  It should use the ``turtle`` module and repeatedly ask the user what shape to draw - for example, box, circle, polygon, star.  Depending on what the user types in, the program should draw that shape.  The code for drawing each shape should reside in its own function, e.g. a function each for ``box``, ``circle``, ``polygon`` and ``star``.  Each function will have to ask the information it needs itself, e.g. a box will need its length and width, a circle will need its radius, etc.
 
 Things to remember
 ------------------

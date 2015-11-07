@@ -20,7 +20,7 @@ import subprocess
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.append(os.path.abspath('.'))
+sys.path.append(os.path.abspath("."))
 
 # -- General configuration ------------------------------------------------
 
@@ -32,38 +32,39 @@ else:
     tags.add("prerelease")
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#needs_sphinx = '1.0'
+#needs_sphinx = "1.0"
 
 # Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# extensions coming with Sphinx (named "sphinx.ext.*") or your custom
 # ones.
 extensions = [
-    #'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.pngmath',
-    'ext.inlinesyntaxhighlight',
-    'ext.pythontest',
-    'ext.lexer',
-    "ext.quote"
+    #"sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
+    "sphinx.ext.pngmath",
+    "ext.inlinesyntaxhighlight",
+    "ext.pythontest",
+    "ext.lexer",
+    "ext.quote",
+    "ext.file"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['templates']
+templates_path = ["templates"]
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = ".rst"
 
 # The encoding of source files.
-#source_encoding = 'utf-8-sig'
+#source_encoding = "utf-8-sig"
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = "index"
 
 # General information about the project.
-project = 'Marching up and down the code'
-copyright = '2015, Dr. D.W. Joyce, M.S. Joyce'
+project = "Marching up and down the code"
+copyright = "2015, Dr. D.W. Joyce, M.S. Joyce"
 
-# The version info for the project you're documenting, acts as replacement for
+# The version info for the project you"re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
@@ -89,19 +90,19 @@ if not isrelease:
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-#today = ''
+#today = ""
 # Else, today_fmt is used as the format for a strftime call.
-#today_fmt = '%B %d, %Y'
+#today_fmt = "%B %d, %Y"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['build']
+exclude_patterns = ["build"]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
 #default_role = None
 
-# If true, '()' will be appended to :func: etc. cross-reference text.
+# If true, "()" will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
 
 # If true, the current module name will be prepended to all description
@@ -113,9 +114,9 @@ exclude_patterns = ['build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'ext.style.TheStyle'
+pygments_style = "ext.style.TheStyle"
 
-highlight_language = 'py3con'
+highlight_language = "py3con"
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -128,7 +129,7 @@ highlight_language = 'py3con'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = "default"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -157,16 +158,16 @@ html_theme = 'default'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['static']
+html_static_path = ["static"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
 #html_extra_path = []
 
-# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
+# If not "", a "Last updated on:" timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+#html_last_updated_fmt = "%b %d, %Y"
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -200,21 +201,21 @@ html_static_path = ['static']
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.
-#html_use_opensearch = ''
+#html_use_opensearch = ""
 
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pythonbookdoc'
+htmlhelp_basename = "pythonbookdoc"
 
 
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    'pointsize': '12pt',
-    'preamble': open("preamble.tex").read(),
-    'maketitle': open("title.tex").read(),
+    "pointsize": "12pt",
+    "preamble": open("preamble.tex").read(),
+    "maketitle": open("title.tex").read(),
     "printindex": ""
 }
 
@@ -225,8 +226,8 @@ if not isrelease:
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class], exclude start file).
 latex_documents = [
-  ('index', 'pythonbook.tex', 'Marching Up and Down the Code',
-   r'Dr. D.W. Joyce \and M.S. Joyce', 'manual', True),
+  ("index", "pythonbook.tex", "Marching Up and Down the Code",
+   r"Dr. D.W. Joyce \and M.S. Joyce", "manual", True),
 ]
 
 latex_additional_files = ["sphinx.sty", "images/python-logo-bw.pdf", "images/raspberry-pi-logo-bw.pdf", "ext/Makefile"]
@@ -266,8 +267,8 @@ if not isrelease:
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'pythonbook', 'pythonbook Documentation',
-     ['Dr. D.W. Joyce, M.S. Joyce'], 1)
+    ("index", "pythonbook", "pythonbook Documentation",
+     ["Dr. D.W. Joyce, M.S. Joyce"], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -280,9 +281,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'pythonbook', 'pythonbook',
-   'Dr. D.W. Joyce, M.S. Joyce', 'pythonbook', 'One line description of project.',
-   'Miscellaneous'),
+  ("index", "pythonbook", "pythonbook",
+   "Dr. D.W. Joyce, M.S. Joyce", "pythonbook", "One line description of project.",
+   "Miscellaneous"),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -291,15 +292,15 @@ texinfo_documents = [
 # If false, no module index is generated.
 #texinfo_domain_indices = True
 
-# How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
+# How to display URL addresses: "footnote", "no", or "inline".
+#texinfo_show_urls = "footnote"
 
-# If true, do not generate a @detailmenu in the "Top" node's menu.
+# If true, do not generate a @detailmenu in the "Top" node"s menu.
 #texinfo_no_detailmenu = False
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+intersphinx_mapping = {"http://docs.python.org/": None}
 
 
 # Turn todo on (or off)

@@ -13,8 +13,8 @@ These exercises are designed to allow you to practice your programming skills le
 
 This work must be done on your own without help or assistance from others in the class.  However, you may consult your previous work, or the books and examples provided by the teacher, as you wish.
 
-welcome.py
-----------
+:file:`welcome.py`
+------------------
 
 Write a program in Python that asks for the user"s name and a number, and then prints out their name that number of times.
 
@@ -28,8 +28,8 @@ For example:
     Snoopy Snoopy Snoopy Snoopy Snoopy
 
 
-oddoreven.py
-------------
+:file:`oddoreven.py`
+--------------------
 
 Write a program in Python that inputs a number, and then tells the user whether the number is odd or even.
 
@@ -45,8 +45,8 @@ For example:
     The number 42 is even.
 
 
-century.py
-----------
+:file:`century.py`
+------------------
 
 Write a program in Python to input the user"s name and age, and then print out a greeting including the user"s name, and the year in which the user will be 100 years old.  Your program can assume the current year is 2015.
 
@@ -64,8 +64,8 @@ For example:
     Hello Bob you will be 100 in 2095
 
 
-circlearea.py
--------------
+:file:`circlearea.py`
+---------------------
 
 Write a program in Python that asks for the diameter of a circle, and prints out its area.  The area can be calculated as follows:
 
@@ -82,8 +82,8 @@ For example:
     The area is: 113.10
 
 
-drawline.py
------------
+:file:`drawline.py`
+-------------------
 
 Write a program in Python to draw a line on the screen given two x and y coordinates, using the ``turtle`` module.
 
@@ -110,8 +110,8 @@ For example (drawn with a thicker pen using the ``pensize`` function on a 500x50
     :align: center
 
 
-countingdown.py
----------------
+:file:`countingdown.py`
+-----------------------
 
 Write a program in Python to input a number from the user and then print all the numbers from this down to zero.  Make sure the number is positive!
 
@@ -134,8 +134,8 @@ For example:
     0
 
 
-span.py
--------
+:file:`span.py`
+---------------
 
 Write a program in Python to ask for two numbers, and print the numbers that span from the first up to the second.  Care should be taken in the case that the second number is lower than the first number - you should always count up.
 
@@ -159,8 +159,8 @@ For example:
     19
 
 
-squares.py
-----------
+:file:`squares.py`
+------------------
 
 Write a program in Python to ask for two numbers, and print out the square of the numbers that span from the first number up to the second.  Care should be taken in the case that the second number is lower than the first number - you should always count up.
 
@@ -184,8 +184,8 @@ For example:
     361
 
 
-headstails.py
--------------
+:file:`headstails.py`
+---------------------
 
 Write a program in Python to ask the user how many times the program should flip a coin, and count how many times the coin landed on heads and tails.
 
@@ -200,8 +200,8 @@ For example:
     The number of heads totalled 459 and the number of tails totalled 541
 
 
-randompathtracer.py
--------------------
+:file:`randompathtracer.py`
+---------------------------
 
 Write a program, using turtle, that asks the user for a number of steps. The program should then loop, and at each step, randomly turn the turtle left by 90 degrees, right by 90 degrees or not turn at all. It should then go forward by 10 pixels.
 
@@ -217,8 +217,8 @@ For example:
     :align: center
 
 
-ascii.py
---------
+:file:`ascii.py`
+----------------
 
 Write a program in Python to print out a section of the ASCII table.  It should print out the decimal, binary, hexadecimal and character representation for the values from 32 to 127, inclusive.  Use the built-in ``bin`` function to get the binary value, ``hex`` for the hexadecimal value and ``chr`` to get the character representation.
 
@@ -325,8 +325,8 @@ For example:
     127    0b1111111    0x7f 
 
 
-vowel.py
---------
+:file:`vowel.py`
+----------------
 
 Write a program in Python to input a character, and tell the user whether it is a vowel or not (i.e. one of these characters - a, e, i, o or u).  Make sure only a single character has been input.
 
@@ -345,8 +345,8 @@ For example:
     The letter E is a vowel!
 
 
-prayers.py
-----------
+:file:`prayers.py`
+------------------
 
 Write a program in Python to offer an index of prayers, ask for a choice of one of them - or none at all - and print out that prayer in full.  Your choice of prayers is up to you.
 
@@ -366,8 +366,8 @@ For example:
     Mother of God, pray for us sinners, now and at the hour of death. Amen
 
 
-palindrome.py
--------------
+:file:`palindrome.py`
+---------------------
 
 Write a program in Python that will input a word, and then inform the user whether the word is a palindrome or not (i.e. words that when reversed, are the same).  So the words "nun", "radar" and "kayak" are palindromes.
 
@@ -382,8 +382,8 @@ For example:
     Input a word: fred
     The word fred is not a palindrome
 
-histogram.py
-------------
+:file:`histogram.py`
+--------------------
 
 Write a program in Python that will accept a list of numbers and then draw a histogram using the star ``*`` character.
 
@@ -401,8 +401,8 @@ For example:
     ****
 
 
-length.py
----------
+:file:`length.py`
+-----------------
 
 Write a program in Python to input a list, and print out how long that list is.  Use ``sentence.split`` to split the sentence returned by ``input`` into a list of items.
 For example:
@@ -417,8 +417,8 @@ For example:
     The number of items in your sentence is: 3
 
 
-turtleboxes.py
---------------
+:file:`turtleboxes.py`
+----------------------
 
 Write a program in Python to draw 100 rectangles of a random length and width, and a random color and at random positions in the turtle window.
 
@@ -431,8 +431,8 @@ For example:
     :align: center
 
 
-longest.py
-----------
+:file:`longest.py`
+------------------
 
 Write a program in Python to input a sentence and then print out which word is the longest.
 
@@ -445,8 +445,8 @@ For example:
     The longest word in that sentence is: jumped
 
 
-reverse.py
-----------
+:file:`reverse.py`
+------------------
 
 Write a program in Python to input a sentence and then print it out in reverse.
 
@@ -459,8 +459,8 @@ For example:
     The reverse of your sentence is: bmal elttil a dah yram
 
 
-twist.py
---------
+:file:`twist.py`
+----------------
 
 Write a program in Python that draws a number of squares, using the ``turtle`` module, each one larger than the last and with the drawing turtle turning after each square.  Each square should also be a different color - use the ``random.choice`` function to select from a variety of colors.
 
@@ -474,8 +474,8 @@ For example:
     :align: center
 
 
-factorial.py
-------------
+:file:`factorial.py`
+--------------------
 
 Write a program in Python to input a number, and then print out the factorial of that number.  The factorial is all the numbers up to and including the actual number multiplied together.
 
@@ -491,8 +491,8 @@ For example:
     The factorial of 10 is 3628800
 
 
-quiz.py
--------
+:file:`quiz.py`
+---------------
 
 Write a program in Python to ask the user a number of questions, with multiple choice answers, and then print out their score at the end.  You should ask 5 questions in total.  You are free to make up your own questions.
 
@@ -531,8 +531,8 @@ For example:
     Well done - you got 3 out of 5!
 
 
-hangman.py
-----------
+:file:`hangman.py`
+------------------
 
 Write a program in Python to implement a simple hangman game.  Give the user 11 tries, and you can draw the hangman as you go along as follows (piece by piece):
 
@@ -600,8 +600,8 @@ You may use the following as your word list, or create your own::
                  'window', 'woman', 'worm']
 
 
-checkerboard.py
----------------
+:file:`checkerboard.py`
+-----------------------
 
 Write a program in Python to input a number, and then draw - using the ``turtle`` module - a checkerboard with that number of squares across.
 
@@ -630,8 +630,8 @@ For example:
     :align: center
 
 
-prime.py
---------
+:file:`prime.py`
+----------------
 
 Write a program in Python to input a number, and then tell the user whether the number is prime or not.
 
@@ -649,8 +649,8 @@ For example:
     The number 29 is prime.
 
 
-factors.py
-----------
+:file:`factors.py`
+------------------
 
 Write a program in Python to input a number, and then print outs the factors of that number.
 
@@ -663,8 +663,8 @@ For example:
     The factors of 20 are: 1, 2, 4, 5, 10, 20
 
 
-turtlehistogram.py
-------------------
+:file:`turtlehistogram.py`
+--------------------------
 
 Write a program in Python to allow the user to input a list of numbers, separated by spaces. Then, using turtle, draw a vertical histogram, with alternating colors, representing those numbers.
 
@@ -680,8 +680,8 @@ For example:
     :align: center
 
 
-kiosk.py
---------
+:file:`kiosk.py`
+----------------
 
 Write a program in Python that lists a set of products and their prices and allows the user to pick a number.  The program should then print out the price of the item chosen.
 
@@ -706,8 +706,8 @@ For example:
          ["4 Sprite", 40], ["Dr Pepper", 60]]
 
 
-order.py
---------
+:file:`order.py`
+----------------
 
 Expand on the previous program to allow the user to enter a number of choices, the money they are entering, and finally the change they should get.
 
@@ -729,8 +729,8 @@ For example:
 Again, use the ``numbers.split`` command to split the original string input into a list of entries.  The list you used in the previous practice can be used again for this program.
 
 
-brackets.py
------------
+:file:`brackets.py`
+-------------------
 
 Write a program in Python that reads in a sentence, and prints out whether the number of brackets match or not.  You will need to account for brackets out of order as well, for example ``")("``, instead of ``"()"``.
 
@@ -752,8 +752,8 @@ For example:
     That sentence does have matching brackets!
 
 
-calc.py
--------
+:file:`calc.py`
+---------------
 
 Write a program in Python to give the user sums to perform until he types the word "quit".  Randomly chose two numbers between 1 and 10, and one operator of either addition, subtraction, division or multiplication.  Use ``random.randrange`` function to choose the number, and also to select between your operator (1 for addition, 2 for subtraction, and so on).
 
@@ -775,8 +775,8 @@ For example:
     Goodbye!
 
 
-compound.py
------------
+:file:`compound.py`
+-------------------
 
 Write a program in Python to ask the user the amount of money to invest, the interest rate per year and the number of years, and then print out total per year and the total interest earned over the investment period.
 
@@ -802,8 +802,8 @@ For example:
     Interest earned: £628.89 over 10 years
 
 
-temprange.py
-------------
+:file:`temprange.py`
+--------------------
 
 Write a program in Python to ask for the start temperature, the end temperature, the type (whether celsius or fahrenheit), and then print out the conversion from one to the other at every degree from the start to the end.
 
@@ -861,8 +861,8 @@ For example:
     Celsius 50 in Fahrenheit is 122
 
 
-cipher.py
----------
+:file:`cipher.py`
+-----------------
 
 Write a program in Python to read in a sentence, and then print it out with each letter shifted back by three (a Caesar cipher).  So, "a" will become "x", "b" will become "y", "c" will become "z", "d" becomes "a", and so on until "z" becomes "w".  You can ignore all letters apart from lowercase ones ("a" to "z") and print them out unchanged (e.g. spaces).
 
@@ -880,8 +880,8 @@ For example:
     The decoded sentence is: mary had a little lamb
 
 
-turtlebattleship.py
--------------------
+:file:`turtlebattleship.py`
+---------------------------
 
 Write a program that, until the user hits the ship, does:
 
