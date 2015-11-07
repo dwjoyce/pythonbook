@@ -18,7 +18,7 @@ To perform a sum on a calculator, such as 10 plus 20, you could simply hit the f
 
     10 + 20
 
-and then hit the = (equals) button.  The result, 30, will then appear on your screen.  We could do other operations as well, such as subtraction, division and multiplication, like so::
+and then hit the :button:`=` (equals) button.  The result, 30, will then appear on your screen.  We could do other operations as well, such as subtraction, division and multiplication, like so::
 
     10 + 20 - 4 ÷ 2 × 3
 

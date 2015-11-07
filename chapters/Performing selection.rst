@@ -19,7 +19,7 @@ To achieve this in Python, we use the ``if`` statement.  We start with the word 
 
 .. note:: Statements that belong to an ``if`` statement must be pushed to the right in order to show what code belongs to what line.  In programming, this is called :term:`indentation`.  In Python, we indent by four spaces.  When the code block is finished, we unindent back to the column of the initial line.
 
-Let us start a new program called :file:`vip.py` - click on the ``File`` -> ``New File`` menu item, and type in the following::
+Let us start a new program called :file:`vip.py` - click on the :menu:`File -> New File` menu item, and type in the following::
 
     print('Welcome to our VIP program for calculating cinema ticket prices')
     print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIPs')
@@ -53,7 +53,7 @@ We can now finish our program, so add the last line on the end so that your comp
 
 See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our :term:`code block` attached to the ``if`` statement is over, and we now carry on as usual.
 
-Now save and run your program using the ``F5`` key, pressing Return, and using the program name of :file:`vip.py`.  Remember, to save your program onto your USB stick.
+Now save and run your program using the :kbd:`F5` key, pressing Return, and using the program name of :file:`vip.py`.  Remember, to save your program onto your USB stick.
 
 You will have to run your program twice.  Initially, input *yes* as the answer to the question, and secondly, input *no* (or vice versa).  You should get different results depending on what you enter on the keyboard - either a price of £6 or £5.  Be careful what you type - if you do not type *yes* exactly, then the test will fail, and the indented statement will not be executed.
 

@@ -56,7 +56,7 @@ Testing just with the ``if`` statement is very useful, but Python does offer mor
     if num2 > num1:
         print('The largest number is:', num2)
         
-Run it with the ``F5`` key, and save it onto your USB stick with the name :file:`nums.py`.
+Run it with the :kbd:`F5` key, and save it onto your USB stick with the name :file:`nums.py`.
 
 It should run fine, printing out the largest number of the two input by the user.  Note how we have to convert the inputs, entered as a sequence of digits, into integer numbers before we can use them in the comparisons.  Otherwise, the comparisons will not work correctly.
 
@@ -94,7 +94,7 @@ We introduced the middle two lines, the ``elif`` followed by the call to the ``p
 A bit more practice
 -------------------
 
-Combining what we have learnt in this chapter, let us write another program called :file:`noises.py`.  Start it in the usual method of clicking on the ``File`` menu and selecting ``New File``.  Once the new blank window has appeared, type in the following::
+Combining what we have learnt in this chapter, let us write another program called :file:`noises.py`.  Start it in the usual method of clicking on the :menu:`File` menu and selecting :menu:`New File`.  Once the new blank window has appeared, type in the following::
 
     animal = input('What animal do you have there with you? ')
     if animal == 'cow':
@@ -118,7 +118,7 @@ Combining what we have learnt in this chapter, let us write another program call
     else:
         print('Sorry, I don\'t recognise that animal!')
 
-Obviously, we could go on and on!  Save it using the ``F5`` key, name it :file:`noises.py` making sure you save it onto your USB stick, and run it.  You need to run it several times in order to test all the possibilities (i.e. see all the different noise words being printed out).
+Obviously, we could go on and on!  Save it using the :kbd:`F5` key, name it :file:`noises.py` making sure you save it onto your USB stick, and run it.  You need to run it several times in order to test all the possibilities (i.e. see all the different noise words being printed out).
 
 As you can see, the ``if`` statement is tested first.  If the test evaluates to true, then the first optional block of code is run (printing out 'Moo!'), and it will then jump to the end (past the ``else``).  Otherwise, it will test each test in turn, only running the code blocks if the test is true.  Otherwise, it will eventually drop down to the ``else`` statement, and run the last block of code, but only if all the other tests have failed.
 

@@ -23,7 +23,7 @@ To see this in action, start a new file window and type in the following:
     while True:
         print('Help, I\'m stuck in a loop!')
         
-Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the ``Ctrl`` and ``C`` keys together - this breaks out of the loop.
+Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the :kbd:`Ctrl` and :kbd:`C` keys together - this breaks out of the loop.
 
 Clearly, we need a better way of breaking out of the loop than relying on the user to do it for us.  This is where the ``break`` keyword comes in, combined with what we know already about the ``while`` loop and the ``if`` statement to make a selection.
 

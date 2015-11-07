@@ -15,13 +15,13 @@ Ed
 
 To write a program, and modify it later, we use an :term:`editor`.  Thankfully, IDLE not only has the interactive shell we have been using, but an editor built-in as well.
 
-To start Python editor, first start IDLE itself (see chapter 0 for this if you have forgotten).  Then, using the mouse pointer, click on the ``File`` menu at the top of the shell window, and click again on the ``New File`` menu item, like so:
+To start Python editor, first start IDLE itself (see chapter 0 for this if you have forgotten).  Then, using the mouse pointer, click on the :menu:`File` menu at the top of the shell window, and click again on the :menu:`New File` menu item, like so:
 
 .. image:: /images/screenshots/idle_new_file_menu.png
     :width: 90%
     :align: center
 
-This will bring up a new window, the editor window.  The shortcut for this is to hold down the ``Ctrl`` key, towards the bottom left of your keyboard, and hit the ``N`` key (N for New).  This blank window is where we type in our new program:
+This will bring up a new window, the editor window.  The shortcut for this is to hold down the :kbd:`Ctrl` key, towards the bottom left of your keyboard, and hit the :kbd:`N` key (N for New).  This blank window is where we type in our new program:
 
 .. image:: /images/screenshots/idle_new_file.png
     :width: 90%
@@ -58,20 +58,20 @@ Our first complete program will be the same as the code we typed in for chapter 
     turtle.circle(40)
     turtle.end_fill()
 
-Type in everything, including the blank lines!  You can use copy (``Ctrl``-``C``) and paste (``Ctrl``-``V``) to repeat the lines in the middle, if you wish.
+Type in everything, including the blank lines!  You can use copy (:kbd:`Ctrl-C`) and paste (:kbd:`Ctrl-V`) to repeat the lines in the middle, if you wish.
 
 Running our program
 -------------------
 
-Once you have typed it all in, we are ready to run our program.  To run, press the ``F5`` key (or if you really want to do it the hard way, then click on the ``Run`` menu and select ``Run Module`` menu item).  This will bring up a dialog box like this one:
+Once you have typed it all in, we are ready to run our program.  To run, press the :kbd:`F5` key (or if you really want to do it the hard way, then click on the :menu:`Run` menu and select :menu:`Run Module` menu item).  This will bring up a dialog box like this one:
 
 .. image:: /images/screenshots/idle_save_before_run.png
     :width: 150pt
     :align: center
 
-Simply agree to this by pressing the Return or Enter key on your keyboard.  Again, if you like doing things the hard way, then use your mouse to click on the ``OK`` button.
+Simply agree to this by pressing the :kbd:`Return` or :kbd:`Enter` key on your keyboard.  Again, if you like doing things the hard way, then use your mouse to click on the :button:`OK` button.
 
-On this, the first time of writing your program, you will need to give it a name.  If you have already done this, then IDLE should proceed onto attempting to run your program.  The ``Save As`` dialog is shown, asking you where to save your program and what to call it:
+On this, the first time of writing your program, you will need to give it a name.  If you have already done this, then IDLE should proceed onto attempting to run your program.  The :button:`Save As` dialog is shown, asking you where to save your program and what to call it:
 
 .. image:: /images/screenshots/idle_save_as.png
     :width: 250pt
@@ -79,9 +79,9 @@ On this, the first time of writing your program, you will need to give it a name
 
 Most importantly, change the location of where the program is being saved to your USB stick.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
 
-.. tip:: To save on your USB stick when the "Save As" dialog box appears, first click on the directory *USB_STICKS*, and then click on the name of your USB stick, which is *USB Disk* by default.
+.. tip:: To save on your USB stick when the :button:`Save As` dialog box appears, first click on the directory :file:`USB_STICKS`, and then click on the name of your USB stick, which is :file:`USB Disk` by default.
 
-Once you are in the right place, give your program a name and click the ``Save`` button (or hold down the ``Alt`` key and hit the ``S`` key), like so:
+Once you are in the right place, give your program a name and click the :button:`Save` button (or hold down the :kbd:`Alt` key and hit the :kbd:`S` key), like so:
 
 .. image:: /images/screenshots/idle_save_as_name.png
     :width: 250pt
@@ -132,11 +132,11 @@ Effectively, Python ignores everything after the ``#`` symbol - up until the end
 Things to remember
 ------------------
 
-#. To start a new program, click on the ``File`` menu and click on ``New File``.  This opens up a new window ready for your program to be typed in.  The shortcut for this is to hold the ``Ctrl`` key down and hit the ``N`` key.
+#. To start a new program, click on the :menu:`File` menu and click on :menu:`New File`.  This opens up a new window ready for your program to be typed in.  The shortcut for this is to hold the :kbd:`Ctrl` key down and hit the :kbd:`N` key.
 
 #. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the note above to see how to do this.
 
-#. Once the program has been typed in, at least a little of it, then to run it you either click on the ``Run`` menu and select the ``Run Module`` item, or press the ``F5`` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted (inserted) it will appear in the ``USB_STICKS`` folder in your home directory.
+#. Once the program has been typed in, at least a little of it, then to run it you either click on the :menu:`Run` menu and select the :menu:`Run Module` item, or press the :kbd:`F5` key as a shortcut.  You will be asked to save your program, so simply press the Return or Enter key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once mounted (inserted) it will appear in the :file:`USB_STICKS` folder in your home directory.
 
 #. Give your Python programs a :term:`.py` postfix.  Avoid including spaces in your program name.
 

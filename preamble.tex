@@ -21,7 +21,9 @@
 
 
 \newcommand{\ourstrut}{\vrule height6.5pt depth1.2pt width0pt}
-\renewcommand{\code}[1]{\fcolorbox{VerbatimBorderColor}{VerbatimColor}{\ourstrut\texttt{\small\color{VerbatimTextColor}#1}}}
+\newcommand{\framedtext}[4]{\fcolorbox{#1}{#2}{\ourstrut\color{#3}#4}}
+\newcommand{\codeframe}[1]{\framedtext{VerbatimBorderColor}{VerbatimColor}{VerbatimTextColor}{\texttt{#1}}}
+\renewcommand{\code}[1]{\codeframe{\small#1}}
 \newcommand{\noframecode}[1]{\texttt{\small\color{VerbatimTextColor}#1}}
 
 % Quote

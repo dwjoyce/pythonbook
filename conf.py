@@ -44,8 +44,7 @@ extensions = [
     "ext.inlinesyntaxhighlight",
     "ext.pythontest",
     "ext.lexer",
-    "ext.quote",
-    "ext.file"
+    "ext.directives_and_roles"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
