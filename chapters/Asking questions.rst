@@ -19,7 +19,7 @@ Begin by creating a new program (:menu:`File -> New File`), and type the followi
     name = input('What is your name? ')
     print('Hello there', name)
     
-Press :kbd:`F5` to run your program, and give it the name :file:`hello.py`.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the ``Return`` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
+Press :kbd:`F5` to run your program, and give it the name :file:`hello.py`.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the :button:`Return` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
 
 Note that we are using a message (a string value) when calling the ``input`` function - this is the message that is presented to the user when you are asking for input.  This is not essential - you could miss it out, but then the user may not know they are expected to type something.  It is best to present the message, so they know what to do next.
 

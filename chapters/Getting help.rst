@@ -25,7 +25,7 @@ When we are in the help utility, the prompt changes from ``>>>`` to ``help>``, t
     help> quit
     >>>
     
-In actual fact, just pressing the Enter key without any text will do the same!
+In actual fact, just pressing the :button:`Enter` key without any text will do the same!
 
 Now, if you re-enter the help utility, you can type any command or function to get further information on that item.  For example:
 

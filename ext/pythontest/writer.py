@@ -5,7 +5,8 @@ import sys
 import builtins
 import io
 from code import compile_command
-import keyword, tokenize
+import keyword
+import tokenize
 import pep8
 import re
 
@@ -43,6 +44,10 @@ class FakeFile(list):
     def seek(self, *a): pass
 
 
+operators = "+ - / * ** = == != /= += -= **= ( ) { } // //= [ ] , : ; ' \" \\' \\\" < > <= >= ^ ~ & | << >> and or in . \\n \\t % %= *=".split() + ["is not"]
+word_re = re.compile("(({})\w*)*".format("|".join(map(re.escape, operators))))
+
+
 class Writer(writers.Writer):
     supported = ('sphinxlatex',)
     settings_defaults = {}
@@ -72,7 +77,8 @@ class Writer(writers.Writer):
     static_builtins.update({"input": input,
                             "open": FakeFile,
                             "help": lambda *a: None})
-    static_ns = {"__builtins__": static_builtins}
+    static_ns = {"__builtins__": static_builtins,
+                 "string": __import__("string")}
 
     def __init__(self, builder):
         writers.Writer.__init__(self)
@@ -263,13 +269,17 @@ class Writer(writers.Writer):
     def minor_retest(self, code, mode):
         if keyword.iskeyword(code):
             return True
-        try:
-            list(tokenize.generate_tokens(io.StringIO(code).readline))
-        except Exception as e:
-            if "EOF in multi-line statement" in str(e):
-                return True
-        else:
+        if code in operators:
             return True
+        if word_re.match(code):
+            return True
+        #try:
+            #list(tokenize.generate_tokens(io.StringIO(code).readline))
+        #except Exception as e:
+            #if "EOF in multi-line statement" in str(e):
+                #return True
+        #else:
+            #return True
         return False
 
     def set_returncode(self, app):

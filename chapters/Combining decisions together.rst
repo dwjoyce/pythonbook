@@ -38,7 +38,7 @@ So far, we have only learned how to attach one test to either an ``if`` statemen
     
     - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether ``a`` is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can also be true, which is also fine.
     
-    - ``not`` which takes a single boolean value and inverts its value, so ``true`` becomes ``false`` and ``false`` becomes ``true``.  For example, ``not weather == 'warm'`` which tests whether the variable weather is equal to the value 'warm', and then flips the result.
+    - ``not`` which takes a single boolean value and inverts its value, so ``True`` becomes ``False`` and ``False`` becomes ``True``.  For example, ``not weather == 'warm'`` which tests whether the variable weather is equal to the value ``'warm'``, and then flips the result.
     
 So, how do we apply this to our code in the :file:`beach.py` program?  To see this, you need to change the big ``if`` statement from this::
 
