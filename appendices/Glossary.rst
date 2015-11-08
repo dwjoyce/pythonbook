@@ -58,7 +58,7 @@ Glossary
 
     type
     class
-        A set of values having the same behaviour (but typically differing in state), or a template defining such a set.  A type is a particular class of data, such as integers, lists or files.
+        A data type defines the range of values and operations that can be performed on a piece of data.  For example, integers are whole numbers, whether negative or positive, that can have mathematical operations performed on them, such as addition, subtraction, multiplication and division.  Strings have a different set of operations available, such as capitalisation and splitting into words or sentences, although addition (joining together) and multiplication (repetition) are also available.  Lists include operations that change, find and sort the values they contain.  Other types of data described in this book are floating point numbers, booleans and files.
 
 
     .. Naming your data
