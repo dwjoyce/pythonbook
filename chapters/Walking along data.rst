@@ -129,7 +129,7 @@ Finally, you can combine two sequences together, and then step over the result a
     >>> first_quote = 'Rosebud.'
     >>> second_quote = 'My precious.'
     >>> for ch1, ch2 in zip(first_quote, second_quote):
-    	print(ch1, ch2)	
+            print(ch1, ch2)	
     R M
     o y
     s  
