@@ -239,7 +239,7 @@ class Writer(writers.Writer):
             else:
                 res = repr(res)
             res = self.stdout.getvalue() + res
-            res = res.strip()
+            res = "\n".join(map(str.rstrip, res.split("\n"))).strip()
             if res != output:
                 return False, "Output failure", "'{}' (real) != '{}' (supposed)".format(res, output)
 
