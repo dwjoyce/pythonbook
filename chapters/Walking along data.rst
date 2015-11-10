@@ -116,13 +116,28 @@ The list that the for loop uses to step over need not be a list of numbers.  It 
     >>> for word in sentence.split():
             print(word)
         
-And finally, the variable to step along need not be a list - it can be any sequence at all, including strings::
+The variable to step along need not be a list - it can be any sequence at all, including strings::
 
     >>> word = 'rotavator'
     >>> for letter in word:
             print(letter)
 
 .. pythontest:: all
+
+Finally, you can combine two sequences together, and then step over the result at the same time.  To do this, use the built-in ``zip`` function which will turn the two individual sequences into a single sequence, made up of items from the originals.  To step over the combined sequence, you need to use two ``for`` loop variables which will be set to the individual items from the original sequences.  Try this out with these strings below, and notice how it only goes as far as the shortest of the two quotes, as the combined sequence effectively runs out of letters::
+
+    >>> first_quote = 'Rosebud.'
+    >>> second_quote = 'My precious.'
+    >>> for ch1, ch2 in zip(first_quote, second_quote):
+    	print(ch1, ch2)	
+    R M
+    o y
+    s  
+    e p
+    b r
+    u e
+    d c
+    . i
 
 Again, as in chapter 15 on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step along it and execute the block of code you provide.
 
