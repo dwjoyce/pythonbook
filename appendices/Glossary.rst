@@ -22,17 +22,17 @@ Glossary
         IDLE is the Python IDE.
 
     integrated development environment
-        An integrated development environment (IDE) is a program that allows you to write, run and debug your code.  Some IDE programs provide extra tools to allow you to write the code faster such as code highlighting and automatic code completion.
+        An integrated development environment (IDE) is a program that allows you to write, run and :term:`debug` your code.  Some IDE programs provide extra tools to allow you to write the code faster such as code highlighting and automatic code completion.
 
     interactive shell
-        A simple, interactive computer programming environment that takes user inputs (e.g. a single line of code or a loop), evaluates them, and returns the result to the user.
+        A simple, interactive computer programming environment that takes user inputs (e.g. a single line of code or a loop), :term:`evaluates` them, and returns the result to the user.
 
     run
     execute
         To perform the actions represented by the code.
         
     statement
-        A line of code or a code block that performs an action.  A compound statement is a statement that performs a block of code selectively or iteratively (e.g. belonging to an ``if`` or ``while`` statement).
+        A line of code or a code block that performs an action.  A compound statement is a statement that performs a block of code :term:`selectively` or :term:`iteratively` (e.g. belonging to an ``if`` or ``while`` statement).
 
 
     .. Python as a Calculator
@@ -47,11 +47,11 @@ Glossary
         A whole number such as ``18``. These numbers never have a fractional part.
 
     float
-        A floating point number is a number that has a fractional part, such as ``1.78``, even if the fractional part is zero.
+        A floating point number is a number that has a fractional part, such as ``1.78``, even if the fractional part is zero (e.g. ``10.0``).
 
     integer division
     floor division
-        An division where the result is rounded down to the nearest whole number.
+        An division where the result is rounded down to the nearest whole number (it evaluates to an :term:`integer`).
 
     modulus
         The remainder when the first number is divided by the second.
@@ -64,13 +64,13 @@ Glossary
     .. Naming your data
     
     assignment
-        The process of defining a variable with a set value, e.g. ``my_name = 'Fred'``.
+        The process of defining a :term:`variable` with a set value, e.g. ``my_name = 'Fred'``.
 
     variable
         A named memory location in which a program can store intermediate results and from which it can read and modify them.
         
     evaluation
-        The process of computing a result.
+        The process of computing a result from an :term:`expression`.
 
 
     .. Functions and Maths
@@ -82,7 +82,7 @@ Glossary
         A section of code given a name that implements a task and :term:`returns` a value, even if that value is empty.
 
     built-in function
-        A function that comes with Python, so you do not need to implement it yourself, such as ``round``, ``print`` and ``input``.
+        A :term:`function` that comes with Python, so you do not need to implement it yourself, such as ``round``, ``print`` and ``input``.
 
     argument
         A value, or reference to a value, passed into a :term:`function`.
@@ -94,7 +94,13 @@ Glossary
     .. Drawing Turtles
     
     import
-        Including or making available one module inside another module.
+        Including or making available one :term:`module` inside another :term:`module`.
+
+    constant
+        A :term:`variable` which should not change. Constants are often used to make code more readable, by giving names to otherwise obscure values.
+
+    pixel
+        A picture element is a single point of color. Many pixels are used to make up an image.
 
 
     .. Getting help
@@ -109,10 +115,10 @@ Glossary
     .. First program
 
     .py
-        The file extension that all python files should use.
+        The :term:`file` extension that all python files should use.
 
     editor
-        A program for creating and making changes to files, especially text files.
+        A program for creating and making changes to :term:`files`, especially text files.
         
     comment
         A piece of text acting as annotation or a description of the code.  It is intended to be read by other people, and is ignored by Python from the ``#`` character to the end of the line.
@@ -124,11 +130,28 @@ Glossary
         A sequence of characters such as letters, digits or symbols stored in encoded form.
 
     string concatenation
-        The operation of joining multiple strings into one string.
+        The operation of joining multiple strings into one :term:`string`. For example::
+
+            >>> "string" + " " + "concatenation"
+            'string concatenation'
+
+    string repetition
+        The operation of repeating a string multiple times to form a new :term:`string`. For example::
+
+            >>> "repetition " * 5
+            'repetition repetition repetition repetition repetition '
+
+    debugging
+        The process of finding and resolving bugs or defects that prevent correct operation of computer software or a system.
 
 
     .. Asking questions
 
+    ASCII
+        The American Standard Code for Information Interchange, a 7-bit character set and character encoding. Based on the Roman alphabet as used in modern English, the code is employed almost universally on computing machinery.
+
+    Unicode
+        A series of character encoding standards intended to support the characters used by a large number of the world's languages.
 
 
     .. Performing selection
@@ -136,11 +159,20 @@ Glossary
     selection
         The process of executing one piece (block) of code over another selectively.
 
+    equality operator
+        The ``==`` operator, that compares two objects and evaluates to ``True`` when they are the same. The opposite of the :term:`inequality operator`.
+
+    inequality operator
+        The ``!=`` operator, that compares two objects and evaluates to ``True`` when they are not the same. The opposite of the :term:`equality operator`.
+
+    comparison operator
+        An operator that takes two values and compares them, evaluating to a :term:`boolean value`. Python comparison operators include ``==``, ``!=``, ``<``, ``>``, ``<=`` and ``>=``. See the Operators appendix for more information.
+
     code block
         A block is a piece of Python code that is executed as a unit.
 
     indentation
-        Beginning a line with one or more spaces. Used to distinguish code blocks.
+        Beginning a line with one or more spaces. Used to distinguish :term:`code blocks`.
 
 
     .. Decisions, decisions
@@ -159,18 +191,20 @@ Glossary
     .. Going loopy
     
     iteration
+    looping
         The process where a set of instructions or data are repeated.
         
     keyword
         A word with a special meaning.  Python has many reserved keywords that it uses for its own purposes, such as ``if``, ``while``, ``for``, ``def``, etc., which you cannot use for any other purpose.  To see Python's full list of keywords, then import the ``keyword`` module and type ``keyword.kwlist`` in the interactive shell.
 
     increment
-        Increase the value of a variable.  For example: ``num = num + 1``, or ``num += 1`` for short.
-        
+        Increase the value of a variable, usually by ``1``.  For example: ``num = num + 1``, or ``num += 1`` for short.
+
+
     .. Escaping the cycle
 
     infinite loop
-        A loop which continues indefinitely.
+        A :term:`loop` which continues indefinitely.
 
 
     .. Going random
@@ -181,8 +215,11 @@ Glossary
 
     .. Grouping data together
 
+    sequence
+        An ordered list of objects. Usually a :term:`list` or :term:`string`.
+
     list
-        A sequence of items, boxed together using the ``[]`` notation.  The items can be of any type, such as integers, strings or even other lists.
+        A :term:`sequence` of items, boxed together using the ``[]`` notation.  The items can be of any type, such as integers, strings or even other lists.
 
     matrix
         A two-dimensional list or list of lists, such as::
@@ -200,17 +237,16 @@ Glossary
     .. Slicing sequences
 
     slice
-        A portion or section of a sequence.
+        A portion or section of a :term:`sequence`.
 
     index
-        Accessing a single item of a sequence, where ``0`` is the first item.
+        Accessing a single item of a :term:`sequence`, where ``0`` is the first item.
 
 
     .. Walking along data
     
     decrement
         Decrease the value of a variable.  For example: ``num = num - 1``, or ``num -= 1`` for short.
-
 
 
     .. Naming code
@@ -222,7 +258,7 @@ Glossary
                 return a + b
                 
     parameter
-        Data as received in by a function, given a name in-between the function definition's parentheses, which is local to the function itself.
+        Data as received in by a :term:`function`, given a name in-between the function definition's parentheses, which is local to the function itself.
 
 
     .. More on functions
@@ -237,7 +273,10 @@ Glossary
     .. Reading files
     
     file
-        A resource for storing information, based on some kind of duration storage.  It is usually persistent, so retains its state when the computer is turned off.
+        A resource for storing information, based on some kind of duration storage.  It is usually :term:`persistent`, so retains its state when the computer is turned off.
+
+    persistent
+        Data that is saved onto secondary memory, such as an SD card, so that it can be used after the program is restarted.
 
 
     .. Writing files
@@ -261,6 +300,8 @@ Glossary
 
     .. Python summary
 
+    input
+        Data that is entered by a source outside of the program, such as the user. In Python, this is most often the ``input`` function or a file.
 
 
     .. Extra exercises

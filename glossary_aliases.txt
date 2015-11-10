@@ -1,15 +1,15 @@
 argument -> arguments
-string concatenation -> concatenating
+string concatenation -> concatenating concatenation
 function -> functions
-call -> called
+call -> called calling
 variable -> variables
-float -> "floating point"
+float -> "floating point" floats
 operator -> operators
 integer -> integers
 exception -> exceptions
 code block -> "block of code"
-return value -> returned returns return
-function definition -> "defining a function"
+return value -> returned returns return "return statement"
+function definition -> "defining a function" "defining functions"
 execute -> executing
 run -> running
 logical operator -> "logical operators"
@@ -19,7 +19,7 @@ built-in function -> "built-in functions"
 type -> types
 expression -> expressions
 statement -> statements
-evaluation -> evaluate
+evaluation -> evaluate evaluates
 dir -> "directory function"
 comment -> comments
 string -> strings
@@ -33,3 +33,20 @@ positional argument -> "positional arguments"
 keyword argument -> "keyword arguments"
 decrement -> decrements
 integrated development environment -> ide
+string repetition -> repetition repeating
+pixel -> pixels
+indentation -> indented
+random -> randomness
+boolean -> "boolean values" "boolean value" "boolean expression"
+sequence -> sequences
+parameter -> parameters
+assignment -> "assignment operator"
+equality operator -> "equals operator" equals
+inequality operator -> "not equal to operator"
+comparison operator -> "comparison operators"
+iteration -> iterating iterate looping iteratively
+selection -> selectively
+file -> files
+code block -> "code blocks"
+looping -> loop
+debugging -> debug
