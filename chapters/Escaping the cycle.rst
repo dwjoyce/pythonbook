@@ -13,7 +13,7 @@ Breaking out
 
 Although we have introduced looping, we have only used it by counting from a starting number to an end number, and then stopping.  We really just want to repeat a block of code a certain number of times.  But what, like our problem above, you don't know when to stop until the end?
 
-Remember that the test after the ``while`` keyword is just a boolean expression.  If it evaluates to a ``True`` value, then the loop should perform another cycle of its block of code.  It will then test the expression again to see if it has changed in the meantime.  So if we don't know when to stop, a good start is to make the loop go round and round indefinitely.  It is a called an :term:`infinite loop`, and - in theory at least - it goes round forever!  And to make an infinite loop, we simply make the boolean expression True by using the value ``True``.
+Remember that the test after the ``while`` keyword is just a boolean expression.  If it evaluates to a ``True`` value, then the loop should perform another cycle of its block of code.  It will then test the expression again to see if it has changed in the meantime.  So if we don't know when to stop, a good start is to make the loop go round and round indefinitely.  It is a called an :term:`infinite loop`, and - in theory at least - it goes round forever!  And to make an infinite loop, we simply make the boolean expression ``True`` by using the value ``True``.
 
 To see this in action, start a new file window and type in the following:
 
@@ -23,7 +23,7 @@ To see this in action, start a new file window and type in the following:
     while True:
         print('Help, I\'m stuck in a loop!')
         
-Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the :kbd:`Ctrl` and :kbd:`C` keys together - this breaks out of the loop.
+Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the :kbd:`Ctrl` and :kbd:`C` (same shortcut as copy) keys together - this breaks out of the loop.
 
 Clearly, we need a better way of breaking out of the loop than relying on the user to do it for us.  This is where the ``break`` keyword comes in, combined with what we know already about the ``while`` loop and the ``if`` statement to make a selection.
 
@@ -80,7 +80,7 @@ Exercises
 Things to remember
 ------------------
 
-#. Use the value of ``True`` as the expression - or test - for the ``while`` loop to make it go on indefinitely, i.e. an infinite loop.
+#. Use the value of ``True`` as the expression - or test - for the ``while`` loop to make it go on indefinitely, i.e. an :term:`infinite loop`.
 
 #. Use the keyword ``break`` to break out of the present loop.  If one loop is nested inside another and the break resides in the inner loop, it only breaks out of the inner loop, not the outer one as well.
 

@@ -176,7 +176,7 @@ In general, you should name the type of exception you wish to handle.  If you do
 
 .. pythontest:: nooutput
 
-To find a full list of error types, you can type the *directory* command ``dir`` in the interactive shell::
+To find a full list of error types, you can type the :term:`directory function` ``dir`` in the interactive shell::
 
     >>> dir(__builtins__)
 
@@ -196,10 +196,10 @@ Exercises
 Things to remember
 ------------------
 
-#. Use ``try``-``except`` blocks to catch exceptions.  Exceptions are errors or problems raised for the program to handle in a proper manner.
+#. Use ``try``-``except`` blocks to catch :term:`exceptions`.  Exceptions are errors or problems raised for the program to handle in a proper manner.
 
 #. The code inside a ``try``-``except`` block is indented, like an ``if`` block.
 
 #. It is best to name an exception type, to avoid surprises.  You can find out what the exception type is by using the interactive shell to provoke the same error.
 
-#. Syntax errors are when the program breaks the rules of the language.  :term:`Runtime errors` or :term:`logical errors` are problems in the operation of the program itself.
+#. :term:`Syntax errors` are when the program breaks the rules of the language.  :term:`Runtime errors` or :term:`logical errors` are problems in the operation of the program itself.

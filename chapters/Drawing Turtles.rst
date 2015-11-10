@@ -13,7 +13,7 @@ Let us move from using Python to do maths and switch to doodling instead!
 
 What we will do is to use a Python program called ``turtle`` to move a shape around the screen, leaving a trail behind in the process.  Think of it like using a piece of graph paper, with the origin in the centre, and the pen being moved by your instructions.
 
-To use this separate Turtle program, we have to use a new command called ``import``.  What :term:`import` does is to bring in, or include, a separate program - called a :term:`module` in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
+To use this separate turtle program, we have to use a new command called ``import``.  What :term:`import` does is to bring in, or include, a separate program - called a :term:`module` in Python - into your own program.  We cannot ever hope to write every piece of code ourselves, so often we depend on programs that others have been written and build on them.
 
 It was Isaac Newton who said:
 
@@ -41,7 +41,7 @@ Here is another example - using the value of :math:`\pi` as defined as a variabl
     >>> math.pi
     3.141592653589793
 
-Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the ``math`` module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change in value.  We call this type of value a *constant*.
+Using the name ``math.pi`` is not calling a function, it is referring to a floating point (i.e. fractional) variable inside the ``math`` module, therefore we do not need to use parentheses.  Although we refer to ``math.pi`` as a :term:`variable`, we do not expect it change in value.  We call this type of value a :term:`constant`.
 
 Stick your head out of the shell
 --------------------------------
@@ -50,7 +50,7 @@ So let us get back to our drawing.  To import the turtle module, you just need t
 
   >>> import turtle
   
-Now we can begin to use it.  The first thing to do is to get our window onto the screen.  This is used to display our canvas (or graph paper), so that we can begin our drawing.  This is done by calling the Turtle function:
+Now we can begin to use it.  The first thing to do is to get our window onto the screen.  This is used to display our canvas (or graph paper), so that we can begin our drawing.  This is done by calling the ``Turtle`` function:
 
 .. code-block:: py3con
     :pythontest: nooutput
@@ -79,7 +79,7 @@ See how the small shape leaves a trail behind as it moves.  Let us carry on::
     >>> turtle.forward(100)
     >>> turtle.left(90)
   
-We have drawn a box!  We have effectively done the same thing four times - moved forward 100 places (measured in *pixels*, which stands for picture elements), and then turned left 90 degrees each time.
+We have drawn a box!  We have effectively done the same thing four times - moved forward 100 places (measured in :term:`pixels`, which stands for picture elements), and then turned left 90 degrees each time.
 
 If you make a mistake, you can go back a turn, or *undo* your previous move, by typing the following::
 

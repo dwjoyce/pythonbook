@@ -14,7 +14,7 @@ Refer to it when you need an example of how to do something, from printing out m
 
 Note that comments start with the ``#`` character.
 
-The ``print`` function to print to the screen::
+The ``print`` :term:`function` to print to the screen::
 
     print("Hello, World!")
     print('I will meet you at Fred\'s house')  # quote in quote
@@ -31,7 +31,7 @@ Arithmetic::
     print(3 + 4 * 5)    # will print 23
     print((3 + 4) * 5)  # will print 35, brackets go first!
 
-Using variables to store values in memory::
+Using :term:`variables` to store values in memory::
 
     a = 10
     b = a + 20
@@ -59,7 +59,7 @@ Calling :term:`functions` (pieces of code that you can use easily)::
     print(hex(183))  # prints hexadecimal B7
     print(int('10110111', 2))  # prints decimal 183
 
-Reading input from the user (using a function)::
+Reading :term:`input` from the user (using a function)::
 
     name = input('What is your name? ')
     print('Hello there', name)
@@ -96,7 +96,7 @@ Taking decisions using ``if`` statement (:term:`operators` you can use are: ``==
         print('a is between 10 and 20!')
 
 
-Looping (repeating the same code whilst a test is ``True``)::
+:term:`Looping` (repeating the same code whilst a test is ``True``)::
 
     a = 10
     b = 20
@@ -116,7 +116,7 @@ To generate :term:`random` numbers, we use the ``random`` module::
     print(random.randrange(1, 100))  # random number between 1 - 100
     print(random.random())  # random number between 0.0 - 1.0
 
-Sequences::
+:term:`Sequences`::
 
     import random
 
@@ -151,7 +151,7 @@ Sequences::
     for item in breakfast:
         print('Yum, I\'m having', item, 'for breakfast.')
 
-Defining functions allows us to organise our code better::
+:term:`Defining functions` allows us to organise our code better::
 
     def say_hello():
         print('hello')
@@ -175,7 +175,7 @@ Defining functions allows us to organise our code better::
     print(square_number(5))  # prints 25
     low, high = lowest_highest([5, 10, 35, 15, 50, 20])
 
-Reading from a file on disk::
+Reading from a :term:`file` on disk::
 
     my_file = open('textfile.txt')
     for line in my_file:  # step through file line by line
@@ -187,14 +187,14 @@ Writing to a file on disk::
     # Open output file, and then write lines to file and close
     output_file = open('test.txt', 'w')  # 'w' for writing
 
-    output_file.write('first line\n')  # note new line symbol
+    output_file.write('first line\n')  # note newline symbol
 
     lines = ['second line\n', 'third line\n']
     output_file.writelines(lines)
 
     output_file.close()
 
-Catching errors::
+Catching :term:`exceptions`::
 
     try:
         number_str = raw_input('Give me a number: ')

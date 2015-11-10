@@ -39,7 +39,7 @@ How to get going
 
 We first use the interactive shell to start off with Python.  Even when introducing more advanced language features, we will still use this shell to experiment before moving onto a proper program.  A proper program is one typed into its own file, and then the program is started separately.  This is similar to how we use other programs (e.g. LibreOffice or Firefox) - we use the final result.  This is known as :term:`running` or executing the program.  However, at this stage, we only use the interactive shell.
 
-Python's interactive shell is known as :term:`IDLE`.  This name comes from the acronym IDE, which stands for :term:`Integrated Development Environment` - a program that allows you to develop or create other programs.  It contains an editor, used to type your code, and a way of running your programs.  IDLE also contains the interactive shell that allows us to experiment line by line.
+Python's interactive shell is known as :term:`IDLE`.  This name comes from the acronym :term:`IDE`, which stands for Integrated Development Environment - a program that allows you to develop or create other programs.  It contains an editor, used to type your code, and a way of running your programs.  IDLE also contains the interactive shell that allows us to experiment line by line.
 
 To start IDLE, either click on the IDLE icon on the desktop or select the IDLE program from the Applications menu in the bottom left:
 

@@ -34,7 +34,7 @@ We do the same in lists to separate each item.  To define a list, to group a seq
 
     >>> names = ['fred', 'bob', 'harry', 'tom']
     
-Notice how we have done away with the individual variables, e.g. name1, name2, etc., and now only have one name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
+Notice how we have done away with the individual variables, e.g. ``name1``, ``name2``, etc., and now only have one name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
 
     >>> print(names)
     ['fred', 'bob', 'harry', 'tom']
@@ -68,6 +68,11 @@ And other functions, ``min`` and ``max``, will give the minimum and maximum valu
     >>> max(numbers)
     123
 
+The ``len`` function gives us the number of items in the list::
+
+    >>> len(numbers)
+    5
+
 You can even get Python to sort a list in any order you wish.  Try this out::
 
     >>> numbers = [15, 5, 35, 10, 25, 20, 30]
@@ -76,7 +81,7 @@ You can even get Python to sort a list in any order you wish.  Try this out::
     >>> print(sorted(numbers, reverse=True))
     [35, 30, 25, 20, 15, 10, 5]
     
-The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but with an extra argument we refer to by name - ``reverse``, which we set to True.  We will cover this kind of argument passing in chapter 19 when we are creating our own functions.
+The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but with an extra argument we refer to by name - ``reverse``, which we set to ``True``.  We will cover this kind of argument passing in chapter 19 when we are creating our own functions.
 
 Lists can also be modified after they have been defined by using the ``append`` and ``insert`` functions within the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well).  To see how this works, try out the following::
 
@@ -90,7 +95,7 @@ Lists can also be modified after they have been defined by using the ``append`` 
     >>> print(names)
     ['Merry', 'Bilbo', 'Frodo', 'Sam', 'Pippin']
     
-We can split a sentence into a lit of words using the split command::
+We can split a sentence into a list of words using the ``split`` function::
 
     >>> sentence = 'Mary had a little lamb'
     >>> sentence.split()
@@ -198,7 +203,7 @@ Exercises
 Things to remember
 ------------------
 
-#. To group a number of items together we box them together using square brackets, with an opening bracket ``[`` at the beginning, and a closing bracket ``]`` at the end.
+#. To group a number of items together we box them together using square brackets, with an opening bracket ``[`` at the beginning, and a closing bracket ``]`` at the end. This creates a :term:`list`.
 
 #. Separate each item within the list using a comma.
 

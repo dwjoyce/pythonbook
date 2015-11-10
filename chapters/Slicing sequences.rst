@@ -30,7 +30,7 @@ We can refer to the whole sequence of letters, such as ``print(letters)``, and e
     :width: 200 pt
     :align: center
 
-To "dip in" and fetch a single letter, we need to index the item as an offset from the start of the sequence.  To picture this, think of a hotel, like so:
+To "dip in" and fetch a single letter, we need to :term:`index` the item as an offset from the start of the sequence.  To picture this, think of a hotel, like so:
 
 .. image:: /images/alien_pizza/hotel.pdf
     :height: 170 pt
@@ -129,7 +129,7 @@ Every third slice from 1 to -1? That's the same as every third slice from 1 to 5
 Python likes pizza
 ------------------
 
-OK, now we know how to ask aliens for pizza, but what about if Python has our pizza? Let us represent the pizza as a list of the colors, one for each slice::
+OK, now we know how to ask aliens for pizza, but what about if a python stole our pizza? Let us represent the pizza as a list of the colors, one for each slice::
 
     >>> pizza = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
 
@@ -156,7 +156,7 @@ See how Python has given us a list of our slices! The other aliens would be happ
     >>> pizza[1:-1]
     ['yellow', 'green', 'cyan', 'blue']
 
-But what if our reg-green-blue loving alien turned up?  We first type the start and stop index: ``pizza[0:5``. Then we type another colon, ``:``, followed by the step we wish to take each time. To ask for every second slice, the step will be ``2``, followed by the closing bracket, ``]``::
+But what if our red-green-blue loving alien turned up?  We first type the start and stop index: ``pizza[0:5``. Then we type another colon, ``:``, followed by the step we wish to take each time. To ask for every second slice, the step will be ``2``, followed by the closing bracket, ``]``::
 
     >>> pizza[0:5:2]
     ['red', 'green', 'blue']
@@ -310,12 +310,12 @@ Exercises
 Things to remember
 ------------------
 
-#. Lists and strings are sequences, and so can be indexed and sliced.
+#. Lists and strings are :term:`sequences`, and so can be indexed and sliced.
 
-#. The first item in a sequence has the index ``0``, the second ``1``, the third ``2``, and so on.
+#. The first item in a sequence has the :term:`index` ``0``, the second ``1``, the third ``2``, and so on.
 
 #. Negative indexes can be used, counting from the end of the sequence. The last item is ``-1``.
 
-#. Slicing is done by ``sequence[start:stop:step]``.
+#. :term:`Slicing` is done by ``sequence[start:stop:step]``.
 
 #. Use the ``len`` function to find out how long a sequence is.

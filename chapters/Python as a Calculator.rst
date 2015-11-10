@@ -51,19 +51,19 @@ The answer is the same as with our calculator example above.  However, what are 
 
 Type in it, press :button:`Return` and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
 
-Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to appendix C on Operators.  If in doubt, use parentheses ``(`` ``)`` to force a particular order!
+Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to appendix C on Operators.
 
-To enforce a different order, you can use brackets.  Just like in Maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
+To enforce a different order, you can use brackets (``(`` and ``)``).  Just like in Maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
     >>> (10 + 20 - 4) / 2 * 3
     39.0
     
-In programming, this way of expressing a value to form a result is called an expression.
+In programming, this way of expressing a value to form a result is called an :term:`expression`.
 
 Operator overload
 -----------------
 
-On your calculator there are more than 4 buttons to do things.  There is one labelled x\ :superscript:`2`\ . And x\ :superscript:`3`\ .  Python has this built-in as well and it is the ``**`` (power) operator.  For example, the number 9 to the power of 2 is as simple as::
+On your calculator there are more than 4 buttons to do things.  There is one labelled :math:`x^2`. And :math:`x^3`.  Python has this built-in as well and it is the ``**`` (power) operator.  For example, the number 9 to the power of 2 is as simple as::
 
     >>> 9 ** 2
     81
@@ -73,20 +73,20 @@ Which is 81. 2 to the power of 3 is::
     >>> 2 ** 3
     8
 
-Which is 8. This works for any power.  How about working out large numbers, such as 19\ :superscript:`8`.  To do this, type in the following::
+Which is 8. This works for any power.  How about working out large numbers, such as 19\ :superscript:`8`?  To do this, type in the following::
 
     >>> 19 ** 8
     16983563041
 
 
-Your answer should state 16983563041. Negative numbers work as well to give fractional numbers less than 1.0.  Remember that 2\ :superscript:`-1` is the same as 1 ÷ 2?  Doing this in Python is similar::
+Your answer should state 16983563041. Negative numbers work as well.  Remember that 2\ :superscript:`-1` is the same as :math:`1 \div 2`?  Doing this in Python is similar::
 
     >>> 2 ** -1
     0.5
 
 Your answer should read 0.5.
 
-We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, 7 ÷ 3 = 2 r 1)? Python took that class too. To get the quotient (in this case 2), use the ``//`` (floor or :term:`integer division`) operator::
+We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, :math:`7 \div 3 = 2\, r\, 1`)? To get the quotient (in this case 2), use the ``//`` (floor or :term:`integer division`) operator::
 
     >>> 7 // 3
     2

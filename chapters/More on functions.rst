@@ -69,12 +69,12 @@ This is very similar to what we have done already.  Now let's chain our function
 
     print(sum_up(sum_up(1, 2), sum_up(3, 4)))
     
-This could go on and on!  You are effectively forming an expression in the shape of a tree - the inner calls to ``sum_up`` are called first, the one on the left, and then the one on the right.  With these two values, 3 and 7, respectively, the outer ``sum_up`` is called, thus producing the final printed result of 10.
+This could go on and on!  You are effectively forming an expression in the shape of a tree - the inner calls to ``sum_up`` are called first, the one on the left, and then the one on the right.  With these two values, 3 and 7, respectively, the outer ``sum_up`` is called, thus producing the final printed result of 10. This expression is equivalent to ``(1 + 2) + (3 + 4)``.
 
 Naming parameters
 -----------------
 
-So far we pass arguments into functions, used inside the function as parameters, to feed data into the function.  We generally do the following, which you should now type into your ever increasing :file:`functions.py` program::
+So far we pass :term:`arguments` into functions, used inside the function as :term:`parameters`, to feed data into the function.  We generally do the following, which you should now type into your ever increasing :file:`functions.py` program::
 
     def box_volume(length, height, width):
         return length * height * width
@@ -85,13 +85,13 @@ You should place the calling of the function, the line containing the function n
 
 It is quite clear that the integer value ``10`` is passed into parameter ``length``, ``20`` is passed into the parameter ``height``, and ``30`` is passed into the parameter ``width``.  In Python, these are called :term:`positional arguments` - the position of each argument determines which parameter it is passed into.  The first argument is passed into the first parameter, the second argument is passed into the second parameter, and so on.  If you get the order of your arguments wrong, then then the wrong data will be fed into the wrong parameters.  Bad things will happen.
 
-An alternative is to explicitly state what parameters you want to use for each argument (remember, arguments on the outside are being passed into parameters on the inside).  Use the same function definition, but call it in this way.  You should place this line beneath the print statement above::
+An alternative is to explicitly state what parameters you want to use for each argument (remember, arguments on the outside are being passed into parameters on the inside).  Use the same function definition, but call it in this way.  You should place this line beneath the last statement from above::
 
     print(box_volume(length=10, height=20, width=30))
     
 Run your program again, and make sure it now prints out the same volume twice.  However, the line calling the function ``box_volume`` makes more sense with the parameter names being assigned to the argument values explicitly.  Yes, it is more typing, but reads better.
 
-This is called :term:`keyword arguments` - you are referring to each parameter by name, by keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
+This is called :term:`keyword arguments` - you are referring to each parameter by name or keyword, and supplying the data you want to be associated with each.  This may not look very useful in this example, but when function definition and function invocation (i.e. calling the function) are in different modules, then it allows you to immediately see what value is being passed into what parameter.  The function call contains more information, and allows you to see what is going on.
 
 A little more practice
 ----------------------
@@ -141,14 +141,14 @@ Run your program, saving it as :file:`circles.py`, and make sure it runs without
 
 A little explanation:
 
-    - we import the modules we need, turtle for drawing, random for producing a bit of variation.
-    - we then define a function called ``draw_circle`` which take four arguments - the radius, followed by red, green and blue to define the color.
-    - inside the ``draw_circle`` function, we set the pen and fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
-    - in the main part of the program, we create our window using the Turtle() function, set the speed to hurry things up, and then save the window width and height so we can use them later.
-    - we then enter a loop which continues forever.
-    - inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
-    - we then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
-    - we then call our ``draw_circle`` function using the data we have at hand.
+    - We import the modules we need, ``turtle`` for drawing, ``random`` for producing a bit of variation.
+    - We then define a function called ``draw_circle`` which take four arguments - the radius, followed by red, green and blue to define the color.
+    - Inside the ``draw_circle`` function, we set the pen and fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
+    - In the main part of the program, we create our window using the ``Turtle()`` function, set the speed to hurry things up, and then save the window width and height so we can use them later.
+    - We then enter a loop which continues forever.
+    - Inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
+    - We then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
+    - We then call our ``draw_circle`` function using the data we have at hand.
 
 Different types of functions
 ----------------------------
@@ -213,10 +213,10 @@ Exercises
 Things to remember
 ------------------
 
-#. Functions can both receive and return data.  Data is received via the use of parameters.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the return statement.
+#. Functions can both receive and return data.  Data is received via the use of :term:`parameters`.  Data is returned via the use of the ``return`` keyword.  You combine the ``return`` keyword with an optional expression to form the :term:`return statement`.
 
 #. Even functions without the ``return`` statement return a value - the value ``None``.  It is like a non or null value, similar to zero but not actually an integer number.
 
 #. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
 
-#. There are two ways of passing in arguments with functions.  Firstly, by *position*, so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword*, so you can specify the name of the parameter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.
+#. There are two ways of passing in arguments with functions.  Firstly, by *position* (:term:`positional arguments`), so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword* (:term:`keyword arguments`), so you can specify the name of the parameter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.

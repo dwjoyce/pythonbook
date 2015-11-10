@@ -10,7 +10,7 @@ Functions and Maths
 Basic functions
 ---------------
 
-In Maths, you learn about functions. An example of a simple function is:
+In Maths, you learn about :term:`functions`. An example of a simple function is:
 
 .. math:: f(x) = x + 1
 
@@ -165,7 +165,7 @@ Exercises
 Things to remember
 ------------------
 
-#. Functions are called with arguments to give a return value.
+#. :term:`Functions` are called with :term:`arguments` to give a :term:`return value`.
 
 #. To call a function ``func`` with no arguments do ``func()``.
 

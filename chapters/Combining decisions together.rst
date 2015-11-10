@@ -11,7 +11,7 @@ Juggling tests
 
 We have learned how to use the ``if`` statement to evaluate a test, and if true it then executes a block of code you provide immediately underneath.  It makes our programs cleverer so that they can take different decisions depending on the circumstances at the time.
 
-This chapter introduces logical operators which make combining tests together easier.  Although this part of programming is not essential, it does make our programs shorter and easier to write.
+This chapter introduces :term:`logical operators` which make combining tests together easier.  Although this part of programming is not essential, it does make our programs shorter and easier to write.
 
 For example, take a program that wants to tell the user whether he can go the beach or not.  This decision depends on the weather (preferably warm), and whether it is during the holidays or not.
 
@@ -88,6 +88,6 @@ Exercises
 Things to remember
 ------------------
 
-#. There are three logical operators: ``and`` for testing whether the left and right-hand side tests are both true; ``or`` for testing whether either the left or right-hand side tests are true (or both); ``not`` for inverting a boolean value.
+#. There are three :term:`logical operators`: ``and`` for testing whether the left and right-hand side tests are both true; ``or`` for testing whether either the left or right-hand side tests are true (or both); ``not`` for inverting a boolean value.
 
 #. Put the ``and`` and ``or`` operators in-between boolean expressions.  Put the ``not`` operator in front of a boolean expression.

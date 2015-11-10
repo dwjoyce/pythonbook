@@ -9,7 +9,7 @@ Naming code
 Data and code
 -------------
 
-Variables are a way of naming data.  A piece of data, like the number *123*, can be given the name ``number`` like this in Python (try it in the interactive shell)::
+Variables are a way of naming data.  A piece of data, like the number ``123``, can be given the name ``number`` like this in Python (try it in the interactive shell)::
 
     >>> number = 123
     
@@ -113,7 +113,7 @@ Now, of course, if you can pass in one item, you should be able to pass in more 
 and insert these lines below the last call to ``say_hello_times``::
 
     say_message_times('Yo! ', 25)
-    say_message_times('I will stop talking in class', 100)
+    say_message_times('I will stop talking in class ', 100)
     
 .. note:: An argument is the value or variable being passed *into* a function.  A :term:`parameter` is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them all parameters!
 
@@ -148,8 +148,8 @@ Things to remember
 
 #. To define a new function, use the ``def`` keyword, followed by the name of the function, and then parentheses.
 
-#. Inside the parentheses, place any parameters you are expecting.  Separate each one using a comma.  This is the way of passing in data to affect how the function behaves - pass in different data, it should do different things.
+#. Inside the parentheses, place any :term:`parameters` you are expecting.  Separate each one using a comma.  This is the way of passing in data to affect how the function behaves - pass in different data, it should do different things.
 
-#. The function definition is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any block of code, is indented to the right.
+#. The :term:`function definition` is completed with a colon ``:`` symbol, followed by the code that is inside the function.  This code, like any block of code, is indented to the right.
 
-#. Defining a function does not mean it is used - it is simply available to be used, like a tool in a toolbox.  To call or invoke a function, you must use its name, followed by parentheses, but without the ``def`` keyword.
+#. Defining a function does not mean it is used - it is simply available to be used, like a tool in a toolbox.  To :term:`call` or invoke a function, you must use its name, followed by parentheses, but without the ``def`` keyword.

@@ -9,7 +9,7 @@ Walking along data
 Round and round
 ---------------
 
-Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a boolean expression) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated *while* the expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can break out of the loop early by using the ``break`` statement.
+Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a :term:`boolean expression`) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated *while* the expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can break out of the loop early by using the ``break`` statement.
 
 For example, if we want to print out the numbers up to 10, then on the interactive shell we could do the following::
 
@@ -51,7 +51,7 @@ And that is all we need to print out the numbers from the list we created.  We c
     >>> for num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
             print(num)
 
-To explain what is going on - the ``for`` keyword is telling Python that *for each* item (which we have called ``num``) in the list provided, then execute this block of code.  It is simply a way of stepping over a list, one item at a time.
+To explain what is going on - the ``for`` keyword is telling Python that *for each* item (which we have called ``num``) in the list provided, then execute this block of code.  It is simply a way of stepping or :term:`iterating` over a list, one item at a time.
 
 To put it another way, you are asking for each item in the list, which Python passes to your program in the variable name provided, and repeats the code until the list runs out.
 
@@ -67,7 +67,7 @@ It is useful then that Python provides a function to give us a list of numbers i
     
 Even shorter than before, now that we are using the ``range`` function to do the work for us.  Usually, it just takes one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting with 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
 
-.. note:: In programming generally, we like to start from 0 and not from 1, just like when indexing lists.  We count up to an end point, but since we usually count from 0, we do not include the end point in our range.
+.. note:: In programming generally, we like to start from 0 and not from 1, just like when indexing lists, or using ``random.randrange``.  We count up to an end point, but since we usually count from 0, we do not include the end point in our range.
 
 If you don't want to start from 0, then you need to pass in two numbers - a start point and an end point.  For example, if you want the numbers between 100 and 200, you simply ask for ``range(100, 200)``.  For numbers between -100 and 50, you ask for ``range(-100, 50)``.
 
@@ -149,7 +149,7 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
 
 Save it as :file:`redoctagon.py`, and run it.  Not surprisingly, it should draw a red octagon.
 
-A bit of explanation: we import the turtle module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
+A bit of explanation: we import the ``turtle`` module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
 
 This is now much easier than before than either using a sequence of statements, or even when we were using ``while`` loops.
 
@@ -183,7 +183,7 @@ Open up another new file window, and type in the following::
 
 Run and save it as :file:`spirals.py`, and see what happens.  If there any problems, then check your code carefully!
 
-Some explanation: we import the modules we need, turtle for drawing, random to introduce a bit of variation.  We then define the colors (note, English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, change the drawing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 times in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
+Some explanation: we import the modules we need, ``turtle`` for drawing, ``random`` to introduce a bit of variation.  We then define the colors (note, not the English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, change the drawing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 times in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
 
 Try changing the numbers to see what happens to the final result.
 

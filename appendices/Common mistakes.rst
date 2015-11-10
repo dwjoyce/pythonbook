@@ -193,7 +193,7 @@ Variable names must begin with either an upper or lowercase letter, or an unders
 Setting variables
 -----------------
 
-Variables are defined by placing the variable name on the left, with an assignment operator in the middle, followed by the expression to use on the right.  If you are defining two variables at the same time (in the second example below), then you must use the assignement operator between each of them so that they are assigned to the same value.
+Variables are defined by placing the variable name on the left, with an assignment operator in the middle, followed by the expression to use on the right.  If you are defining two variables at the same time (in the second example below), then you must use the assignment operator between each of them so that they are assigned to the same value.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |
@@ -284,7 +284,7 @@ Any compound statement, whether an ``if``, ``while``, ``for`` or ``def``, must h
 Using the assignment operator instead of comparison operator
 ------------------------------------------------------------
 
-When comparing values, you must use one of the comparison operators.  The assignment operator ``=`` is used to define variables.  The comparison operator ``==`` is used to compare an expression on the left with an expression on the right, resulting in a boolean ``True`` or ``False`` result.
+When comparing values, you must use one of the :term:`comparison operators`.  The :term:`assignment operator` ``=`` is used to define variables.  The equals operator ``==`` is used to compare an expression on the left with an expression on the right, resulting in a boolean ``True`` or ``False`` result.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |
@@ -300,7 +300,7 @@ When comparing values, you must use one of the comparison operators.  The assign
 Not forming expressions properly
 --------------------------------
 
-The expressions below on the left (taking the first example) were intended to compare the variable ``ch`` against either 'A' or 'B', and execute the subsequent code block if this is the case.  Unfortunately, it only compares ``ch`` against 'A', and then checks whether the letter 'B' is not empty (which it isn't).  It is equivalent to ``(ch == 'A') or ('B')``, with each side of the expression being evaluated separately, and then combined together with the ``or`` operator.  This means that the code block will always execute, as this expression is always ``True``.  To compare a variable against two separate values, you need to do both comparisons individually, such as on the right of the table.
+The expressions below on the left (taking the first example) were intended to compare the variable ``ch`` against either ``'A'`` or ``'B'``, and execute the subsequent code block if this is the case.  Unfortunately, it only compares ``ch`` against ``'A'``, and then checks whether the letter ``'B'`` is not empty (which it isn't).  It is equivalent to ``(ch == 'A') or ('B')``, with each side of the expression being evaluated separately, and then combined together with the ``or`` operator.  This means that the code block will always execute, as this expression is always ``True``.  To compare a variable against two separate values, you need to do both comparisons individually, such as on the right of the table.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |
@@ -404,7 +404,7 @@ Do not index past the end of a sequence, which ranges from 0 up until the length
 Forgetting the brackets when calling a function
 -----------------------------------------------
 
-Always include parentheses when invoking (calling) a function.  Simply typing the name of the function will provide you with its memory location - it will not actually run it!
+Always include parentheses when invoking (:term:`calling`) a function.  Simply typing the name of the function will provide you with its memory location - it will not actually run it!
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |
@@ -464,7 +464,7 @@ Do not use reserved keywords as names in your code.  To see Python's full list o
 Getting the indentation wrong
 -----------------------------
 
-Python uses indentation (the practice of "pushing in" your code from the left-hand side) to define blocks of code.  Ensure that each block of code is exactly indented in the same manner (i.e. they start in the same column as other lines at the same level or indentation).  It is recommended practice to use an indentation of 4 spaces for each code block.
+Python uses :term:`indentation` (the practice of "pushing in" your code from the left-hand side) to define blocks of code.  Ensure that each block of code is exactly indented in the same manner (i.e. they start in the same column as other lines at the same level or indentation).  It is recommended practice to use an indentation of 4 spaces for each code block.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |

@@ -44,7 +44,7 @@ You can print out more than one item by using a comma ``,`` between the items to
 
 and run, again by using the :kbd:`F5` key and pressing the :button:`Return` key to confirm.  This will print out 10, followed by 20 and finally 30, all on the same line.
 
-You can even get the print function to perform the calculation for you when passing in the values to print.  All arguments like this are evaluated (processed or simplified) before the values are presented to the function to use.  Again, modify your program like so::
+You can even get the ``print`` function to perform the calculation for you when passing in the values to print.  All arguments like this are evaluated (processed or simplified) before the values are presented to the function to use.  Again, modify your program like so::
 
   a = 10
   b = 20
@@ -90,7 +90,7 @@ We can even have a bit of fun, and join and replicate strings like so::
   print('One piece of text' + 'joined to another')
   print('How about this ' * 10)
 
-Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called :term:`string concatenation`.  The multiplication operation ``*`` is used to repeat the string however many times you specify - 10 times in this example.
+Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called :term:`string concatenation`.  The multiplication operation ``*`` is used to repeat the string however many times you specify - 10 times in this example.  This is called :term:`repetition`.
 
 Variables can also be assigned to strings.  Add the following onto your program, :file:`lines.py`::
 
@@ -101,13 +101,13 @@ Variables can also be assigned to strings.  Add the following onto your program,
   
 Finally, you can use special characters in strings to denote certain things.  Here I will introduce just three of them, so add these lines to finish::
 
-  print('Here is a new line character\nThis is now on a separate line!')
+  print('Here is a newline character\nThis is now on a separate line!')
   print('This introduces a horizontal tab \t to space out my text')
   print('I love St. Michael\'s - notice the quote inside the quote!')
 
-The first one breaks the line with a new line character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
+The first one breaks the line with a newline character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
 
-.. tip:: When you are writing a program later on and cannot see why it is not working as you would expect, try inserting some ``print`` statements in the code with the variables your program is using.  That way, you will see what is going on, whilst it is running.  This should then show you what needs changing to make it work better.  This is called debugging your program.
+.. tip:: When you are writing a program later on and cannot see why it is not working as you would expect, try inserting some ``print`` statements in the code with the variables your program is using.  That way, you will see what is going on, whilst it is running.  This should then show you what needs changing to make it work better.  This is called :term:`debugging` your program.
 
 Exercises
 ---------
@@ -125,14 +125,14 @@ Exercises
 Things to remember
 ------------------
 
-#. Use the ``print`` function to display or output any expression onto the screen.
+#. Use the ``print`` function to display or output any :term:`expression` onto the screen.
 
 #. Separate the items to print using a comma.
 
 #. A piece of text can be used by enclosing it in quotation marks, whether using single (e.g. ``'fred'``) or double quotes (e.g. ``"fred"``).
 
-#. The only arithmetic operators that can be used with text are addition (i.e. joining strings together, known as concatenation) and multiplication (repetition).
+#. The only arithmetic operators that can be used with text are addition (i.e. joining strings together, known as :term:`concatenation`) and multiplication (:term:`repetition`).
 
 #. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
 
-#. We have now covered three types of data: integers, floats and strings.
+#. We have now covered three types of data: :term:`integers`, :term:`floats` and :term:`strings`.

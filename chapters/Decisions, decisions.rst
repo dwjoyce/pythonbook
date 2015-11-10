@@ -30,13 +30,13 @@ We will use the interactive shell to experiment for a while.  Type the following
     >>> a >= b
     False
     
-Then try changing the values of a and b (make them the same, for instance), and repeat the comparisons.
+Then try changing the values of ``a`` and ``b`` (make them the same, for instance), and repeat the comparisons.
 
-From the above snippet, the first two lines create our variables, ``a`` and ``b``, using the assignment operator (not the comparison operator).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the not equal to operator ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` is turned into ``<=``.
+From the above snippet, the first two lines create our variables, ``a`` and ``b``, using the :term:`assignment operator` (not the :term:`equals operator`).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the :term:`not equal to operator` ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` is turned into ``<=``.
 
-.. note:: We call these expressions, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. ``2.5 > 1.2`` and ``"fred" != "harry"``.
+.. note:: We call these :term:`expressions`, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. ``2.5 > 1.2`` and ``"fred" != "harry"``.
 
-You will also notice that the result of each expression is either ``True`` or ``False``.  This is our fourth type of data, and they are called :term:`boolean` values.  They are the simplest type of data imaginable - they are either ``True`` or ``False``.  They cannot be any other value.  This is the equivalent of on or off, 1 or 0, up or down.  There is no in-between value, it is one or the other.  For example, above we tested whether 10 was equal to 20 (``a == b``) - this is either True or it is False (obviously the latter).  It cannot be something else, or both!
+You will also notice that the result of each expression is either ``True`` or ``False``.  This is our fourth type of data, and they are called :term:`boolean` values.  They are the simplest type of data imaginable - they are either ``True`` or ``False``.  They cannot be any other value.  This is the equivalent of on or off, 1 or 0, up or down.  There is no in-between value, it is one or the other.  For example, above we tested whether ``10`` was equal to ``20`` (``a == b``) - this is either ``True`` or it is ``False`` (obviously the latter).  It cannot be something else, or both!
 
 Booleans are very useful, and you can set variables to boolean values as well.  We will see more of this in chapter 13 on escaping out of a loop.
 
@@ -147,7 +147,7 @@ Things to remember
    Less than or equal to                   ``<=``
    ======================================  ========
    
-#. We now know four types of data - integer, floats, strings and booleans.  Boolean values are either ``True`` or ``False``.
+#. We now know four types of data - integer, floats, strings and booleans.  :term:`Boolean values` are either ``True`` or ``False``.
 
 #. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated as true, then even if there are ``elif`` or ``else`` statements below, the program will skip them all.
 

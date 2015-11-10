@@ -101,7 +101,7 @@ You can name your variables with any combination of letters (UPPER and lowercase
 Exercises
 ---------
 
-#. Define a variable called ``age`` and set it to your age (use an integer number).
+#. Define a variable called ``age`` and set it to your age (use an :term:`integer` number).
 
 #. Use your ``age`` variable to calculate how many days old you are (assume each year has 365 days).
 
@@ -110,8 +110,8 @@ Exercises
 Things to remember
 ------------------
 
-#. You define a variable by giving it a name, and using the assignment operator to give it a value.  The value can be evaluated (calculated) from other variables.
+#. You define a variable by giving it a name, and using the :term:`assignment` operator to give it a value.  The value can be evaluated (calculated) from other variables.
 
-#. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.  To use the underscore character, you need to press the Shift key down whilst pressing the key to the right of the 0 (zero).
+#. Begin your variable names with a letter from the alphabet (upper or lowercase) or the ``_`` (underscore) character.  To use the underscore character, you need to press the :button:`Shift` key down whilst pressing the key to the right of the 0 (zero), the :button:`-` key.
 
 #. Use the ``_`` (underscore) character to divide up words in your variable names to make them more readable, e.g. ``first_num``.

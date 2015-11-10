@@ -11,7 +11,7 @@ Taking a different route
 
 With what we have learned up until now, we can do arithmetic, store values against variable names, call functions, import other people's modules, and even get input from the user.  We have also dealt in different types of data, whether numbers (integers or floating point) or strings (sequences of letters, digits and symbols).  Our programs have started running (technically known as :term:`executing`) from the top, and finished at the bottom, performing each line (a code statement) at a time, without any deviation whatsoever.
 
-If a program simply performs the same instructions, line by line, every single time, then effectively they do the same thing every time they are run.  This is not very interesting!  Programs become more useful when they can make decisions on what to do, depending on the circumstances.  Usually, this involves testing the value of a variable, and then performing some instructions over others.  In programming, this is known as :term:`selection` - the program is running some code statements selectively over others - it is making a decision.
+If a program simply performs the same instructions, line by line, every single time, then effectively they do the same thing every time they are run.  This is not very interesting!  Programs become more useful when they can make decisions on what to do, depending on the circumstances.  Usually, this involves testing the value of a variable, and then performing some instructions over others.  In programming, this is known as :term:`selection` - the program is selecting some code statements for running, and not others - it is making a decision.
 
 For example, if the program is working out the price of a cinema ticket, and VIP tickets cost 20% extra, the program needs to take a decision as to whether to add on this 20% or not.  It cannot add on 20% for all the tickets!
 
@@ -89,7 +89,7 @@ You can add another block of code that is selectively executed after the ``if`` 
     if popcorn == 'yes':
         price = price + 1.25
 
-You finish with the ``print`` statement as usual.  Now run your program again - there are now six routes or paths through your :file:`vip.py` program - firstly, whether the seat chosen is VIP or not, and within this, whether it is weekend or not, and finally whether popcorn was purchased.  That is 3 possibilities, multiplied by two ways for each (either yes or no), to reach our six paths in the program.  See if you can run the :file:`vip.py` program, with all of these possibilities tried out.
+You finish with the ``print`` statement as usual.  Now run your program again - there are now six routes or paths through your :file:`vip.py` program - firstly, whether the seat chosen is VIP or not, and within this, whether it is weekend or not, and finally whether popcorn was purchased. See if you can run the :file:`vip.py` program, with all of these possibilities tried out.
 
 Exercises
 ---------
@@ -104,12 +104,12 @@ Exercises
 Things to remember
 ------------------
 
-#. Use the ``if`` statement to perform selection.  It is given an expression to evaluate, and if true, it will then execute the statements below the ``if`` statement.
+#. Use the ``if`` statement to perform :term:`selection`.  It is given an :term:`expression` to :term:`evaluate`, and if true, it will then execute the statements below the ``if`` statement.
 
 #. Put a colon ``:`` at the end of the line containing the ``if``.
 
-#. Statements grouped together belonging to an ``if`` statement is called a block of code.  It should be indented by 4 spaces, thus showing Python what code belongs to which test.
+#. Statements grouped together belonging to an ``if`` statement is called a :term:`block of code`.  It should be :term:`indented` by 4 spaces, thus showing Python what code belongs to which test.
 
 #. To resume the program regardless of whether the test for the ``if`` statement was successful or not, then you should unindent your code (push it back to the left by 4 spaces).
 
-#. Use the double equals operator ``==`` to test whether the left-hand side of the expression is equal to the right-hand side.  Do not use the assignment operator ``=`` for this!
+#. Use the :term:`equals` operator ``==`` to test whether the left-hand side of the expression is equal to the right-hand side.  Do not use the :term:`assignment` operator ``=`` for this!

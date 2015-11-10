@@ -16,7 +16,7 @@ Computer programs which need a bit of variation are programs like flight simulat
 Going random
 ------------
 
-Python does this by using the ``random`` module.  We will get to know this by first using the interactive shell - bring this onto your screen, and you can then import the random module in a similar fashion to importing the turtle module::
+Python does this by using the ``random`` module.  We will get to know this by first using the interactive shell - bring this onto your screen, and you can then import the ``random`` module in a similar fashion to importing the ``turtle`` module::
 
     >>> import random
 
@@ -44,7 +44,7 @@ In fact, let's use our new found knowledge on looping to see how this random num
     while True:
         random.random()
 
-Just like in the previous chapter on infinite loops, you will have to press the :kbd:`Ctrl` and :kbd:`C` keys together on your keyboard to break out of the loop manually.  It will probably go so fast, that only by breaking out of the loop will you be able to look at the numbers properly.  If this doesn't work, then make sure you have imported the random module first.
+Just like in the previous chapter on infinite loops, you will have to press the :kbd:`Ctrl` and :kbd:`C` keys together on your keyboard to break out of the loop manually.  It will probably go so fast, that only by breaking out of the loop will you be able to look at the numbers properly.  If this doesn't work, then make sure you have imported the ``random`` module first.
 
 Let's try another function - ``randrange`` - this time, instead of returning a number between 0.0 and 1.0 (which could be scaled up, if needs be), it will return an integer up to (but not including) the number you give it.  For example, try the following a few times::
 
@@ -125,6 +125,6 @@ Exercises
 Things to remember
 ------------------
 
-#. To add variation, or a bit of randomness, into your program, then ``import`` the ``random`` module, and make use of what it offers.
+#. To add variation, or a bit of :term:`randomness`, into your program, then ``import`` the ``random`` module, and make use of what it offers.
 
 #. Two functions we used in this chapter are the ``random`` function (note: it has the same name as the module), which returns a floating point number between 0.0 and 1.0, and ``randrange`` which returns an integer number between 0 (or the starting point you provide) and up to (but not including) the end point.

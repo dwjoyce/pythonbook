@@ -5,14 +5,14 @@ Asking questions
     :author: Homer Simpson
     :source: In response to the message, "Press any key"
 
-    Where is the 'any' key?”
+    Where is the :button:`any` key?”
 
 String input
 ------------
 
 It is now time to make our programs more interactive, allowing the user to get involved whilst the program is running.  Up until now, Python has carried out our instructions, one line at a time, with the program doing exactly the same thing every time.
 
-In this chapter, we will allow the user to affect what happens in the program with the opportunity to enter data of their own.  The way Python allows the user to enter data is by using the ``input`` function.  This reads in what the user is typing on the keyboard, and returns the value to the program so that it can be stored or used elsewhere.
+In this chapter, we will allow the user to affect what happens in the program with the opportunity to enter data of their own.  The way Python allows the user to enter data is by using the ``input`` function.  This reads in what the user is typing on the keyboard, and returns the value to the program as a string so that it can be stored or used elsewhere.
 
 Begin by creating a new program (:menu:`File -> New File`), and type the following::
 
@@ -21,18 +21,18 @@ Begin by creating a new program (:menu:`File -> New File`), and type the followi
     
 Press :kbd:`F5` to run your program, and give it the name :file:`hello.py`.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the :button:`Return` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
 
-Note that we are using a message (a string value) when calling the ``input`` function - this is the message that is presented to the user when you are asking for input.  This is not essential - you could miss it out, but then the user may not know they are expected to type something.  It is best to present the message, so they know what to do next.
+Note that we are using a message (a :term:`string` value) when calling the ``input`` function - this is the message that is presented to the user when you are asking for input.  This is not essential - you could miss it out, but then the user may not know they are expected to type something.  It is best to present the message, so they know what to do next.
 
 Using numbers
 -------------
 
 The type of data given to us by the ``input`` function (i.e. what is returned) is always a string.
 
-Remember, when you *add* two strings, you are really joining them together or :term:`concatenating` them (e.g. ``"12" + "34"`` would equal ``"1234"``).  When you *multiply* a string by a number, you are repeating the contents of the string (e.g. ``"123" * 3`` would equal ``"123123123"``).
+Remember, when you *add* two strings, you are really joining them together or :term:`concatenating` them (e.g. ``"12" + "34"`` would equal ``"1234"``).  When you *multiply* a string by a number, you are :term:`repeating` the contents of the string (e.g. ``"123" * 3`` would equal ``"123123123"``).
 
 Therefore, if you need to use the input as an actual number, you need to convert it from a string type to an integer or float type.  This means you can then use the result in a normal calculation like any other number.  It is effectively converts a sequence of digits into a proper number where the right most digit is the 1s, the second column is the 10s, the third column is the 100s, etc., with all the numbers combined together to form a complete number.
 
-.. note:: Each character of a string is actually encoded according to a table of a character set.  One common character set is ASCII (American Standard Code for Information Interchange), which includes all the Latin characters, digits and common symbols.  Another is Unicode, which includes characters from many other languages.  These character sets encode the letter 'A' as the number 65, the digit '0' as 48, and the symbol "!" as 33.  This demonstrates how text is stored inside computer systems.
+.. note:: Each character of a string is actually encoded according to a table of a character set.  One common character set is :term:`ASCII` (American Standard Code for Information Interchange), which includes all the Latin characters, digits and common symbols.  Another is :term:`Unicode`, which includes characters from many other languages.  These character sets encode the letter 'A' as the number 65, the digit '0' as 48, and the symbol "!" as 33.  This demonstrates how text is stored inside computer systems.
 
 To convert from a string to an integer, you use the ``int`` function.  So for example, ``int("123")`` would return the actual number ``123``.
 
@@ -81,15 +81,15 @@ Exercises
 
 #. Expand on the :file:`sumup.py` program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your :file:`sumup.py` program we did earlier in this chapter.
 
-#. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out 10th; if the user entered 18, print out "18th".  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
+#. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out ``10th``; if the user entered 18, print out ``18th``.  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
 
 Things to remember
 ------------------
 
 #. Use the ``input`` function to read input from the keyboard.  You can store this in a variable by putting the variable name and the assignment operator to the left hand side of the call to input.  Moreover, you can optionally include a message (a string) to present to the user when the program pauses for input.
 
-#. To convert to an integer, use the ``int`` function.
+#. To convert to an :term:`integer`, use the ``int`` function.
 
-#. To convert to a float, use the ``float`` function.
+#. To convert to a :term:`float`, use the ``float`` function.
 
-#. To convert to a string, use the ``str`` function.
+#. To convert to a :term:`string`, use the ``str`` function.
