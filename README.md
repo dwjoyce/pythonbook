@@ -1,16 +1,16 @@
 Marching up and down the code
 =============================
 
-![Licence](https://img.shields.io/github/license/dwjoyce/pythonbook.svg)
+![Licence](https://img.shields.io/badge/licence-CC--BY--NC--SA%204.0-blue.svg)
 ![Build status](https://img.shields.io/travis/dwjoyce/pythonbook.svg)
 ![Issues](https://img.shields.io/github/issues/dwjoyce/pythonbook.svg)
 ![Release](https://img.shields.io/github/release/dwjoyce/pythonbook.svg)
 ![Downloads](https://img.shields.io/github/downloads/dwjoyce/pythonbook/latest/total.svg)
 
-A project to create a textbook for teaching Python 3 on Rasberry Pi 2B computers
+A project to create a textbook for teaching Python 3 on Raspberry Pi 2B computers
 
-Useful commands
----------------
+Useful commands for development
+-------------------------------
 
 Install sphinx:
 
