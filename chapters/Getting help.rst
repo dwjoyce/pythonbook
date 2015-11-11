@@ -15,7 +15,7 @@ On a general level, you can use the interactive shell to enter the help utility 
 
     >>> help()
     
-So if you remember what we taught in chapter 2, this means that ``help`` is a function, and it is being called by placing parentheses ``()`` (round brackets) after its name.
+So if you remember what we taught in :ref:`chapter 2`, this means that ``help`` is a function, and it is being called by placing parentheses ``()`` (round brackets) after its name.
 
 When we are in the help utility, the prompt changes from ``>>>`` to ``help>``, to avoid confusing the two.  The first thing to learn is how to exit the help system:
 

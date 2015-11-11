@@ -84,4 +84,4 @@ Things to remember
 
 #. Use the keyword ``break`` to break out of the present loop.  If one loop is nested inside another and the break resides in the inner loop, it only breaks out of the inner loop, not the outer one as well.
 
-#. The ``while`` loop is best used for this kind of looping - when you do not know when to stop until you have reached the end.  In chapter 17, we will introduce another kind of loop which is better for looping a set number of times.
+#. The ``while`` loop is best used for this kind of looping - when you do not know when to stop until you have reached the end.  In :ref:`chapter 17`, we will introduce another kind of loop which is better for looping a set number of times.

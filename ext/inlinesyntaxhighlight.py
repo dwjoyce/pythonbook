@@ -7,6 +7,7 @@ import re
 import shlex
 import sphinx.writers.latex
 from sphinx import addnodes
+from sphinx.util import nodes as sphinxnodes
 
 
 def code_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -337,20 +338,35 @@ with open("glossary_aliases.txt") as f:
 
 
 def missing_reference(app, env, node, contnode):
-    if node["reftarget"] in aliases:
-        target = node['reftarget']
-        if target not in aliases:
-            return
-        typ = node['reftype']
-        fromdocname = node["refdoc"]
-        if 'refdomain' in node and node['refdomain']:
-            try:
-                domain = env.domains[node['refdomain']]
-            except KeyError:
-                return
-            node['reftarget'] = aliases[target]
-            return domain.resolve_xref(env, fromdocname, app.builder,
-                                       typ, aliases[target], node, contnode)
+    target = node['reftarget']
+    typ = node['reftype']
+    fromdocname = node["refdoc"]
+    if 'refdomain' in node and node['refdomain']:
+        try:
+            domain = env.domains[node['refdomain']]
+        except KeyError:
+            pass
+    if node["reftarget"] in aliases and domain:
+        node['reftarget'] = aliases[target]
+        return domain.resolve_xref(env, fromdocname, app.builder,
+                                   typ, aliases[target], node, contnode)
+    if node["reftarget"].startswith("chapter") or node["reftarget"].startswith("appendix"):
+        chap, appe = re.search("chapter (\d+)|appendix (\w+)", node["reftarget"]).groups()
+        if chap:
+            chap_lookup = dict(enumerate(env.toctree_includes["index"]))
+            file = chap_lookup[int(chap)]
+        elif appe:
+            app_lookup = {chr(i + ord("a")): j for i, j in enumerate(env.config["latex_appendices"])}
+            file = app_lookup[appe]
+        else:
+            RuntimeError("Panic, regex failed!")
+        subref = "".join((x if x.isalpha() else "-") for x in file.split("/")[-1].lower()).rstrip("-")
+        ref = file + ":" + subref
+        node['reftarget'] = subref
+        node['refexplicit'] = True
+        print(subref, domain, fromdocname, typ)
+        print(domain.data['anonlabels'])
+        return sphinxnodes.make_refnode(app.builder, fromdocname, file, subref, contnode)
 
 
 def setup(app):

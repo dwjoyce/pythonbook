@@ -166,7 +166,7 @@ Glossary
         The ``!=`` operator, that compares two objects and evaluates to ``True`` when they are not the same. The opposite of the :term:`equality operator`.
 
     comparison operator
-        An operator that takes two values and compares them, evaluating to a :term:`boolean value`. Python comparison operators include ``==``, ``!=``, ``<``, ``>``, ``<=`` and ``>=``. See the Operators appendix for more information.
+        An operator that takes two values and compares them, evaluating to a :term:`boolean value`. Python comparison operators include ``==``, ``!=``, ``<``, ``>``, ``<=`` and ``>=``. Refer to :ref:`appendix C` on Operators for more information.
 
     code block
         A block is a piece of Python code that is executed as a unit.

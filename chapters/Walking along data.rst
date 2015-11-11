@@ -41,7 +41,7 @@ So let's introduce this step by step.  First define a list and give it a name us
     
 The name of the list is ``numbers``, and we have given it the same values as we printed out using the ``while`` loop above.
 
-Now we use our new keyword ``for``.  We combine it with the ``in`` operator we first saw in chapter 15 on working out whether a value is a member of a list, but this time it is used to step along each item *in* the list.  To see it in action, type this in and make sure you get the same result as when we used the ``while`` loop earlier::
+Now we use our new keyword ``for``.  We combine it with the ``in`` operator we first saw in :ref:`chapter 15` on working out whether a value is a member of a list, but this time it is used to step along each item *in* the list.  To see it in action, type this in and make sure you get the same result as when we used the ``while`` loop earlier::
 
     >>> for num in numbers:
             print(num)
@@ -140,7 +140,7 @@ Finally, you can combine two sequences together, and then step over the result a
     d c
     . i
 
-Again, as in chapter 15 on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step along it and execute the block of code you provide.
+Again, as in :ref:`chapter 15` on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step along it and execute the block of code you provide.
 
 Drawing
 -------
@@ -206,7 +206,7 @@ Try changing the numbers to see what happens to the final result.
 Loops inside loops
 ------------------
 
-As we noted in chapter 9 on selection, you can have blocks of code inside other blocks of code.  These blocks of code could be repeated, with other blocks also repeated - in other words, we can have loops inside loops - one section of code repeated inside another.
+As we noted in :ref:`chapter 9` on selection, you can have blocks of code inside other blocks of code.  These blocks of code could be repeated, with other blocks also repeated - in other words, we can have loops inside loops - one section of code repeated inside another.
 
 Let us practice this concept by using the interactive shell:
 
@@ -300,7 +300,7 @@ Exercises
 
 #. In the interactive shell, write a ``for`` loop that counts from 100 to 0 in steps of -5.
 
-#. Write a program called :file:`sides.py` which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in chapter 12, but this time the looping is different.
+#. Write a program called :file:`sides.py` which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in :ref:`chapter 12`, but this time the looping is different.
 
 #. Write a program called :file:`brekkie.py` which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
@@ -313,4 +313,4 @@ Things to remember
 
 #. Use the ``range`` function to provide a sequence of numbers to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
 
-#. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we learnt in chapter 13 on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.
+#. You can use the ``break`` keyword inside a ``for`` loop as well as the ``while`` loop we learnt in :ref:`chapter 13` on escaping the cycle.  This breaks out of the loop before the loop has finished stepping along the sequence of data.

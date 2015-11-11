@@ -187,11 +187,11 @@ The errors that you can use to filter your errors are listed at the start - gene
 Exercises
 ---------
 
-#. Add ``try``-``except`` blocks to your programs from chapter 8, printing out "That was not a number" when the user types in a non-number.
+#. Add ``try``-``except`` blocks to your programs from :ref:`chapter 8`, printing out "That was not a number" when the user types in a non-number.
 
 #. Write a program that takes two numbers, and divides one by the other. Print out a message when it tries to divide by zero using a ``try``-``except`` (the exception type is ``ZeroDivisionError``).
 
-#. Write a program called :file:`openfile.py` which asks the user for a filename, opens the file and prints out its contents, just like in chapter 20 on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
+#. Write a program called :file:`openfile.py` which asks the user for a filename, opens the file and prints out its contents, just like in :ref:`chapter 20` on reading files. However, this time, if the file does not exist you should print out a suitable message such as "Sorry, that file does not exist".  The error you need to trap is called ``FileNotFoundError``.
 
 Things to remember
 ------------------

@@ -15,7 +15,7 @@ Ed
 
 To write a program, and modify it later, we use an :term:`editor`.  Thankfully, IDLE not only has the interactive shell we have been using, but an editor built-in as well.
 
-To start Python editor, first start IDLE itself (see chapter 0 for this if you have forgotten).  Then, using the mouse pointer, click on the :menu:`File` menu at the top of the shell window, and click again on the :menu:`New File` menu item, like so:
+To start Python editor, first start IDLE itself (see :ref:`chapter 0` for this if you have forgotten).  Then, using the mouse pointer, click on the :menu:`File` menu at the top of the shell window, and click again on the :menu:`New File` menu item, like so:
 
 .. image:: /images/screenshots/idle_new_file_menu.png
     :width: 90%
@@ -38,7 +38,7 @@ The scene is set.
 Our first program
 -----------------
 
-Our first complete program will be the same as the code we typed in for chapter 4 on drawing turtles.  Therefore, in this new editor window, type in the following::
+Our first complete program will be the same as the code we typed in for :ref:`chapter 4` on drawing turtles.  Therefore, in this new editor window, type in the following::
 
     import turtle
 

@@ -38,7 +38,7 @@ From the above snippet, the first two lines create our variables, ``a`` and ``b`
 
 You will also notice that the result of each expression is either ``True`` or ``False``.  This is our fourth type of data, and they are called :term:`boolean` values.  They are the simplest type of data imaginable - they are either ``True`` or ``False``.  They cannot be any other value.  This is the equivalent of on or off, 1 or 0, up or down.  There is no in-between value, it is one or the other.  For example, above we tested whether ``10`` was equal to ``20`` (``a == b``) - this is either ``True`` or it is ``False`` (obviously the latter).  It cannot be something else, or both!
 
-Booleans are very useful, and you can set variables to boolean values as well.  We will see more of this in chapter 13 on escaping out of a loop.
+Booleans are very useful, and you can set variables to boolean values as well.  We will see more of this in :ref:`chapter 13` on escaping out of a loop.
 
 More than one possibility
 -------------------------

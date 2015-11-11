@@ -110,7 +110,7 @@ However, if you play with files, you will some interesting behaviour, such as::
     >>> f.read()
     ''
 
-These special escape sequences (such as ``\n`` for newline and ``\t`` for tab) were covered briefly in chapter 7 on printing.  This is the text file as it really is, not formatted nicely for reading.
+These special escape sequences (such as ``\n`` for newline and ``\t`` for tab) were covered briefly in :ref:`chapter 7` on printing.  This is the text file as it really is, not formatted nicely for reading.
 
 If you read a file completely, the open file points to the end of the file. This is like having a book open at the end of the last page. If you want to re-read the file, you can re-open the file (similar to closing a book and reopening it at the beginning again), or use the function ``seek`` to move back to the start (similar to flicking through the pages back to the beginning, but much quicker)::
 

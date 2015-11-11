@@ -16,7 +16,7 @@ In the previous chapter we learnt how to group a sequence of items together unde
     >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     >>> jumble = [10, 'fred', 17.25, True, ['username', 123456789]]
     
-However, there is another type of sequence that we are already familiar with - strings.  As we know from chapter 7 on printing, strings are sequences of characters, whether letters, digits or symbols, and can be treated as sequences in terms of slicing as we shall see later in this chapter.  The main difference is that you cannot modify the contents of a string, but you can form new strings from old ones.
+However, there is another type of sequence that we are already familiar with - strings.  As we know from :ref:`chapter 7` on printing, strings are sequences of characters, whether letters, digits or symbols, and can be treated as sequences in terms of slicing as we shall see later in this chapter.  The main difference is that you cannot modify the contents of a string, but you can form new strings from old ones.
 
 .. pythontest:: nooutput
 
@@ -24,7 +24,7 @@ We have been able to refer to the group as a whole, but what if we need to selec
 
     >>> letters = 'abcdef'
     
-We can refer to the whole sequence of letters, such as ``print(letters)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, just like we illustrated in chapter 7 on printing, think of this string as a sequence of boxes, each of which contains a single letter:
+We can refer to the whole sequence of letters, such as ``print(letters)``, and even randomly select an item as we did the previous chapter.  But how would we get at just one of those letters?  Firstly, just like we illustrated in :ref:`chapter 7` on printing, think of this string as a sequence of boxes, each of which contains a single letter:
 
 .. image:: /images/alien_pizza/indexing-middle.pdf
     :width: 200 pt
