@@ -81,14 +81,14 @@ This allows us to call all the functions that belong to the string type.  To con
     >>> f.read().split()
     ['Three', 'Rings', 'for', 'the', 'Elven-kings', 'under', 'the', 'sky,',
     'Seven', 'for', 'the', 'Dwarf-lords', 'in', 'their', 'halls', 'of',
-    'stone,', 'Nine', 'for', 'Mortal', 'Men', 'doomed', 'to', 'die,', 'One',
-    'for', 'the', 'Dark', 'Lord', 'on', 'his', 'dark', 'throne,', 'In',
-    'the', 'Land', 'of', 'Mordor', 'where', 'the', 'Shadows', 'lie,', 'One',
-    'ring', 'to', 'rule', 'them', 'all,', 'one', 'ring', 'to', 'find',
-    'them,', 'One', 'ring', 'to', 'bring', 'them', 'all', 'and', 'in', 'the',
-    'darkness', 'bind', 'them', 'In', 'the', 'Land', 'of', 'Mordor', 'where',
-    'the', 'Shadows', 'lie.', '-', 'The', 'Lord', 'of', 'the', 'Rings,',
-    'Epigraph']
+    'stone,', 'Nine', 'for', 'Mortal', 'Men', 'doomed', 'to', 'die,',
+    'One', 'for', 'the', 'Dark', 'Lord', 'on', 'his', 'dark', 'throne,',
+    'In', 'the', 'Land', 'of', 'Mordor', 'where', 'the', 'Shadows', 'lie,',
+    'One', 'ring', 'to', 'rule', 'them', 'all,', 'one', 'ring', 'to',
+    'find', 'them,', 'One', 'ring', 'to', 'bring', 'them', 'all', 'and',
+    'in', 'the', 'darkness', 'bind', 'them', 'In', 'the', 'Land', 'of',
+    'Mordor', 'where', 'the', 'Shadows', 'lie.', '-', 'The', 'Lord', 'of',
+    'the', 'Rings,', 'Epigraph']
 
 And to count the number of words in the file we can do::
 

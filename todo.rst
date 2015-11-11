@@ -68,9 +68,15 @@ More code::
 
 Longness::
 
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx = 11
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx = 11
 
 Random stuff about :term:`argument` or :term:`arguments` or see :file:`/usr/lib/python2.{x}/site-packages` ...
+
+Inline test:
+
+ - ``! "#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ``
+ - ``[\]^_`abcdefghijklmnopqrstuvwxyz{|}~``
+ - ``x`` or ``|``
 
 #. one
 #. two

@@ -77,7 +77,7 @@ class Translator(nodes.NodeVisitor):
         if self.pythontest:
             self.code_bits[self.chapter].append((False, self.pythontest, node.astext()))
         longest = max(map(len, node.astext().split("\n")))
-        if longest > 73:
+        if longest > 72:
             self.warnings.append((self.chapter, node.astext(),
                                   "Code is too wide", "{} > 73".format(longest)))
         raise nodes.SkipNode
@@ -86,7 +86,7 @@ class Translator(nodes.NodeVisitor):
         if self.pythontest:
             self.code_bits[self.chapter].append((True, self.pythontest, node.astext()))
         longest = max(map(len, node.astext().split("\n")))
-        if longest > 73:
+        if longest > 72:
             self.warnings.append((self.chapter, node.astext(),
                                   "Code is too wide", "{} > 73".format(longest)))
         raise nodes.SkipNode

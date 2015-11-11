@@ -64,10 +64,11 @@ To get a list of what is built into Python, you can call the :term:`directory fu
     ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__',
      '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__',
      '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__',
-     '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__',
-     '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__',
-     '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items',
-     'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+     '__len__', '__lt__', '__ne__', '__new__', '__reduce__',
+     '__reduce_ex__', '__repr__', '__setattr__', '__setitem__',
+     '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy',
+     'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault',
+     'update', 'values']
     
 This will list a number of error codes, followed by a number of built-in functions.  These functions can be used just by referring to their name, followed by parentheses to call them.  For example, one of the built-in functions is ``round``, so we can simply call it as follows::
 

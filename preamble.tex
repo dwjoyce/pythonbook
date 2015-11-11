@@ -19,8 +19,9 @@
 
 % Code background
 
-
-\newcommand{\ourstrut}{\vrule height6.5pt depth1.2pt width0pt}
+\typeout{fboxsep \the\fboxsep}
+\setlength{\fboxsep}{1.5pt}
+\newcommand{\ourstrut}{\vrule height7.8pt depth2.0pt width0pt}
 \newcommand{\framedtext}[4]{\fcolorbox{#1}{#2}{\ourstrut\color{#3}#4}}
 \newcommand{\codeframe}[1]{\framedtext{VerbatimBorderColor}{VerbatimColor}{VerbatimTextColor}{\texttt{#1}}}
 \renewcommand{\code}[1]{\codeframe{\small#1}}
@@ -105,7 +106,7 @@
 \penalty\z@%
 \else%
 % \typeout{page break}%
-{\vspace{-1.5em}\small\hspace{380pt} #1 \par\break\hspace{320pt} #2 \par\nobreak}%
+{\vspace{-1.5em}\small\hspace{380pt} #1 \par\vfill\break\hspace{320pt} #2 \par\nobreak}%
 \fi%
 \fi%
 \expandafter\label\expandafter{\the\bt@count bt@count}%
@@ -125,7 +126,7 @@
   \setlength\leftmargin{0pt}%
   \@totalleftmargin=0cm%
   \MakeFramed {\FrameRestore}%
-    \texttt{\small #1}
+    \texttt{\ourstrut\small #1}
   \endMakeFramed%
   \egroup%
 }
@@ -138,7 +139,7 @@
   \setlength\partopsep{0pt}%
   \setlength\leftmargin{0pt}%
   \@totalleftmargin=0cm%
-    \texttt{\small #1}%
+    \texttt{\ourstrut\small #1}%
   \egroup%
 }
 
