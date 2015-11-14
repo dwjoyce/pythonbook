@@ -157,16 +157,47 @@ Different types of functions
 
 To conclude our two chapters on functions, we briefly describe the four general types of functions in Python:
 
-- **Built-in functions** - you can see the list of built-in functions by typing ``dir(__builtins__)`` in the interactive shell, revealing the following:
+- **Built-in functions** - you can see the list of built-in functions by typing ``dir(__builtins__)`` in the interactive shell.  Here is a list of the most useful ones, particularly the ones we have covered in this book with a brief note and example on each:
 
-  ``abs``, ``all``, ``any``, ``ascii``, ``bin``, ``bool``, ``bytearray``, ``bytes``, ``callable``, ``chr``, ``classmethod``, ``compile``, ``complex``, ``copyright``, ``credits``, ``delattr``, ``dict``, ``dir``, ``divmod``, ``enumerate``, ``eval``, ``exec``, ``exit``, ``filter``, ``float``, ``format``, ``frozenset``, ``getattr``, ``globals``, ``hasattr``, ``hash``, ``help``, ``hex``, ``id``, ``input``, ``int``, ``isinstance``, ``issubclass``, ``iter``, ``len``, ``license``, ``list``, ``locals``, ``map``, ``max``, ``memoryview``, ``min``, ``next``, ``object``, ``oct``, ``open``, ``ord``, ``pow``, ``print``, ``property``, ``quit``, ``range``, ``repr``, ``reversed``, ``round``, ``set``, ``setattr``, ``slice``, ``sorted``, ``staticmethod``, ``str``, ``sum``, ``super``, ``tuple``, ``type``, ``vars``, ``zip``
+  ===========    ====================================================================================  =====================
+  Name           Description                                                                           Example
+  ===========    ====================================================================================  =====================
+  ``all``        Returns True if all values in supplied sequence (iterable) are also True              ``all(my_list)``
+  ``any``        Returns True if any values in supplied sequence (iterable) are True                   ``any(my_list)``
+  ``abs``        Returns the absolute (positive) value of an integer or float                          ``abs(-10)``
+  ``bin``        Returns the binary number equivalent of the supplied integer as a string              ``bin(123)``
+  ``bool``       Converts the supplied value into a boolean value                                      ``bool(1)``
+  ``chr``        Returns the character equivalent of the supplied ordinal number                       ``chr(65)``
+  ``dir``        Returns a (directory) listing of the imported module                                  ``dir(math)``
+  ``divmod``     Divide one number by another, and returns the quotient and remainder in a sequence    ``divmod(10, 8)``
+  ``enumerate``  Supply a sequence, return a sequence of items paired with their index from 0          ``enumerate('abc')``
+  ``exit``       Exit your program early (same as ``quit``)                                            ``exit()``
+  ``float``      Converts the supplied value into a floating point (fractional) number                 ``float('1.5')``
+  ``hex``        Converts the supplied value into a hexadecimal value as a string                      ``hex(127)``
+  ``help``       Provides help on the supplied item                                                    ``help(input)``
+  ``id``         Returns the memory address of the supplied name                                       ``id(my_num)``
+  ``input``      Waits on the user to type something, and return sequence of characters as a string    ``input('name? ')``
+  ``int``        Convert the supplied value into an integer number                                     ``int('100')``
+  ``len``        Returns the length of the supplied sequence (e.g. string or list)                     ``len('fred')``
+  ``list``       Converts the supplied value into a list                                               ``list('xyz')``
+  ``max``        Returns the maximum value from the supplied sequence                                  ``max([1, 2, 3])``
+  ``min``        Returns the minimum value from the supplied sequence                                  ``min([5, 1, 3])``
+  ``oct``        Converts the supplied value into an octal value as a string                           ``oct(25)``
+  ``ord``        Returns the supplied character into an ordinal (integer) value                        ``ord('a')``
+  ``open``       Open the supplied filename and return the opened file                                 ``open('scores.txt)``
+  ``pow``        Calculate the power of one number to another and return the result                    ``pow(2, 8)``
+  ``print``      Print out or display the supplied string or list of items                             ``print('Hello')``
+  ``range``      Provide a range of integers, with a set start, stop and step                          ``range(10, 20, 2)``
+  ``reversed``   Reverse the order of a supplied sequence                                              ``reversed('abcde')``
+  ``round``      Round the supplied floating point number to the specified precision                   ``round(4.75)``
+  ``sorted``     Return the supplied sequence in order                                                 ``sorted('azgdbdc')``
+  ``str``        Convert the supplied value into a string                                              ``str(100)``
+  ``sum``        Sum or add up the supplied sequence of numbers returning the result                   ``sum([1, 3, 5, 7])``
+  ``type``       Return the type of the supplied item, e.g. int, float, str, bool                      ``type('bob')``
+  ``zip``        Zips up or combines two or more supplied sequences                                    ``zip('abc', 'def')``
+  ===========    ====================================================================================  =====================
 
-  The full list will include other built-in items as well (e.g. exception types).  These can be called by any Python program without having to import anything else – they are built-in to the language itself.  For example::
-    
-      >>> abs(-123)
-      >>> range(10)
-      >>> min([10, 20, 5, 15])
-      >>> print('Hello there')
+  The full list will include other built-in items as well (e.g. exception types).  These can be called by any Python program without having to import anything else – they are built-in to the language itself.
 
 - **Local functions** - you can define your own functions in your Python module by using the ``def`` keyword.  These can then be called from within your own program by simply using the name of the function itself, similar to a built-in function.  For example, here is a function that accepts a number and returns its square::
 
