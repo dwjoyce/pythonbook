@@ -364,8 +364,8 @@ def missing_reference(app, env, node, contnode):
         ref = file + ":" + subref
         node['reftarget'] = subref
         node['refexplicit'] = True
-        print(subref, domain, fromdocname, typ)
-        print(domain.data['anonlabels'])
+        #print(subref, domain, fromdocname, typ)
+        #print(domain.data['anonlabels'])
         return sphinxnodes.make_refnode(app.builder, fromdocname, file, subref, contnode)
 
 
