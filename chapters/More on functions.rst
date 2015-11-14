@@ -159,9 +159,9 @@ To conclude our two chapters on functions, we briefly describe the four general 
 
 - **Built-in functions** - you can see the list of built-in functions by typing ``dir(__builtins__)`` in the interactive shell.  Here is a list of the most useful ones, particularly the ones we have covered in this book with a brief note and example on each:
 
-  ===========    ====================================================================================  =====================
+  ============== ====================================================================================  =====================
   Name           Description                                                                           Example
-  ===========    ====================================================================================  =====================
+  ============== ====================================================================================  =====================
   ``all``        Returns True if all values in supplied sequence (iterable) are also True              ``all(my_list)``
   ``any``        Returns True if any values in supplied sequence (iterable) are True                   ``any(my_list)``
   ``abs``        Returns the absolute (positive) value of an integer or float                          ``abs(-10)``
@@ -195,7 +195,7 @@ To conclude our two chapters on functions, we briefly describe the four general 
   ``sum``        Sum or add up the supplied sequence of numbers returning the result                   ``sum([1, 3, 5, 7])``
   ``type``       Return the type of the supplied item, e.g. int, float, str, bool                      ``type('bob')``
   ``zip``        Zips up or combines two or more supplied sequences                                    ``zip('abc', 'def')``
-  ===========    ====================================================================================  =====================
+  ============== ====================================================================================  =====================
 
   The full list will include other built-in items as well (e.g. exception types).  These can be called by any Python program without having to import anything else – they are built-in to the language itself.
 
