@@ -162,15 +162,15 @@ To conclude our two chapters on functions, we briefly describe the four general 
   ============== ====================================================================================  =====================
   Name           Description                                                                           Example
   ============== ====================================================================================  =====================
-  ``all``        Returns True if all values in supplied sequence (iterable) are also True              ``all(my_list)``
-  ``any``        Returns True if any values in supplied sequence (iterable) are True                   ``any(my_list)``
+  ``all``        Returns ``True`` if all values in supplied sequence (iterable) are also ``True``      ``all(my_list)``
+  ``any``        Returns ``True`` if any values in supplied sequence (iterable) are ``True``           ``any(my_list)``
   ``abs``        Returns the absolute (positive) value of an integer or float                          ``abs(-10)``
   ``bin``        Returns the binary number equivalent of the supplied integer as a string              ``bin(123)``
   ``bool``       Converts the supplied value into a boolean value                                      ``bool(1)``
   ``chr``        Returns the character equivalent of the supplied ordinal number                       ``chr(65)``
   ``dir``        Returns a (directory) listing of the imported module                                  ``dir(math)``
   ``divmod``     Divide one number by another, and returns the quotient and remainder in a sequence    ``divmod(10, 8)``
-  ``enumerate``  Supply a sequence, return a sequence of items paired with their index from 0          ``enumerate('abc')``
+  ``enumerate``  Supply a sequence, return a sequence of items paired with their index from ``0``      ``enumerate('abc')``
   ``exit``       Exit your program early (same as ``quit``)                                            ``exit()``
   ``float``      Converts the supplied value into a floating point (fractional) number                 ``float('1.5')``
   ``hex``        Converts the supplied value into a hexadecimal value as a string                      ``hex(127)``
@@ -193,7 +193,7 @@ To conclude our two chapters on functions, we briefly describe the four general 
   ``sorted``     Return the supplied sequence in order                                                 ``sorted('azgdbdc')``
   ``str``        Convert the supplied value into a string                                              ``str(100)``
   ``sum``        Sum or add up the supplied sequence of numbers returning the result                   ``sum([1, 3, 5, 7])``
-  ``type``       Return the type of the supplied item, e.g. int, float, str, bool                      ``type('bob')``
+  ``type``       Return the type of the supplied item, e.g. ``int``, ``float``, ``str``, ``bool``      ``type('bob')``
   ``zip``        Zips up or combines two or more supplied sequences                                    ``zip('abc', 'def')``
   ============== ====================================================================================  =====================
 
