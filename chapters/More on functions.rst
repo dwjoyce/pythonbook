@@ -167,7 +167,7 @@ To conclude our two chapters on functions, we briefly describe the four general 
   ``abs``        Returns the absolute (positive) value of an integer or float                          ``abs(-10)``
   ``bin``        Returns the binary number equivalent of the supplied integer as a string              ``bin(123)``
   ``bool``       Converts the supplied value into a boolean value                                      ``bool(1)``
-  ``chr``        Returns the character equivalent of the supplied ordinal number                       ``chr(65)``
+  ``chr``        Returns the character equivalent of the supplied ordinal (integer) number             ``chr(65)``
   ``dir``        Returns a (directory) listing of the imported module                                  ``dir(math)``
   ``divmod``     Divide one number by another, and returns the quotient and remainder in a sequence    ``divmod(10, 8)``
   ``enumerate``  Supply a sequence, return a sequence of items paired with their index from 0          ``enumerate('abc')``
