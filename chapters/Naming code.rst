@@ -134,6 +134,37 @@ These functions are very short, so may not appear very useful yet, but imagine w
 
 In the next chapter, we will discuss not only passing data into a function, but also getting data back out again.
 
+Keeping your data local
+-----------------------
+
+Usually, data used inside a function should be passed in, so if a function adds two numbers together, both numbers should be passed in as parameters.  It should never have to rely on variables outside of its own definition - if it needs the data, pass it in.  These variables are called *local* variables, as they are defined locally, or within, the function itself.
+
+However, sometimes this is impractical, so functions always have the ability to use variables defined in the module itself.  Variables that have been defined in the module (i.e. the program), and not part of a function, are called *global* variables, as they are defined for use throughout the program and not just a part of it.  Type this into your :file:`functions.py` program::
+
+    def add_by_5():
+        print(num + 5)
+        
+and at the end of your program, add this::
+
+    num = 10
+    add_by_5()
+    
+This should print out 15, with 5 being added onto 10.  However, if you want to change the variable ``num``, or any global variable, then you will hit trouble.  Change your function to read like this::
+
+    def add_by_5():
+        num = num + 5
+        print(num)
+
+This should print out an error, as Python assumes you are using a local variable called ``num`` before defining it.  If you really want to change a global variable, you must inform it before you do so::
+
+    def add_by_5():
+        num = num + 5
+        print(num)
+
+Run your program again, and it should now be happy, finding the global variable of ``num`` as you intended.
+
+The general rule, though, is to pass in all the data the function needs, unless the data never changes such as a list of month names or the value of :math`\pi` from the ``math`` module, for example.
+
 Exercises
 ---------
 

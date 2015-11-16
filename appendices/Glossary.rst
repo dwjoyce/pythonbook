@@ -259,6 +259,12 @@ Glossary
                 
     parameter
         Data as received in by a :term:`function`, given a name in-between the function definition's parentheses, which is local to the function itself.
+        
+    local variable
+        A variable that has been defined within a function for use inside the function alone.
+        
+    global variable
+        A variable that has been defined for use throughout a module, not just one function.  A global variable can be used inside functions, but if it is to be modified, then it needs to be declared as ``global`` in advance.
 
 
     .. More on functions
