@@ -177,14 +177,13 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
             self.body.append('\\endfirsthead\n\n')
             self.body.append('\\multicolumn{%s}{c}%%\n' % self.table.colcount)
-            self.body.append(r'{{\textsf{\tablename\ \thetable{} -- %s}}} \\'
-                                % _('continued from previous page'))
+            self.body.append(r'{} \\')
             self.body.append('\n\\hline\n')
-            self.body.extend(self.tableheaders)
-            self.body.append('\\endhead\n\n')
-            self.body.append(r'\hline \multicolumn{%s}{|r|}{{\textsf{%s}}} \\ \hline'
+            #self.body.extend(self.tableheaders)
+            self.body.append('\\endhead\n')
+            self.body.append(r'\hline\rowcolor{TableHeaderColor} \multicolumn{%s}{|r|}{{\textsf{\textit{%s}}}} \\ \hline'
                                 % (self.table.colcount,
-                                _('Continued on next page')))
+                                'Continued on next page'))
             self.body.append('\n\\endfoot\n\n')
             self.body.append('\\endlastfoot\n\n')
         else:
