@@ -152,6 +152,6 @@ Things to remember
 
 #. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated as true, then even if there are ``elif`` or ``else`` statements below, the program will skip them.
 
-#. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these evaluated has true, then the first one is run, and the others are skipped.
+#. You can optionally include one or more ``elif`` statements, each with their own tests to evaluate and their own blocks of code.  If more than one of these is evaluated as true, then the first one is run, and the others are skipped.
 
 #. Finally, you can also optionally include an ``else`` statement, without any test, but with its own block of code to run.  This block of code is only run if the ``if`` and ``elif`` tests all fail (i.e. are all false).
