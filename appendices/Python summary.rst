@@ -464,40 +464,40 @@ Local functions
 
 You can define your own functions in your Python module by using the ``def`` keyword.  These can then be called from within your own program by simply using the name of the function itself, similar to a built-in function.  For example, here is a function that accepts a number and returns its square::
 
-      def square_number(number):
-          return number * number
+    def square_number(number):
+        return number * number
 
-  Which can then be called as follows::
+Which can then be called as follows::
 
-      square_number(5)  # returns 25
+    square_number(5)  # returns 25
 
 Imported functions
 ^^^^^^^^^^^^^^^^^^
 
 You can use functions in other modules by importing them first.  For example, to use functions inside the ``math`` module, you can do the following::
 
-      import math
-      math.sqrt(100)
+    import math
+    math.sqrt(100)
 
-  You need to write module name followed by a period ``.`` before the name of the function when calling it.  You can print out a directory listing of what a module contains by performing a 'dir' on its name, for example::
+You need to write module name followed by a period ``.`` before the name of the function when calling it.  You can print out a directory listing of what a module contains by performing a 'dir' on its name, for example::
 
-      >>> dir(math)
+    >>> dir(math)
 
 Functions belonging to a type ("class methods")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A particular class of values is called a type (integers, floating point numbers, strings, files), and these contain functions on the data that the type contains.  For example, to change a sentence to uppercase you can do the following::
 
-      >>> message = 'mary had a little lamb'
-      >>> message.upper()  # returns 'MARY HAD A LITTLE LAMB'
-      >>> message.split()  # returns a list of words: ['mary', 'had', 'a', 'little', 'lamb']
+    >>> message = 'mary had a little lamb'
+    >>> message.upper()  # returns 'MARY HAD A LITTLE LAMB'
+    >>> message.split()  # returns a list of words: ['mary', 'had', 'a', 'little', 'lamb']
 
-  You need to write the variable name (which belongs to a particular type), followed by a period ``.`` before the name of the function when calling it.  You can list the functions that a type contains by performing a ``dir`` on its name, for example::
+You need to write the variable name (which belongs to a particular type), followed by a period ``.`` before the name of the function when calling it.  You can list the functions that a type contains by performing a ``dir`` on its name, for example::
 
-      >>> dir(int)
-      >>> dir(float)
-      >>> dir(str)
+    >>> dir(int)
+    >>> dir(float)
+    >>> dir(str)
 
-  This will show that some types have functions that are not relevant to other types.  For example, floats have a function called ``is_integer`` which returns ``True`` if it is a whole number, ``False`` if not.  Strings have functions such as ``lower``, ``split``, ``title``, ``upper``, which are relevant to strings of characters, but not numbers and files.  These methods are bound up with the data they work on, so only relevant functions are offered with the type of data the variable refers to.
+This will show that some types have functions that are not relevant to other types.  For example, floats have a function called ``is_integer`` which returns ``True`` if it is a whole number, ``False`` if not.  Strings have functions such as ``lower``, ``split``, ``title``, ``upper``, which are relevant to strings of characters, but not numbers and files.  These methods are bound up with the data they work on, so only relevant functions are offered with the type of data the variable refers to.
 
 .. pythontest:: all
