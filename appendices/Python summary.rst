@@ -209,18 +209,18 @@ Catching :term:`exceptions`::
 Data types
 ----------
 
-The following table summarises the types of data we have introduced in this book, along with examples of their values and operations 
+The following table summarises the types of data we have introduced in this book, along with examples of their values and operations you can perform on them:
 
-  ============== ===============================================================================  ==================
-  Type           Values                                                                           Example operations
-  ============== ===============================================================================  ==================
-  ``int``        -10 0 10 20 21 22 1234567890                                                     ``10 + 20 * 2 / 4``
-  ``float``      -5.0 1.75 0.0 10.8 3.333333                                                      ``1.75 / 2 * 5.5``
-  ``str``        "abc" "+44 (0)1635 123456" "General Ike gives D-day go-ahead" '123.456' '100'    ``'abc' + 'def'`` ``'abc'.upper()`` ``'one two three'.split()``
-  ``bool``       True False                                                                       ``(a > 10) and (b < 0) or (c == 0)``  ``stop = False``
-  ``list``       [0, 1, 2, 3, 4], ['Jan', 'Feb', 'Mar'], [[1, 2, 3], [4, 5, 6]]                   ``10 in range(100)`` ``months[5]`` ``alphabet[::2]``
-  ``file``       You obtain a file value by opening a file on disk                                ``open('shopping.txt')``
-  ============== ===============================================================================  =====================
+=========  =============================================================================  ==================
+Type       Values                                                                         Example operations
+=========  =============================================================================  ==================
+``int``    -10 0 10 20 21 22 1234567890                                                   ``10 + 20 * 2 / 4``
+``float``  -5.0 1.75 0.0 10.8 3.333333                                                    ``1.75 / 2 * 5.5``
+``str``    "abc" "+44 (0)1635 123456" "General Ike gives D-day go-ahead" '123.456' '100'  ``'abc' + 'def'`` ``'abc'.upper()`` ``'one two three'.split()``
+``bool``   True False                                                                     ``(a > 10) and (b < 0) or (c == 0)`` ``stop = False``
+``list``   [0, 1, 2, 3, 4], ['Jan', 'Feb', 'Mar'], [[1, 2, 3], [4, 5, 6]]                 ``10 in range(100)`` ``months[5]`` ``alphabet[::2]``
+``file``   You obtain a file value by opening a file on disk                              ``open('shopping.txt')``
+=========  =============================================================================  =====================
 
 
 Operators
