@@ -155,9 +155,10 @@ This should print out 15, with 5 being added onto 10.  However, if you want to c
         num = num + 5
         print(num)
 
-This should print out an error, as Python assumes you are using a local variable called ``num`` before defining it.  If you really want to change a global variable, you must inform it before you do so::
+This should print out an error, as Python assumes you are using a local variable called ``num`` before defining it (in using it on the right-hand side of the assignment statement).  If you really want to change a global variable, then you must state this in advance by using the ``global`` keyword alongside the variable name itself.  Change the function in your program as follows::
 
     def add_by_5():
+        global num
         num = num + 5
         print(num)
 
