@@ -69,7 +69,7 @@ class PTDocutilsCodeBlock(directives.body.CodeBlock):
             mode = self.options['pythontest'].strip().lower()
             return [pythontestsave(), pythontest(mode=MODES[mode]), literal, pythontestrestore()]
         return [literal]
- 
+
 
 def remove_pythontest_nodes(app, doctree, fromdocname):
     if isinstance(app.builder, builder.Builder):

@@ -185,5 +185,6 @@ pseudoxml:
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
 pythontest:
+	rm -rf $(BUILDDIR)/*
 	$(SPHINXBUILD) -b pythontest $(ALLSPHINXOPTS) $(BUILDDIR)/pythontest
 	@echo "Build finished. The pythontest files are in $(BUILDDIR)/pythontest."

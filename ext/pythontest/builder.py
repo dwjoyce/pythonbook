@@ -103,7 +103,7 @@ class Builder(sphinx.builders.Builder):
         if toctree_only:
             # extract toctree nodes from the tree and put them in a
             # fresh document
-            new_tree = new_document('<latex output>')
+            new_tree = new_document('<pythonbook output>')
             new_sect = nodes.section()
             new_sect += nodes.title('<Set title in conf.py>',
                                     '<Set title in conf.py>')

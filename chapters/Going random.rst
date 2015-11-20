@@ -13,8 +13,8 @@ To add variation to our programs, we can ask the user for some input, and then b
 
 Computer programs which need a bit of variation are programs like flight simulators (where the weather differs from time to time), board games (so the moves vary from game to game), racing games (where your competitors do different things from race to race), and so on.  They do this by using a piece of software to provide them with some :term:`random` data, such as a simple number which varies between a range of numbers.  This simple piece of data is then used to vary the decisions made within the program, thus making the program more interesting to use.  In a way, it becomes a little more like the real world.
 
-Going random
-------------
+That's random
+-------------
 
 Python does this by using the ``random`` module.  We will get to know this by first using the interactive shell - bring this onto your screen, and you can then import the ``random`` module in a similar fashion to importing the ``turtle`` module::
 

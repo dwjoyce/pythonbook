@@ -283,7 +283,7 @@ class Writer(writers.Writer):
         return False
 
     def set_returncode(self, app):
-        app.statuscode = self.returncode
+        app.statuscode = self.returncode + app._warncount
 
     def complete_pep8(self):
         fname = self.dest.rsplit(".", 1)[0] + "{}.py"
