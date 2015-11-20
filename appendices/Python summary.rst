@@ -486,13 +486,16 @@ You need to write module name followed by a period ``.`` before the name of the 
 Functions belonging to a type ("class methods")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A particular class of values is called a type (integers, floating point numbers, strings, files), and these contain functions on the data that the type contains.  For example, to change a sentence to uppercase you can do the following::
+A particular set of values is called a type (integers, floating point numbers, strings, files) or a class.  These types wrap up the data they contain, and also offer functions that operate on that data.  This allows the data and related code to live in one place.  For example, once you have defined a string, you can calls its type or class methods (functions) to perform a number of operations on that string value::
 
-    >>> message = 'mary had a little lamb'
-    >>> message.upper()  # returns 'MARY HAD A LITTLE LAMB'
-    >>> message.split()  # returns a list of words: ['mary', 'had', 'a', 'little', 'lamb']
-
-You need to write the variable name (which belongs to a particular type), followed by a period ``.`` before the name of the function when calling it.  You can list the functions that a type contains by performing a ``dir`` on its name, for example::
+    >>> message = 'the quick brown fox jumps over the lazy dog'
+    >>> message.upper()  # returns the uppercase version
+    >>> message.split()  # returns a list of words
+    >>> message.replace('fox', 'coyote')  # replaces one word with another
+    >>> message.count('o')  # returns how many times one string is in another
+    >>> message.startswith('the')  # does string start with this?
+    
+And so on.  You need to write the variable name (which refers to a piece of data, or object, belonging to a particular type), followed by a period ``.`` before the name of the function when calling it.  You can list the functions that a type contains by performing a ``dir`` on its name, for example::
 
     >>> dir(int)
     >>> dir(float)
