@@ -62,7 +62,7 @@ class Builder(sphinx.builders.Builder):
             self.titles.append((docname, entry[2]))
 
     def write(self, *ignored):
-        docwriter = writer.Writer(self)
+        docwriter = writer.Writer(self, app)
         docsettings = OptionParser(
             defaults=self.env.settings,
             components=(docwriter,),
@@ -93,7 +93,7 @@ class Builder(sphinx.builders.Builder):
             doctree.settings.docclass = docclass
             docwriter.write(doctree, destination)
             self.info("done")
-        docwriter.set_returncode(app)
+        docwriter.set_returncode()
 
     def assemble_doctree(self, indexfile, toctree_only, appendices):
         self.docnames = set([indexfile] + appendices)

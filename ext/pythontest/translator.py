@@ -49,6 +49,7 @@ class Translator(nodes.NodeVisitor):
         self.saved_pythontest_state = []
         self.code_bits = defaultdict(list)
         self.warnings = []
+        self.errors = []
 
     def result(self):
         for chapter in self.chapters:
@@ -78,8 +79,8 @@ class Translator(nodes.NodeVisitor):
             self.code_bits[self.chapter].append((False, self.pythontest, node.astext()))
         longest = max(map(len, node.astext().split("\n")))
         if longest > 72:
-            self.warnings.append((self.chapter, node.astext(),
-                                  "Code is too wide", "{} > 73".format(longest)))
+            self.errors.append((True, self.chapter, node.astext(),
+                               "Code is too wide, so will overflow", "{} > 72 (this is not a PEP8 thing, this is serious)".format(longest)))
         raise nodes.SkipNode
 
     def visit_literal_block(self, node):
@@ -87,8 +88,8 @@ class Translator(nodes.NodeVisitor):
             self.code_bits[self.chapter].append((True, self.pythontest, node.astext()))
         longest = max(map(len, node.astext().split("\n")))
         if longest > 72:
-            self.warnings.append((self.chapter, node.astext(),
-                                  "Code is too wide", "{} > 73".format(longest)))
+            self.errors.append((True, self.chapter, node.astext(),
+                               "Code is too wide, so will overflow", "{} > 72 (this is not a PEP8 thing, this is serious)".format(longest)))
         raise nodes.SkipNode
 
     visit_doctest_block = visit_literal_block

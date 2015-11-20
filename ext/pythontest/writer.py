@@ -80,12 +80,13 @@ class Writer(writers.Writer):
     static_ns = {"__builtins__": static_builtins,
                  "string": __import__("string")}
 
-    def __init__(self, builder):
+    def __init__(self, builder, app):
         writers.Writer.__init__(self)
         self.builder = builder
         self.returncode = 0
         self.fails = []
         self.pep8 = []
+        self.app = app
 
     def print(self, *args, sep=" ", end="\n"):
         self.output += sep.join(map(str, args)) + end
@@ -100,6 +101,9 @@ class Writer(writers.Writer):
         self.document.walkabout(visitor)
         over_tests = over_minor_fails = over_major_fails = 0
         self.warnings = warnings = visitor.warnings
+        self.fails.extend(visitor.errors)
+        over_minor_fails += sum(not x for x, *_ in visitor.errors)
+        over_major_fails += sum(x for x, *_ in visitor.errors)
         self.output = ""
 
         for chapter, code_bits in visitor.result():
@@ -115,7 +119,6 @@ class Writer(writers.Writer):
                                                                 warnings, chapter if major else None)
                 if not succeeded:
                     if major:
-                        self.returncode = 1
                         self.fails.append((True, chapter, code, error, detail))
                         major_fails += 1
 
@@ -163,11 +166,14 @@ class Writer(writers.Writer):
         self.builder.info(yellow("{} warnings".format(len(warnings))))
         self.builder.info(yellow("{} minor fails".format(over_minor_fails)))
         self.builder.info(red("{} major fails".format(over_major_fails)))
+        self.builder.info(red("{} sphinx errors / warnings".format(self.app._warncount)))
 
         self.print("Overall", "=======", sep="\n")
         self.print(tests, "code items")
         self.print(minor_fails, "minor fails")
         self.print(major_fails, "major fails")
+        self.print(self.app._warncount, "sphinx errors / warnings")
+        self.returncode = major_fails + self.app._warncount
 
     def compile(self, code, try_eval=False):
         if try_eval:
@@ -282,8 +288,8 @@ class Writer(writers.Writer):
             #return True
         return False
 
-    def set_returncode(self, app):
-        app.statuscode = self.returncode + app._warncount
+    def set_returncode(self):
+        self.app.statuscode = self.returncode
 
     def complete_pep8(self):
         fname = self.dest.rsplit(".", 1)[0] + "{}.py"
@@ -294,8 +300,10 @@ class Writer(writers.Writer):
         pep8.print = lambda m, **_: msgs.append(m)
         checker = pep8.StyleGuide(paths=[fname.format(i) for i in range(len(self.pep8))])
         report = checker.check_files()
-        r = re.compile(re.escape(self.dest.rsplit(".", 1)[0]) + "(\d+)\.py:(\d+):\d+: (.*)$")
+        r = re.compile(re.escape(self.dest.rsplit(".", 1)[0]) + "(\d+)\.py:(\d+):\d+: (\w*) (.*)$")
         for i in [fname.format(i) for i in range(len(self.pep8))]:
             os.remove(i)
-        for filenum, line, msg in [r.match(i).groups() for i in msgs]:
-            self.warnings.append(self.pep8[int(filenum)] + ("PEP8 fail", msg))
+        for filenum, line, code, msg in [r.match(i).groups() for i in msgs]:
+            if code in ["E501"]:
+                continue
+            self.warnings.append(self.pep8[int(filenum)] + ("PEP8 fail", "{} - {}".format(code, msg)))
