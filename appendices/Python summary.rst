@@ -211,7 +211,7 @@ Data types
 
 The following table summarises the types of data we have introduced in this book, along with examples of their values and operations you can perform on them:
 
-- **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure the stirng contains a single whole number, without even a fraction.
+- **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure the stirng contains a single whole number, without even a fractional part.
 
   The operations that can be performed on an integer mainly include the arithmetic operators, such as ``+``, ``-``, ``*``, ``/`` (which results in a floating point answer), ``//`` (which results in an integer answer), ``**`` and ``%``.
 
@@ -231,13 +231,13 @@ The following table summarises the types of data we have introduced in this book
   
   For example::
 
-      >>> 10 * 4 + 21 // 2     # results in 50.5
-      >>> 10 * 4 + 21 / 2      # also results in 50.5
-      >>> 2 ** 8               # results in 256.0
-      >>> 10 % 6               # results in 4.0
-      >>> float("123")         # results in number 123.0
-      >>> float(123.5)         # results in number 123.5
-      >>> float(input('num?')) # convert from input to number
+      >>> 10.0 * 4 + 21 // 2     # results in 50.5
+      >>> 10.0 * 4 + 21 / 2      # also results in 50.5
+      >>> 2.0 ** 8               # results in 256.0
+      >>> 10.0 % 6               # results in 4.0
+      >>> float("123")           # results in number 123.0
+      >>> float(123.5)           # results in number 123.5
+      >>> float(input('num?'))   # convert from input to number
       
 - **strings (str)** - strings are a sequence of alphanumberic characters, such as those found on your keyboard.  You can convert to a string data type using the ``str`` function.  You can pass almost anthing into this function in order to get its string representation.
 
@@ -249,7 +249,7 @@ The following table summarises the types of data we have introduced in this book
       >>> capitalised = name.upper()
       >>> new_name = name.replace('General', 'President')
       >>> repeated = 'Fred' * 100
-      >>> joined_up = 'Fred' + 'Bloggs'
+      >>> joined_up = 'Fred' + 'Bloggs' + str(10)
       >>> num_to_str = str(123.456)
 
 - **booleans** - booleans are either ``True`` or ``False``, and are produced when you compare values or combine comparisons.  You can convert to a boolean data type using the ``bool`` function.
