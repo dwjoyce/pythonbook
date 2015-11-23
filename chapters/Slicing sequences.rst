@@ -216,6 +216,23 @@ All the multiples of 3, offset by 1::
     >>> nums[1::3]
     [1, 4, 7, 10, 13, 16, 19]
 
+In reverse
+----------
+
+If you wish to slice a sequence in reverse (backwards), then you simply need to use a negative step.  Type in these examples:
+
+    >>> letters = 'abcde'
+    >>> letters[4:0:-1]
+    'edcb'
+    >>> letters[4::-1]
+    'edcba'
+    >>> letters[::-1]
+    'edcba'
+    
+The first slice goes from the 4th element (the letter 'e') to the beginning (up to, but not including, the letter 'a'), with a step of -1 every time.
+
+If we wish to include the beginning as well, we can miss out the number for the end position - it will then stop when the sequence stops.  This is the approach we take with the second example.  Since we wish to go from the end all the way back to the beginning, we don't really need the start position either - let Python fill in those numbers for us.  To copy the whole sequence, you would simply type ``letters[::]`` as it encompasses both the beginning and the end, inclusive, so adding a step of ``-1`` slices from the end all the way back to the beginning, including both ends as it does so.
+
 Cut the string
 --------------
 
@@ -286,9 +303,11 @@ We can find various things::
     'xyz'
     >>> alphabet[5:8]
     'fgh'
-
+    
 Exercises
 ---------
+
+#. Write a program called :file:`sentence.py` that inputs a sentence, and then prints out every other letter (i.e. prints even letters, but misses out odd ones) and also in reverse.  Use both a ``while`` loop and slicing to achieve this, so that each print occurs twice.
 
 #. Write a program called :file:`daysofweek.py` which defines a list containing the days of the week (assume that Sunday is the first day).  Ask the user for a number between 1 and 7, and print out the appropriate day of the week.  For example, if the user types in ``1``, then print out ``Sunday``.  If the user types in ``7``, then print out ``Saturday``.  Note, you will have to take 1 off what the user has typed in before you use it as an index into your days of the week list.
 
