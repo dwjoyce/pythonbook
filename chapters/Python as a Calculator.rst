@@ -131,10 +131,10 @@ Things to remember
 
 #. Remember your arithmetic operators, using the values 2 and 5 as an example:
 
-   ======================================  ========    ============
+   ======================================  ========    ============================
    Name                                    Operator    Maths
                                                        equivalent
-   ======================================  ========    ============
+   ======================================  ========    ============================
    Addition                                ``5 + 2``   :math:`5 + 2`
    Subtraction                             ``5 - 2``   :math:`5 - 2`
    Division                                ``5 / 2``   :math:`5 \div 2`
@@ -142,7 +142,7 @@ Things to remember
    Power                                   ``5 ** 2``  :math:`5 < 2`
    Floor division (Whole number division)  ``5 // 2``  :math:`\floor*{\frac{5}{2}}`
    Modulus (remainder)                     ``5 % 2``   :math:`5 mod 2`
-   ======================================  ==========  ============
+   ======================================  ==========  ============================
    
    See Appendix C for a full list of operators, over and above arithmetic.
 
