@@ -401,21 +401,27 @@ The following table summarises the types of data we have introduced in this book
 
   The operations that can be performed on an integer mainly include the arithmetic operators, such as ``+``, ``-``, ``*``, ``/`` (which results in a floating point answer), ``//`` (which results in an integer answer), ``**`` and ``%``.
 
-  For example::
+  For example:
 
-      >>> 10 * 4 + 21 // 2   # results in 50
-      >>> 10 * 4 + 21 / 2    # results in 50.5
-      >>> 2 ** 8             # results in 256
-      >>> 10 % 6             # results in 6 (remainder from 10 divided by 6)
-      >>> int("123")         # results in number 123
-      >>> int(123.5)         # also results in number 123
-      >>> int(input('num?')) # convert from input to number
+.. code-block:: py3con
+    :pythontest: norun
+
+      >>> 10 * 4 + 21 // 2    # results in 50
+      >>> 10 * 4 + 21 / 2     # results in 50.5
+      >>> 2 ** 8              # results in 256
+      >>> 10 % 6              # results in 6 (remainder from 10 divided by 6)
+      >>> int("123")          # results in number 123
+      >>> int(123.5)          # also results in number 123
+      >>> int(input('num?'))  # convert from number
        
 - **floats (float)** - floating point numbers are fractional numbers that contains a whole number and a fractional part, such as -10.5, 0.0, 1.75, 15.0.  You convert to a float data type using the ``float`` function.  Make sure the argument passed in is an actual number, whether just a whole number or one already containing a fraction.
 
   The operators that can be performed on a floating point number are the same as integers.
   
-  For example::
+  For example:
+
+.. code-block:: py3con
+    :pythontest: norun
 
       >>> 10.0 * 4 + 21 // 2     # results in 50.5
       >>> 10.0 * 4 + 21 / 2      # also results in 50.5
