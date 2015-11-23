@@ -206,88 +206,6 @@ Catching :term:`exceptions`::
     # Now carry on as normal...
 
 
-Data types
-----------
-
-The following table summarises the types of data we have introduced in this book, along with examples of their values and operations you can perform on them:
-
-- **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure the stirng contains a single whole number, without even a fractional part.
-
-  The operations that can be performed on an integer mainly include the arithmetic operators, such as ``+``, ``-``, ``*``, ``/`` (which results in a floating point answer), ``//`` (which results in an integer answer), ``**`` and ``%``.
-
-  For example::
-
-      >>> 10 * 4 + 21 // 2   # results in 50
-      >>> 10 * 4 + 21 / 2    # results in 50.5
-      >>> 2 ** 8             # results in 256
-      >>> 10 % 6             # results in 6 (remainder from 10 divided by 6)
-      >>> int("123")         # results in number 123
-      >>> int(123.5)         # also results in number 123
-      >>> int(input('num?')) # convert from input to number
-       
-- **floats (float)** - floating point numbers are fractional numbers that contains a whole number and a fractional part, such as -10.5, 0.0, 1.75, 15.0.  You convert to a float data type using the ``float`` function.  Make sure the argument passed in is an actual number, whether just a whole number or one already containing a fraction.
-
-  The operators that can be performed on a floating point number are the same as integers.
-  
-  For example::
-
-      >>> 10.0 * 4 + 21 // 2     # results in 50.5
-      >>> 10.0 * 4 + 21 / 2      # also results in 50.5
-      >>> 2.0 ** 8               # results in 256.0
-      >>> 10.0 % 6               # results in 4.0
-      >>> float("123")           # results in number 123.0
-      >>> float(123.5)           # results in number 123.5
-      >>> float(input('num?'))   # convert from input to number
-      
-- **strings (str)** - strings are a sequence of alphanumberic characters, such as those found on your keyboard.  You can convert to a string data type using the ``str`` function.  You can pass almost anthing into this function in order to get its string representation.
-
-  Although you can join and repeat strings by using the ``+`` and ``*`` operators, respectively, you can also use methods belonging to the string type or class to perform operations contained by the string value or object.
-  
-  For example::
-  
-      >>> name = 'General Ike'
-      >>> capitalised = name.upper()
-      >>> new_name = name.replace('General', 'President')
-      >>> repeated = 'Fred' * 100
-      >>> joined_up = 'Fred' + 'Bloggs' + str(10)
-      >>> num_to_str = str(123.456)
-
-- **booleans** - booleans are either ``True`` or ``False``, and are produced when you compare values or combine comparisons.  You can convert to a boolean data type using the ``bool`` function.
-
-  For example::
-  
-      >>> 10 < 20          # results in True
-      >>> run = True       # sets run to True
-      >>> run and 10 < 20  # results in True
-      >>> not run          # results in False
-
-- **lists** - sequences of items of any type.  A list is simply a sequence of items, such as a range of numbers, a list of names or months.  You can convert to a list data type using the ``list`` function.
-
-  For example::
-
-      >>> list('abcdefg')
-      >>> tunnels = 'tom dick harry'.split()
-      >>> spring = ['Mar', 'Apr', 'May']
-      >>> sorted(spring)
-      >>> list(reversed(spring))
-      >>> spring.append('gorilla')
-      >>> spring[0]
-      
-- **files** - a value or object pointing to an open file.  You specify its name when opening the file, including its path if necessary, and optionally the mode in which you wish to open it - ``'r'`` for reading, ``'w'`` for writing.
-
-  For example::
-
-      >>> my_file = open('shopping-list.txt')
-      >>> my_file.read()
-      >>> my_file.readlines()
-      >>> my_file.close()
-      
-      >>> new_file = open('todo.txt', 'w')
-      >>> new_file.write('Finish computing coursework\n')
-      >>> new_file.writelines(['one\n', 'two\n', 'three\n'])
-      >>> new_file.close()
-      
-
 Operators
 ---------
 
@@ -472,10 +390,92 @@ Operator                                                                        
 ===================================================================================== ========================================================================
 
 
-Different types of functions
-----------------------------
+Data types
+----------
 
 .. pythontest:: nooutput
+
+The following table summarises the types of data we have introduced in this book, along with examples of their values and operations you can perform on them:
+
+- **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure the stirng contains a single whole number, without even a fractional part.
+
+  The operations that can be performed on an integer mainly include the arithmetic operators, such as ``+``, ``-``, ``*``, ``/`` (which results in a floating point answer), ``//`` (which results in an integer answer), ``**`` and ``%``.
+
+  For example::
+
+      >>> 10 * 4 + 21 // 2   # results in 50
+      >>> 10 * 4 + 21 / 2    # results in 50.5
+      >>> 2 ** 8             # results in 256
+      >>> 10 % 6             # results in 6 (remainder from 10 divided by 6)
+      >>> int("123")         # results in number 123
+      >>> int(123.5)         # also results in number 123
+      >>> int(input('num?')) # convert from input to number
+       
+- **floats (float)** - floating point numbers are fractional numbers that contains a whole number and a fractional part, such as -10.5, 0.0, 1.75, 15.0.  You convert to a float data type using the ``float`` function.  Make sure the argument passed in is an actual number, whether just a whole number or one already containing a fraction.
+
+  The operators that can be performed on a floating point number are the same as integers.
+  
+  For example::
+
+      >>> 10.0 * 4 + 21 // 2     # results in 50.5
+      >>> 10.0 * 4 + 21 / 2      # also results in 50.5
+      >>> 2.0 ** 8               # results in 256.0
+      >>> 10.0 % 6               # results in 4.0
+      >>> float("123")           # results in number 123.0
+      >>> float(123.5)           # results in number 123.5
+      >>> float(input('num?'))   # convert from input to number
+      
+- **strings (str)** - strings are a sequence of alphanumberic characters, such as those found on your keyboard.  You can convert to a string data type using the ``str`` function.  You can pass almost anthing into this function in order to get its string representation.
+
+  Although you can join and repeat strings by using the ``+`` and ``*`` operators, respectively, you can also use methods belonging to the string type or class to perform operations contained by the string value or object.
+  
+  For example::
+  
+      >>> name = 'General Ike'
+      >>> capitalised = name.upper()
+      >>> new_name = name.replace('General', 'President')
+      >>> repeated = 'Fred' * 100
+      >>> joined_up = 'Fred' + 'Bloggs' + str(10)
+      >>> num_to_str = str(123.456)
+
+- **booleans** - booleans are either ``True`` or ``False``, and are produced when you compare values or combine comparisons.  You can convert to a boolean data type using the ``bool`` function.
+
+  For example::
+  
+      >>> 10 < 20          # results in True
+      >>> run = True       # sets run to True
+      >>> run and 10 < 20  # results in True
+      >>> not run          # results in False
+
+- **lists** - sequences of items of any type.  A list is simply a sequence of items, such as a range of numbers, a list of names or months.  You can convert to a list data type using the ``list`` function.
+
+  For example::
+
+      >>> list('abcdefg')
+      >>> tunnels = 'tom dick harry'.split()
+      >>> spring = ['Mar', 'Apr', 'May']
+      >>> sorted(spring)
+      >>> list(reversed(spring))
+      >>> spring.append('gorilla')
+      >>> spring[0]
+      
+- **files** - a value or object pointing to an open file.  You specify its name when opening the file, including its path if necessary, and optionally the mode in which you wish to open it - ``'r'`` for reading, ``'w'`` for writing.
+
+  For example::
+
+      >>> my_file = open('shopping-list.txt')
+      >>> my_file.read()
+      >>> my_file.readlines()
+      >>> my_file.close()
+      
+      >>> new_file = open('todo.txt', 'w')
+      >>> new_file.write('Finish computing coursework\n')
+      >>> new_file.writelines(['one\n', 'two\n', 'three\n'])
+      >>> new_file.close()
+      
+      
+Different types of functions
+----------------------------
 
 In this section we will briefly describe the four general types of functions in Python:
 
@@ -557,7 +557,7 @@ A particular set of values is called a type (integers, floating point numbers, s
     >>> message.upper()  # returns the uppercase version
     >>> message.split()  # returns a list of words
     >>> message.replace('fox', 'coyote')  # replaces one word with another
-    >>> message.count('o')  # returns how many times one string is in another
+    >>> message.count('o')  # returns how often one string is in another
     >>> message.startswith('the')  # does string start with this?
     
 And so on.  You need to write the variable name (which refers to a piece of data, or object, belonging to a particular type), followed by a period ``.`` before the name of the function when calling it.  You can list the functions that a type contains by performing a ``dir`` on its name, for example::
