@@ -409,7 +409,7 @@ The following table summarises the types of data we have introduced in this book
       >>> 10 * 4 + 21 // 2    # results in 50
       >>> 10 * 4 + 21 / 2     # results in 50.5
       >>> 2 ** 8              # results in 256
-      >>> 10 % 6              # results in 6 (remainder from 10 divided by 6)
+      >>> 10 % 6              # results in 6 (remainder of 10 divided by 6)
       >>> int("123")          # results in number 123
       >>> int(123.5)          # also results in number 123
       >>> int(input('num?'))  # convert from number
