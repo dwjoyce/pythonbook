@@ -96,7 +96,22 @@ Which should be 2. And for the remainder, use the ``%`` (:term:`modulus`) operat
     >>> 7 % 3
     1
 
-Resulting in 1.  Reading both answers together, we have got 2 remainder 1.
+Resulting in 1.  Reading both answers together, we have got 2 remainder 1.  To practice further::
+
+    >>> 10 // 6
+    1
+    >>> 10 % 6
+    4
+    >>> 29 // 8
+    3
+    >>> 29 % 8
+    5
+    >>> 24 % 2
+    0
+    >>> 25 % 2
+    1
+    
+The last two demonstrate that 24 is even (no remainder when divided by 2), and 25 is odd (a remainder of 1)!
 
 Exercises
 ---------
@@ -114,19 +129,20 @@ Exercises
 Things to remember
 ------------------
 
-#. Remember your arithmetic operators:
+#. Remember your arithmetic operators, using the values 2 and 5 as an example:
 
-   ======================================  ========
-   Name                                    Operator    
-   ======================================  ========
-   Addition                                ``+``
-   Subtraction                             ``-``
-   Division                                ``/``
-   Multiplication                          ``*``
-   Power                                   ``**``
-   Floor division (Whole number division)  ``//``
-   Modulus (remainder)                     ``%``
-   ======================================  ========
+   ======================================  ========    ============
+   Name                                    Operator    Maths
+                                                       equivalent
+   ======================================  ========    ============
+   Addition                                ``5 + 2``   :math:`5 + 2`
+   Subtraction                             ``5 - 2``   :math:`5 - 2`
+   Division                                ``5 / 2``   :math:`5 \div 2`
+   Multiplication                          ``5 * 2``   :math:`5 \times 2`
+   Power                                   ``5 ** 2``  :math:`5 < 2`
+   Floor division (Whole number division)  ``5 // 2``  :math:`\floor*{\frac{5}{2}}`
+   Modulus (remainder)                     ``5 % 2``   :math:`5 mod 2`
+   ======================================  ==========  ============
    
    See Appendix C for a full list of operators, over and above arithmetic.
 
@@ -134,4 +150,4 @@ Things to remember
 
 #. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
 
-#. In programming, values are known as :term:`expressions`, potentially made up of values, operators and even other expressions that need to be evaluated to form a result.  They express a value.
+#. In programming, values are known as :term:`expressions`, potentially made up of other values, operators and even other expressions that need to be evaluated to form a result.  They express a value.
