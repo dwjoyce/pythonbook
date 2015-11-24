@@ -170,10 +170,10 @@ class Writer(writers.Writer):
 
         self.print("Overall", "=======", sep="\n")
         self.print(tests, "code items")
-        self.print(minor_fails, "minor fails")
-        self.print(major_fails, "major fails")
+        self.print(over_minor_fails, "minor fails")
+        self.print(over_major_fails, "major fails")
         self.print(self.app._warncount, "sphinx errors / warnings")
-        self.returncode = major_fails + self.app._warncount
+        self.app.statuscode += over_major_fails + self.app._warncount
 
     def compile(self, code, try_eval=False):
         if try_eval:
@@ -287,9 +287,6 @@ class Writer(writers.Writer):
         #else:
             #return True
         return False
-
-    def set_returncode(self):
-        self.app.statuscode = self.returncode
 
     def complete_pep8(self):
         fname = self.dest.rsplit(".", 1)[0] + "{}.py"
