@@ -51,7 +51,7 @@ The answer is the same as with our calculator example above.  However, what are 
 
 Type in it, press :button:`Return` and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
 
-Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to :ref:`appendix B.2` on Operators.
+Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to :ref:`Appendix B.2` on Operators.
 
 To enforce a different order, you can use brackets (``(`` and ``)``).  Just like in Maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
@@ -131,20 +131,20 @@ Things to remember
 
 #. Remember your arithmetic operators, using the values 2 and 5 as an example:
 
-   ======================================  ==========  ============================
-   Name                                    Operator    Maths
-                                                       equivalent
-   ======================================  ==========  ============================
-   Addition                                ``5 + 2``   :math:`5 + 2`
-   Subtraction                             ``5 - 2``   :math:`5 - 2`
-   Division                                ``5 / 2``   :math:`5 \div 2`
-   Multiplication                          ``5 * 2``   :math:`5 \times 2`
-   Power                                   ``5 ** 2``  :math:`5 < 2`
-   Floor division (Whole number division)  ``5 // 2``  :math:`\floor*{\frac{5}{2}}`
-   Modulus (remainder)                     ``5 % 2``   :math:`5 mod 2`
-   ======================================  ==========  ============================
+   =================================  ========  ==========  ============================
+   Name                               Operator  Example     Maths
+                                                            equivalent
+   =================================  ========  ==========  ============================
+   Addition                           ``+``     ``5 + 2``   :math:`5 + 2`
+   Subtraction                        ``-``     ``5 - 2``   :math:`5 - 2`
+   Division                           ``/``     ``5 / 2``   :math:`5 \div 2`
+   Multiplication                     ``*``     ``5 * 2``   :math:`5 \times 2`
+   Power                              ``**``    ``5 ** 2``  :math:`5^2`
+   Floor division (integer division)  ``//``    ``5 // 2``  :math:`\floor*{\frac{5}{2}}`
+   Modulus (remainder)                ``%``     ``5 % 2``   :math:`5 mod 2`
+   =================================  ========  ==========  ============================
    
-   See Appendix C for a full list of operators, over and above arithmetic.
+   See :ref:`Appendix B.2` for a full list of operators, over and above arithmetic.
 
 #. Use brackets to force Python to do a calculation in a particular order
 
