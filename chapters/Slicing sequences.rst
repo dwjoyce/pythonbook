@@ -216,10 +216,10 @@ All the multiples of 3, offset by 1::
     >>> nums[1::3]
     [1, 4, 7, 10, 13, 16, 19]
 
-In reverse
-----------
+Reverse gear
+------------
 
-If you wish to slice a sequence in reverse (backwards), then you simply need to use a negative step.  Type in these examples:
+If you wish to slice a sequence in reverse (backwards), then you simply need to use a negative step.  However, in this case, you must ensure the end index lower than the start index, otherwise it will return an empty sequence.  Type in these examples:
 
     >>> letters = 'abcde'
     >>> letters[4:0:-1]
@@ -231,7 +231,9 @@ If you wish to slice a sequence in reverse (backwards), then you simply need to 
     
 The first slice goes from the 4th element (the letter 'e') to the beginning (up to, but not including, the letter 'a'), with a step of -1 every time.
 
-If we wish to include the beginning as well, we can miss out the number for the end position - it will then stop when the sequence stops.  This is the approach we take with the second example.  Since we wish to go from the end all the way back to the beginning, we don't really need the start position either - let Python fill in those numbers for us.  To copy the whole sequence, you would simply type ``letters[::]`` as it encompasses both the beginning and the end, inclusive, so adding a step of ``-1`` slices from the end all the way back to the beginning, including both ends as it does so.
+If we wish to include the beginning as well, we can miss out the number for the end position - it will then stop when the sequence stops.  This is the approach we take with the second example.  Since we wish to go from the end all the way back to the beginning, we don't really need the start position either - let Python fill in those numbers for us.  To copy the whole sequence, you would simply type ``letters[:]`` as it encompasses both the beginning and the end, inclusive, so adding a step of ``-1`` will slice from the end all the way back to the beginning, including both ends as it does so.
+
+.. tip:: If you simply want to reverse a sequence of items, then use the built-in function ``reversed``.  For example, ``''.join(reversed('abcde'))``, will print out ``edcba`` - the call to the ``join`` function is to join the list back together again, each separated by an empty string!
 
 Cut the string
 --------------

@@ -145,7 +145,7 @@ Glossary
             'repetition repetition repetition repetition repetition '
 
     debugging
-        The process of finding and resolving bugs or defects that prevent correct operation of computer software or a system.
+        The process of finding and fixing bugs or defects that prevent the correct operation of a computer program or a system.
 
 
     .. Asking questions

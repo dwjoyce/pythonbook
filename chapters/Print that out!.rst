@@ -107,6 +107,18 @@ Finally, you can use special characters in strings to denote certain things.  He
 
 The first one breaks the line with a newline character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
 
+Keeping things in line
+----------------------
+
+If you wish to call ``print`` a number of times, with each item being appended onto the end of the line rather than starting a new line, then you need to use a special argument called ``end``.  If you set end to a particular string value, it will use that instead of a new line.  For example, type this in::
+
+  print('This is the first line')
+  print('This will appear on another line')
+  print('But these two lines', end='')
+  print(' will appear on the same line!)
+  
+You could, of course, specifiy the ``end`` argument to be anything you want, but it is most common to either not use it at all, or set it to an empty string (two single quotes, one after the other).  This kind of argument is called a *keyword argument*, which will be described further in chapter 19 on functions.
+
 .. tip:: When you are writing a program later on and cannot see why it is not working as you would expect, try inserting some ``print`` statements in the code with the variables your program is using.  That way, you will see what is going on, whilst it is running.  This should then show you what needs changing to make it work better.  This is called :term:`debugging` your program.
 
 Exercises
@@ -134,5 +146,7 @@ Things to remember
 #. The only arithmetic operators that can be used with text are addition (i.e. joining strings together, known as :term:`concatenation`) and multiplication (:term:`repetition`).
 
 #. Use the ``\n`` for newline, ``\t`` for tab and ``\'`` or ``\"`` (quotation marks) inside strings.
+
+#. Use the optional ``end`` argument when calling the ``print`` function to keep subsequent calls to ``print`` on the same line, rather than starting a new line.
 
 #. We have now covered three types of data: :term:`integers`, :term:`floats` and :term:`strings`.

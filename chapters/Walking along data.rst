@@ -78,7 +78,7 @@ The third thing you can do is to ask for a step in the numbers, so instead of ea
 
 By this stage, you should realise that the range function is very similar to how we slice up sequences - specify a start, and also optionally an end point along with a step to take for each number.
 
-By using the *step*, you can also obtain a list that counts down rather than counting up.  All the number ranges we have done so far have counted up.  To count down, you need to use a negative step.  However, you must also remember to make the end point lower than the start point!  Try this to count down from 10 to 1, inclusive::
+By using the *step*, you can also obtain a list that counts down rather than counting up.  All the number ranges we have done so far have counted up.  To count down, you need to use a negative step.  However, you must also remember to make the end point lower than the start point!  Again, this is similar to slicing a sequence backwards.  Try this to count down from 10 to 1 (down to, but not including 0), inclusive::
 
     >>> for num in range(10, 0, -1):
             print(num)
@@ -106,6 +106,9 @@ And you don't need to use it all, of course.  It is used to just step through th
     >>> for line in range(1000):
             print('I will not draw on the classroom wall again.')
 
+Not just numbers
+----------------
+
 The list that the for loop uses to step over need not be a list of numbers.  It can be a list containing anything you like.  Try this::
 
     >>> names = ['Bilbo', 'Gandalf', 'Thorin', 'Golum']
@@ -121,6 +124,14 @@ The variable to step along need not be a list - it can be any sequence at all, i
     >>> word = 'rotavator'
     >>> for letter in word:
             print(letter)
+
+and items in reverse, using the ``reversed`` function we mentioned in the previous chapter on slicing::
+
+    >>> sentence = 'The attack starts at dawn'
+    >>> for letter in reversed(sentence):
+            print(letter, end='')
+
+We introduced the ``end`` argument in chapter 7 on printing - it simply instructs the call to not end the print with a new line, but with nothing (i.e. an empty string) instead.  It allows multiple calls to print to add onto the current line, instead of starting a new one.
 
 .. pythontest:: all
 
