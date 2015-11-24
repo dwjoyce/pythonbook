@@ -141,7 +141,7 @@ Things to remember
    Multiplication                     ``*``     ``5 * 2``   :math:`5 \times 2`
    Power                              ``**``    ``5 ** 2``  :math:`5^2`
    Floor division (integer division)  ``//``    ``5 // 2``  :math:`\floor*{\frac{5}{2}}`
-   Modulus (remainder)                ``%``     ``5 % 2``   :math:`5 mod 2`
+   Modulus (remainder)                ``%``     ``5 % 2``   :math:`5\; mod\; 2`
    =================================  ========  ==========  ============================
    
    See :ref:`Appendix B.2` for a full list of operators, over and above arithmetic.
