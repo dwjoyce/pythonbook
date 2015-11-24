@@ -51,7 +51,7 @@ The answer is the same as with our calculator example above.  However, what are 
 
 Type in it, press :button:`Return` and see what the result is.  The result should read 24.0, the same as when we were using the calculator earlier.  This is not a whole number, but a fractional number - it has a decimal point included.  In Python, we will deal with two :term:`types` of numbers - whole numbers (:term:`integers`) and fractional numbers (:term:`floating point` or real numbers).
 
-Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to :ref:`Appendix B.2` on Operators.
+Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to :ref:`Appendix B.1` on Operators.
 
 To enforce a different order, you can use brackets (``(`` and ``)``).  Just like in Maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
@@ -78,13 +78,14 @@ Which is 8. This works for any power.  How about working out large numbers, such
     >>> 19 ** 8
     16983563041
 
-
-Your answer should state 16983563041. Negative numbers work as well.  Remember that 2\ :superscript:`-1` is the same as :math:`1 \div 2`?  Doing this in Python is similar::
+Your answer should state 16983563041.  Negative numbers work as well.  Remember that 2\ :superscript:`-1` is the same as :math:`1 \div 2`?  Doing this in Python is similar::
 
     >>> 2 ** -1
     0.5
 
 Your answer should read 0.5.
+
+.. note:: Operators almost always have a value either side of them, such as ``10 + 20``, or ``2 ** 8``.  The general exception when using the minus sign ``-`` or the plus sign ``+``, in which case it appears you are using two operators in a row, such as ``30 + -10``, which would result in a value of 20.  Apart from negating a value, you should use these arithmetic operators with two values (one to the left, one to the right), not with one.
 
 We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, :math:`7 \div 3 = 2\, r\, 1`)? To get the quotient (in this case 2), use the ``//`` (floor or :term:`integer division`) operator::
 
@@ -144,7 +145,7 @@ Things to remember
    Modulus (remainder)                ``%``     ``5 % 2``   :math:`5\; mod\; 2`
    =================================  ========  ==========  ============================
    
-   See :ref:`Appendix B.2` for a full list of operators, over and above arithmetic.
+   See :ref:`Appendix B.1` for a full list of operators, over and above arithmetic.
 
 #. Use brackets to force Python to do a calculation in a particular order
 

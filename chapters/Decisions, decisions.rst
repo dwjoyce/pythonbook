@@ -134,20 +134,20 @@ Exercises
 Things to remember
 ------------------
 
-#. Remember your comparison operators:
+#. Remember your comparison operators, using the variable ``a`` (an integer) as an example:
 
-   ==================================  ========  ============
-   Name                                Operator  Maths
-                                                 equivalent
-   ==================================  ========  ============
-   Equals                              ``==``    =
-   Not equal to                        ``!=``    :math:`\neq`
-   Greater than                        ``>``     >
-   Greater than or equal to            ``>=``    :math:`\geq`
-   Less than                           ``<``     <
-   Less than or equal to               ``<=``    :math:`\leq`
-   ==================================  ========  ============
-   
+   ==================================  ========  ===========  =================
+   Name                                Operator  Example      Maths
+                                                              equivalent
+   ==================================  ========  ===========  =================
+   Equals                              ``==``    ``a == 10``  :math:`a = 10`
+   Not equal to                        ``!=``    ``a != 10``  :math:`a \neq 10`
+   Greater than                        ``>``     ``a > 10``   :math:`a > 10`
+   Greater than or equal to            ``>=``    ``a >= 10``  :math:`a \geq 10`
+   Less than                           ``<``     ``a < 10``   :math:`a < 10`
+   Less than or equal to               ``<=``    ``a <= 10``  :math:`a \leq 10`
+   ==================================  ========  ===========  =================
+
 #. We now know four types of data - integers, floats, strings and booleans.  :term:`Boolean values` are either ``True`` or ``False``.
 
 #. Each selection statement must contain an ``if`` statement, along with a test to evaluate and at least one line of code to run, indented to the right.  If the test is evaluated as true, then even if there are ``elif`` or ``else`` statements below, the program will skip them.
