@@ -13,10 +13,10 @@ Now that we have started writing proper programs that can be saved and run over 
 
 To see this, open up a new file (click on the :menu:`File` menu and select :menu:`New File`), and type in the following into the new window that appears::
 
-  a = 10
-  b = 20
-  c = a + b
-  c
+    a = 10
+    b = 20
+    c = a + b
+    c
 
 This is just the same code as we did in Chapter 2 when working with variables for the first time.  However, back then, we typed in each individual line in the interactive shell, and it gave an answer every time if there was one.
 
@@ -28,28 +28,28 @@ The reason for this is that just typing a value (e.g. ``10``) or an expression t
 
 So what do we want to do with the variable ``c`` above?  We want to display or print it out onto the screen.  In Python, the way to do this is to use the ``print`` function.  You simply wrap your value inside the parentheses in the ``print`` call, and it will then print it out as we originally intended.  Therefore, modify your program so it looks like this::
 
-  a = 10
-  b = 20
-  c = a + b
-  print(c)
+    a = 10
+    b = 20
+    c = a + b
+    print(c)
 
 Run your program again, using the :kbd:`F5` key (you may have to click the :button:`OK` button, or just press the :button:`Return` key to confirm).  This should now print out the number 30 in the run window.
 
 You can print out more than one item by using a comma ``,`` between the items to separate them.  Modify the last line in your program again::
 
-  a = 10
-  b = 20
-  c = a + b
-  print(a, b, c)
+    a = 10
+    b = 20
+    c = a + b
+    print(a, b, c)
 
 and run, again by using the :kbd:`F5` key and pressing the :button:`Return` key to confirm.  This will print out 10, followed by 20 and finally 30, all on the same line.
 
 You can even get the ``print`` function to perform the calculation for you when passing in the values to print.  All arguments like this are evaluated (processed or simplified) before the values are presented to the function to use.  Again, modify your program like so::
 
-  a = 10
-  b = 20
-  c = a + b
-  print(a, b, c, a + b + c)
+    a = 10
+    b = 20
+    c = a + b
+    print(a, b, c, a + b + c)
 
 This will print out the three numbers from before (10, 20 and 30), and then 60 (all the variables added together), without the need of a fourth variable to hold this extra number.
 
@@ -62,10 +62,10 @@ To deal with text, we need to enclose the words with quotation marks, just like 
 
 Open up a new file (click on the :menu:`File` menu and select :menu:`New File`), and type the following::
 
-  print("Hello World!")
-  print('How are you?')
-  print("I love Python")
-  print('This is fun!')
+    print("Hello World!")
+    print('How are you?')
+    print("I love Python")
+    print('This is fun!')
   
 Save this file as :file:`lines.py` (press the :kbd:`F5` button, press :button:`Return` to confirm and save it onto your USB stick), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
 
@@ -79,43 +79,43 @@ We now know three types of data - integers, floats and strings.
 
 Modify your :file:`lines.py` program to include strings and integers together, below the lines you added previously::
 
-  print("1 plus 2 equals:", 1 + 2)
-  print("I am", 18, "years old")
-  print("That bag of apples cost", 75, "pence")
+    print("1 plus 2 equals:", 1 + 2)
+    print("I am", 18, "years old")
+    print("That bag of apples cost", 75, "pence")
   
 Again note how we separate a number of items being printed together - using a comma between each.
 
 We can even have a bit of fun, and join and replicate strings like so::
 
-  print('One piece of text' + 'joined to another')
-  print('How about this ' * 10)
+    print('One piece of text' + 'joined to another')
+    print('How about this ' * 10)
 
 Here we are using the addition operation ``+`` to join two items of text together, and then print out the result.  Notice, the result does not have a space between each item, as the other examples previously do.  This is called :term:`string concatenation`.  The multiplication operation ``*`` is used to repeat the string however many times you specify - 10 times in this example.  This is called :term:`repetition`.
 
 Variables can also be assigned to strings.  Add the following onto your program, :file:`lines.py`::
 
-  name = 'Fred'
-  occupation = 'Farmer'
-  age = 25
-  print('Here are my details:', name, occupation, age)
+    name = 'Fred'
+    occupation = 'Farmer'
+    age = 25
+    print('Here are my details:', name, occupation, age)
   
 Finally, you can use special characters in strings to denote certain things.  Here I will introduce just three of them, so add these lines to finish::
 
-  print('Here is a newline character\nThis is now on a separate line!')
-  print('This introduces a horizontal tab \t to space out my text')
-  print('I love St. Michael\'s - notice the quote inside the quote!')
+    print('Here is a newline character\nThis is now on a separate line!')
+    print('This introduces a horizontal tab \t to space out my text')
+    print('I love St. Michael\'s - notice the quote inside the quote!')
 
 The first one breaks the line with a newline character (``\n``), the second spaces out the text using a tab, and the third is a way of using quotes inside quotes, otherwise Python will get confused between an apostrophe (e.g. St. Michael's School) and the closing quotation mark.
 
 Keeping things in line
 ----------------------
 
-If you wish to call ``print`` a number of times, with each item being appended onto the end of the line rather than starting a new line, then you need to use a special argument called ``end``.  If you set end to a particular string value, it will use that instead of a new line.  For example, type this in::
+If you wish to call ``print`` a number of times, with each item being appended onto the end of the line rather than starting a new line, then you need to use a special argument called ``end``.  If you set end to a particular string value, it will use that instead of a new line.  For example, add these lines to the end of your :file:`lines.py` program and run it once again::
 
-  print('This is the first line')
-  print('This will appear on another line')
-  print('But these two lines', end='')
-  print(' will appear on the same line!')
+    print('This is the first line')
+    print('This will appear on another line')
+    print('But these two lines', end='')
+    print(' will appear on the same line!')
   
 You could, of course, specifiy the ``end`` argument to be anything you want, but it is most common to either not use it at all, or set it to an empty string (two single quotes, one after the other).  This kind of argument is called a *keyword argument*, which will be described further in chapter 19 on functions.
 
