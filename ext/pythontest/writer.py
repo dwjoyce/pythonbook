@@ -60,7 +60,7 @@ class Writer(writers.Writer):
         prompt = prompt.strip().lower()
         if "stop" in prompt:
             return "stop"
-        elif "age" in prompt or "number" in prompt:
+        elif "age" in prompt or "num" in prompt:
             return "10"
         elif "name" in prompt:
             return "quit"

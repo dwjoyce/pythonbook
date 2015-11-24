@@ -159,11 +159,14 @@ To generate :term:`random` numbers, we use the ``random`` module::
     def say_hello():
         print('hello')
 
+
     def say_hello_times(times):
         print('hello' * times)
 
+
     def square_number(number):
         return number * number
+
 
     def lowest_highest(numbers):  # accepts a list of numbers
         lowest = min(numbers)
@@ -401,10 +404,7 @@ The following table summarises the types of data we have introduced in this book
 
   The operations that can be performed on an integer mainly include the arithmetic operators, such as ``+``, ``-``, ``*``, ``/`` (which results in a floating point answer), ``//`` (which results in an integer answer), ``**`` and ``%``.
 
-  For example:
-
-.. code-block:: py3con
-    :pythontest: norun
+  For example::
 
       >>> 10 * 4 + 21 // 2    # results in 50
       >>> 10 * 4 + 21 / 2     # results in 50.5
@@ -413,15 +413,12 @@ The following table summarises the types of data we have introduced in this book
       >>> int("123")          # results in number 123
       >>> int(123.5)          # also results in number 123
       >>> int(input('num?'))  # convert from number
-       
+
 - **floats (float)** - floating point numbers are fractional numbers that contains a whole number and a fractional part, such as -10.5, 0.0, 1.75, 15.0.  You convert to a float data type using the ``float`` function.  Make sure the argument passed in is an actual number, whether just a whole number or one already containing a fraction.
 
   The operators that can be performed on a floating point number are the same as integers.
   
-  For example:
-
-.. code-block:: py3con
-    :pythontest: norun
+  For example::
 
       >>> 10.0 * 4 + 21 // 2     # results in 50.5
       >>> 10.0 * 4 + 21 / 2      # also results in 50.5
