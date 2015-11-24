@@ -350,7 +350,7 @@ def missing_reference(app, env, node, contnode):
         return domain.resolve_xref(env, fromdocname, app.builder,
                                    typ, aliases[target], node, contnode)
     if node["reftarget"].startswith("chapter") or node["reftarget"].startswith("appendix"):
-        chap, appe = re.search("chapter (\d+)|appendix (\w+)", node["reftarget"]).groups()
+        chap, appe, app_num = re.search("chapter (\d+)|appendix (\w+)\.?(\d+)?", node["reftarget"]).groups()
         if chap:
             chap_lookup = dict(enumerate(env.toctree_includes["index"]))
             file = chap_lookup[int(chap)]
@@ -359,11 +359,16 @@ def missing_reference(app, env, node, contnode):
             file = app_lookup[appe]
         else:
             RuntimeError("Panic, regex failed!")
-        subref = "".join((x if x.isalpha() else "-") for x in file.split("/")[-1].lower()).rstrip("-")
+        if app_num is None:
+            name = file.split("/")[-1].lower()
+        else:
+            app_num = int(app_num)
+            name = env.tocs[file][0][1][app_num][0][0].astext().lower()
+        subref = "".join((x if x.isalpha() else "-") for x in name).rstrip("-")
         ref = file + ":" + subref
         node['reftarget'] = subref
         node['refexplicit'] = True
-        #print(subref, domain, fromdocname, typ)
+        print(subref, domain, fromdocname, typ)
         #print(domain.data['anonlabels'])
         return sphinxnodes.make_refnode(app.builder, fromdocname, file, subref, contnode)
 
