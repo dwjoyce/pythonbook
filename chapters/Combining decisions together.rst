@@ -39,7 +39,9 @@ So far, we have only learned how to attach one test to either an ``if`` statemen
     - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether ``a`` is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can also be true, which is also fine.
     
     - ``not`` which takes a single boolean value and inverts its value, so ``True`` becomes ``False`` and ``False`` becomes ``True``.  For example, ``not weather == 'warm'`` which tests whether the variable weather is equal to the value ``'warm'``, and then flips the result.
-    
+
+.. note:: Just like with arithmetic operators, the ``and`` and the ``or`` logical operators need two values (formally called operands), one to the left and another to the right.  For example, you could write ``(a > 10) and (b < 20)`` or ``(a == 10) or (b == 10)``.  And similar to the negative operator ``-``, the ``not`` operator only needs one, the value it is inverting, such as ``not (a == 10)``.
+
 So, how do we apply this to our code in the :file:`beach.py` program?  To see this, you need to change the big ``if`` statement from this::
 
     if weather == 'warm':

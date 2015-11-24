@@ -41,7 +41,10 @@ Glossary
         A combination of actual values, variables, operators, calls to functions and even sub-expressions, to form a value that is computed or evaluated into its simplest form.  For example, the expression ``10 + 4 * 3 / 2`` is evaluated to form the value ``16.0``.
 
     operator
-        A symbol that represents an action, such as addition, assignment or equality.
+        A symbol that represents an action, such as addition, assignment or equality.  In this book, we have learnt arithmetic, comparison and logical operators.
+        
+    operand
+        A value that is processed or used by an operator.  For example, in the expression ``10 + 20``, the ``+`` is an operator, whilst the values ``10`` and ``20`` are operands.
 
     integer
         A whole number such as ``18``. These numbers never have a fractional part.
