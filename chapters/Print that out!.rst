@@ -115,7 +115,7 @@ If you wish to call ``print`` a number of times, with each item being appended o
   print('This is the first line')
   print('This will appear on another line')
   print('But these two lines', end='')
-  print(' will appear on the same line!)
+  print(' will appear on the same line!')
   
 You could, of course, specifiy the ``end`` argument to be anything you want, but it is most common to either not use it at all, or set it to an empty string (two single quotes, one after the other).  This kind of argument is called a *keyword argument*, which will be described further in chapter 19 on functions.
 
