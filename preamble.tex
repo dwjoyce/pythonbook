@@ -90,7 +90,7 @@
 
 
 \def\breaktext#1#2{%
-\par%
+% \par%
 \nobreak%
 \global\advance\bt@count\@ne%
 \expandafter\label\expandafter{\the\bt@count bt@count}%
@@ -104,10 +104,12 @@
 % \typeout{[\@tempa][\@tempb]}%
 \ifx\@tempa\@tempb%
 % \typeout{equal}%
+\par%
 \penalty\z@%
 \else%
 % \typeout{page break}%
-{\vspace{-1.5em}\small\hspace{380pt} #1 \par\vfill\break\hspace{320pt} #2 \par\nobreak}%
+{#1 \par%
+\break\par\nobreak}%
 \fi%
 \fi%
 \expandafter\label\expandafter{\the\bt@count bt@count}%

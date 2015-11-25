@@ -93,6 +93,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.append('\\begin{alltt}\n')
         else:
             code = node.astext().rstrip('\n')
+            code = "\n".join(map("{:64}".format, code.split("\n")))
             lang = self.hlsettingstack[-1][0]
             linenos = code.count('\n') >= self.hlsettingstack[-1][1] - 1
             highlight_args = node.get('highlight_args', {})
@@ -368,7 +369,7 @@ def missing_reference(app, env, node, contnode):
         ref = file + ":" + subref
         node['reftarget'] = subref
         node['refexplicit'] = True
-        print(subref, domain, fromdocname, typ)
+        #print(subref, domain, fromdocname, typ)
         #print(domain.data['anonlabels'])
         return sphinxnodes.make_refnode(app.builder, fromdocname, file, subref, contnode)
 
