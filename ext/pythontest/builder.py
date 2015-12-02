@@ -110,8 +110,12 @@ class Builder(sphinx.builders.Builder):
             for node in tree.traverse(addnodes.toctree):
                 new_sect += node
             tree = new_tree
-        largetree = inline_all_toctrees(self, self.docnames, indexfile, tree,
-                                        darkgreen)
+        try:
+            largetree = inline_all_toctrees(self, self.docnames, indexfile, tree,
+                                            darkgreen)
+        except:
+            largetree = inline_all_toctrees(self, self.docnames, indexfile, tree,
+                                            darkgreen, [indexfile])
         largetree['docname'] = indexfile
         for docname in appendices:
             appendix = self.env.get_doctree(docname)
