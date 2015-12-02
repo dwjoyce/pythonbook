@@ -93,7 +93,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.append('\\begin{alltt}\n')
         else:
             code = node.astext().rstrip('\n')
-            code = "\n".join(map("{:64}".format, code.split("\n")))
+            spaces_to_add = [64 - len(i) for i in code.split("\n")]
             lang = self.hlsettingstack[-1][0]
             linenos = code.count('\n') >= self.hlsettingstack[-1][1] - 1
             highlight_args = node.get('highlight_args', {})
@@ -124,6 +124,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
                                     r'')
             hlcode = hlcode.replace('\\end{Verbatim}\n',
                                     '')
+            hlcode = "\n".join(i + " " * j for i, j in zip(hlcode.split("\n"), spaces_to_add))
             hlcode = hlcode.replace(' ',
                                     '\\hspace{\\charwidth}')
             hlcode = hlcode.strip("\n").replace('\n',

@@ -75,7 +75,7 @@ If you call ``round`` with ``-2``, it makes the last two non-fractional digits z
 How many arguments can one function have?
 -----------------------------------------
 
-That's depends!  Some functions take any number of arguments. ``min`` is a function that takes two or more arguments, and returns the smallest one::
+That depends!  Some functions take any number of arguments. ``min`` is a function that takes two or more arguments, and returns the smallest one::
 
     >>> min(1, 8)
     1
