@@ -136,7 +136,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         self.table.has_problematic = True
         if self.table.rowcount > 30:
             self.table.longtable = True
-        self.body = self._body
+        self.popbody()
         if not self.table.longtable and self.table.caption is not None:
             self.body.append('\n\n\\begin{threeparttable}\n'
                                 '\\capstart\\caption{%s}\n' % self.table.caption)
@@ -175,7 +175,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         if self.table.longtable:
             self.body.append('\\hline\n')
             if self.tableheaders:
-                self._body.append('\\rowcolor{TableHeaderColor}\n')
+                self.body.append('\\rowcolor{TableHeaderColor}\n')
             self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
             self.body.append('\\endfirsthead\n\n')
             self.body.append('\\multicolumn{%s}{c}%%\n' % self.table.colcount)
@@ -183,7 +183,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
             self.body.append('\n\\hline\n')
             #self.body.extend(self.tableheaders)
             self.body.append('\\endhead\n')
-            self.body.append(r'\hline\rowcolor{TableHeaderColor} \multicolumn{%s}{|r|}{{\textsf{\textit{%s}}}} \\ \hline'
+            self.body.append(r'\rowcolor{white} \multicolumn{%s}{|r|}{{\textsf{\textit{%s}}}} \\ \hline'
                                 % (self.table.colcount,
                                 'Continued on next page'))
             self.body.append('\n\\endfoot\n\n')
@@ -191,7 +191,7 @@ class ISLLaTeXTranslator(sphinx.writers.latex.LaTeXTranslator):
         else:
             self.body.append('\\hline\n')
             if self.tableheaders:
-                self._body.append('\\rowcolor{TableHeaderColor}\n')
+                self.body.append('\\rowcolor{TableHeaderColor}\n')
             self.body.extend([("\\textbf{" + i + "}") if "textsf" in i else i for i in self.tableheaders])
         self.body.extend(self.tablebody)
         self.body.append(endmacro)
