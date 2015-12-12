@@ -82,6 +82,29 @@ All of this is relevant for any type of list, whether they contain characters, s
 
 Be careful that you open and close the brackets correctly, if you are having problems!  Moreover, if you use an offset that is past the end of the sequence, Python will complain - ``print(names[4])`` in this example.
 
+Outside In
+----------
+
+What if the sequence contains more than one level, like a matrix we mentioned in the previous chapter?  For example, type the following to define a matrix of numbers::
+
+    >>> matrix = [[0,1,2], [3,4,5], [6,7,8]]
+
+How do we get at the individual items inside on of the inner lists, such as the number 3?  We use the same notation, and go from the outside sequence inwards.  In this example, to get at the number 3, we first index the second item of the overall sequence, which gives us ``[3,4,5]``.  With this item, we can then index the actual number we wish, which being the first item has an index of 0.  Although it is conceptually two steps, we can do it in one line by first indexing the correct item in the overall list, and then indexing the individual item in this inner list::
+
+    >>> matrix[1][0]
+    3
+    
+So the indexing goes from outside in, left to right, with the name of the overall sequence (or matrix) on the left-hand side.
+
+The same occurs if the list is even deeper, such as a list of lists, each containing a string::
+
+    >>> names = [['tom', 'jones'], ['john', 'smith'], ['zippy', 'james']]
+
+If we wish to pull out the ``'y'`` in ``'zippy'`` then - from the outside in - we index ``2`` to get at ``['zippy', 'james']`` then index ``0`` to get at ``'zippy'`` and finally ``4`` to index the ``'y'``::
+                  
+    >>> names[2][0][4]
+    >>> 'y'
+
 .. pythontest:: all
 
 Unidentified Food Object
@@ -336,6 +359,8 @@ Things to remember
 #. The first item in a sequence has the :term:`index` ``0``, the second ``1``, the third ``2``, and so on.
 
 #. Negative indexes can be used, counting from the end of the sequence. The last item is ``-1``.
+
+#. If a sequence has more than one level (i.e. is multi-dimensional like a matrix), then you index from the outside in, with each index using the ``[]`` notation.
 
 #. :term:`Slicing` is done by ``sequence[start:stop:step]``.
 
