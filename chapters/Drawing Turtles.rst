@@ -46,29 +46,20 @@ Using the name ``math.pi`` is not calling a function, it is referring to a float
 Stick your head out of the shell
 --------------------------------
 
-So let us get back to our drawing.  To import the turtle module, you just need to type the following::
+So let us get back to our drawing.  To import the turtle module, you just need to type the ``import`` command followed by the name of the module, as follows::
 
   >>> import turtle
   
-Now we can begin to use it.  The first thing to do is to get our window onto the screen.  This is used to display our canvas (or graph paper), so that we can begin our drawing.  This is done by calling the ``Turtle`` function:
+Now we can begin to use it.  The first time we use a function inside the turtle module, a window (similar to a canvas or graph paper) will pop up so that we can draw in it.  Let us do this by drawing something, so type in the following::
 
-.. code-block:: py3con
-    :pythontest: nooutput
-
-    >>> turtle.Turtle()
+    >>> turtle.forward(100)
   
-At first you may find this confusing - ``turtle`` (with a lowercase 't') is the module name, and ``Turtle`` (with an uppercase 't') is the function that creates the drawing window.  Please do not confuse the two - the function name begins with a CAPITAL letter!
-
-You should see a new window pop up onto the screen.  Move it to the right of your screen so it does not obscure what you are typing, like so:
+You should see a new window pop onto the screen.  Move it to the right of your screen so it does not obscure what you are typing, like so:
 
 .. image:: /images/screenshots/idle_turtle.png
     :width: 90%
     :align: center
 
-We are now ready to get drawing.  Now type this::
-
-    >>> turtle.forward(100)
-  
 See how the small shape leaves a trail behind as it moves.  Let us carry on::
 
     >>> turtle.left(90)

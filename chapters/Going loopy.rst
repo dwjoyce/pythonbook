@@ -17,8 +17,6 @@ With what we have learned up until now, we would do the following.  So open a ne
 
     import turtle
 
-    turtle.Turtle()
-
     turtle.forward(100)
     turtle.left(60)
     turtle.forward(100)

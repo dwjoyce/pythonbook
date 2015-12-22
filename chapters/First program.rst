@@ -42,9 +42,6 @@ Our first complete program will be the same as the code we typed in for :ref:`ch
 
     import turtle
 
-    turtle.Turtle()
-
-    turtle.left(90)
     turtle.forward(100)
     turtle.left(90)
     turtle.forward(100)
@@ -102,11 +99,7 @@ That is not all - we can also insert :term:`comments` to help others people unde
 
     import turtle
 
-    # Create new turtle window
-    turtle.Turtle()
-
-    # Draw a square
-    turtle.left(90)
+    # Draw a square - move forward and turn for each side
     turtle.forward(100)
     turtle.left(90)
     turtle.forward(100)

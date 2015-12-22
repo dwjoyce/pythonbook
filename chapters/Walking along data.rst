@@ -160,9 +160,6 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
 
     import turtle
 
-    # Create our window to draw in
-    turtle.Turtle()
-
     # Set color and start shape
     turtle.fillcolor('red')
     turtle.begin_fill()
@@ -190,8 +187,6 @@ Open up another new file window, and type in the following::
 
     # Define the colors we will use below
     colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']
-
-    turtle.Turtle()
 
     # Set the pen size, color and drawing speed
     turtle.pensize(2)
@@ -258,8 +253,7 @@ Now to do something longer and more colorful, start a new program and type in th
     # Define our colors to use lower down
     colors = ['red', 'cyan', 'green', 'magenta', 'blue', 'yellow', 'white']
 
-    # Create our window, and set pen size and speed
-    turtle.Turtle()
+    # Set pen size and speed
     turtle.pensize(5)
     turtle.speed(0)
 

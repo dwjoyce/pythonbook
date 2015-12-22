@@ -112,7 +112,7 @@ We will write a little turtle based program to demonstrate some of the concepts 
         turtle.circle(radius)
         turtle.end_fill()
         
-    turtle.Turtle()
+    # Set the speed and save width and height
     turtle.speed('fastest')
     win_width, win_height = turtle.window_width(), turtle.window_height()
     
