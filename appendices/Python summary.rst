@@ -581,7 +581,7 @@ When a program gets past a few lines, including its own function definitions and
     import math
     
     # define constant variables (variables whose values don't change), e.g.
-    colors = ['red', 'green', 'blue']
+    MULTIPLIER = 2
     
     # function definitions, e.g.
     def get_integer():
@@ -589,7 +589,7 @@ When a program gets past a few lines, including its own function definitions and
         return int(number)
     
     def double_up(num):
-        return num * 2
+        return num * MULTIPLIER
         
     # main code, e.g.:
     number = get_integer()
