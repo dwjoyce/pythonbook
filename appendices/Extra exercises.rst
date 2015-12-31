@@ -606,7 +606,7 @@ You may use the following as your word list, or create your own::
 
 Write a program to input a number, and then draw - using the ``turtle`` module - a checkerboard with that number of squares across.
 
-.. hint:: Use the ``turtle`` module, and to see what turtle offers you, type ``dir(turtle)`` in the interactive shell to see the available functions.  You can use the ``turtle.setup`` function set arrange a square window for drawing.
+.. hint:: Use the ``turtle`` module, and to see what turtle offers you, type ``dir(turtle)`` in the interactive interpreter to see the available functions.  You can use the ``turtle.setup`` function set arrange a square window for drawing.
 
 For example:
 

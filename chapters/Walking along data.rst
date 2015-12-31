@@ -11,7 +11,7 @@ Round and round
 
 Python actually has two ways of repeating a block of code, something we call looping.  The first method which we have already covered is by using the ``while`` keyword.  The ``while`` statement includes a test (a :term:`boolean expression`) that can change over time, thus affecting how many times the following block of code is run.  Effectively the block of code is repeated *while* the expression remains ``True``.  It stops repeating when the expression becomes ``False``.  You can break out of the loop early by using the ``break`` statement.
 
-For example, if we want to print out the numbers up to 10, then on the interactive shell we could do the following::
+For example, if we want to print out the numbers up to 10, then on the interactive interpreter we could do the following::
 
     >>> num = 0
     >>> while num < 10:
@@ -71,7 +71,7 @@ Even shorter than before, now that we are using the ``range`` function to do the
 
 If you don't want to start from 0, then you need to pass in two numbers - a start point and an end point.  For example, if you want the numbers between 100 and 200, you simply ask for ``range(100, 200)``.  For numbers between -100 and 50, you ask for ``range(-100, 50)``.
 
-The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the ``step``.  For example, type this in the interactive shell to print out all the even numbers from 100 to 200::
+The third thing you can do is to ask for a step in the numbers, so instead of each number going up by 1, you can go up by a different amount.  This is achieved by using a third argument, the ``step``.  For example, type this in the interactive interpreter to print out all the even numbers from 100 to 200::
 
     >>> for num in range(100, 200, 2):
             print(num)
@@ -214,7 +214,7 @@ Loops inside loops
 
 As we noted in :ref:`chapter 9` on selection, you can have blocks of code inside other blocks of code.  These blocks of code could be repeated, with other blocks also repeated - in other words, we can have loops inside loops - one section of code repeated inside another.
 
-Let us practice this concept by using the interactive shell:
+Let us practice this concept by using the interactive interpreter:
 
 .. code::
     :pythontest: nooutput
@@ -301,9 +301,9 @@ One extra note - we use an index to rotate our colors, so it steps along the col
 Exercises
 ---------
 
-#. In the interactive shell, write a ``for`` loop that counts from 1000 to 2000 in steps of 50.
+#. In the interactive interpreter, write a ``for`` loop that counts from 1000 to 2000 in steps of 50.
 
-#. In the interactive shell, write a ``for`` loop that counts from 100 to 0 in steps of -5.
+#. In the interactive interpreter, write a ``for`` loop that counts from 100 to 0 in steps of -5.
 
 #. Write a program called :file:`sides.py` which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in :ref:`chapter 12`, but this time the looping is different.
 

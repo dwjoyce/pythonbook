@@ -6,16 +6,16 @@ First program
 
     Computers are good at following instructions, but not at reading your mind.
 
-So far we have been using Python's interactive shell, built into the IDLE program, to experiment with Python in a way that is familiar to us - performing calculations, calling functions, giving values in memory a name.  We have started to step out of this familiar territory by using other programs (known as modules), such as the ``turtle`` module, to extend what Python can do by itself.  Using the interactive shell allows us get to know the language, but it limits us effectively to one statement of code - a line that when you press the :button:`Return` key, will be run straight away and gives you back an answer (if there is one).
+So far we have been using Python's interactive interpreter, built into the IDLE program, to experiment with Python in a way that is familiar to us - performing calculations, calling functions, giving values in memory a name.  We have started to step out of this familiar territory by using other programs (known as modules), such as the ``turtle`` module, to extend what Python can do by itself.  Using the interactive interpreter allows us get to know the language, but it limits us effectively to one statement of code - a line that when you press the :button:`Return` key, will be run straight away and gives you back an answer (if there is one).
 
 We will now learn how to use IDLE in order to write a full program, one that can be run on its own again and again.  This means we can write the program once, and run it many times without the need to re-write the program each time.  We only need to change our program to modify its behaviour, or correct errors, not having to it from scratch each time.  It also means we can write longer, more interesting programs!
 
 Ed
 --
 
-To write a program, and modify it later, we use an :term:`editor`.  Thankfully, IDLE not only has the interactive shell we have been using, but an editor built-in as well.
+To write a program, and modify it later, we use an :term:`editor`.  Thankfully, IDLE not only has the interactive interpreter we have been using, but an editor built-in as well.
 
-To start Python editor, first start IDLE itself (see :ref:`chapter 0` for this if you have forgotten).  Then, using the mouse pointer, click on the :menu:`File` menu at the top of the shell window, and click again on the :menu:`New File` menu item, like so:
+To start Python editor, first start IDLE itself (see :ref:`chapter 0` for this if you have forgotten).  Then, using the mouse pointer, click on the :menu:`File` menu at the top of the interactive window, and click again on the :menu:`New File` menu item, like so:
 
 .. image:: /images/screenshots/idle_new_file_menu.png
     :width: 90%
@@ -27,7 +27,7 @@ This will bring up a new window, the editor window.  The shortcut for this is to
     :width: 90%
     :align: center
 
-.. tip:: The best arrangement is to have your interactive shell on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive shell title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen - and let go of the mouse button.  Do a similar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side:
+.. tip:: The best arrangement is to have your interactive interpreter on the left and the editor window on the right.  You can do this on the Raspberry Pi by using the mouse, clicking on the interactive interpreter title bar using the left mouse button (keeping it pressed down) and try to pull the top of the interactive window past the left hand side of the screen - it should then snap into a shape that takes up the left 50% of your screen - and let go of the mouse button.  Do a similar procedure with the editor window, but try to drag it past the right side of the screen.  You will then have the two windows you need to see, side by side:
     
     .. image:: /images/screenshots/idle_side_by_side.png
         :width: 90%
@@ -127,7 +127,7 @@ Things to remember
 
 #. To start a new program, click on the :menu:`File` menu and click on :menu:`New File`.  This opens up a new window ready for your program to be typed in.  The shortcut for this is to hold the :kbd:`Ctrl` key down and hit the :kbd:`N` key.
 
-#. The best arrangement is to move your interactive shell window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the tip above to see how to do this.
+#. The best arrangement is to move your interactive interpreter window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the tip above to see how to do this.
 
 #. Once the program has been typed in, or at least a little of it, then to run it you either click on the :menu:`Run` menu and select the :menu:`Run Module` item, or press the :kbd:`F5` key as a shortcut.  You will be asked to save your program, so simply press the :button:`Return` or :button:`Enter` key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once inserted it will appear in the :file:`USB_STICKS` folder in your home directory.
 

@@ -485,7 +485,7 @@ In this section we will briefly describe the four general types of functions in 
 Built-in functions
 ^^^^^^^^^^^^^^^^^^
 
-You can see the list of built-in functions by typing ``dir(__builtins__)`` in the interactive shell.  Here is a list of the most useful ones, particularly the ones we have covered in this book with a brief note and example on each:
+You can see the list of built-in functions by typing ``dir(__builtins__)`` in the interactive interpreter.  Here is a list of the most useful ones, particularly the ones we have covered in this book with a brief note and example on each:
 
   ============== ====================================================================================  =====================
   Name           Description                                                                           Example
@@ -570,5 +570,32 @@ And so on.  You need to write the variable name (which refers to a piece of data
     >>> dir(str)
 
 This will show that some types have functions that are not relevant to other types.  For example, floats have a function called ``is_integer`` which returns ``True`` if it is a whole number, ``False`` if not.  Strings have functions such as ``lower``, ``split``, ``title``, ``upper``, which are relevant to strings of characters, but not numbers and files.  These methods are bound up with the data they work on, so only relevant functions are offered with the type of data the variable refers to.
+
+
+Program layout
+--------------
+
+When a program gets past a few lines, including its own function definitions and the like, you need to structure your program in an orderly fashion to avoid it becoming messy.  The general structure of a Python program should follow this pattern::
+
+    # firstly import any modules you need, e.g.
+    import math
+    
+    # define constant variables (variables whose values don't change), e.g.
+    colors = ['red', 'green', 'blue']
+    
+    # function definitions, e.g.
+    def get_integer():
+        number = input('Give me a number: ')
+        return int(number)
+    
+    def double_up(num):
+        return num * 2
+        
+    # main code, e.g.:
+    number = get_integer()
+    
+    print('Number doubled is:', double_up(number))
+    print('and its factorial is:', math.factorial(number))
+    print('Bye for now.')
 
 .. pythontest:: all

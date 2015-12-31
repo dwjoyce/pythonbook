@@ -44,7 +44,7 @@ In Python, sequences are very similar - the number of each item is how far from 
     :width: 200 pt
     :align: center
 
-To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[index]`` or ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive shell::
+To use the offset of a particular item inside a sequence, you need to use square brackets in the form ``[index]`` or ``[offset]``, just like how have leant how to box up a list of items.  This is placed directly after the name of the sequence itself.  We can now practice this in the interactive interpreter::
 
     >>> print(letters[0])
     >>> print(letters[1])
@@ -61,7 +61,7 @@ If we want to refer to an item not from the beginning, but instead from the end,
     :width: 200 pt
     :align: center
 
-Practice again in the interactive shell::
+Practice again in the interactive interpreter::
 
     >>> print(letters[-1])
     >>> print(letters[-2])

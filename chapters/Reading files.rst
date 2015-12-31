@@ -11,7 +11,7 @@ Opening the file
 
 .. pythontest:: nooutput
 
-We have used Python to store values in memory by using variables.  Type the following in the interactive shell::
+We have used Python to store values in memory by using variables.  Type the following in the interactive interpreter::
 
     >>> message = 'The attack starts at dawn'
     >>> troops = 85
@@ -37,7 +37,7 @@ The first step in reading a file is opening it.  Think if a file like a folder o
 
     - The Lord of the Rings, Epigraph
 
-Save it as :file:`mission.txt`, making sure you save it in your home directory (:file:`/home/pi` directory), not on your USB stick.  That way we can experiment with it in the interactive shell.  We now have a file to open and read.
+Save it as :file:`mission.txt`, making sure you save it in your home directory (:file:`/home/pi` directory), not on your USB stick.  That way we can experiment with it in the interactive interpreter.  We now have a file to open and read.
 
 In Python, we use the ``open`` function to open files, so type the following::
 

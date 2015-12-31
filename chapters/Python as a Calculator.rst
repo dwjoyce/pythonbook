@@ -35,7 +35,7 @@ Using the first example, the Python code is very simple.
 .. highlight:: py3con
 .. pythontest:: on
 
-Bring up your Python interactive shell, as described in :ref:`chapter 0` (i.e. by clicking on the IDLE icon on your desktop), and type the following::
+Bring up your Python interactive interpreter, as described in :ref:`chapter 0` (i.e. by clicking on the IDLE icon on your desktop), and type the following::
 
     >>> 10 + 20
     30

@@ -7,7 +7,7 @@ More on functions
 
     Once more unto the breach, dear friends, once more!
 
-In the previous chapter we learned how to define functions of our own, and how to pass in data that the functions can then use.  To follow on from this, we will now learn how to define functions that not only allow data to be passed in, but also return data that can be used by the calling code.  We are already used to this in the way we use functions built into Python itself.  Try these in the interactive shell::
+In the previous chapter we learned how to define functions of our own, and how to pass in data that the functions can then use.  To follow on from this, we will now learn how to define functions that not only allow data to be passed in, but also return data that can be used by the calling code.  We are already used to this in the way we use functions built into Python itself.  Try these in the interactive interpreter::
     
     >>> round(1.75)
     2
@@ -20,7 +20,7 @@ In the previous chapter we learned how to define functions of our own, and how t
     >>> sum(range(1000))
     499500
 
-Hopefully that is all very straightforward to you now.  The last example gets a list of numbers from the ``range`` function, and passes it into the ``sum`` function, which sums all the numbers together, returning the total which is then shown in the interactive shell.  It has effectively added up the first 1000 numbers, from 0 to 999.
+Hopefully that is all very straightforward to you now.  The last example gets a list of numbers from the ``range`` function, and passes it into the ``sum`` function, which sums all the numbers together, returning the total which is then shown in the interactive interpreter.  It has effectively added up the first 1000 numbers, from 0 to 999.
 
 How do we do this in our own functions?
 

@@ -437,7 +437,7 @@ Always include parentheses when invoking (:term:`calling`) a function.  Simply t
 Using variable names reserved by Python
 ---------------------------------------
 
-Do not use reserved keywords as names in your code.  To see Python's full list of keywords, then import the ``keyword`` module and type ``keyword.kwlist`` in the interactive shell.
+Do not use reserved keywords as names in your code.  To see Python's full list of keywords, then import the ``keyword`` module and type ``keyword.kwlist`` in the interactive interpreter.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |

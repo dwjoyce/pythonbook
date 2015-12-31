@@ -9,7 +9,7 @@ Naming code
 Data and code
 -------------
 
-Variables are a way of naming data.  A piece of data, like the number ``123``, can be given the name ``number`` like this in Python (try it in the interactive shell)::
+Variables are a way of naming data.  A piece of data, like the number ``123``, can be given the name ``number`` like this in Python (try it in the interactive interpreter)::
 
     >>> number = 123
     
@@ -36,7 +36,7 @@ Programs are made up of data, which we have been discussing here, and code.  We 
 Functions
 ---------
 
-We have already used named sections of code - they are called :term:`functions`.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses after its name.  Try the following, again in the interactive shell::
+We have already used named sections of code - they are called :term:`functions`.  Python programs are generally organised into modules (the programs themselves) and functions (the named sections of code contained within each module).  A function is given a name, and we invoke it (call it) by placing parentheses after its name.  Try the following, again in the interactive interpreter::
 
     >>> print()
     

@@ -13,7 +13,7 @@ In the previous chapter, we introduced the ``if`` statement, which evaluates a t
 
 We also introduced our first comparison operator, the equals sign ``==``.  There are many more, most of which you will recognise from your mathematics material.  We list the possibilities at the end of this chapter, but here are some highlights.
 
-We will use the interactive shell to experiment for a while.  Type the following for practice::
+We will use the interactive interpreter to experiment for a while.  Type the following for practice::
 
     >>> a = 10
     >>> b = 20

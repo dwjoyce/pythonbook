@@ -11,7 +11,7 @@ Save Our Sanity
 
 Python is a very helpful programming language when we need to find out more information.  And it is all built-in so we do not even need to go elsewhere to find it.
 
-On a general level, you can use the interactive shell to enter the help utility like so::
+On a general level, you can use the interactive interpreter to enter the help utility like so::
 
     >>> help()
     
@@ -101,4 +101,4 @@ For further information and a guide on the language, please refer to *The Python
 Things to remember
 ------------------
 
-#. To get help, use the ``help()`` function in the interactive shell with the item on which your require further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.
+#. To get help, use the ``help()`` function in the interactive interpreter with the item on which your require further information, and the ``dir()`` function to get a directory listing on the ``__builtins__`` (double underscore at each end) or a particular module.

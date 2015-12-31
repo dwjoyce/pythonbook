@@ -11,7 +11,7 @@ Scattered data
 
 We have already covered variables, which just give a name to a piece of data.  This is very handy, and allows us to give data a memorable name we can refer to and modify later.  Technically, variable names (identifiers) are memory addresses that point to the data we have stored - it is like a signpost pointing at the data.
 
-However, it can become messy when there are many variables in our programs, especially if they are closely related.  For example, if we had a bunch of people's names, we could define each name individually.  Use the interactive shell to type in the following::
+However, it can become messy when there are many variables in our programs, especially if they are closely related.  For example, if we had a bunch of people's names, we could define each name individually.  Use the interactive interpreter to type in the following::
 
     >>> name1 = 'fred'
     >>> name2 = 'bob'

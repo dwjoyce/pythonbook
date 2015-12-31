@@ -21,7 +21,7 @@ It was created in the early 1990s by the Dutch programmer Guido van Rossum.  It 
 
 Code written in Python is very readable.  It lacks much of the cryptic notation that other languages use to express themselves.  It almost reads like :term:`pseudo-code` - a description of how a program should operate as written in lines of simple English.
 
-Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from :ref:`chapter 6` - First Program), initially we will use Python's interactive shell to start off.  It is called an :term:`interactive shell` because you type lines of code (known as :term:`statements`) and get the answer straight away, i.e. interactively.
+Python is also very interactive.  This means that you can experiment with the language, getting to know it better, without a cumbersome process getting in the way.  Although we will write proper programs later (from :ref:`chapter 6` - First Program), initially we will use Python's interactive interpreter to start off.  It is called an :term:`interactive interpreter` because you type lines of code (known as :term:`statements`) and get the answer straight away, i.e. interactively.  It is an interpreter because it translates the lines of Python into a form that the computer can understand directly.
 
 What we will be learning
 ------------------------
@@ -37,9 +37,9 @@ It is encouraged to use this book as a starting point, and then use other resour
 How to get going
 ----------------
 
-We first use the interactive shell to start off with Python.  Even when introducing more advanced language features, we will still use this shell to experiment before moving onto a proper program.  A proper program is one typed into its own file, and then the program is started separately.  This is similar to how we use other programs (e.g. LibreOffice or Firefox) - we use the final result.  This is known as :term:`running` or executing the program.  However, at this stage, we only use the interactive shell.
+We first use the interactive interpreter to start off with Python.  Even when introducing more advanced language features, we will still use this shell to experiment before moving onto a proper program.  A proper program is one typed into its own file, and then the program is started separately.  This is similar to how we use other programs (e.g. LibreOffice or Firefox) - we use the final result.  This is known as :term:`running` or executing the program.  However, at this stage, we only use the interactive interpreter.
 
-Python's interactive shell is known as :term:`IDLE`.  This name comes from the acronym :term:`IDE`, which stands for Integrated Development Environment - a program that allows you to develop or create other programs.  It contains an editor, used to type your code, and a way of running your programs.  IDLE also contains the interactive shell that allows us to experiment line by line.
+Python's interactive interpreter is known as :term:`IDLE`.  This name comes from the acronym :term:`IDE`, which stands for Integrated Development Environment - a program that allows you to develop or create other programs.  It contains an editor, used to type your code, and a way of running your programs.  IDLE also contains the interactive interpreter that allows us to experiment line by line.
 
 To start IDLE, either click on the IDLE icon on the desktop or select the IDLE program from the Applications menu in the bottom left:
 
@@ -55,14 +55,14 @@ IDLE will then start, and you will have a window on your screen which looks like
 
 You are now ready to go.
 
-Later, in :ref:`chapter 6` on your First Program, you will position this IDLE window slightly differently in order for you to see both the program you are writing and the interactive shell at the same time.  Until then, this is all you need to know about starting Python's shell.  Next chapter - typing in some code and seeing what happens!
+Later, in :ref:`chapter 6` on your First Program, you will position this IDLE window slightly differently in order for you to see both the program you are writing and the interactive interpreter at the same time.  Until then, this is all you need to know about starting Python's shell.  Next chapter - typing in some code and seeing what happens!
 
 Things to remember
 ------------------
 
-#. Click on the IDLE desktop or panel icon to start Python's interactive shell.
+#. Click on the IDLE desktop or panel icon to start Python's interactive interpreter.
 
-#. Type away in the interactive shell and see what results you get.  Don't be afraid to experiment, you can't break the computer that easily.  Fortune rewards the brave!
+#. Type away in the interactive interpreter and see what results you get.  Don't be afraid to experiment, you can't break the computer that easily.  Fortune rewards the brave!
 
 #. To recall something already typed in, use the up arrow to move the cursor onto the line you wish to use.  Press the :button:`Return` or :button:`Enter` key - this brings it down onto your current line.  You can modify what has been copied down.  To run the line again, press the :button:`Return` or :button:`Enter` key a second time.  This will save you lots of typing!
 

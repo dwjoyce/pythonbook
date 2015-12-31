@@ -18,13 +18,13 @@ To see this, open up a new file (click on the :menu:`File` menu and select :menu
     c = a + b
     c
 
-This is just the same code as we did in Chapter 2 when working with variables for the first time.  However, back then, we typed in each individual line in the interactive shell, and it gave an answer every time if there was one.
+This is just the same code as we did in Chapter 2 when working with variables for the first time.  However, back then, we typed in each individual line in the interactive interpreter, and it gave an answer every time if there was one.
 
 What happens now, given that it is living in its own program?  Try it and see - press the :kbd:`F5` key, click :button:`OK` to save it and give it the name :file:`sum.py`.  Remember, the :file:`.py` postfix stands for Python.  Moreover, save all your programs onto your USB stick.
 
-When the program runs in the run window (the same as the interactive shell), what does it display onto the screen?  Does it give 30 as expected?  No, it does not!
+When the program runs in the run window (the same as the interactive interpreter), what does it display onto the screen?  Does it give 30 as expected?  No, it does not!
 
-The reason for this is that just typing a value (e.g. ``10``) or an expression to be evaluated (e.g. ``10 + 20``) or a variable name (``c`` in the example above) will do nothing in a real program.  The interactive shell is just that - interactive.  But in a real program, you have to tell Python what to do with the item you are dealing with.  Otherwise, the value will simply be discarded as it is not being used for anything.
+The reason for this is that just typing a value (e.g. ``10``) or an expression to be evaluated (e.g. ``10 + 20``) or a variable name (``c`` in the example above) will do nothing in a real program.  The interactive interpreter is just that - interactive.  But in a real program, you have to tell Python what to do with the item you are dealing with.  Otherwise, the value will simply be discarded as it is not being used for anything.
 
 So what do we want to do with the variable ``c`` above?  We want to display or print it out onto the screen.  In Python, the way to do this is to use the ``print`` function.  You simply wrap your value inside the parentheses in the ``print`` call, and it will then print it out as we originally intended.  Therefore, modify your program so it looks like this::
 
