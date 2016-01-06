@@ -2,9 +2,10 @@ Going loopy
 ===========
 
 .. quote::
-    :author: Martin Golding
+    :author: Anonymous
 
-    Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
+    Q. How did the programmer die in the shower?
+    A. He read the shampoo bottle instructions: Lather. Rinse. Repeat.
 
 Computers are very good at doing a number of steps repetitively, relieving us of many mundane tasks in our lives.  In programming, this makes our programs much more flexible and involves a lot less typing which is always a good thing!
 
