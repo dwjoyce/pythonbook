@@ -571,6 +571,24 @@ And so on.  You need to write the variable name (which refers to a piece of data
 
 This will show that some types have functions that are not relevant to other types.  For example, floats have a function called ``is_integer`` which returns ``True`` if it is a whole number, ``False`` if not.  Strings have functions such as ``lower``, ``split``, ``title``, ``upper``, which are relevant to strings of characters, but not numbers and files.  These methods are bound up with the data they work on, so only relevant functions are offered with the type of data the variable refers to.
 
+Keep in mind that if you call a function to change its value, some functions will change the data referred to by the variable name, and others will return a new value.  This means that some types can change their values (e.g. lists, where you can ``append``, ``insert`` or ``remove`` values), and others cannot so give you a new value (e.g. integers, floats and strings).  Therefore, all the calls on the ``message`` variable above, being a string, would return a new value if you tried to change it (e.g. changing the string to uppercase or replacing values).  You could then assign this new value to a variable name using the assignment ``=`` operator.
+
+Here are a few more examples to show this difference between types that allow the value to change (*mutable*) and types that do not (*immutable*)::
+    
+    >>> hobbits = ['Bilbo', 'Frodo', 'Sam']
+    >>> hobbits.append('Pippin')  # changes value
+    >>> hobbits.remove('Bilbo')   # changes value
+
+    >>> num = 10
+    >>> num = num + 1   # new value
+    >>> num = num * 10  # new value
+    
+    >>> name = 'The 11th Doctor'
+    >>> big_name = name.upper()  # new value
+    >>> new_name = name.replace('11th', '12th')  # new value
+    
+Functions that change the existing value, rather than returning a new one, are known as in-place operations - they change the data where it lives or is placed in memory, rather than creating a new value with different contents.  It is a subtle but vital point!
+
 
 Program layout
 --------------
