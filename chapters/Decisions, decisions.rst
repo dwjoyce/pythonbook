@@ -4,9 +4,7 @@ Decisions, decisions
 .. quote::
     :author: William Shakespeare
 
-    If music be the food of love, play on;
-    Give me excess of it, that, surfeiting,
-    The appetite may sicken, and so die.
+    To be, or not to be, that is the question.
 
 Differing ways of comparing
 ---------------------------
