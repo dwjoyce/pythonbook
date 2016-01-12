@@ -4,8 +4,8 @@ Going loopy
 .. quote::
     :author: Anonymous
 
-    Q. How did the programmer die in the shower?
-    A. He read the shampoo bottle instructions: Lather. Rinse. Repeat.
+    |    Q. How did the programmer die in the shower?
+    |    A. He read the shampoo bottle instructions: Lather. Rinse. Repeat.
 
 Computers are very good at doing a number of steps repetitively, relieving us of many mundane tasks in our lives.  In programming, this makes our programs much more flexible and involves a lot less typing which is always a good thing!
 
