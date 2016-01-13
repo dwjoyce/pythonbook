@@ -229,7 +229,7 @@ latex_documents = [
    r"Dr. D.W. Joyce \and M.S. Joyce", "manual", True),
 ]
 
-latex_additional_files = ["sphinx.sty", "images/python-logo-bw.pdf", "images/raspberry-pi-logo-bw.pdf", "ext/Makefile"]
+latex_additional_files = ["sphinx.sty", "newfloat.sty", "images/python-logo-bw.pdf", "images/raspberry-pi-logo-bw.pdf", "ext/Makefile"]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
