@@ -311,6 +311,12 @@ Glossary
 
     input
         Data that is entered by a source outside of the program, such as the user. In Python, this is most often the ``input`` function or a file.
+        
+    mutable
+        A data type is mutable if its value can change after having been defined without having to move it in memory.  The data is said to change in-place, so that the data in memory is altered rather than the variable name having to move to another memory location.  A ``list`` is an example of a mutable type, so that we can write ``my_list.append('fred')``.
+        
+    immutable
+        A data type is immutable if its value cannot change.  This means if we change the value of a variable, e.g. ``num = num + 1`` then the variable is moved to a new location containing the new data value.  It is similar to creating a new box for the new data value, and moving the label of the variable to the new box.  ``int``, ``float`` and ``str`` are examples of mutable types, so if we change their value, we need to assign them to a variable name to save the new value, e.g. ``number = number + 10``.
 
 
     .. Extra exercises
