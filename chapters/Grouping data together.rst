@@ -87,7 +87,7 @@ The first print statement prints out the numbers in ascending order.  The second
 
 Lists can also be modified after they have been defined by using the ``append`` and ``insert`` functions on the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well); ``remove`` removes the named item from the list (the first one if more than one exists).  To see how this works, try out the following::
 
-    >>> names = ['Bilbo', 'Frodo', 'Sam']
+    >>> 0
     >>> print(names)
     ['Bilbo', 'Frodo', 'Sam']
     >>> names.append('Pippin')
@@ -99,13 +99,17 @@ Lists can also be modified after they have been defined by using the ``append`` 
     >>> names.remove('Bilbo')
     >>> print(names)
     ['Merry', 'Frodo', 'Sam', 'Pippin']
-    
+
+As described by the note above, we are using type functions for the first time.  These functions are called by using the variable name (or even just the value itself), followed by a period ``.`` character, and then the function name, similar to calling a function inside a module that has been imported.  This means that the code ``names.append('Pippin')`` is simply shorthand for ``list.append(names, 'Pippin')``, and the code ``names.insert(0, 'Merry')`` is shorthand for ``list.insert(names, 0, 'Merry')``, and finally the code ``names.remove('Bilbo')`` is shorthand for ``list.remove(names, 'Bilbo')``.
+
 We can split a sentence into a list of words using the ``split`` function::
 
     >>> sentence = 'Mary had a little lamb'
     >>> sentence.split()
     ['Mary', 'had', 'a', 'little', 'lamb']
-    
+
+Here we are using a function belonging to the ``str`` (string) type, so the code ``sentence.split()`` is shorthand for ``str.split(sentence)``.
+
 We can also find out whether a value is a member of a list (i.e. is contained within the list) by using the ``in`` operator.  Try this out::
 
     >>> numbers = [1, 2, 3, 4, 5]
@@ -215,5 +219,7 @@ Things to remember
 #. Use the ``in`` operator to test whether a value is contained by the list.
 
 #. Use the ``choice`` function from the ``random`` module to select one item, chosen in a random fashion, from a list of possible items.
+
+#. Every value or variable in Python belongs to a type (e.g. str, int, list), and every type has a number of functions that operate on the data it contains.  Use the ``variable.function_name`` notation to invoke a type function, just like invoking a function side a module.
 
 #. We now know five types of data - integers, floats, strings, booleans and lists.  Lists can contain any of the other types of data, including sub-lists!
