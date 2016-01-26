@@ -87,7 +87,7 @@ The first print statement prints out the numbers in ascending order.  The second
 
 Lists can also be modified after they have been defined by using the ``append`` and ``insert`` functions on the list variable itself.  The ``append`` function adds a new item onto the end of the list; ``insert`` adds an item into the list (so you need to give a position as well); ``remove`` removes the named item from the list (the first one if more than one exists).  To see how this works, try out the following::
 
-    >>> 0
+    >>> names = ['Bilbo', 'Frodo', 'Sam']
     >>> print(names)
     ['Bilbo', 'Frodo', 'Sam']
     >>> names.append('Pippin')
