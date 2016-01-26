@@ -600,12 +600,14 @@ When a program gets past a few lines, including its own function definitions and
     
     # define constant variables (variables whose values don't change), e.g.
     MULTIPLIER = 2
-    
+
+
     # function definitions, e.g.
     def get_integer():
         number = input('Give me a number: ')
         return int(number)
-    
+
+
     def double_up(num):
         return num * MULTIPLIER
         
