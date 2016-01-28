@@ -356,12 +356,10 @@ Things to remember
 
 #. Lists and strings are :term:`sequences`, and so can be indexed and sliced.
 
-#. The first item in a sequence has the :term:`index` ``0``, the second ``1``, the third ``2``, and so on.
+#. The first item in a sequence has the :term:`index` ``0``, the second ``1``, the third ``2``, and so on.  Think of the index as the offset from the beginning.
 
-#. Negative indexes can be used, counting from the end of the sequence. The last item is ``-1``.
+#. Negative indices can be used, counting from the end of the sequence. The last item is ``-1``, the second from last -2, and so on.
 
 #. If a sequence has more than one level (i.e. is multi-dimensional like a matrix), then you index from the outside in, with each index using the ``[]`` notation.
 
 #. :term:`Slicing` is done by ``sequence[start:stop:step]``.
-
-#. Use the ``len`` function to find out how long a sequence is.
