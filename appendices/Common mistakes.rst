@@ -227,6 +227,8 @@ Before you can use anything defined inside another module, you must import it fi
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
+Another common mistake is to save your program with the same name as a module you are importing, so it will import your own program instead.  For example, if you are using the ``random`` module, then do not call your program ``random.py, or if you are using the ``turtle`` module then do not call your program ``turtle.py``.
+
 Not converting to integers when performing arithmetic
 -----------------------------------------------------
 
