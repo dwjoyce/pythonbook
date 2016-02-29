@@ -528,6 +528,27 @@ A selection statement must always include an ``if`` statement, with the ``elif``
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
+Placing a condition after an ``else``
+-------------------------------------
+
+The ``else`` line within an ``if`` statement can be read as *otherwise do this* - or if all of the tests above are ``False`` then do this instead.  It is not meant to include a test of its own.
+
++----------------------------------------+----------------------------------------+
+| Bad                                    | Good                                   |
++========================================+========================================+
+| .. code-block:: py3con                 | .. code-block:: py3con                 |
+|     :pythontest: off                   |                                        |
+|                                        |                                        |
+|     a, b = 10, 20                      |     a, b = 10, 20                      |
+|     if a > b:                          |     if a > b:                          |
+|         print('a is larger')           |         print('a is larger')           |
+|     elif a < b:                        |     elif a < b:                        |
+|         print('b is larger')           |         print('b is larger')           |
+|     else a == b:                       |     else:                              |
+|         print('a and b are the same')  |         print('a and b are the same')  |
+|                                        |                                        |
++----------------------------------------+----------------------------------------+
+
 Getting stuck in a loop
 -----------------------
 
