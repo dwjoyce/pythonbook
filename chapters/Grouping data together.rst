@@ -216,10 +216,12 @@ Things to remember
 
 #. Separate each item within the list using a comma.
 
+#. Use the ``len`` function to find out how long a sequence is.
+
 #. Use the ``in`` operator to test whether a value is contained by the list.
 
 #. Use the ``choice`` function from the ``random`` module to select one item, chosen in a random fashion, from a list of possible items.
 
-#. Every value or variable in Python belongs to a type (e.g. str, int, list), and every type has a number of functions that operate on the data it contains.  Use the ``variable.function_name`` notation to invoke a type function, just like invoking a function side a module.
+#. Every value or variable in Python belongs to a type (e.g. str, int, list), and every type has a number of functions that operate on the data it contains.  Use the ``variable.function_name`` notation to invoke a type function, just like invoking a function inside a module.
 
 #. We now know five types of data - integers, floats, strings, booleans and lists.  Lists can contain any of the other types of data, including sub-lists!

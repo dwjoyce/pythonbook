@@ -81,7 +81,7 @@ Exercises
 
 #. Ask for a day between 10 and 20.  Print it out with the letters "th" appended onto the day, as with a date.  So if the user entered 10, print out ``10th``; if the user entered 18, print out ``18th``.  There is no need to convert the number to an integer - use the addition operator ``+`` to simply join the data input and the letters "th" together.
 
-#. Expand on the :file:`sumup.py` program we did in the chapter so that it also prints out the second number subtracted from the first, the first divided by the second, and both numbers multiplied together.  To save on typing, you can modify your :file:`sumup.py` program we did earlier in this chapter.
+#. Expand on the :file:`sumup.py` program we did in the chapter so that it also prints out the second number subtracted from the first (i.e. the first minus the second), the first divided by the second, and both numbers multiplied together.
 
 Things to remember
 ------------------

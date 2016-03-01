@@ -227,6 +227,8 @@ Before you can use anything defined inside another module, you must import it fi
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
+Another common mistake is to save your program with the same name as a module you are importing, so it will import your own program instead.  For example, if you are using the ``random`` module, then do not call your program ``random.py, or if you are using the ``turtle`` module then do not call your program ``turtle.py``.
+
 Not converting to integers when performing arithmetic
 -----------------------------------------------------
 
@@ -523,6 +525,27 @@ A selection statement must always include an ``if`` statement, with the ``elif``
 |         print('something else')        |         print('larger than ten')       |
 |                                        |     else:                              |
 |                                        |         print('something else')        |
+|                                        |                                        |
++----------------------------------------+----------------------------------------+
+
+Placing a condition after an ``else``
+-------------------------------------
+
+The ``else`` line within an ``if`` statement can be read as *otherwise do this* - or if all of the tests above are ``False`` then do this instead.  It is not meant to include a test of its own.
+
++----------------------------------------+----------------------------------------+
+| Bad                                    | Good                                   |
++========================================+========================================+
+| .. code-block:: py3con                 | .. code-block:: py3con                 |
+|     :pythontest: off                   |                                        |
+|                                        |                                        |
+|     a, b = 10, 20                      |     a, b = 10, 20                      |
+|     if a > b:                          |     if a > b:                          |
+|         print('a is larger')           |         print('a is larger')           |
+|     elif a < b:                        |     elif a < b:                        |
+|         print('b is larger')           |         print('b is larger')           |
+|     else a == b:                       |     else:                              |
+|         print('a and b are the same')  |         print('a and b are the same')  |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 

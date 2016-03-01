@@ -55,7 +55,7 @@ Our first complete program will be the same as the code we typed in for :ref:`ch
     turtle.circle(40)
     turtle.end_fill()
 
-Type in everything, including the blank lines!  You can use copy (:kbd:`Ctrl-C`) and paste (:kbd:`Ctrl-V`) to repeat the lines in the middle, if you wish.
+Type in everything, including the blank lines!  You can use copy (:kbd:`Ctrl-C`) and paste (:kbd:`Ctrl-V`) to repeat the lines in the middle to save time.
 
 Running our program
 -------------------
@@ -78,7 +78,7 @@ Most importantly, change the location of where the program is being saved to you
 
 .. tip:: To save on your USB stick when the :button:`Save As` dialog box appears, first click on the directory :file:`USB_STICKS`, and then click on the name of your USB stick, which is :file:`USB Disk` by default.
 
-Once you are in the right place, give your program a name and click the :button:`Save` button (or hold down the :kbd:`Alt` key and hit the :kbd:`S` key), like so:
+Once you are in the right place, give your program a name (such as ``shapes.py`` in this instance) and click the :button:`Save` button (or hold down the :kbd:`Alt` key and hit the :kbd:`S` key), like so:
 
 .. image:: /images/screenshots/idle_save_as_name.png
     :width: 250pt
@@ -131,6 +131,6 @@ Things to remember
 
 #. Once the program has been typed in, or at least a little of it, then to run it you either click on the :menu:`Run` menu and select the :menu:`Run Module` item, or press the :kbd:`F5` key as a shortcut.  You will be asked to save your program, so simply press the :button:`Return` or :button:`Enter` key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once inserted it will appear in the :file:`USB_STICKS` folder in your home directory.
 
-#. Give your Python programs a :term:`.py` postfix.  Avoid including spaces in your program name.
+#. Name your Python programs with a :term:`.py` postfix (e.g. shapes.py).  Avoid including spaces in your program name, and include only one period ``.`` character.
 
 #. :term:`Comments`, or annotations intended for other people to read, are denoted with hash ``#`` symbol.
