@@ -72,7 +72,7 @@ Notice how creating the variable of ``total`` with a value of 0 is outside of th
 Exercises
 ---------
 
-#. Change your :file:`adding.py` so that the user types 'quit' instead of 'stop' to break out of the loop.
+#. Change your :file:`adder.py` so that the user types 'quit' instead of 'stop' to break out of the loop.
 
 #. Write a program called :file:`words.py` which inputs a word at a time, appends it onto a string (e.g. ``sentence = sentence + word``), and prints it out at the end.
 
