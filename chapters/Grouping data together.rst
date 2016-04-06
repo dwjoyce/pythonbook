@@ -17,7 +17,7 @@ However, it can become messy when there are many variables in our programs, espe
     >>> name2 = 'bob'
     >>> name3 = 'harry'
     >>> name4 = 'tom'
-    
+
 All the variables here describe the same kind of data - a group of names, one after the other.  It would be good if we could simply group these items together under a single name.  This is usually very good practice in programming - those things (whether code or data) that belong together should be kept together.
 
 Boxing up
@@ -29,11 +29,11 @@ Remember, if we have more than one item to print out, we simply use a comma ``,`
 
     >>> print(name1, name2, name3, name4)
     fred bob harry tom
-    
+
 We do the same in lists to separate each item.  To define a list, to group a sequence of items together, we simply use brackets - square ones.  It is like a box grouping the values together.  So, for example, let's group together the names we defined earlier::
 
     >>> names = ['fred', 'bob', 'harry', 'tom']
-    
+
 Notice how we have done away with the individual variables, e.g. ``name1``, ``name2``, etc., and now only have one name, ``names``.  This means all four values are referred to by the same variable name - the entire list is given a single name.  You can print out the entire list in one go as well::
 
     >>> print(names)
@@ -44,11 +44,11 @@ This list is a sequence containing four strings - the names ``'fred'``, ``'bob'`
     >>> my_ints = [1, 2, 3, 4, 5]
     >>> my_floats = [2.5, 17.2, -1.7, 123.9]
     >>> my_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
-    
+
 Notice how the contents of the list can be in any order you wish, although it can be sorted later.  The last one is slightly complicated - it is a list containing four sub-lists, each of which contain three integers.  A list of lists, or sometimes referred to as a :term:`matrix`.  The data can even be mixed, although this does not always make sense.  Try this::
 
     >>> my_stuff = ['bacon', 123, 99.5, [1, 44.2, 'fred']]
-    
+
 Again, you can print these list out using the ``print`` function.  Try it with each list in turn.
 
 Playing with lists
@@ -59,7 +59,7 @@ We can do all sorts of things with lists in Python that can turn out to be very 
     >>> numbers = [1, 5, 50, 23, 77]
     >>> sum(numbers)
     156
-    
+
 And other functions, ``min`` and ``max``, will give the minimum and maximum value out of a list::
 
     >>> numbers = [10, 123, 40, 89, 65]
@@ -80,7 +80,7 @@ You can even get Python to sort a list in any order you wish.  Try this out::
     [5, 10, 15, 20, 25, 30, 35]
     >>> print(sorted(numbers, reverse=True))
     [35, 30, 25, 20, 15, 10, 5]
-    
+
 The first print statement prints out the numbers in ascending order.  The second prints out the numbers in descending (i.e. reverse) order.  Notice how we call ``sorted`` function initially with one argument (i.e. the list to sort), and secondly, we call the same function but with an extra argument we refer to by name - ``reverse``, which we set to ``True``.  We will cover this kind of argument passing in :ref:`chapter 19` when we are creating our own functions.
 
 .. note:: We have described how to use functions built into Python itself by typing its name, followed by parentheses with any parameters enclosed between the parentheses.  For example, ``print()``, ``len('Yo man')``, ``min(10, 20, 30)``.  We have also described how to use functions that have been defined in other modules by typing the module name followed by a period ``.``  For example, ``random.random()``, ``math.sqrt(81)``, ``turtle.circle(100, 180)``.  Below, for the first time, we will also call functions that belong to a particular type.  These operate on the data referred to by the variable name or the value itself.  It effectively wraps the value and the functions that work on that value together, so the ``int`` type contains functions that work on integers, the ``str`` type contains functions that work on strings, the ``list`` type contains functions that work on lists, etc.  For example, if using a string ``name`` we could type ``name.upper()`` to change it to uppercase (i.e. capitals), ``name.find('fred')`` to find a string within the name, ``name.split()`` to split the string into a list of words.  If you intend to change the value itself, the function will either return a new value or will change the value in-place, depending on the data type.  To find out what type functions (also known as *class methods*) are available, you just type ``dir(str)`` or ``dir(list)`` depending on the data type you are working with.  See the :ref:`chapter 5` for more on getting help, and :ref:`Appendix B.3` for more on functions.
@@ -117,7 +117,7 @@ We can also find out whether a value is a member of a list (i.e. is contained wi
     True
     >>> 10 in numbers
     False
-    >>> 
+    >>>
     >>> sentence = 'jack and jill ran up the hill'.split()
     >>> 'jack' in sentence
     True
@@ -125,7 +125,7 @@ We can also find out whether a value is a member of a list (i.e. is contained wi
     True
     >>> 'bob' in sentence
     False
-    >>> 
+    >>>
     >>> breakfast = ['porrige', 'toast', 'coffee', 'juice', 'bacon', 'egg']
     >>> 'waffle' in breakfast
     False
@@ -133,7 +133,7 @@ We can also find out whether a value is a member of a list (i.e. is contained wi
     False
     >>> 'egg' in breakfast
     True
-    
+
 All of these things would have been much harder to do by ourselves - Python is great at helping out in this way.  There is so much to what Python offers, but here we have at least given a brief overview.
 
 We will learn how to dip into a list to fetch individual items (or a section of the list) in the next chapter.  We learn how to step over a list, one item at a time, in two chapters time.  All this will make our programs easier to write.
@@ -146,9 +146,9 @@ Let's write a rock, paper, scissors game, where you play versus the computer.  T
 Start by opening up a new file window, and type in the following::
 
     import random
-    
+
     choices = ['rock', 'paper', 'scissors']
-    
+
     while True:
         user_choice = input('Enter your choice, rock, paper'
                             ' or scissors (or stop to quit): ')
@@ -160,14 +160,14 @@ This should be fairly familiar to you now.  We are importing the ``random`` modu
 The new bit is the second line, where we define a list with the possible choices contained (boxed up) in a list, which we call ``choices``.  It is a list of strings.  We can then add onto our program (watch the indentation, these lines are *within* the while loop)::
 
     computer_choice = random.choice(choices)
-        
+
 This is also new - we are using a different function from the random module called ``choice``.  It takes a list, and returns back one item selected in a random fashion from that list.  We now have both choices needed in order to declare a winner - remember what the rules of the game are:
 
     - if they are the same, it is a draw
     - rock beats scissors
     - scissors beats paper
     - paper beats rock.
-    
+
 So we can now finish::
 
     if user_choice == computer_choice:
@@ -178,8 +178,8 @@ So we can now finish::
         print('You won!')
     else:
         print('Computer won!')
-            
-And that's it!  Now save and run your program calling it :file:`rockpaperscissors.py` (or :file:`rps.py` if you like).  
+
+And that's it!  Now save and run your program calling it :file:`rockpaperscissors.py` (or :file:`rps.py` if you like).
 
 Notice how we can split a large test (the one attached to the ``elif`` testing whether the user has won or not) over 3 lines to make it more readable by putting parentheses around the entire expression.  Otherwise Python will complain.
 
@@ -207,7 +207,7 @@ Exercises
 
 #. Modify your :file:`rps.py` program so that it prints out what the choices were, particularly the computer choice.  It is nice for the user to know how they won or lost a game!
 
-#. Write a program called :file:`sizes.py` to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could defined your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
+#. Write a program called :file:`sizes.py` to use the ``turtle`` module to draw a shape (e.g. a circle) with a fill color randomly selected.  You could define your colors such as ``colors = ['red', 'green', 'blue', 'magenta', 'cyan', 'yellow']``, and use the ``random.choice`` function to choose between them, passing the result into ``turtle.fillcolor`` function.  Don't forget to call ``turtle.begin_fill`` and ``turtle.end_fill`` before and after drawing your shape, respectively!
 
 Things to remember
 ------------------
