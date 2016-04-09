@@ -119,6 +119,8 @@ def menu_role(typ, rawtext, text, lineno, inliner,
 
 
 def setup(app):
+    warn = app.warn
+    app.warn = lambda *a: None
     app.add_node(quote_node, latex=(visit_quote_latex, depart_quote_latex))
     app.add_directive("quote", Quote)
 
@@ -131,3 +133,4 @@ def setup(app):
     app.add_role("kbd", kbd_role)
     app.add_role("menu", menu_role)
     app.add_role("button", menu_role)
+    app.warn = warn

@@ -40,7 +40,7 @@ else:
 extensions = [
     #"sphinx.ext.intersphinx",
     "sphinx.ext.todo",
-    "sphinx.ext.pngmath",
+    "sphinx.ext.imgmath",
     "ext.inlinesyntaxhighlight",
     "ext.pythontest",
     "ext.lexer",
