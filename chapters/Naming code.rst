@@ -52,7 +52,7 @@ As we can see above, functions can take in values (which we have learned are cal
 
 In this chapter, we will begin learning how to define our own functions, and not just use the functions already present in the language (built-in ones), or from other programs (imported modules).
 
-But before we do, why should we bother?  Can't we just use loops instead?
+But before we do, why should we bother?  Can't we just use loops instead to avoid repeating code?
 
 Loops are very useful, but only when the code to be repeated is in the same place.  Functions are useful when they are being used from a number of places, especially if they are not in related parts of your program.  They are more flexible, and offer a way of being called from anywhere - even outside your program, just like we do to other modules (e.g. ``turtle``).  Moreover, giving pieces of your code a name makes it more understandable to those reading it, or even to you when you come back to your program in the future.
 
@@ -66,19 +66,19 @@ Here is an example of a bit of code that needs sections to be separated into fun
     num = num + 1
     print('Hello there')
 
-Lots of repetitive code that could be parcelled up, given a name and put in one place, but called from where it is needed.  Moreover, when code only needs to be written once, we tend to make less mistakes than when we have to write it lots of times.
+Lots of repetitive code that could be parcelled up, given a name and put in one place, but called from where it is needed.  Moreover, when code only needs to be written once, we tend to make less mistakes than when we have to write it many times.
 
 Rolling our own
 ---------------
 
-When naming data we use the assignment operator, when naming code we use the ``def`` keyword.  This means we are :term:`defining a function` - not calling it, but defining it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
+When naming data we use the assignment operator, when naming code we use the ``def`` keyword.  This means we are :term:`defining a function` - not calling it, but creating it.  Just because you define a function, doesn't mean it gets called - it is simply there ready to be called upon when needed.
 
 Open up a new file window, and type in the following::
 
     def say_hello():
         print('Hello there')
         
-Save your program as :file:`functions.py`, and run it.  It should do nothing - as described just above, it is available to your program, but it is not being run yet.  To do that, insert the following line beneath your program::
+Save your program as :file:`functions.py`, and run it.  It should do nothing - as described just above, it is available to your program, but it is not being run yet.  To do that, insert the following line lower down your program::
 
     say_hello()
     
@@ -117,7 +117,7 @@ and insert these lines below the last call to ``say_hello_times``::
     
 .. note:: An argument is the value or variable being passed *into* a function.  A :term:`parameter` is the variable as received inside a function.  Or in other words, it has parameters, but takes in arguments.  Perhaps it is easier to remember it like this: for the sake of argument, if we pass in ``'Yo!'`` and ``25``, the function uses them as parameters - arguments on the outside, parameters on the inside.  If you cannot remember the difference, don't worry - just call them all parameters!
 
-These parameters can be anything you like, it just depends on what the function does, and what information it needs to operate.  Let's add onto our list of functions one that takes in two numbers, and prints out the sum::
+These parameters can be anything you like, it just depends on what the function does, and what type of information it needs.  Let's add onto our list of functions one that takes in two numbers, and prints out the sum::
 
     def add_two_nums(num1, num2):
         print(num1 + num2)

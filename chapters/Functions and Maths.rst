@@ -40,10 +40,10 @@ We can say that ``abs`` is a function that takes one argument, a number, and :te
 More arguments
 --------------
 
-But not all functions take one argument. An example of a function that takes two arguments is ``round``. It takes a number to be rounded, usually one with a fraction part, and a whole number of decimal places to round the first number to. So rounding ``123.45`` to ``1`` decimal place should give ``123.4``. How do we call a function with more than one argument? We separate the arguments with commas. To call round as we described, we write ``round``, then ``(``, our first argument, ``123.45``, then a comma, ``,``. We then write our second argument, ``1`` and a closing parenthesis, ``)``::
+But not all functions take one argument. An example of a function that takes two arguments is ``round``. It takes a number to be rounded, usually a fractional number, and a whole number of decimal places to round the first number to. So rounding ``123.12`` to ``1`` decimal place should give ``123.1``. How do we call a function with more than one argument? We separate the arguments with commas. To call round as we described, we write ``round``, then ``(``, our first argument, ``123.12``, then a comma, ``,``. We then write our second argument, ``1`` and a closing parenthesis, ``)``::
 
-    >>> round(123.45, 1)
-    123.5
+    >>> round(123.12, 1)
+    123.1
 
 ``round`` can round to any number of decimal places to round to::
 

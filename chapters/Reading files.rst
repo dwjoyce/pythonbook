@@ -17,7 +17,7 @@ We have used Python to store values in memory by using variables.  Type the foll
     >>> troops = 85
     >>> print('Your message:', message, 'and your troops:', troops)
 
-However, storing values in memory by using variables is only transitory - just like some maths calculator.  If you store a number in memory using the :button:`MS` (memory store) button, turn your calculator off and on again, and try and recall the number you stored by using :button:`MR`, it will be gone.  Variables in computer memory are similar - when your program stops (or the computer is switched off), the memory is gone.  To demonstrate this, having typed in the code above, select the :menu:`Restart Shell` menu item from the :menu:`Shell` menu.  Then redo the print command (you can use the up arrow and press the :button:`Return` key twice), and see what happens - Python will complain it cannot find the variables stating you have not defined them.  In other words, they have gone from memory!
+However, storing values in memory by using variables is only transitory - just like some maths calculator.  If you store a number in memory using the :button:`MS` (memory store) button, turn your calculator off and on again, and try and recall the number you stored by using :button:`MR`, it will be gone.  Variables in computer memory are similar - when your program stops (or the computer is switched off), the memory is gone.  To demonstrate this, having typed in the code above, select the :menu:`Restart Shell` menu item from the :menu:`Shell` menu.  Then redo the print command (you can use the up arrow and press the :button:`Return` or :button:`Enter` key twice), and see what happens - Python will complain it cannot find the variables stating you have not defined them.  In other words, they have gone from memory!
 
 So how do we retain information from one run of our program to the next?  How do we, as a computer scientist would say, make our data :term:`persistent` - i.e. recall the data when the program is run again?  Think of a game with a highest scores table - we need a way to store these numbers (and names) so that they can be read and changed every time the game is run.  To do this, we need to place our data in a :term:`file` that is stored on disk - whether a hard drive or flash storage such as a USB stick.  This data, when the electricity is turned off, retains its state - the data does not drain away with the current!  To work with files, we need to learn how to read from them (in this chapter) and write to them (in the next).
 
@@ -47,7 +47,7 @@ In Python, we use the ``open`` function to open files, so type the following::
 
 This shows that the file has been opened. The ``mode`` is ``'r'``, which means the it is open for reading. The other mode, ``'w'``, is for writing and it is covered in the next chapter.  Note you have to enclose the name of the file - the filename - in quotation marks as it is a string.  If this does not work, make sure the :file:`mission.txt` file is in the correct location as indicated above and named correctly.
 
-We have called the variable that refers to our open file ``f``, but it could be called anything just like other variables, such as ``my_file``, ``saurons_dark_secret``, ``input_file``, ``my_todo_list`` or the like.
+We have called the variable that refers to our open file ``f``, but it could be called anything just like other variables, such as ``my_file``, ``saurons_dark_secret``, ``input_file``, ``my_todo_list``, or the like.
 
 .. note::
 
@@ -154,7 +154,7 @@ To get the entire file as a string, we use ``read``. If we want it line by line,
 
     - The Lord of the Rings, Epigraph 
 
-For most purposes, this is the best way to read a file and fits in well with what we have learnt elsewhere in the book.  Notice how the print inserts an extra blank line in-between each line from the file - since the line from the file contains a newline character already, this is added onto the newline that the print function does ordinarily.
+For most purposes, this is the best way to read a file and fits in well with what we have learnt elsewhere in the book.  Notice how the print inserts an extra blank line in-between each line from the file - since the line from the file contains a newline character already, this is added onto the newline that the print function adds itself.
 
 This also works for the ``list`` function::
 
@@ -200,7 +200,7 @@ This just like closing the covers of a book, or the flap of a real folder from a
 Exercises
 ---------
 
-For these exercises, you will need to copy the text file :file:`mission.txt` from the home directory on the Raspberry Pi (:file:`/home/pi/mission.txt`) to the same location as your programs on your USB stick (e.g. :file:`/home/pi/USB_STICKS/USB Disk`).
+For these exercises, you will need to copy the text file :file:`mission.txt` from the home directory on the Raspberry Pi (:file:`/home/pi/mission.txt`) to the same location as your programs - either on your USB stick (e.g. :file:`/home/pi/USB_STICKS/USB Disk`) or in your named directory (e.g. :file:`/home/pi/fredbloggs`).
 
 #. Open and print out the contents of the :file:`mission.txt` file, converting each line to uppercase (tip: use the ``upper`` function on the line string to achieve this).
 

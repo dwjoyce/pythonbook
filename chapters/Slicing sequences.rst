@@ -9,7 +9,7 @@ Slicing sequences
 Dipping in
 ----------
 
-In the previous chapter we learnt how to group a sequence of items together under a single name.  These are all sequences in Python::
+In the previous chapter we learnt how to group a sequence of items together under a single name as a list.  These are all sequences in Python::
 
     >>> escape_tunnels = ['tom', 'dick', 'harry']
     >>> numbers = [0, 1, 2, 3, 4, 5]
@@ -70,7 +70,7 @@ Practice again in the interactive interpreter::
     >>> print(letters[-5])
     >>> print(letters[-6])
     
-This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the beginning), and end up at -6.  This may not sound like a big improvement, but when your sequence is very long it is useful to state the offset from the right rather than from the left.
+This should print off each letter in turn, this time from the end or the right of the sequence.  Notice when we used positive numbers, we start from 0 and ended up at an item offset by 5 (one less than the length of the sequence itself).  When we use negative numbers, we start from -1 (as 0 is the first item), and end up at -6.  This may not sound like a big improvement, but when your sequence is very long it is useful to state the offset from the right rather than from the left.
 
 All of this is relevant for any type of list, whether they contain characters, strings, numbers, sub-lists or anything else.  Let us use one from the previous chapter::
 
@@ -152,7 +152,7 @@ Every third slice from 1 to -1? That's the same as every third slice from 1 to 5
 Python likes pizza
 ------------------
 
-OK, now we know how to ask aliens for pizza, but what about if a python stole our pizza? Let us represent the pizza as a list of the colors, one for each slice::
+OK, now we know how to ask aliens for pizza, but how does Python do this? Let us represent the pizza as a list of the colors, one for each slice::
 
     >>> pizza = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
 
@@ -332,7 +332,7 @@ We can find various things::
 Exercises
 ---------
 
-#. Write a program called :file:`sentence.py` that inputs a sentence, and then prints out every other letter (i.e. prints even letters, but misses out odd ones) and also in reverse.  Use both a ``while`` loop and slicing to achieve this, so that each print occurs twice.
+#. Write a program called :file:`sentence.py` that inputs a sentence, and then prints out every other letter (i.e. prints even letters, but misses out odd ones), and also in reverse.  Use both a ``while`` loop and slicing to achieve this, so that each print occurs twice.
 
 #. Write a program called :file:`daysofweek.py` which defines a list containing the days of the week (assume that Sunday is the first day).  Ask the user for a number between 1 and 7, and print out the appropriate day of the week.  For example, if the user types in ``1``, then print out ``Sunday``.  If the user types in ``7``, then print out ``Saturday``.  Note, you will have to take 1 off what the user has typed in before you use it as an index into your days of the week list.
 

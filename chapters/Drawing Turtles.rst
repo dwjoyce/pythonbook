@@ -17,11 +17,11 @@ To use this separate turtle program, we have to use a new command called ``impor
 
 It was Isaac Newton who said:
 
-  "If I have seen further it is by standing on the shoulders of Giants"
+  "If I have seen further, it is by standing on the shoulders of giants."
 
-In other words, he could only have made the advances in the fields of mathematics and physics, by building on the work of those who came before him.
+In other words, he only made the advances in the fields of mathematics and physics he did by building on the work of those who came before him.
 
-Programming is similar.  If we make use of the work of others, we can go far.  We can build more interesting programs much faster, and we also use other people's code which we can depend upon.  Modules that Python itself offers as standard, ready to be included into your program, are often very well written and tested.
+Programming is similar.  If we make use of the work of others, we can go far.  We can build more interesting programs much faster by using other people's code which we can depend upon.  Modules that Python itself offers as standard, ready to be included into your program, are often very well written and tested.
 
 So, to include another program, we must use the ``import`` command, and give it the name of the module to import.  Although this program will have the :file:`.py` filename extension (e.g. :file:`turtle.py`), we do not include that part when naming the module.
 

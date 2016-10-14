@@ -74,7 +74,7 @@ On this, the first time of writing your program, you will need to give it a name
     :width: 250pt
     :align: center
 
-Most importantly, change the location of where the program is being saved to your USB stick.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
+Most importantly, change the location of where the program is being saved to either your USB stick or the computer directory with your name.  This is so your own programs are saved in the same place, and you will be responsible for looking after it.
 
 .. tip:: To save on your USB stick when the :button:`Save As` dialog box appears, first click on the directory :file:`USB_STICKS`, and then click on the name of your USB stick, which is :file:`USB Disk` by default.
 
@@ -129,7 +129,7 @@ Things to remember
 
 #. The best arrangement is to move your interactive interpreter window to the window so it takes up the left half of the screen, and the editor window to the right so it takes up the right half of the screen.  See the tip above to see how to do this.
 
-#. Once the program has been typed in, or at least a little of it, then to run it you either click on the :menu:`Run` menu and select the :menu:`Run Module` item, or press the :kbd:`F5` key as a shortcut.  You will be asked to save your program, so simply press the :button:`Return` or :button:`Enter` key.  If you are running your program for the first time, you will need to give a name.  Save all your programs onto your USB stick. Once inserted it will appear in the :file:`USB_STICKS` folder in your home directory.
+#. Once the program has been typed in, or at least a little of it, then to run it you either click on the :menu:`Run` menu and select the :menu:`Run Module` item, or press the :kbd:`F5` key as a shortcut.  You will be asked to save your program, so simply press the :button:`Return` or :button:`Enter` key.  If you are running your program for the first time, you will need to give a name.  Save all your programs into the directory with your name, or onto your USB stick. If you are using a USB stick, it will appear in the :file:`USB_STICKS` folder in your home directory once you have plugged it in.
 
 #. Name your Python programs with a :term:`.py` postfix (e.g. shapes.py).  Avoid including spaces in your program name, and include only one period ``.`` character.
 

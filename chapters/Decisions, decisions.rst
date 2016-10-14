@@ -11,7 +11,7 @@ Differing ways of comparing
 
 In the previous chapter, we introduced the ``if`` statement, which evaluates a test, and if true, it runs the statements which have been indented to the right following the colon ``:`` symbol.  We call this group of statements indented to the right a :term:`block of code`.
 
-We also introduced our first comparison operator, the equals sign ``==``.  There are many more, most of which you will recognise from your mathematics material.  We list the possibilities at the end of this chapter, but here are some highlights.
+We also introduced our first comparison operator, the equals sign ``==``.  There are many more, most of which you will recognise from maths.  We list the possibilities at the end of this chapter, but here are some highlights.
 
 We will use the interactive interpreter to experiment for a while.  Type the following for practice::
 
@@ -32,7 +32,7 @@ We will use the interactive interpreter to experiment for a while.  Type the fol
     
 Then try changing the values of ``a`` and ``b`` (make them the same, for instance), and repeat the comparisons.
 
-From the above snippet, the first two lines create our variables, ``a`` and ``b``, using the :term:`assignment operator` (not the :term:`equals operator`).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the :term:`not equal to operator` ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on the average computer keyboard, we use the exclamation mark in front of the equals sign to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` is turned into ``<=``.
+From the above snippet, the first two lines create our variables, ``a`` and ``b``, using the :term:`assignment operator` (not the :term:`equals operator`).  The next six lines demonstrate the different comparison operators, one by one.  The only one that really requires explanation is the second one, the :term:`not equal to operator` ``!=``.  In maths, you would use a different symbol, such as this one: :math:`\neq`.  Since this symbol is not readily available on a computer keyboard, we use the exclamation mark in front of the equals sign to make the not equals operator ``!=``.  The other symbols are also separated, so in maths you could use the :math:`\geq` symbol, in programming, we expand it into ``>=``, thus taking up two symbols to mean the same.  Similarly with :math:`\leq` is turned into ``<=``.
 
 .. note:: We call these :term:`expressions`, as they express a value once properly evaluated by the computer.  Normally, one value is on the left, and another on the right, with the operator in the middle.  Each of these operators can be used with other types of data than just integer numbers - floats and strings could also be used, e.g. ``2.5 > 1.2`` and ``"fred" != "harry"``.
 
@@ -78,7 +78,7 @@ Many, many possibilities!
 
 What if we had more than two possibilities - doing one thing for the main test, and another thing for everything else?  Python has you covered for this eventuality as well - a combination of the ``if`` and the ``else`` put together to form the ``elif`` - short for *else if*.
 
-The ``elif`` statement sits after the ``if`` (so there must always be an ``if`` statement first), and there can be as many ``elif`` statements as you need.  Each one has an expression to evaluate, and if true, then the ``elif`` code block is run.
+The ``elif`` statement is placed after the ``if`` (so there must always be an ``if`` statement first), and there can be as many ``elif`` statements as you need.  Each one has an expression to evaluate, and if true, then the ``elif`` code block is run.
 
 For example, modify your ``if`` and ``else`` statement in your :file:`nums.py` program above, so that it now states the following::
 
@@ -118,7 +118,7 @@ Combining what we have learnt in this chapter, let us write another program call
     else:
         print('Sorry, I don\'t recognise that animal!')
 
-Obviously, we could go on and on!  Save it using the :kbd:`F5` key, name it :file:`noises.py` making sure you save it onto your USB stick, and run it.  You need to run it several times in order to test all the possibilities (i.e. see all the different noise words being printed out).
+Obviously, we could go on and on!  Save it using the :kbd:`F5` key, name it :file:`noises.py` making sure you save it in the usual location, and run it.  You need to run it several times in order to test all the possibilities (i.e. see all the different noise words being printed out).
 
 As you can see, the ``if`` statement is tested first.  If the test evaluates to true, then the first optional block of code is run (printing out 'Moo!'), and it will then jump to the end (past the ``else``).  Otherwise, it will test each test in turn, only running the code blocks if the test is true.  Otherwise, it will eventually drop down to the ``else`` statement, and run the last block of code, but only if all the other tests have failed.
 

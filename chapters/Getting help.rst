@@ -89,6 +89,11 @@ In the previous chapter, we introduced the notion of bringing in a separate prog
     
 This takes a few seconds for Python to work out, but it will list every available module that can be imported by your program, including the ``math`` or ``turtle`` modules we used previously.
 
+To see what is inside a module, once you have imported it, you can perform a ``dir`` on the module name, for example::
+
+    >>> import turtle
+    >>> dir(turtle)
+
 To delve deeper, we can find out more information on functions inside these other modules by using the dot notation as introduced last time.  So, for example, if we want to find out more information on the square root function inside the ``math`` module, we could do the following::
 
     >>> import math

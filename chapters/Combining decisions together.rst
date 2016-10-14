@@ -9,7 +9,7 @@ Combining decisions together
 Juggling tests
 --------------
 
-We have learned how to use the ``if`` statement to evaluate a test, and if true it then executes a block of code you provide immediately underneath.  It makes our programs cleverer so that they can take different decisions depending on the circumstances at the time.
+We have learned how to use the ``if`` statement to evaluate a test, and if true it then executes a block of code you provide immediately underneath.  It makes our programs cleverer so that they can take different decisions depending on the circumstances.
 
 This chapter introduces :term:`logical operators` which make combining tests together easier.  Although this part of programming is not essential, it does make our programs shorter and easier to write.
 
@@ -30,11 +30,11 @@ With what we know now, we could code this as follows, so type this into a new fi
 
 Save this program and call it :file:`beach.py`.  Run it and test it out - it should all work fine, regardless of the combination of values you type in.
 
-However, this took a lot of typing to get working, and programmers like to avoid typing when we can!  One problem is that the 'Sorry' message is done twice, so we are duplicating a line unnecessarily.  We also have two ``else`` statements to go with the two ``if`` statements.  It would be much better if we could combine the two tests together on one line, with one ``if`` statement and one ``else`` statement, with each call to the ``print`` function done once each as well.
+However, this took a lot of typing to get working, and programmers like to avoid typing when they can!  One problem is that the 'Sorry' message is done twice, so we are duplicating a line unnecessarily.  We also have two ``else`` statements to go with the two ``if`` statements.  It would be much better if we could combine the two tests together on one line, with one ``if`` statement and one ``else`` statement, with each call to the ``print`` function done once each as well.
 
 So far, we have only learned how to attach one test to either an ``if`` statement or an ``elif`` statement.  With :term:`logical operators`, we can combine a number of tests together to form a larger single test.  There are three logical operators:
 
-    - ``and`` which tests whether the left-hand side and the right-hand side are both true, giving an overall result of true.  For example: ``a > 10 and b > 10`` tests whether ``a`` and ``b`` are both greater than 10, and if so the whole expression is true.
+    - ``and`` which tests whether the left-hand side and the right-hand side are both true, giving an overall result of true.  For example: ``a > 10 and b > 10`` tests whether ``a`` and ``b`` are both greater than 10, and if so, the whole expression is true.
     
     - ``or`` which tests whether either the left-hand side or the right-hand side are true, thus giving a overall result of true.  For example, ``a < 0 or a > 100`` tests whether ``a`` is either less than zero (i.e. negative) or greater than 100 (but obviously not both at the same time), and if so the whole expression is true.  Both sides can also be true, which is also fine.
     

@@ -51,7 +51,11 @@ And that is all we need to print out the numbers from the list we created.  We c
     >>> for num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
             print(num)
 
-To explain what is going on - the ``for`` keyword is telling Python that *for each* item (which we have called ``num``) in the list provided, then execute this block of code.  It is simply a way of stepping or :term:`iterating` over a list, one item at a time.
+To explain what is going on - the ``for`` keyword is telling Python that *for each* item in the list (stored in the variable ``num``), then execute this block of code.  It is simply a way of stepping or :term:`iterating` over a list, one item at a time.  The variable ``num`` is defined for you - you do not have to set it up in advance, and it changes value as you walk along the list.  It is referred to as the *loop variable*, and acts like a baton in a relay race - it is passed from one list item to the next in turn, like so:
+
+.. image:: /images/loop-variable.pdf
+    :width: 310 pt
+    :align: center
 
 To put it another way, you are asking for each item in the list, which Python passes to your program in the variable name provided, and repeats the code until the list runs out.
 
@@ -60,12 +64,12 @@ Ranges
 
 However, it is a bit of a chore to have to type out the contents of our number lists all the time.  Typing in ten numbers is one thing.  What if we wanted to have a list with a 1,000 numbers?  Or a million?  Not only would this be very time consuming (and also make our programs very long), it would also be rather error prone.  Think about typing in a few thousand numbers, and making mistake somewhere in the middle!
 
-It is useful then that Python provides a function to give us a list of numbers in just the way we ask for.  It is called ``range``, and given its name, it simply provides a range of numbers as a list of integers.  Let's do the above program again using this ``range`` function::
+It is useful then that Python provides a function to give us a list of numbers in just the way we want.  It is called ``range``, and as the name suggests, it simply provides a range of numbers as a list of integers.  Let's do the above program again, this time using the ``range`` function::
 
     >>> for num in range(10):
             print(num)
     
-Even shorter than before, now that we are using the ``range`` function to do the work for us.  Usually, it just takes one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting with 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
+Even shorter than before, now that we are using the ``range`` function to do the work for us.  Usually, it just takes one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting from 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
 
 .. note:: In programming generally, we like to start from 0 and not from 1, just like when indexing lists, or using ``random.randrange``.  We count up to an end point, but since we usually count from 0, we do not include the end point in our range.
 
@@ -76,20 +80,26 @@ The third thing you can do is to ask for a step in the numbers, so instead of ea
     >>> for num in range(100, 200, 2):
             print(num)
 
-By this stage, you should realise that the range function is very similar to how we slice up sequences - specify a start, and also optionally an end point along with a step to take for each number.
+By this stage, you should realise that the range function is very similar to how we slice up sequences - specify an end point, and also optionally a start point along with a step to perform for each number.  Therefore, there are three ways of calling the range function, depending on what kind of number range you want to produce:
+
+.. code-block::
+    :pythontest: norun
+    range(end)
+    range(start, end)
+    range(start, end, step)
 
 By using the *step*, you can also obtain a list that counts down rather than counting up.  All the number ranges we have done so far have counted up.  To count down, you need to use a negative step.  However, you must also remember to make the end point lower than the start point!  Again, this is similar to slicing a sequence backwards.  Try this to count down from 10 to 1 (down to, but not including 0), inclusive::
 
     >>> for num in range(10, 0, -1):
             print(num)
 
-The variable used to step through the list can be called anything you like.  It is a little different to how we have defined variables up until now which is by using the assignment operator::
+The variable used to step through the list (the loop variable) can be called anything you like.  It is a little different to how we have defined variables up until now which is by using the assignment operator::
 
     >>> num = 10
     >>> number = 20
     >>> my_int = 123
     
-The ``for`` loop defines its loop variable as part of the ``for`` statement, but just like with ordinary variable, we can call it what we want to::
+As described above, the ``for`` loop defines its loop variable as part of the ``for`` statement, but just like  ordinary variables, we can call it what we want to::
 
     >>> for item in range(10):
             print(item)
@@ -151,7 +161,7 @@ Finally, you can combine two sequences together, and then step over the result a
     d c
     . i
 
-Again, as in :ref:`chapter 15` on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step along it and execute the block of code you provide.
+Again, as in :ref:`chapter 15` on grouping, whatever you can place in a list variable, you can use the ``for`` loop to step along it and execute the block of code that follows.
 
 Drawing
 -------
@@ -173,9 +183,9 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
 
 Save it as :file:`redoctagon.py`, and run it.  Not surprisingly, it should draw a red octagon.
 
-A bit of explanation: we import the ``turtle`` module so that we can use it in our program; we then created the canvas to draw on by calling the ``Turtle`` function; we then set the filling color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in red.
+A bit of explanation: we import the ``turtle`` module so that we can use it in our program; we then set the fill color as red and start the fill operation; we then loop round 8 times using the ``for`` keyword by going forward 50 pixels and turning left 45 degrees each time; we end by ending our fill operation so that the shape is filled in.
 
-This is now much easier than before than either using a sequence of statements, or even when we were using ``while`` loops.
+This is now much easier than before, whether using a sequence of statements, or even when we were using ``while`` loops.
 
 Vertigo
 -------
@@ -205,7 +215,7 @@ Open up another new file window, and type in the following::
 
 Run and save it as :file:`spirals.py`, and see what happens.  If there any problems, then check your code carefully!
 
-Some explanation: we import the modules we need, ``turtle`` for drawing, ``random`` to introduce a bit of variation.  We then define the colors (note, not the English spelling - Python requires the American spelling) we are going to use.  We then create our drawing window, change the drawing the speed (so it doesn't take so long) and the pen size as well.  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 299 (300 times in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
+Some explanation: we import the modules we need, ``turtle`` for drawing, ``random`` to introduce a bit of variation.  We then define the colors (note, not the English spelling - Python requires the American spelling) we are going to use.  We then change the pen size and the drawing speed (so it doesn't take so long).  We start with a line length of 5, which is increased for each line so the shape moves outwards.  We then use a ``for`` loop to step along the range of numbers, from 0 to 399 (400 times in total).  Inside the block of code that we are repeating (the loop), we change the pen color, move forward, change the angle (a little more than 90 degrees) and increase the length.  We then repeat.  The lines are drawn longer and longer, at an increasingly skewed angle.
 
 Try changing the numbers to see what happens to the final result.
 
@@ -307,14 +317,14 @@ Exercises
 
 #. Write a program called :file:`sides.py` which uses the ``turtle`` module to draw a polygon having the number of sides the user has input.  Use a ``for`` loop to draw the sides of the polygon.  This is similar to the exercise in :ref:`chapter 12`, but this time the looping is different.
 
-#. Write a program called :file:`brekkie.py` which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it to the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
+#. Write a program called :file:`brekkie.py` which creates an empty list called breakfast (using the notation ``breakfast = []`` to create an empty list).  Ask the user what they had for breakfast, one item at a time, and call ``append`` for each item to append it onto the breakfast list.  Use a ``while`` loop to accomplish this, allowing the user to type 'stop' to break out of the loop.  Then use a ``for`` loop to print out each item in the breakfast list, printing out how yummy each item is.
 
-#. Write a program called :file:`bullseye.py` which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red in the middle.  Try and centre your shape in the middle of the turtle window.
+#. Write a program called :file:`bullseye.py` which draws a series of red and white circles, ever smaller, to form a bullseye shape.  The program should draw 11 in total, starting with a large red circle, and finishing with a small red circle, with alternate white and red circles in the middle.  Try and centre your shape in the middle of the turtle window.
 
 Things to remember
 ------------------
 
-#. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The ``for`` keyword can be read as *for each* if that makes its easier to understand.
+#. Use the ``for`` loop to repeat a block of code a set number of times.  Use the ``while`` loop to repeat a block of code an unknown number of times (e.g. depending on whatever the user types in).  The ``for`` keyword can be read as *for each* item in the sequence, then do this code block.
 
 #. Use the ``range`` function to provide a sequence of numbers to step through.  You can use it with just one argument, the end point, or with two, the start and end point, or three arguments, start, end and step.
 

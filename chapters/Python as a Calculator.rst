@@ -40,7 +40,7 @@ Bring up your Python interactive interpreter, as described in :ref:`chapter 0` (
     >>> 10 + 20
     30
 
-and press the :button:`Return` or :button:`Enter` key on your keyboard.  The ``>>>`` (chevrons) appear automatically, so do not type these!  You should see the number 30 displayed below the line you typed, as in the example above.
+and press the :button:`Return` or :button:`Enter` key on your keyboard.  The ``>>>`` (chevrons) appear automatically, so do not type these!  The chevrons just mean that IDLE is ready for you to type something new.  You should see the number 30 displayed below the line you typed, as in the example above.
 
 How about the second example?  Let us try this::
 
@@ -53,12 +53,12 @@ Type in it, press :button:`Return` and see what the result is.  The result shoul
 
 Remember, like in mathematics, a computer language does not work out the sum from left to right - it gives priority or precedence - to some operations over others.  It actually performs the division first (4 divided by 2, equalling 2), then the multiplication (2 times 3, equalling 6), then the addition (10 plus 20 equalling 30) and finally the subtraction (30 minus 6 equalling 24).  To see the full list of operator precedence - which operator is processed before others - then refer to :ref:`Appendix B.1` on Operators.
 
-To enforce a different order, you can use brackets (``(`` and ``)``).  Just like in Maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
+To enforce a different order, you can use brackets ``(`` and ``)`` - just like in maths.  Put a pair of brackets around each part of the sum you want done separately.  So if you wanted to do the addition and subtraction section first, then type the following::
 
     >>> (10 + 20 - 4) / 2 * 3
     39.0
     
-In programming, this way of expressing a value to form a result is called an :term:`expression`.
+In programming (and maths too), this way of expressing a value to form a result is called an :term:`expression`.
 
 Operator overload
 -----------------
@@ -85,7 +85,7 @@ Your answer should state 16983563041.  Negative numbers work as well.  Remember 
 
 Your answer should read 0.5.
 
-.. note:: Operators almost always have a value either side of them, such as ``10 + 20``, or ``2 ** 8``.  The general exception when using the minus sign ``-`` or the plus sign ``+``, in which case it appears you are using two appears in a row, such as ``30 + -10``, which would result in a value of 20.  Apart from negating a value, you should use these arithmetic operators with two values (one to the left, one to the right), not with one.
+.. note:: Operators almost always have a value either side of them, such as ``10 + 20``, or ``2 ** 8``.  The general exception when using the minus sign ``-`` or the plus sign ``+``, in which case it appears you are using two appears in a row, such as ``30 + -10``, which would result in a value of 20.  Apart from negating a value, you should use these arithmetic operators with two values (one to the left, one to the right), not just one.
 
 We can now move onto something your calculator cannot do.  Remember when you were in primary school, and you learnt that 7 divided by 3 was 2 remainder 1 (or to put it another way, :math:`7 \div 3 = 2\, r\, 1`)? To get the quotient (in this case 2), use the ``//`` (floor or :term:`integer division`) operator::
 
@@ -121,11 +121,11 @@ Exercises
 
 #. Type the Python line to work out 4 times 2 minus 7.
 
-#. To convert from Celsius to Fahrenheit temperature, you multiply the Celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the Fahrenheit reading?
-
 #. Type the Python line to work out 7 to the power of 6.
 
 #. Type the Python lines to work out the quotient and remainder of 11 divided by 4.
+
+#. To convert from Celsius to Fahrenheit temperature, you multiply the Celsius by 9 divided by 5, and add 32.  If the Celsius is 40, what is the Fahrenheit reading?
 
 Things to remember
 ------------------
@@ -149,6 +149,6 @@ Things to remember
 
 #. Use brackets to force Python to do a calculation in a particular order
 
-#. Whole numbers are referred to as integers, fractional numbers are referred to as floats.
+#. Whole numbers are referred to as integers, fractional numbers are referred to as floats (floating point).
 
 #. In programming, values are known as :term:`expressions`, potentially made up of other values, operators and even other expressions that need to be evaluated to form a result.  They express a value.

@@ -80,7 +80,6 @@ Converting from one :term:`type` to another::
 Using code from other programs (:term:`modules`)::
 
     import turtle
-    turtle.Turtle()  # make sure the 'T' in the function call is uppercase!
     turtle.circle(100)
     dir(turtle)  # provide a directory listing of module
     help(turtle.fillcolor)  # help on a particular item
@@ -158,7 +157,7 @@ To generate :term:`random` numbers, we use the ``random`` module::
 
     def say_hello():
         print('hello')
-
+        
 
     def say_hello_times(times):
         print('hello' * times)
@@ -508,8 +507,8 @@ You can see the list of built-in functions by typing ``dir(__builtins__)`` in th
   ``int``        Convert the supplied value into an integer number                                     ``int('100')``
   ``len``        Returns the length of the supplied sequence (e.g. string or list)                     ``len('fred')``
   ``list``       Converts the supplied value into a list                                               ``list('xyz')``
-  ``max``        Returns the maximum value from the supplied sequence                                  ``max([1, 2, 3])``
-  ``min``        Returns the minimum value from the supplied sequence                                  ``min([5, 1, 3])``
+  ``max``        Returns the maximum value from the supplied sequence                                  ``max(1, 2, 3)``
+  ``min``        Returns the minimum value from the supplied sequence                                  ``min(5, 1, 3)``
   ``oct``        Converts the supplied value into an octal value as a string                           ``oct(25)``
   ``ord``        Returns the supplied character into an ordinal (integer) value                        ``ord('a')``
   ``open``       Open the supplied filename and return the opened file                                 ``open('scores.txt)``

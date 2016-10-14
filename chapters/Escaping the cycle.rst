@@ -24,7 +24,7 @@ To see this in action, start a new file window and type in the following:
     while True:
         print('Help, I\'m stuck in a loop!')
         
-Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the :kbd:`Ctrl` and :kbd:`C` (same shortcut as copy) keys together - this breaks out of the loop.
+Save it as :file:`adder.py`, and see what happens.  It should keep printing out the *Help* message.  To stop the program, you need to press the :kbd:`Ctrl` and :kbd:`C` (same shortcut as copy) keys together - this breaks out of the loop.  Alternatively, you can select the "Restart Shell" item from the "Shell" menu at the top of the IDLE program.
 
 Clearly, we need a better way of breaking out of the loop than relying on the user to do it for us.  This is where the ``break`` keyword comes in, combined with what we know already about the ``while`` loop and the ``if`` statement to make a selection.
 
@@ -36,7 +36,7 @@ Therefore, modify your :file:`adder.py` program like so::
             break
         print('Hello there', name)
         
-Save and run it again and see what happens.  Notice how the ``while`` statement is the same, but inside the loop it is very different.  The first line of the loop code block simply asks for the user's name, using the ``input`` function, and stores it in a variable called ``name``.  Then we do something new - we test whether the contents of the variable ``name`` is equal to the value 'stop' (which we have told the user to type in to quit the loop), and if so, we use the new keyword ``break`` to break out of the loop.  It simply jumps passed the end of the code block, attached to the ``while`` loop, to carry on with the rest of the program (if there is any).  If we didn't break out of the loop, then we print a message to the user, using the contents of the variable ``name`` as we do so.
+Save and run it again and see what happens.  Notice how the ``while`` statement is the same, but inside the loop it is very different.  The first line of the loop code block simply asks for the user's name, using the ``input`` function, and stores it in a variable called ``name``.  Then we do something new - we test whether the contents of the variable ``name`` is equal to the value 'stop' (which we have told the user to type in to quit the loop), and if so, we use the new keyword ``break`` to break out of the loop.  It simply jumps passed the end of the code block, attached to the ``while`` loop, to carry on with the rest of the program (if there is any).  If we didn't break out of the loop, then we print a message to the user, using the contents of the variable ``name`` to do so.
 
 We could also do this by using a boolean variable in a slightly different way::
 

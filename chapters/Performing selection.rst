@@ -19,6 +19,25 @@ To achieve this in Python, we use the ``if`` statement.  We start with the word 
 
 .. note:: Statements that belong to an ``if`` statement must be pushed to the right in order to show what code belongs to what line.  In programming, this is called :term:`indentation`.  In Python, we indent by four spaces.  When the code block is finished, we unindent back to the column of the initial line.
 
+Indentation is like drawing up a shopping list, like so::
+
+.. code-block::
+    :pythontest: norun
+    clothes:
+        shirt
+        socks
+        hat
+    food:
+        apples
+        milk
+        cheese
+        bread
+    others:
+        cup
+        clothes pegs
+        
+Each section is defined by a header, followed by the ``:`` colon symbol to indicate what follows belongs to the header.  The items beneath each header are indented, or pushed in to form a group.
+
 Let us start a new program called :file:`vip.py` - click on the :menu:`File -> New File` menu item, and type in the following::
 
     print('Welcome to our VIP program for calculating cinema ticket prices')
@@ -33,7 +52,7 @@ So far, so good!  Now we need to take a decision, so add the following to your p
     if vip == 'yes':
         price = price * 1.2
 
-You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable ``vip``, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string *yes*.  To perform the test, we have introduced a new operator, called the equals operator.  It is looks similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing whether what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is ``True``, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.
+You will notice we have used the ``if`` statement to perform a test.  The test is whether the variable ``vip``, created when we saved the answer from asking the user the question over VIP tickets, is the same as the string "yes".  To perform the test, we have introduced a new operator, called the equals (comparison) operator.  It is looks similar to the assignment operator, which creates variable names, but the equals operator has two equals signs, not one.  It is testing whether what is on the left is equal to what is on the right.  If the equals test is successful, then the expression is ``True``, and the code drops into the code below the ``if`` statement, indicated by the code being indented to the right.  If the test is unsuccessful, then the expression is ``False``, and the code is skipped over.
 
 Also note the use of the colon ``:`` symbol.  This is used at the end of every line that has other lines that are attached to it.  We will be seeing that on many more occasions in the future with other statements we will be introducing.  It effectively tells Python to run the following lines if the test just evaluated was true.  Please don't miss these off!
 
@@ -53,7 +72,7 @@ We can now finish our program, so add the last line on the end so that your comp
 
 See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our :term:`code block` attached to the ``if`` statement is over, and we now carry on as usual.
 
-Now save and run your program using the :kbd:`F5` key, pressing :button:`Return`, and using the program name of :file:`vip.py`.  Remember, to save your program onto your USB stick.
+Now save and run your program using the :kbd:`F5` key, pressing :button:`Return`, and using the program name of :file:`vip.py`.  Remember, to save your program in the usual location (the directory with your name, or your USB stick).
 
 You will have to run your program twice.  Initially, input *yes* as the answer to the question, and secondly, input *no* (or vice versa).  You should get different results depending on what you enter on the keyboard - either a price of £6 or £5.  Be careful what you type - if you do not type *yes* exactly, then the test will fail, and the indented statement will not be executed.
 
@@ -73,7 +92,7 @@ Run your program again, and notice how either both of these statement will be pe
             price = price * 1.5
             print('Weekend viewing adds on another 50%, sorry!')
             
-Watching films at the weekend is very expensive, 50% more expensive!  You will notice, though, that this is only added on for VIP seats, as the question and the test, along with the increase in price, all live inside the test for VIP seats only.  Regardless, this demonstrates that one block of code (with a certain level of indentation) can reside inside another.  There is no limit to how many blocks can be inside other blocks, although if we overdo this, it will make the code less readable.
+Watching films at the weekend is very expensive, 50% more expensive!  You will notice, though, that this is only added on for VIP seats, as the question and the test, along with the increase in price, all live inside the test for VIP seats only.  Regardless, this demonstrates that one block of code (with a certain level of indentation) can reside inside another.  There is no limit to how many blocks can be inside other blocks, although if we overdo this, it will make the code harder to understand.
 
 You can add another block of code that is selectively executed after the ``if`` statement above, just by starting it in the same column as the first.  Add these extra three lines onto your program::
 

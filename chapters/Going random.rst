@@ -32,7 +32,7 @@ We can then experiment with some of its functions.  Try calling the ``random`` m
     >>> random.random()
     >>> random.random()
     
-.. note:: You can repeat a command in the interactive interpreter by using the up arrow key on your keyboard, and pressing the :button:`Return` key.  This brings the lines down onto your current line, allowing you change it.  Execute that statement by pressing :button:`Return` again.
+.. note:: You can repeat a command in the interactive interpreter by using the up arrow key on your keyboard, and pressing the :button:`Return` or :button:`Enter` key.  This brings the statement down onto your current line, allowing you change it.  Execute that statement by pressing :button:`Return` again.
 
 Run this line a few time with the note above.  See how it always returns a number that is between 0.0 and 1.0, but hardly ever the same exact number.  See if you can get it to repeat a number - it is not easy!
 
@@ -120,7 +120,7 @@ Exercises
 
 #. Modify your :file:`guess.py` program so that after testing whether the ``user_guess`` variable is equal to the computer's number ``number_to_guess``, the program will then test whether the user's number is less than the computer's number and print an appropriate message (e.g. 'Too low!'), and also if the user's number is larger than the computer's number, then print out another message (e.g. 'Too high!').  This will give the user a hint as to which direction to head in!
 
-#. Write a program called :file:`poly.py` to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is draw, or if it returns 8, an octagon is drawn.
+#. Write a program called :file:`poly.py` to randomly choose how many sides a polygon should have (e.g. between 3 and 12), and then draw the appropriate polygon.  So if the ``randrange`` function returns 3, then a triangle is drawn, or if it returns 8, an octagon is drawn.
 
 Things to remember
 ------------------

@@ -19,20 +19,20 @@ Begin by creating a new program (:menu:`File -> New File`), and type the followi
     name = input('What is your name? ')
     print('Hello there', name)
     
-Press :kbd:`F5` to run your program, and give it the name :file:`hello.py`.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the :button:`Return` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
+Press :kbd:`F5` to run your program, and give it the name :file:`hello.py`.  You will notice the program pauses at the first line - it is waiting for your input.  Use the keyboard to type in your name, and press the :button:`Return` or :button:`Enter` key.  You may have to click on the interactive window used to run your program with your mouse to make it active.  Whatever you typed in will be stored in the variable ``name``.  This variable is then used in the second line to print out a message along with the value referred to by the variable ``name``.
 
 Note that we are using a message (a :term:`string` value) when calling the ``input`` function - this is the message that is presented to the user when you are asking for input.  This is not essential - you could miss it out, but then the user may not know they are expected to type something.  It is best to present the message, so they know what to do next.
 
 Using numbers
 -------------
 
-The type of data given to us by the ``input`` function (i.e. what is returned) is always a string.
+The type of data given to us by the ``input`` function (i.e. its return value) is always a string.
 
 Remember, when you *add* two strings, you are really joining them together or :term:`concatenating` them (e.g. ``"12" + "34"`` would equal ``"1234"``).  When you *multiply* a string by a number, you are :term:`repeating` the contents of the string (e.g. ``"123" * 3`` would equal ``"123123123"``).
 
 Therefore, if you need to use the input as an actual number, you need to convert it from a string type to an integer or float type.  This means you can then use the result in a normal calculation like any other number.  It is effectively converts a sequence of digits into a proper number where the right most digit is the 1s, the second column is the 10s, the third column is the 100s, etc., with all the numbers combined together to form a complete number.
 
-.. note:: Each character of a string is actually encoded according to a table of a character set.  One common character set is :term:`ASCII` (American Standard Code for Information Interchange), which includes all the Latin characters, digits and common symbols.  Another is :term:`Unicode`, which includes characters from many other languages.  These character sets encode the letter 'A' as the number 65, the digit '0' as 48, and the symbol "!" as 33.  This demonstrates how text is stored inside computer systems.
+.. note:: Each character of a string is actually encoded according to a table of numbers (a character set).  One common character set is :term:`ASCII` (American Standard Code for Information Interchange), which includes all the Latin characters, digits and common symbols.  Another is :term:`Unicode`, which includes characters from many other languages.  These character sets encode the letter 'A' as the number 65, the digit '0' as 48, and the symbol "!" as 33.  This demonstrates how text is stored inside computer systems.
 
 To convert from a string to an integer, you use the ``int`` function.  So for example, ``int("123")`` would return the actual number ``123``.
 

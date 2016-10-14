@@ -11,11 +11,11 @@ Prepare your ink
 
 The opposite to reading a file is writing to it.  Whilst in the previous chapter on reading we used IDLE's editor to create a file in order to read from it, this chapter we will do the writing from within the program itself.
 
-To write to a file, we first have to open it in writing mode. To do this, we pass the ``'w'`` to ``open``::
+To write to a file, we first have to open it in writing mode. To do this, we pass a mode of ``'w'`` into the ``open`` function::
 
     >>> f = open('todo.txt', 'w')
 
-This will open the file, creating it if it does not exist, and assigns the data containing the open file to the variable ``f``. The file is then emptied or truncated, "cleaning the slate" for any data you will write.  In the previous chapter, we could have passed in ``'r'`` for reading, but this is not necessary as it is the default (normal) behaviour anyway.
+This will open the file, creating it if it does not exist, and assigns the data containing the open file to the variable ``f``. The file is then emptied or truncated, "cleaning the slate" for any data you will write.  In the previous chapter, we could have passed in ``'r'`` for reading, but this is not necessary as it is the default (normal) behaviour when opening a file.
 
 Learning to write
 -----------------

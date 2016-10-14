@@ -9,7 +9,7 @@ Grouping data together
 Scattered data
 --------------
 
-We have already covered variables, which just give a name to a piece of data.  This is very handy, and allows us to give data a memorable name we can refer to and modify later.  Technically, variable names (identifiers) are memory addresses that point to the data we have stored - it is like a signpost pointing at the data.
+We have already covered variables, which simply attaches a name (like a label) to a piece of data.  This is very handy, and allows us to give data a memorable name we can refer to and modify later.  Technically, variable names (identifiers) are memory addresses that point to the data we have stored - it is like a signpost pointing at the data.
 
 However, it can become messy when there are many variables in our programs, especially if they are closely related.  For example, if we had a bunch of people's names, we could define each name individually.  Use the interactive interpreter to type in the following::
 
@@ -136,7 +136,7 @@ We can also find out whether a value is a member of a list (i.e. is contained wi
 
 All of these things would have been much harder to do by ourselves - Python is great at helping out in this way.  There is so much to what Python offers, but here we have at least given a brief overview.
 
-We will learn how to dip into a list to fetch individual items (or a section of the list) in the next chapter.  We learn how to step over a list, one item at a time, in two chapters time.  All this will make our programs easier to write.
+We will learn how to dip into a list to fetch individual items (or a section of the list) in the next chapter.  We learn how to step over a list, one item at a time, in the chapter after next.  All this will make our programs easier to write.
 
 Rock, Paper, Scissors
 ---------------------

@@ -126,7 +126,7 @@ You must be consistent in using the names that have been defined, including the 
 | .. code-block:: py3con                 | .. code-block:: py3con                 |
 |     :pythontest: off                   |                                        |
 |                                        |                                        |
-|     turtle.turtle()                    |      turtle.Turtle()                   |
+|     turtle.pencolour("red")            |      turtle.pencolor("red")            |
 |     turtle.beginfill()                 |      turtle.begin_fill()               |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
@@ -193,7 +193,7 @@ Variable names must begin with either an upper or lowercase letter, or an unders
 Setting variables
 -----------------
 
-Variables are defined by placing the variable name on the left, with an assignment operator in the middle, followed by the expression to use on the right.  If you are defining two variables at the same time (in the second example below), then you must use the assignment operator between each of them so that they are assigned to the same value.
+Variables are defined by placing the variable name on the left, with an assignment operator in the middle, followed by the expression to store on the right.  If you are defining two variables at the same time (in the second example below), then you must use the assignment operator between each of them so that they are assigned to the same value.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |
@@ -227,7 +227,7 @@ Before you can use anything defined inside another module, you must import it fi
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 
-Another common mistake is to save your program with the same name as a module you are importing, so it will import your own program instead.  For example, if you are using the ``random`` module, then do not call your program ``random.py, or if you are using the ``turtle`` module then do not call your program ``turtle.py``.
+Another common mistake is to save your program with the same name as a module you are importing, so it will import your own program instead.  For example, if you are using the ``random`` module, then do not call your program ``random.py``, or if you are using the ``turtle`` module then do not call your program ``turtle.py``.
 
 Not converting to integers when performing arithmetic
 -----------------------------------------------------
@@ -248,7 +248,7 @@ Strings must be converted into numbers, whether integers or floats, before they 
 Forgetting the colon ``:`` at the end of compound statements
 ------------------------------------------------------------
 
-Any compound statement, whether an ``if``, ``while``, ``for`` or ``def``, must have a colon ``:`` symbol at the end of the line to indicate that the code block that follows belongs to it.  For example, if an ``if`` statement is used, then the code block is only executed if the condition following the ``if`` keyword evaluates to ``True``.
+Any compound statement, whether an ``if``, ``while``, ``for``, ``def`` or ``try``, must have a colon ``:`` symbol at the end of the line to indicate that the code block that follows belongs to it.  For example, if an ``if`` statement is used, then the code block is only executed if the condition following the ``if`` keyword evaluates to ``True``.
 
 +----------------------------------------+----------------------------------------+
 | Bad                                    | Good                                   |
@@ -420,7 +420,7 @@ Always include parentheses when invoking (:term:`calling`) a function.  Simply t
 | .. code-block:: py3con                 | .. code-block:: py3con                 |
 |     :pythontest: off                   |                                        |
 |                                        |                                        |
-|     turtle.Turtle                      |     turtle.Turtle()                    |
+|     turtle.begin_fill                  |     turtle.begin_fill()                |
 |                                        |                                        |
 +----------------------------------------+----------------------------------------+
 | .. code-block:: py3con                 | .. code-block:: py3con                 |

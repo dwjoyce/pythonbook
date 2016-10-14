@@ -144,7 +144,7 @@ A little explanation:
     - We import the modules we need, ``turtle`` for drawing, ``random`` for producing a bit of variation.
     - We then define a function called ``draw_circle`` which take four arguments - the radius, followed by red, green and blue to define the color.
     - Inside the ``draw_circle`` function, we set the pen and fill color, tell turtle we are starting the shape so it can be filled in later, and then draw a circle.  We then end the shape, so the circle is filled in.
-    - In the main part of the program, we create our window using the ``Turtle()`` function, set the speed to hurry things up, and then save the window width and height so we can use them later.
+    - In the main part of the program, we set the speed to hurry things up, and then save the window width and height so we can use them later.
     - We then enter a loop which continues forever.
     - Inside the loop, we first define the size of the circle by using the ``randrange`` function in the ``random`` module.  We ask for a radius somewhere between 20 and 200.
     - We then pick up the pen, and move it to a random place in the drawing window, and then put the pen down again.
@@ -168,4 +168,4 @@ Things to remember
 
 #. When a program comes across the ``return`` keyword, control returns immediately to the calling code.  This is the case even if there is more code after the return statement - this code is effectively out of reach by the program.  This is why it is called *unreachable* code.
 
-#. There are two ways of passing in arguments with functions.  Firstly, by *position* (:term:`positional arguments`), so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword* (:term:`keyword arguments`), so you can specify the name of the parameter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should be given.
+#. There are two ways of passing in arguments with functions.  Firstly, by *position* (:term:`positional arguments`), so the order of arguments is matched up with the order of parameters.  Secondly, by *keyword* (:term:`keyword arguments`), so you can specify the name of the parameter, followed by the equals sign, and then the expression (e.g. a value or variable name) that parameter should set to.
