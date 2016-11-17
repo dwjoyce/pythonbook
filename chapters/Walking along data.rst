@@ -28,7 +28,7 @@ For example, if we want to print out the numbers up to 10, then on the interacti
     7
     8
     9
-    
+
 The test is whether the variable ``num`` is less than 10.  We initially set it to 0, and every time we repeat the block of code, we add 1 onto it, and give it the same name.  Eventually, it reaches 10, and the loop stops, as the variable ``num`` now equals 10 it is not less than 10, so the test evaluates to ``False``.  Hopefully this is all very straightforward by now.
 
 However, Python has an easier way of repeating a block of code a set number of times (10 in this example).  It is the ``for`` loop, and all it does is to step through a sequence such as a list or a string.  We have been working with such sequences in the previous two chapters.
@@ -38,14 +38,14 @@ However, Python has an easier way of repeating a block of code a set number of t
 So let's introduce this step by step.  First define a list and give it a name using the assignment operator::
 
     >>> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    
+
 The name of the list is ``numbers``, and we have given it the same values as we printed out using the ``while`` loop above.
 
 Now we use our new keyword ``for``.  We combine it with the ``in`` operator we first saw in :ref:`chapter 15` on working out whether a value is a member of a list, but this time it is used to step along each item *in* the list.  To see it in action, type this in and make sure you get the same result as when we used the ``while`` loop earlier::
 
     >>> for num in numbers:
             print(num)
-        
+
 And that is all we need to print out the numbers from the list we created.  We could combine those three lines into two like this, thus avoiding the need for defining the list variable::
 
     >>> for num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
@@ -68,7 +68,7 @@ It is useful then that Python provides a function to give us a list of numbers i
 
     >>> for num in range(10):
             print(num)
-    
+
 Even shorter than before, now that we are using the ``range`` function to do the work for us.  Usually, it just takes one argument - the number of integers that you want.  If you pass in ``5``, you get back ``[0, 1, 2, 3, 4]``, that is, 5 numbers starting from 0.  If you pass in ``1000``, you get a list of a 1000 numbers, from 0 to 999.
 
 .. note:: In programming generally, we like to start from 0 and not from 1, just like when indexing lists, or using ``random.randrange``.  We count up to an end point, but since we usually count from 0, we do not include the end point in our range.
@@ -82,8 +82,9 @@ The third thing you can do is to ask for a step in the numbers, so instead of ea
 
 By this stage, you should realise that the range function is very similar to how we slice up sequences - specify an end point, and also optionally a start point along with a step to perform for each number.  Therefore, there are three ways of calling the range function, depending on what kind of number range you want to produce:
 
-.. code-block::
+.. code-block:: py3con
     :pythontest: norun
+
     range(end)
     range(start, end)
     range(start, end, step)
@@ -98,21 +99,21 @@ The variable used to step through the list (the loop variable) can be called any
     >>> num = 10
     >>> number = 20
     >>> my_int = 123
-    
+
 As described above, the ``for`` loop defines its loop variable as part of the ``for`` statement, but just like  ordinary variables, we can call it what we want to::
 
     >>> for item in range(10):
             print(item)
-    
+
     >>> for counter in range(100):
             print(counter)
-        
+
 And you don't need to use it all, of course.  It is used to just step through the list - what you do with it is up to you::
 
     >>> for num in range(10):
             print('Going round and round 10 times!')
             print('Weeeeee!')
-           
+
     >>> for line in range(1000):
             print('I will not draw on the classroom wall again.')
 
@@ -124,11 +125,11 @@ The list that the for loop uses to step over need not be a list of numbers.  It 
     >>> names = ['Bilbo', 'Gandalf', 'Thorin', 'Golum']
     >>> for name in names:
             print('Enjoy your adventure', name)
-        
+
     >>> sentence = 'Mary had a litle lamb'
     >>> for word in sentence.split():
             print(word)
-        
+
 The variable to step along need not be a list - it can be any sequence at all, including strings::
 
     >>> word = 'rotavator'
@@ -154,7 +155,7 @@ Finally, you can combine two sequences together, and then step over the result a
 
     R M
     o y
-    s  
+    s
     e p
     b r
     u e
@@ -178,7 +179,7 @@ Let's put this knowledge to use to draw a shape using turtle.  Open a new file w
     for side in range(8):
         turtle.forward(50)
         turtle.left(45)
-    
+
     turtle.end_fill()
 
 Save it as :file:`redoctagon.py`, and run it.  Not surprisingly, it should draw a red octagon.
@@ -191,7 +192,7 @@ Vertigo
 -------
 
 Open up another new file window, and type in the following::
-        
+
     import turtle
     import random
 
@@ -232,7 +233,7 @@ Let us practice this concept by using the interactive interpreter:
     >>> for outer_number in range(1, 10):
             print('outer loop', outer_number)
             for inner_number in range(1, 10):
-                print('inner', inner_number)    
+                print('inner', inner_number)
     outer loop 1
     inner 1
     inner 2
@@ -286,7 +287,7 @@ Now to do something longer and more colorful, start a new program and type in th
             color = colors[color_index % len(colors)]
             turtle.fillcolor(color)
             turtle.begin_fill()
-            
+
             # Draw each of the triangle's 3 sides
             for side in range(3):
                 turtle.forward(length)

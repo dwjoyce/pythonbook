@@ -19,10 +19,11 @@ To achieve this in Python, we use the ``if`` statement.  We start with the word 
 
 .. note:: Statements that belong to an ``if`` statement must be pushed to the right in order to show what code belongs to what line.  In programming, this is called :term:`indentation`.  In Python, we indent by four spaces.  When the code block is finished, we unindent back to the column of the initial line.
 
-Indentation is like drawing up a shopping list, like so::
+Indentation is like drawing up a shopping list, like so:
 
-.. code-block::
-    :pythontest: norun
+.. code-block:: none
+    :pythontest: off
+
     clothes:
         shirt
         socks
@@ -35,7 +36,7 @@ Indentation is like drawing up a shopping list, like so::
     others:
         cup
         clothes pegs
-        
+
 Each section is defined by a header, followed by the ``:`` colon symbol to indicate what follows belongs to the header.  The items beneath each header are indented, or pushed in to form a group.
 
 Let us start a new program called :file:`vip.py` - click on the :menu:`File -> New File` menu item, and type in the following::
@@ -60,14 +61,14 @@ We can now finish our program, so add the last line on the end so that your comp
 
     print('Welcome to our VIP program for calculating cinema ticket prices')
     print('Ticket prices are £5.00 for ordinary tickets, £6.00 for VIPs')
-    
+
     vip = input('Do you require a VIP ticket, yes or no? ')
-    
+
     price = 5.0
 
     if vip == 'yes':
         price = price * 1.2
-        
+
     print('Your total price is:', price)
 
 See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our :term:`code block` attached to the ``if`` statement is over, and we now carry on as usual.
@@ -91,7 +92,7 @@ Run your program again, and notice how either both of these statement will be pe
         if weekend == 'yes':
             price = price * 1.5
             print('Weekend viewing adds on another 50%, sorry!')
-            
+
 Watching films at the weekend is very expensive, 50% more expensive!  You will notice, though, that this is only added on for VIP seats, as the question and the test, along with the increase in price, all live inside the test for VIP seats only.  Regardless, this demonstrates that one block of code (with a certain level of indentation) can reside inside another.  There is no limit to how many blocks can be inside other blocks, although if we overdo this, it will make the code harder to understand.
 
 You can add another block of code that is selectively executed after the ``if`` statement above, just by starting it in the same column as the first.  Add these extra three lines onto your program::
