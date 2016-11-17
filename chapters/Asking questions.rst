@@ -43,7 +43,7 @@ To convert back from a number (whether integer or float) into a string, you use 
 To appreciate what is involved in converting a string of digits into an integer using the ``int`` function, look at the following diagram to see how Python multiplies the place values, and adds them all together:
 
 .. image:: /images/intconversion.pdf
-    :width: 310 pt
+    :width: 350 pt
     :align: center
 
 To practice, start a new program called :file:`sumup.py`, and type in the following into your new window::
