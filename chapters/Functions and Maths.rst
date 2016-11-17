@@ -173,4 +173,4 @@ Things to remember
 
 #. To call a function ``func`` with more than one argument, separate the arguments by commas: ``func(arg1, arg2, arg3, etc)``.
 
-#. Function return values can be assigned to variables, and variables and return values can be used as arguments.
+#. Functions return values that can be assigned to variables, e.g. ``num = abs(-10)``, and variables and return values can be used as arguments, e.g. ``abs(num)`` and ``abs(round(-10.75))``.

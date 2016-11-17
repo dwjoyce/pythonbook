@@ -40,6 +40,12 @@ To convert from a string to a floating point number, you use the ``float`` funct
 
 To convert back from a number (whether integer or float) into a string, you use the ``str`` function.  So for example, ``str(123)`` would return ``"123"``, and ``str(123.0)`` would return ``"123.0"``.
 
+To appreciate what is involved in converting a string of digits into an integer using the ``int`` function, look at the following diagram to see how Python multiplies the place values, and adds them all together:
+
+.. image:: /images/intconversion.pdf
+    :width: 310 pt
+    :align: center
+
 To practice, start a new program called :file:`sumup.py`, and type in the following into your new window::
 
     first_num_str = input('First number: ')

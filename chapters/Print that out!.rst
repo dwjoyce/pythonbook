@@ -33,7 +33,7 @@ So what do we want to do with the variable ``c`` above?  We want to display or p
     c = a + b
     print(c)
 
-Run your program again, using the :kbd:`F5` key (you may have to click the :button:`OK` button, or just press the :button:`Return` key to confirm).  This should now print out the number 30 in the run window.
+Run your program again, using the :kbd:`F5` key (you may have to click the :button:`OK` button, or just press the :button:`Return` or :button:`Enter` key to confirm).  This should now print out the number 30 in the run window.
 
 You can print out more than one item by using a comma ``,`` between the items to separate them.  Modify the last line in your program again::
 
@@ -42,7 +42,7 @@ You can print out more than one item by using a comma ``,`` between the items to
     c = a + b
     print(a, b, c)
 
-and run, again by using the :kbd:`F5` key and pressing the :button:`Return` key to confirm.  This will print out 10, followed by 20 and finally 30, all on the same line.
+and run, again by using the :kbd:`F5` key and pressing the :button:`Return` or :button:`Enter` key to confirm.  This will print out 10, followed by 20 and finally 30, all on the same line.
 
 You can even get the ``print`` function to perform the calculation for you when passing in the values to print.  All arguments like this are evaluated (processed or simplified) before the values are presented to the function to use.  Again, modify your program like so::
 
@@ -67,7 +67,7 @@ Open up a new file (click on the :menu:`File` menu and select :menu:`New File`),
     print("I love Python")
     print('This is fun!')
 
-Save this file as :file:`lines.py` (press the :kbd:`F5` button, press :button:`Return` to confirm and save it in the usual place), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
+Save this file as :file:`lines.py` (press the :kbd:`F5` button, press the :button:`Return` or :button:`Enter` key to confirm and save it in the usual place), and see the text being printed out onto the screen.  Notice how we use either double quotation marks ``"`` or single quotation marks ``'`` - Python does not mind which one you use, as long as you are consistent.  This means that if you start with a double quote, then you must close with a double quote.
 
 These pieces of text in Python are called :term:`strings`.  Think of them as strings of characters, made up of either letters from the alphabet, numerical digits or symbols.  This includes almost any key from your keyboard, and more besides.  Similar to a string or chain of pearls, a string in programming is a sequence of characters.  To illustrate, whilst with an integer number (shown below on the left) is stored as a whole number (with the 1s, 10s, 100s, etc., all in their correct places), strings (shown on the right) are simply a sequence of characters, where digits are treated the same as letters and symbols:
 

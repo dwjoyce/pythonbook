@@ -72,7 +72,7 @@ We can now finish our program, so add the last line on the end so that your comp
 
 See how the program carries on past the test, whether the ``if`` statement test was true or not - you simply have to move back 4 spaces to the left.  This means our :term:`code block` attached to the ``if`` statement is over, and we now carry on as usual.
 
-Now save and run your program using the :kbd:`F5` key, pressing :button:`Return`, and using the program name of :file:`vip.py`.  Remember, to save your program in the usual location (the directory with your name, or your USB stick).
+Now save and run your program using the :kbd:`F5` key, pressing the :button:`Return` or :button:`Enter` key, and using the program name of :file:`vip.py`.  Remember, to save your program in the usual location (the directory with your name, or your USB stick).
 
 You will have to run your program twice.  Initially, input *yes* as the answer to the question, and secondly, input *no* (or vice versa).  You should get different results depending on what you enter on the keyboard - either a price of £6 or £5.  Be careful what you type - if you do not type *yes* exactly, then the test will fail, and the indented statement will not be executed.
 

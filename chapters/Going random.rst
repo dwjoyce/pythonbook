@@ -32,7 +32,7 @@ We can then experiment with some of its functions.  Try calling the ``random`` m
     >>> random.random()
     >>> random.random()
     
-.. note:: You can repeat a command in the interactive interpreter by using the up arrow key on your keyboard, and pressing the :button:`Return` or :button:`Enter` key.  This brings the statement down onto your current line, allowing you change it.  Execute that statement by pressing :button:`Return` again.
+.. note:: You can repeat a command in the interactive interpreter by using the up arrow key on your keyboard, and pressing the :button:`Return` or :button:`Enter` key.  This brings the statement down onto your current line, allowing you change it.  Execute that statement by pressing the :button:`Return` or :button:`Enter` key again.
 
 Run this line a few time with the note above.  See how it always returns a number that is between 0.0 and 1.0, but hardly ever the same exact number.  See if you can get it to repeat a number - it is not easy!
 
