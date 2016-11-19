@@ -116,8 +116,8 @@ If you wish to call ``print`` a number of times, with each item being appended o
     print('This will appear on another line')
     print('But these two lines', end='')
     print(' will appear on the same line!')
-  
-You could, of course, specifiy the ``end`` argument to be anything you want, but it is most common to either not use it at all, or set it to an empty string (two single quotes, one after the other).  This kind of argument is called a *keyword argument*, which will be described further in chapter 19 on functions.
+
+You could, of course, specify the ``end`` argument to be anything you want, but it is most common to either not use it at all, or set it to an empty string (two single quotes, one after the other).  This kind of argument is called a *keyword argument*, which will be described further in chapter 19 on functions.
 
 .. tip:: When you are writing a program later on and cannot see why it is not working as you would expect, try inserting some ``print`` statements in the code with the variables your program is using.  That way, you will see what is going on, whilst it is running.  This should then show you what needs changing to make it work better.  This is called :term:`debugging` your program.
 

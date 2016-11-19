@@ -299,7 +299,7 @@ Now to do something longer and more colorful, start a new program and type in th
             # Increment our index, so the colors are rotated
             color_index = color_index + 1
 
-Run it, naming it :file:`triangles.py`, and see what happens.  Much of what we have typed in is similar to the :file:`spirals.py` program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is ``True``, which never changes to ``False``.  Inside this loop, we draw 6 triangles, centred on a point so they form a hexagon shape.  We do this centering by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
+Run it, naming it :file:`triangles.py`, and see what happens.  Much of what we have typed in is similar to the :file:`spirals.py` program, but this time we have loops inside other loops.  The first loop simply repeats the main part of the program forever, an infinite loop.  We know it is an infinite loop as the condition is ``True``, which never changes to ``False``.  Inside this loop, we draw 6 triangles, centred on a point so they form a hexagon shape.  We do this centring by turning 60 degrees towards the end of this loop.  Inside this loop drawing all the triangles is another ``for`` loop which draws the 3 sides of each triangle, turning 120 degrees each time.
 
 Your turtle window should show something like this being drawn:
 

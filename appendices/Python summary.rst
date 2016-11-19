@@ -370,7 +370,7 @@ Examples::
 Operator precedence
 ^^^^^^^^^^^^^^^^^^^
 
-The following table summarizes the operator precedences in Python, from lowest precedence (least binding) to highest precedence (most binding). Operators in the same box have the same precedence - so they are evaluated from left to right.  If in doubt, use parentheses ``(`` ``)`` to force a particular order!
+The following table summarises the operator precedences in Python, from lowest precedence (least binding) to highest precedence (most binding). Operators in the same box have the same precedence - so they are evaluated from left to right.  If in doubt, use parentheses ``(`` ``)`` to force a particular order!
 
 ===================================================================================== ========================================================================
 Operator                                                                              Description
@@ -399,7 +399,7 @@ Data types
 
 The following table summarises the types of data we have introduced in this book, along with examples of their values and operations you can perform on them:
 
-- **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure the stirng contains a single whole number, without even a fractional part.
+- **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure that the string contains a single whole number, without even a fractional part.
 
   The operations that can be performed on an integer mainly include the arithmetic operators, such as ``+``, ``-``, ``*``, ``/`` (which results in a floating point answer), ``//`` (which results in an integer answer), ``**`` and ``%``.
 
@@ -427,7 +427,7 @@ The following table summarises the types of data we have introduced in this book
       >>> float(123.5)           # results in number 123.5
       >>> float(input('num?'))   # convert from input to number
       
-- **strings (str)** - strings are a sequence of alphanumberic characters, such as those found on your keyboard.  You can convert to a string data type using the ``str`` function.  You can pass almost anthing into this function in order to get its string representation.
+- **strings (str)** - strings are a sequence of alphanumeric characters, such as those found on your keyboard.  You can convert to a string data type using the ``str`` function.  You can pass almost anything into this function in order to get its string representation.
 
   Although you can join and repeat strings by using the ``+`` and ``*`` operators, respectively, you can also use methods belonging to the string type or class to perform operations contained by the string value or object.
   
