@@ -397,6 +397,10 @@ Data types
 
 .. pythontest:: nooutput
 
+Python allows more one type of data.  Whilst calculators generally deal with only numbers, computers can store all sorts of data that can be interpreted in different ways.  In addition to numbers (integers, floating point), programs can also process strings of characters, lists of values, files to store data on a more permanent basis.  A bit of interpretation is required (the type itself) as all this data is invariably stored in binary.
+
+Essentially, a data type determines the size of the data being stored, a set of permitted values, and the operations that can be performed on the data.  Obviously, we can divide an integer by 2, but it would make no sense to divide a telephone number or someone's address by 2 - that operation is not permitted by strings.
+ 
 The following table summarises the types of data we have introduced in this book, along with examples of their values and operations you can perform on them:
 
 - **integers (int)** - integers are whole numbers, such as -1, 0, 1, 2, 3, 4, and so on.  You convert to an integer data type using the ``int`` function.  However, when doing so, make sure the argument passed in is an actual number, or else an error will be raised.  If a floating point number is passed in, then the fractional part is dropped.  If a string is passed in, ensure that the string contains a single whole number, without even a fractional part.
