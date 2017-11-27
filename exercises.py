@@ -57,6 +57,7 @@ max(7, -8, 4, -12, 1)
 
 # A1.
 import turtle
+turtle.speed(0)
 turtle.forward(100)
 turtle.left(60)
 turtle.forward(100)
@@ -121,7 +122,8 @@ num2 = 30
 num3 = 50
 num4 = 70
 num5 = 90
-print(num1, num2, num3, num4, num5, num1 + num2 + num3 + num4 + num5)
+total = num1 + num2 + num3 + num4 + num5
+print(num1, num2, num3, num4, num5, total)
 
 # A2.
 year = 1996
@@ -229,9 +231,9 @@ if choice == "4":
 weather = input("What's the weather today, sunny, rainy or cloudy? ")
 if weather == "sunny":
     print("Bring some sun cream!")
-elif weather == "rainy":
+if weather == "rainy":
     print("Bring your umbrella")
-elif weather == "cloudy":
+if weather == "cloudy":
     print("Bring a jumper")
 
 
@@ -392,8 +394,8 @@ print('The grand total is:', total)
 # A2 - words.py
 sentence = ""
 while True:
-    word = input("Enter a word, or 'quit' to stop: ")
-    if word == "quit":
+    word = input("Enter a word, or 'stop': ")
+    if word == "stop":
         break
     sentence = sentence + word
 print(sentence)
@@ -401,8 +403,8 @@ print(sentence)
 # A3
 import turtle
 while True:
-    sides = input("How many sides to draw, or 'quit' to stop? ")
-    if sides == "quit":
+    sides = input("How many sides to draw, or 'stop': ")
+    if sides == "stop":
         break
     sides = int(sides)
     num = 0
@@ -456,8 +458,8 @@ import random
 choices = ['rock', 'paper', 'scissors']
 
 while True:
-    user_choice = input("Enter your choice, rock, paper or scissors (or 'quit' to stop): ")
-    if user_choice == "quit":
+    user_choice = input("Enter your choice, rock, paper or scissors (or stop to quit): ")
+    if user_choice == "stop":
         break
 
     computer_choice = random.choice(choices)
@@ -527,13 +529,13 @@ seasons = [['December', 'January', 'February'],
            ['September', 'October', 'November']]
 choice = input("Which season, winter, spring, summer or autumn? ")
 if choice == "winter":
-    print(seasons[0])
+    print(', '.join(seasons[0]))
 elif choice == "spring":
-    print(seasons[1])
+    print(', '.join(seasons[1]))
 elif choice == "summer":
-    print(seasons[2])
+    print(', '.join(seasons[2]))
 elif choice == "autumn":
-    print(seasons[3])
+    print(', '.join(seasons[3]))
 
 
 ##############################
@@ -559,8 +561,8 @@ for num in range(sides):
 # A4 - brekkie.py
 breakfast = []
 while True:
-    item = input("What are we having for breakfast, or type 'quit' to stop: ")
-    if item == "quit":
+    item = input("What are we having for breakfast, or type 'stop': ")
+    if item == "stop":
         break
     breakfast.append(item)
     
@@ -648,11 +650,19 @@ def star():
         turtle.right(144)
         turtle.forward(length)
         turtle.left(72)
-    
-box()
-circle()
-polygon()
-star()
+
+while True:
+    shape = input("Which shape to draw, box, circle, polygon, star, or 'stop': ")
+    if shape == "stop":
+        break
+    elif shape == "box":
+        box()
+    elif shape == "circle":
+        circle()
+    elif shape == "polygon":
+        polygon()
+    elif shape == "star":
+        star()
 
 
 ##############################
@@ -730,8 +740,8 @@ print("Average number words per line is", length_total / num_words)
 # A1 - notes.py
 notes_file = open("notes.txt", "w")
 while True:
-    sentence = input("Please type in a sentence, or 'quit' to stop: ")
-    if sentence == "quit":
+    sentence = input("Please type in a sentence, or 'stop': ")
+    if sentence == "stop":
         break
     notes_file.write(sentence + "\n")
 notes_file.close()
@@ -740,8 +750,8 @@ notes_file.close()
 notes_file = open("notes.txt", "w")
 line_number = 1
 while True:
-    sentence = input("Please type in a sentence, or 'quit' to stop: ")
-    if sentence == "quit":
+    sentence = input("Please type in a sentence, or 'stop': ")
+    if sentence == "stop":
         break
     notes_file.write(str(line_number) + ".  " + sentence + "\n")
     line_number = line_number + 1
