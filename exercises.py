@@ -126,13 +126,16 @@ print(num1, num2, num3, num4, num5, num1 + num2 + num3 + num4 + num5)
 # A2.
 year = 1996
 age = 21
-print("Year of birth", year, "age is", age, "age in 10 years", age + 10)
+print(year, age, age + 10)
 
 # A3.
+print("Year of birth", year, "age is", age, "age in 10 years", age + 10)
+
+# A4.
 name = "Fred Bloggs"
 print((name + "\t") * 100)
 
-# A4.
+# A5.
 import turtle
 
 turtle.pencolor("red")
@@ -497,7 +500,7 @@ while index >= 0:
     print(sentence[index])
     index = index - 2
 
-print(sentence[0::2])
+print(sentence[::2])
 print(sentence[-1::-2])
 
 # A2 - daysofweek.py
@@ -509,7 +512,7 @@ print(day_names[day_num - 1])
 planet_names = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 planet_type = input("Which type of planet, rocky or gaseous? ")
 if planet_type == "rocky":
-    print(planet_names[0:4])
+    print(planet_names[:4])
 else:
     print(planet_names[4:])
 
@@ -568,7 +571,6 @@ for item in breakfast:
 import turtle
 turtle.up()
 
-num = 11
 width = 20  # thickness of each circle
 
 for num in range(11, 0, -1):
@@ -678,11 +680,16 @@ print(sum_up(product(4, 5), product(6, 7)))
 # A3 - functions.py (new prime function)
 def prime(number):
     # return whether the number is prime (True) or not (False)
+    if number < 2:
+        return False
     for num in range(2, number):
         if number % num == 0:
             return False
     return True
 
+print(prime(0))  # should print out False
+print(prime(1))  # should print out False
+print(prime(2))  # should print out True
 print(prime(25))  # should print out False
 print(prime(29))  # should print out True
 
@@ -708,8 +715,9 @@ mission_file = open("mission.txt")
 length_total = 0
 num_words = 0
 for line in mission_file:
-    length_total = length_total + len(line)    
-    num_words = num_words + len(line.split())
+    for word in line.split():
+        length_total = length_total + len(word)    
+        num_words = num_words + 1
 mission_file.close()
 
 print("Average number words per line is", length_total / num_words)
